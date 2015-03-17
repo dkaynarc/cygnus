@@ -191,13 +191,24 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\Strings.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GatewaysController.cs" />
     <Compile Include="Controllers\Api\SensorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503090410331_InitialCreate.cs" />
+    <Compile Include="Migrations\201503090410331_InitialCreate.Designer.cs">
+      <DependentUpon>201503090410331_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503170243145_initial.cs" />
+    <Compile Include="Migrations\201503170243145_initial.Designer.cs">
+      <DependentUpon>201503170243145_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Api\Gateway.cs" />
     <Compile Include="Models\Api\Sensor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -280,6 +291,14 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201503090410331_InitialCreate.resx">
+      <DependentUpon>201503090410331_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503170243145_initial.resx">
+      <DependentUpon>201503170243145_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

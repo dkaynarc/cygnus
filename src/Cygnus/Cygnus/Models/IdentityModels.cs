@@ -29,5 +29,7 @@ namespace Cygnus.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Cygnus.Models.Api.Gateway> Gateways { get; set; }
     }
 }
