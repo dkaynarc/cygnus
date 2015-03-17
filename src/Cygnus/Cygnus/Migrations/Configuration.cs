@@ -11,14 +11,13 @@ namespace Cygnus.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Cygnus.Models.ApplicationDbContext";
         }
 
         protected override void Seed(Cygnus.Models.ApplicationDbContext context)
         {
             context.Gateways.AddOrUpdate(x => x.Id,
-                new Gateway() { Id = 1, Name = "DefaultTestGateway1" },
-                new Gateway() { Id = 2, Name = "DefaultTestGateway2" });
+                new Gateway() { Id = Guid.NewGuid(), Name = "DefaultTestGateway1" },
+                new Gateway() { Id = Guid.NewGuid(), Name = "DefaultTestGateway2" });
         }
     }
 }

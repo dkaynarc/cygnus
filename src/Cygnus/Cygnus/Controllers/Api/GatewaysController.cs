@@ -26,7 +26,7 @@ namespace Cygnus.Controllers.Api
 
         // GET: api/Gateways/5
         [ResponseType(typeof(Gateway))]
-        public async Task<IHttpActionResult> GetGateway(int id)
+        public async Task<IHttpActionResult> GetGateway(Guid id)
         {
             Gateway gateway = await db.Gateways.FindAsync(id);
             if (gateway == null)
@@ -39,7 +39,7 @@ namespace Cygnus.Controllers.Api
 
         // PUT: api/Gateways/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutGateway(int id, Gateway gateway)
+        public async Task<IHttpActionResult> PutGateway(Guid id, Gateway gateway)
         {
             if (!ModelState.IsValid)
             {
@@ -82,14 +82,29 @@ namespace Cygnus.Controllers.Api
             }
 
             db.Gateways.Add(gateway);
-            await db.SaveChangesAsync();
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (GatewayExists(gateway.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = gateway.Id }, gateway);
         }
 
         // DELETE: api/Gateways/5
         [ResponseType(typeof(Gateway))]
-        public async Task<IHttpActionResult> DeleteGateway(int id)
+        public async Task<IHttpActionResult> DeleteGateway(Guid id)
         {
             Gateway gateway = await db.Gateways.FindAsync(id);
             if (gateway == null)
@@ -112,7 +127,7 @@ namespace Cygnus.Controllers.Api
             base.Dispose(disposing);
         }
 
-        private bool GatewayExists(int id)
+        private bool GatewayExists(Guid id)
         {
             return db.Gateways.Count(e => e.Id == id) > 0;
         }

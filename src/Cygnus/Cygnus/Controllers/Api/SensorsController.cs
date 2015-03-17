@@ -1,43 +1,135 @@
-﻿using Cygnus.Models.Api;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
+using Cygnus.Models;
+using Cygnus.Models.Api;
 
 namespace Cygnus.Controllers.Api
 {
     public class SensorsController : ApiController
     {
-        Sensor[] sensors = new Sensor[] 
-        { 
-            new Sensor { Id = 1, Name = "Temperature" }, 
-            new Sensor { Id = 2, Name = "Camera" }, 
-            new Sensor { Id = 3, Name = "" } 
-        };
+        private ApplicationDbContext db = new ApplicationDbContext();
 
-        [HttpGet]
-        public IEnumerable<Sensor> All()
+        // GET: api/Sensors
+        public IQueryable<Sensor> GetSensors()
         {
-            return sensors;
+            return db.Sensors;
         }
 
-        [HttpGet]
-        public IHttpActionResult Sensor(int id)
+        // GET: api/Sensors/5
+        [ResponseType(typeof(Sensor))]
+        public async Task<IHttpActionResult> GetSensor(Guid id)
         {
-            var sensor = sensors.FirstOrDefault((p) => p.Id == id);
+            Sensor sensor = await db.Sensors.FindAsync(id);
             if (sensor == null)
             {
                 return NotFound();
             }
+
             return Ok(sensor);
         }
 
-        [HttpGet]
-        public IHttpActionResult Capabilities()
+        // PUT: api/Sensors/5
+        [ResponseType(typeof(void))]
+        public async Task<IHttpActionResult> PutSensor(Guid id, Sensor sensor)
         {
-            return Ok("Capabilities");
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != sensor.Id)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(sensor).State = EntityState.Modified;
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!SensorExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        // POST: api/Sensors
+        [ResponseType(typeof(Sensor))]
+        public async Task<IHttpActionResult> PostSensor(Sensor sensor)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.Sensors.Add(sensor);
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (SensorExists(sensor.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtRoute("DefaultApi", new { id = sensor.Id }, sensor);
+        }
+
+        // DELETE: api/Sensors/5
+        [ResponseType(typeof(Sensor))]
+        public async Task<IHttpActionResult> DeleteSensor(Guid id)
+        {
+            Sensor sensor = await db.Sensors.FindAsync(id);
+            if (sensor == null)
+            {
+                return NotFound();
+            }
+
+            db.Sensors.Remove(sensor);
+            await db.SaveChangesAsync();
+
+            return Ok(sensor);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool SensorExists(Guid id)
+        {
+            return db.Sensors.Count(e => e.Id == id) > 0;
         }
     }
 }
