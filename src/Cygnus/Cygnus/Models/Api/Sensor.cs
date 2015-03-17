@@ -17,6 +17,15 @@ namespace Cygnus.Models.Api
         // Foreign Key
         public Guid GatewayId { get; set; }
         // Navigation property
-        public Gateway Gateway { get; set; }
+        public virtual Gateway Gateway { get; set; }
+    }
+
+    public class SensorDTO
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Resource { get; set; }
+        public string Description { get; set; }
+        public string GatewayName { get; set; }
     }
 }

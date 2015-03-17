@@ -19,16 +19,33 @@ namespace Cygnus.Controllers.Api
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Sensors
-        public IQueryable<Sensor> GetSensors()
+        public IQueryable<SensorDTO> GetSensors()
         {
-            return db.Sensors.Include(b => b.Gateway);
+            var sensors = from s in db.Sensors
+                          select new SensorDTO()
+                          {
+                              Id = s.Id,
+                              Name = s.Name,
+                              Resource = s.Resource,
+                              Description = s.Description,
+                              GatewayName = s.Gateway.Name
+                          };
+            return sensors;
         }
 
         // GET: api/Sensors/5
         [ResponseType(typeof(Sensor))]
         public async Task<IHttpActionResult> GetSensor(Guid id)
         {
-            Sensor sensor = await db.Sensors.FindAsync(id);
+            var sensor = await db.Sensors.Include(s => s.Gateway).Select(s =>
+                new SensorDTO()
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Resource = s.Resource,
+                    Description = s.Description,
+                    GatewayName = s.Gateway.Name
+                }).SingleOrDefaultAsync(s => s.Id == id);
             if (sensor == null)
             {
                 return NotFound();
@@ -82,24 +99,20 @@ namespace Cygnus.Controllers.Api
             }
 
             db.Sensors.Add(sensor);
+            
+            await db.SaveChangesAsync();
+            db.Entry(sensor).Reference(s => s.Gateway).Load();
 
-            try
+            var dto = new SensorDTO()
             {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (SensorExists(sensor.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                Id = sensor.Id,
+                Name = sensor.Name,
+                Resource = sensor.Resource,
+                Description = sensor.Description,
+                GatewayName = sensor.Gateway.Name
+            };
 
-            return CreatedAtRoute("DefaultApi", new { id = sensor.Id }, sensor);
+            return CreatedAtRoute("DefaultApi", new { id = sensor.Id }, dto);
         }
 
         // DELETE: api/Sensors/5
