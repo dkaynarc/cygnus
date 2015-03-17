@@ -21,7 +21,7 @@ namespace Cygnus.Controllers.Api
         // GET: api/Sensors
         public IQueryable<Sensor> GetSensors()
         {
-            return db.Sensors;
+            return db.Sensors.Include(b => b.Gateway);
         }
 
         // GET: api/Sensors/5
