@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Cygnus.Models;
 using Cygnus.Models.Api;
+using Cygnus.GatewayInterface;
 
 namespace Cygnus.Controllers.Api
 {
@@ -19,17 +20,20 @@ namespace Cygnus.Controllers.Api
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Sensors
-        public IQueryable<SensorDTO> GetSensors()
+        public async Task<IQueryable<SensorDTO>> GetSensors()
         {
-            var sensors = from s in db.Sensors
-                          select new SensorDTO()
-                          {
-                              Id = s.Id,
-                              Name = s.Name,
-                              Resource = s.Resource,
-                              Description = s.Description,
-                              GatewayName = s.Gateway.Name
-                          };
+            var sensors = await Task.Run(() =>
+            {
+                return from s in db.Sensors
+                              select new SensorDTO()
+                              {
+                                  Id = s.Id,
+                                  Name = s.Name,
+                                  Resource = s.Resource,
+                                  Description = s.Description,
+                                  GatewayName = s.Gateway.Name
+                              };
+            });
             return sensors;
         }
 

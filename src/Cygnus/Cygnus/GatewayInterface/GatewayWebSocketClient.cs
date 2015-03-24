@@ -16,16 +16,22 @@ namespace Cygnus.GatewayInterface
         {
         }
 
-        public async void Connect(string uri)
+        public async Task Connect(string uri)
         {
-            if (m_gatewayWebSocket.State == WebSocketState.Closed && !String.IsNullOrEmpty(uri))
+            if (m_gatewayWebSocket.State != WebSocketState.Open && !String.IsNullOrEmpty(uri))
             {
-               var ct = new CancellationToken();
-               await m_gatewayWebSocket.ConnectAsync(new Uri(uri), ct);
+                try
+                {
+                    var ct = new CancellationToken();
+                    await m_gatewayWebSocket.ConnectAsync(new Uri(uri), ct);
+                }
+                catch (Exception e)
+                {
+                }
             }
         }
 
-        public async void Disconnect()
+        public async Task Disconnect()
         {
             var ct = new CancellationToken();
             await m_gatewayWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure,

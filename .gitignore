@@ -184,3 +184,6 @@ FakesAssemblies/
 
 # Private configuration files
 PrivateSettings.config
+
+# Kinoma Studio Metadata
+.metadata
