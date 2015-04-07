@@ -39,16 +39,17 @@ var logContainer = Container.template(function($) { return {
 var mainContainer = new Container ({ left: 0, right: 0, top: 0, bottom: 0, skin: blueSkin, active: true });
 
 var logger = new logContainer();
+var log = function(text, color) {
+	logger.delegate('log', text, color);
+}
 
 application.add(mainContainer);
 mainContainer.add(logger);
 
+log(application.uuid);
+
 var serverPort = 9300;
 var serverName = "CygnusGateway" + serverPort;
-
-var log = function(text, color) {
-	logger.delegate('log', text, color);
-}
 
 var server = new WebSocketServer(serverPort);
 
@@ -85,3 +86,19 @@ server.onconnect = function(conn, options) {
 };
 
 log("server is launching on port " + serverPort);
+
+// Register this device with the web service
+var uri = "https://localhost:44300/api/gateways/";
+var body = {
+	"Id": application.uuid,
+	"Name": serverName};
+	
+var message = new Message(uri);
+message.method = "POST";
+message.requestText = JSON.stringify(body);
+message.setRequestHeader("Content-Length", message.requestText.length);
+message.setRequestHeader("Content-Type", "Application/Json");
+application.invoke(message);
+
+log("api call made");
+

@@ -46,7 +46,7 @@ namespace Cygnus.Controllers.Api
                 return BadRequest(ModelState);
             }
 
-            if (id != gateway.Id)
+            if (gateway == null || id != gateway.Id)
             {
                 return BadRequest();
             }
