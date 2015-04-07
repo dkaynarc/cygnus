@@ -34,6 +34,12 @@ namespace Cygnus.Controllers.Api
                                   GatewayName = s.Gateway.Name
                               };
             });
+
+            // Hack for testing
+            var wsClient = new GatewayWebSocketClient();
+            wsClient.Connect(@"ws://localhost:9300");
+            // end hack
+
             return sensors;
         }
 
