@@ -25,15 +25,13 @@ namespace Cygnus.GatewayInterface
         {
         }
 
-        public void BindToResource(IResource r, Guid g)
+        public void Bind(IResource r, Guid g)
         {
             if (r == null) throw new ArgumentNullException("Resource was null");
 
             m_boundResource = r;
             m_resourceGuid = g;
         }
-
-        
 
         protected override void OnMessage(WebSocketSharp.MessageEventArgs e)
         {

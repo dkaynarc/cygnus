@@ -7,24 +7,27 @@ using Cygnus.GatewayInterface;
 
 namespace Cygnus.GatewayTestHarness
 {
-    public class MockTemperatureSensor : IResource
+    public class MockTemperatureSensor : ResourceBase
     {
-        public string GetResourceData()
+        public MockTemperatureSensor(string name = "") : base(name)
+        {
+        }
+        public override string GetResourceData()
         {
             var r = new Random();
             return (r.NextDouble() * (100.0 - 0.0) + 0.0).ToString();
         }
 
-        public string GetResourceDataUnits()
+        public override string GetResourceDataUnits()
         {
             return "Celcius";
         }
 
-        public void SetResourceData(string d)
+        public override void SetResourceData(string d)
         {
         }
 
-        public string GetResourceDataType()
+        public override string GetResourceDataType()
         {
             return typeof(double).ToString();
         }
