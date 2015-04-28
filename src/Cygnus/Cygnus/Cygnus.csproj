@@ -204,8 +204,6 @@
     <Compile Include="Controllers\Api\SensorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="GatewayInterface\GatewayWebSocketClient.cs" />
-    <Compile Include="GatewayInterface\ISensorData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -305,6 +303,12 @@
     <EmbeddedResource Include="Migrations\201503170413579_Initial.resx">
       <DependentUpon>201503170413579_Initial.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GatewayInterface\GatewayInterface.csproj">
+      <Project>{9fa16076-1e00-4caa-a462-b018d6a11c7c}</Project>
+      <Name>GatewayInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

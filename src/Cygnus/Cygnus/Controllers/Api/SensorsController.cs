@@ -11,7 +11,6 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Cygnus.Models;
 using Cygnus.Models.Api;
-using Cygnus.GatewayInterface;
 
 namespace Cygnus.Controllers.Api
 {
@@ -35,10 +34,8 @@ namespace Cygnus.Controllers.Api
                               };
             });
 
-            // Hack for testing
-            var wsClient = new GatewayWebSocketClient();
-            wsClient.Connect(@"ws://localhost:9300");
-            // end hack
+            //TEST
+            GatewayInterface.GatewaySocketClient.Test();
 
             return sensors;
         }

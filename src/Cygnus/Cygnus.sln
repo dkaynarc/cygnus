@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configura
 		PublishScripts\Configurations\Cygnus-WAWS-dev.json = PublishScripts\Configurations\Cygnus-WAWS-dev.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayTestHarness", "GatewayTestHarness\GatewayTestHarness.csproj", "{F12CBD0D-6EC1-426F-A11C-951F658F82D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayInterface", "GatewayInterface\GatewayInterface.csproj", "{9FA16076-1E00-4CAA-A462-B018D6A11C7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{4909864E-5E79-4797-B0A6-66BD61A1AC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4909864E-5E79-4797-B0A6-66BD61A1AC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4909864E-5E79-4797-B0A6-66BD61A1AC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12CBD0D-6EC1-426F-A11C-951F658F82D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12CBD0D-6EC1-426F-A11C-951F658F82D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12CBD0D-6EC1-426F-A11C-951F658F82D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12CBD0D-6EC1-426F-A11C-951F658F82D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA16076-1E00-4CAA-A462-B018D6A11C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA16076-1E00-4CAA-A462-B018D6A11C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA16076-1E00-4CAA-A462-B018D6A11C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA16076-1E00-4CAA-A462-B018D6A11C7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
