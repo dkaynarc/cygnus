@@ -20,6 +20,7 @@ namespace Cygnus.GatewayTestHarness
         private WebSocketServer m_gatewayServer;
         private Guid m_thisGatewayGuid;
         const string GuidFilePath = "guid.txt";
+        const string ServerName = "CygnusGateway1";
 
         public MainForm()
         {
@@ -30,6 +31,7 @@ namespace Cygnus.GatewayTestHarness
             m_gatewayServer = new WebSocketServer("ws://localhost:9300");
             BindResourceServices();
             OpenSocketServer();
+            RegisterWithApi();
         }
      
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -49,6 +51,16 @@ namespace Cygnus.GatewayTestHarness
                 File.WriteAllText(GuidFilePath, g.ToString());
             }
             m_thisGatewayGuid = g;
+        }
+
+        private void RegisterWithApi()
+        {
+            var apiProxy = new CygnusApiProxy();
+            apiProxy.PostGateway(new Gateway()
+            {
+                Id = m_thisGatewayGuid,
+                Name = ServerName
+            });
         }
 
         private void OpenSocketServer()
