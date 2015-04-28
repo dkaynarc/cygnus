@@ -7,7 +7,7 @@
     <ProjectGuid>{9FA16076-1E00-4CAA-A462-B018D6A11C7C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GatewayInterface</RootNamespace>
+    <RootNamespace>Cygnus.GatewayInterface</RootNamespace>
     <AssemblyName>GatewayInterface</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,9 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GatewayHttpClient.cs" />
     <Compile Include="GatewaySocketClient.cs" />
+    <Compile Include="IResource.cs" />
     <Compile Include="ResourceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

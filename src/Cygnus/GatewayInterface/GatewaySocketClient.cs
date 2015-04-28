@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WebSocketSharp;
 
 
-namespace GatewayInterface
+namespace Cygnus.GatewayInterface
 {
     public class GatewaySocketClient
     {

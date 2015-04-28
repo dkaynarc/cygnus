@@ -11,8 +11,9 @@ using System.Windows.Forms;
 using System.IO;
 using WebSocketSharp;
 using WebSocketSharp.Server;
+using Cygnus.GatewayInterface;
 
-namespace GatewayTestHarness
+namespace Cygnus.GatewayTestHarness
 {
     public partial class MainForm : Form
     {

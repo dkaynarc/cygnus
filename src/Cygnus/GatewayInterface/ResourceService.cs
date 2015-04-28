@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 
-namespace GatewayTestHarness
+namespace Cygnus.GatewayInterface
 {
     public class ResourceService : WebSocketBehavior
     {
@@ -39,15 +39,15 @@ namespace GatewayTestHarness
         {
             if (IsBound)
             {
-                var request = JsonConvert.DeserializeObject<GatewayInterface.ResourceMessage>(e.Data);
+                var request = JsonConvert.DeserializeObject<ResourceMessage>(e.Data);
                 var response = PerformRequest(request);
                 Send(JsonConvert.SerializeObject(response));
             }
         }
 
-        private GatewayInterface.ResourceMessage CreateResponse()
+        private Cygnus.GatewayInterface.ResourceMessage CreateResponse()
         {
-            var response = new GatewayInterface.ResourceMessage()
+            var response = new Cygnus.GatewayInterface.ResourceMessage()
             {
                 Command = "response",
                 // Resources that are write-only (e.g. most actuators) will return nothing here
@@ -59,7 +59,7 @@ namespace GatewayTestHarness
             return response;
         }
 
-        private GatewayInterface.ResourceMessage PerformRequest(GatewayInterface.ResourceMessage request)
+        private Cygnus.GatewayInterface.ResourceMessage PerformRequest(ResourceMessage request)
         {
             if (request.Command.Contains("set"))
             {

@@ -35,7 +35,7 @@ namespace Cygnus.Controllers.Api
             });
 
             //TEST
-            GatewayInterface.GatewaySocketClient.Test();
+            Cygnus.GatewayInterface.GatewaySocketClient.Test();
 
             return sensors;
         }

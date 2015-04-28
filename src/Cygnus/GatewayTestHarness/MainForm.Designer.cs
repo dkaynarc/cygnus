@@ -1,4 +1,4 @@
-﻿namespace GatewayTestHarness
+﻿namespace Cygnus.GatewayTestHarness
 {
     partial class MainForm
     {
