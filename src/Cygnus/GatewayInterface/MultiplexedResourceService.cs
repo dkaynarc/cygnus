@@ -14,13 +14,6 @@ namespace Cygnus.GatewayInterface
         private HashSet<IResource> m_boundResources = null;
         private Guid m_serverGuid = Guid.NewGuid();
 
-        public bool IsBound
-        {
-            get
-            {
-                return (m_boundResources != null);
-            }
-        }
         public MultiplexedResourceService()
         {
             m_boundResources = new HashSet<IResource>();
@@ -44,12 +37,9 @@ namespace Cygnus.GatewayInterface
 
         protected override void OnMessage(WebSocketSharp.MessageEventArgs e)
         {
-            if (IsBound)
-            {
-                var request = JsonConvert.DeserializeObject<ResourceMessage>(e.Data);
-                var response = PerformRequest(request);
-                Send(JsonConvert.SerializeObject(response));
-            }
+            var request = JsonConvert.DeserializeObject<ResourceMessage>(e.Data);
+            var response = PerformRequest(request);
+            Send(JsonConvert.SerializeObject(response));
         }
 
         private ResourceMessage CreateResponse(IResource r)

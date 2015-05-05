@@ -29,7 +29,8 @@ namespace Cygnus.GatewayTestHarness
         public void Initialize()
         {
             InitializeGuid();
-            BindResourceServices();
+            CreateResources();
+            CreateResourceService();
             OpenSocketServer();
             RegisterWithApi();
         }
@@ -69,13 +70,10 @@ namespace Cygnus.GatewayTestHarness
             m_gatewayServer.Start();
         }
 
-        private void BindResourceServices()
+        private void CreateResources()
         {
-            Debug.Assert(m_gatewayServer != null);
             var resource = new MockTemperatureSensor("Temperature1");
             ResourceManager.Instance.Add(resource);
-            
-            m_gatewayServer.Start();
         }
 
         /// <summary>

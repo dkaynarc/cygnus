@@ -49,7 +49,7 @@ namespace Cygnus.GatewayInterface
             {
                 Command = "get",
                 SenderGuid = Guid.NewGuid().ToString(),
-                TargetGuid = Guid.NewGuid().ToString()
+                TargetGuid = (new Guid("e16c519e-d5f1-494d-b1ba-ed546a6bf199")).ToString()
             };
             gwsc.SendRequest(request);
         }
