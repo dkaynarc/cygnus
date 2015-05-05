@@ -10,6 +10,7 @@ namespace Cygnus.GatewayInterface
     {
         string Name { get; set;  }
         Guid Guid { get; set; }
+        bool IsInitialized { get; }
         string GetResourceData();
         string GetResourceDataUnits();
         void SetResourceData(string d);

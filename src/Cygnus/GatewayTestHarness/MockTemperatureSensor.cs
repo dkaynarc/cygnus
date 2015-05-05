@@ -11,6 +11,7 @@ namespace Cygnus.GatewayTestHarness
     {
         public MockTemperatureSensor(string name = "") : base(name)
         {
+            m_isInitialized = true;
         }
         public override string GetResourceData()
         {

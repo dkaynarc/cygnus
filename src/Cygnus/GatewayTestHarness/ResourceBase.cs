@@ -11,6 +11,8 @@ namespace Cygnus.GatewayTestHarness
     {
         public Guid Guid { get; set; }
         public string Name { get; set; }
+        protected bool m_isInitialized = false;
+        public bool IsInitialized { get { return m_isInitialized; } }
 
         public ResourceBase(string name = "")
         {

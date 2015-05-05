@@ -10,6 +10,7 @@ namespace Cygnus.GatewayInterface
     {
         // get / set / response
         public string Command { get; set; }
+        public string TargetGuid { get; set; }
         public string SenderGuid { get; set; }
         public string Data { get; set; }
         public string DataType { get; set; }

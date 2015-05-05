@@ -54,7 +54,7 @@
     <Compile Include="IResource.cs" />
     <Compile Include="ResourceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourceService.cs" />
+    <Compile Include="MultiplexedResourceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
