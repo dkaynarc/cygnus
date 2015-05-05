@@ -44,11 +44,12 @@ namespace Cygnus.GatewayInterface
         public static void Test()
         {
             var gwsc = new GatewaySocketClient();
-            gwsc.Connect("ws://localhost:9300/temperature1");
+            gwsc.Connect("ws://localhost:9300/resources");
             var request = new ResourceMessage()
             {
                 Command = "get",
-                SenderGuid = Guid.NewGuid().ToString()
+                SenderGuid = Guid.NewGuid().ToString(),
+                TargetGuid = Guid.NewGuid().ToString()
             };
             gwsc.SendRequest(request);
         }

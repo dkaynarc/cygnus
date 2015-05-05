@@ -20,7 +20,6 @@ namespace Cygnus.GatewayTestHarness
         private Guid m_thisGatewayGuid;
         const string GuidFilePath = "guid.txt";
         const string ServerName = "CygnusGateway1";
-        private MultiplexedResourceService m_resourceService = null;
 
         public GatewayHost()
         {
@@ -74,20 +73,25 @@ namespace Cygnus.GatewayTestHarness
         {
             Debug.Assert(m_gatewayServer != null);
             var resource = new MockTemperatureSensor("Temperature1");
+            ResourceManager.Instance.Add(resource);
             
+            m_gatewayServer.Start();
+        }
+
+        /// <summary>
+        /// Creates a resource service endpoint for the resources held by ResourceManager.
+        /// Note that the initializer doesn't execute until a request is made to the socket.
+        /// </summary>
+        private void CreateResourceService()
+        {
             m_gatewayServer.AddWebSocketService<MultiplexedResourceService>("/resources",
                 () =>
                 {
                     var rs = new MultiplexedResourceService();
-                    m_resourceService = rs;
+                    rs.Initialize(m_thisGatewayGuid);
+                    ResourceManager.Instance.Resources.ForEach(x => rs.Bind(x));
                     return rs;
                 });
-        }
-
-        private void BindService(string path, IResource r)
-        {
-            ResourceManager.Instance.Add(r);
-            m_resourceService.Bind(r);
         }
 
         private void CloseSocketServer()
