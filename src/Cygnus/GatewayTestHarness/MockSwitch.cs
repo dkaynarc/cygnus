@@ -3,30 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Cygnus.GatewayInterface;
 
 namespace Cygnus.GatewayTestHarness
 {
-    public class MockTemperatureSensor : ResourceBase
+    public class MockSwitch : ResourceBase
     {
-        private double m_temperature = 0.0;
-        public MockTemperatureSensor(string name = "") : base(name)
+        public bool m_isSwitchOn = false;
+        public MockSwitch(string name = "") : base(name)
         {
             m_isInitialized = true;
         }
         public override string GetResourceData()
         {
-            return m_temperature.ToString();
+            return m_isSwitchOn.ToString();
         }
 
         public override string GetResourceDataUnits()
         {
-            return "Celcius";
+            return "boolean";
         }
 
         public override void SetResourceData(string d)
         {
-            if (Double.TryParse(d, out m_temperature))
+            if (Boolean.TryParse(d, out m_isSwitchOn))
             {
                 RaiseOnDataChangedEvent(d);
             }
@@ -34,19 +33,17 @@ namespace Cygnus.GatewayTestHarness
 
         public override string GetResourceDataType()
         {
-            return typeof(double).ToString();
+            return typeof(bool).ToString();
         }
 
         public override string GetMax()
         {
-            return (100.0).ToString();
+            return "true";
         }
 
         public override string GetMin()
         {
-            return (0.0).ToString();
+            return "false";
         }
     }
-
-
 }

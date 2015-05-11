@@ -15,5 +15,18 @@ namespace Cygnus.GatewayInterface
         string GetResourceDataUnits();
         void SetResourceData(string d);
         string GetResourceDataType();
+        string GetMax();
+        string GetMin();
+        event DataChangedHandler OnDataChanged;
+        
+    }
+    public delegate void DataChangedHandler(object sender, DataChangedEventArgs e);
+    public class DataChangedEventArgs
+    {
+        public string Data { get; set; }
+        public DataChangedEventArgs(string data = "")
+        {
+            this.Data = data;
+        }
     }
 }

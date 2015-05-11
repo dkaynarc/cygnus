@@ -44,7 +44,7 @@ namespace Cygnus.GatewayTestHarness
                 m_nameGuidMapping.Add(resource.Name, resource.Guid);
             }
             Resources.Add(resource);
-            ExportResourceMapAsync(m_nameGuidMapping);
+            ExportResourceMap(m_nameGuidMapping);
         }
 
         public void Remove(IResource resource)
@@ -53,7 +53,7 @@ namespace Cygnus.GatewayTestHarness
             {
                 m_nameGuidMapping.Remove(resource.Name);
                 Resources.Remove(resource);
-                ExportResourceMapAsync(m_nameGuidMapping);
+                ExportResourceMap(m_nameGuidMapping);
             }
         }
 
@@ -88,11 +88,6 @@ namespace Cygnus.GatewayTestHarness
                                 new XmlRootAttribute() { ElementName = "ResourceItems" });
                 xml.Serialize(sw, map.Select(kv => new ResourceItem() { Key = kv.Key, Value = kv.Value }).ToArray() );
             }
-        }
-
-        private static void ExportResourceMapAsync(Dictionary<string, Guid> map)
-        {
-            Task.Run(() => ExportResourceMap(map));
         }
     }
     public struct ResourceItem

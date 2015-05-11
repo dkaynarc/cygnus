@@ -9,6 +9,7 @@ namespace Cygnus.GatewayTestHarness
 {
     public abstract class ResourceBase : IResource
     {
+        public event DataChangedHandler OnDataChanged;
         public Guid Guid { get; set; }
         public string Name { get; set; }
         protected bool m_isInitialized = false;
@@ -24,5 +25,15 @@ namespace Cygnus.GatewayTestHarness
         public abstract string GetResourceDataUnits();
         public abstract void SetResourceData(string d);
         public abstract string GetResourceDataType();
+        public abstract string GetMax();
+        public abstract string GetMin();
+
+        public void RaiseOnDataChangedEvent(string data)
+        {
+            if (OnDataChanged != null)
+            {
+                OnDataChanged(this, new DataChangedEventArgs(data));
+            }
+        }
     }
 }

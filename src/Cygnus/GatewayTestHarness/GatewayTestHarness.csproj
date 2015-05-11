@@ -55,17 +55,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GatewayHost.cs" />
+    <Compile Include="IResourceControl.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MockSwitch.cs" />
     <Compile Include="MockTemperatureSensor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceBase.cs" />
     <Compile Include="ResourceManager.cs" />
+    <Compile Include="ResourceSliderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResourceSliderControl.Designer.cs">
+      <DependentUpon>ResourceSliderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceSwitchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResourceSwitchControl.Designer.cs">
+      <DependentUpon>ResourceSwitchControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +93,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResourceSliderControl.resx">
+      <DependentUpon>ResourceSliderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceSwitchControl.resx">
+      <DependentUpon>ResourceSwitchControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

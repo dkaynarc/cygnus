@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.m_resControlPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // m_resControlPanel
+            // 
+            this.m_resControlPanel.AutoSize = true;
+            this.m_resControlPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.m_resControlPanel.Location = new System.Drawing.Point(13, 13);
+            this.m_resControlPanel.Name = "m_resControlPanel";
+            this.m_resControlPanel.Size = new System.Drawing.Size(0, 0);
+            this.m_resControlPanel.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(578, 271);
+            this.Controls.Add(this.m_resControlPanel);
+            this.Name = "MainForm";
+            this.Text = "Gateway Test Harness";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel m_resControlPanel;
+
+
     }
 }
 

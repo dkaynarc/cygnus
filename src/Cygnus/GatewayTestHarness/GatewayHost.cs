@@ -72,8 +72,9 @@ namespace Cygnus.GatewayTestHarness
 
         private void CreateResources()
         {
-            var resource = new MockTemperatureSensor("Temperature1");
-            ResourceManager.Instance.Add(resource);
+            ResourceManager.Instance.Add(new MockTemperatureSensor("Temperature1"));
+            ResourceManager.Instance.Add(new MockTemperatureSensor("Temperature2"));
+            ResourceManager.Instance.Add(new MockSwitch("LightSwitch1"));
         }
 
         /// <summary>
