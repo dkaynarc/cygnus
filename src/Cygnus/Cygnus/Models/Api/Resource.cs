@@ -5,13 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cygnus.Models.Api
 {
-    public class Sensor
+    public class Resource
     {
         [Key]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public string Resource { get; set; }
+        public string Uri { get; set; }
         public string Description { get; set; }
 
         // Foreign Key
@@ -20,11 +20,11 @@ namespace Cygnus.Models.Api
         public virtual Gateway Gateway { get; set; }
     }
 
-    public class SensorDTO
+    public class ResourceDTO
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Resource { get; set; }
+        public string Uri { get; set; }
         public string Description { get; set; }
         public string GatewayName { get; set; }
     }

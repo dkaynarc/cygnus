@@ -37,6 +37,24 @@ namespace Cygnus.GatewayInterface
             request.Resource = "Gateways";
             return Execute<Gateway>(request);
         }
+
+        public Resource PostResource(Resource resource)
+        {
+            var request = new RestRequest(Method.POST);
+            request.JsonSerializer = new JsonSerializer();
+            request.AddJsonBody(resource);
+            request.Resource = "Resources";
+            return Execute<Resource>(request);
+        }
+    }
+
+    public class Resource
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Uri { get; set; }
+        public string Description { get; set; }
+        public string GatewayName { get; set; }
     }
 
     public class Gateway

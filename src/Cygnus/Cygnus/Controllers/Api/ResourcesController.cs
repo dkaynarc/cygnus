@@ -14,21 +14,21 @@ using Cygnus.Models.Api;
 
 namespace Cygnus.Controllers.Api
 {
-    public class SensorsController : ApiController
+    public class ResourcesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Sensors
-        public async Task<IQueryable<SensorDTO>> GetSensors()
+        public async Task<IQueryable<ResourceDTO>> GetSensors()
         {
             var sensors = await Task.Run(() =>
             {
-                return from s in db.Sensors
-                              select new SensorDTO()
+                return from s in db.Resources
+                              select new ResourceDTO()
                               {
                                   Id = s.Id,
                                   Name = s.Name,
-                                  Resource = s.Resource,
+                                  Uri = s.Uri,
                                   Description = s.Description,
                                   GatewayName = s.Gateway.Name
                               };
@@ -41,15 +41,15 @@ namespace Cygnus.Controllers.Api
         }
 
         // GET: api/Sensors/5
-        [ResponseType(typeof(Sensor))]
+        [ResponseType(typeof(Resource))]
         public async Task<IHttpActionResult> GetSensor(Guid id)
         {
-            var sensor = await db.Sensors.Include(s => s.Gateway).Select(s =>
-                new SensorDTO()
+            var sensor = await db.Resources.Include(s => s.Gateway).Select(s =>
+                new ResourceDTO()
                 {
                     Id = s.Id,
                     Name = s.Name,
-                    Resource = s.Resource,
+                    Uri = s.Uri,
                     Description = s.Description,
                     GatewayName = s.Gateway.Name
                 }).SingleOrDefaultAsync(s => s.Id == id);
@@ -63,7 +63,7 @@ namespace Cygnus.Controllers.Api
 
         // PUT: api/Sensors/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutSensor(Guid id, Sensor sensor)
+        public async Task<IHttpActionResult> PutSensor(Guid id, Resource sensor)
         {
             if (!ModelState.IsValid)
             {
@@ -97,24 +97,24 @@ namespace Cygnus.Controllers.Api
         }
 
         // POST: api/Sensors
-        [ResponseType(typeof(Sensor))]
-        public async Task<IHttpActionResult> PostSensor(Sensor sensor)
+        [ResponseType(typeof(Resource))]
+        public async Task<IHttpActionResult> PostSensor(Resource sensor)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Sensors.Add(sensor);
+            db.Resources.Add(sensor);
             
             await db.SaveChangesAsync();
             db.Entry(sensor).Reference(s => s.Gateway).Load();
 
-            var dto = new SensorDTO()
+            var dto = new ResourceDTO()
             {
                 Id = sensor.Id,
                 Name = sensor.Name,
-                Resource = sensor.Resource,
+                Uri = sensor.Uri,
                 Description = sensor.Description,
                 GatewayName = sensor.Gateway.Name
             };
@@ -123,16 +123,16 @@ namespace Cygnus.Controllers.Api
         }
 
         // DELETE: api/Sensors/5
-        [ResponseType(typeof(Sensor))]
+        [ResponseType(typeof(Resource))]
         public async Task<IHttpActionResult> DeleteSensor(Guid id)
         {
-            Sensor sensor = await db.Sensors.FindAsync(id);
+            Resource sensor = await db.Resources.FindAsync(id);
             if (sensor == null)
             {
                 return NotFound();
             }
 
-            db.Sensors.Remove(sensor);
+            db.Resources.Remove(sensor);
             await db.SaveChangesAsync();
 
             return Ok(sensor);
@@ -149,7 +149,7 @@ namespace Cygnus.Controllers.Api
 
         private bool SensorExists(Guid id)
         {
-            return db.Sensors.Count(e => e.Id == id) > 0;
+            return db.Resources.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -1,6 +1,5 @@
 namespace Cygnus.Migrations
 {
-    using Cygnus.Models.Api;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -15,9 +14,18 @@ namespace Cygnus.Migrations
 
         protected override void Seed(Cygnus.Models.ApplicationDbContext context)
         {
-            context.Gateways.AddOrUpdate(x => x.Id,
-                new Gateway() { Id = Guid.NewGuid(), Name = "DefaultTestGateway1" },
-                new Gateway() { Id = Guid.NewGuid(), Name = "DefaultTestGateway2" });
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }

@@ -32,6 +32,6 @@ namespace Cygnus.Models
 
         public System.Data.Entity.DbSet<Cygnus.Models.Api.Gateway> Gateways { get; set; }
 
-        public System.Data.Entity.DbSet<Cygnus.Models.Api.Sensor> Sensors { get; set; }
+        public System.Data.Entity.DbSet<Cygnus.Models.Api.Resource> Resources { get; set; }
     }
 }

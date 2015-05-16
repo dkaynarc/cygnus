@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="GatewayRestClient.cs" />
     <Compile Include="GatewaySocketClient.cs" />
+    <Compile Include="INotifiableRequester.cs" />
     <Compile Include="IResource.cs" />
     <Compile Include="ResourceMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

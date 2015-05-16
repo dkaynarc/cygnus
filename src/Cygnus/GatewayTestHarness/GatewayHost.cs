@@ -19,11 +19,12 @@ namespace Cygnus.GatewayTestHarness
         private WebSocketServer m_gatewayServer;
         private Guid m_thisGatewayGuid;
         const string GuidFilePath = "guid.txt";
-        const string ServerName = "CygnusGateway1";
+        const string GatewayName = "CygnusGateway1";
+        const string BaseUri = "ws://localhost:9300";
 
         public GatewayHost()
         {
-            m_gatewayServer = new WebSocketServer("ws://localhost:9300");
+            m_gatewayServer = new WebSocketServer(BaseUri);
         }
 
         public void Initialize()
@@ -60,8 +61,20 @@ namespace Cygnus.GatewayTestHarness
             apiProxy.PostGateway(new Gateway()
             {
                 Id = m_thisGatewayGuid,
-                Name = ServerName
+                Name = GatewayName
             });
+
+            foreach (var resource in ResourceManager.Instance.Resources)
+            {
+                apiProxy.PostResource(new Resource()
+                {
+                    Id = resource.Guid,
+                    Name = resource.Name,
+                    Uri = BaseUri + "/resources",
+                    Description = "",
+                    GatewayName = GatewayName
+                });
+            }
         }
 
         private void OpenSocketServer()
