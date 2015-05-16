@@ -57,6 +57,11 @@ namespace Cygnus.GatewayTestHarness
             }
         }
 
+        public bool Contains(Guid id)
+        {
+            return m_nameGuidMapping.ContainsValue(id);
+        }
+
         private static Dictionary<string, Guid> ImportResourceMap()
         {
             var resourceDb = new Dictionary<string, Guid>();

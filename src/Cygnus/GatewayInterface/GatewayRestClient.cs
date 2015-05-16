@@ -46,6 +46,20 @@ namespace Cygnus.GatewayInterface
             request.Resource = "Resources";
             return Execute<Resource>(request);
         }
+
+        public List<Resource> GetResources()
+        {
+            var request = new RestRequest(Method.GET);
+            request.Resource = "Resources";
+            return Execute<List<Resource>>(request);
+        }
+
+        public Resource DeleteResource(Resource resource)
+        {
+            var request = new RestRequest(Method.DELETE);
+            request.Resource = "Resources";
+            return Execute<Resource>(request);
+        }
     }
 
     public class Resource

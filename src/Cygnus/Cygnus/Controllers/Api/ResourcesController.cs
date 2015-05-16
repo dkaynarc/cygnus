@@ -107,7 +107,7 @@ namespace Cygnus.Controllers.Api
 
             if (ResourceExists(resource.Id))
             {
-                db.Entry(resource).State = EntityState.Modified;
+                db.Entry(rawResource).State = EntityState.Modified;
             }
             else
             {

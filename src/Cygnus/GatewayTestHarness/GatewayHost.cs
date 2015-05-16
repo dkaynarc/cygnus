@@ -18,7 +18,8 @@ namespace Cygnus.GatewayTestHarness
     public class GatewayHost
     {
         private WebSocketServer m_gatewayServer;
-        private Guid m_thisGatewayGuid;
+        private CygnusApiProxy m_apiProxy;
+        private Guid m_gatewayId;
         const string GuidFilePath = "guid.txt";
         string GatewayName = "CygnusGateway1";
         string BaseUri = "ws://localhost:9300";
@@ -28,6 +29,7 @@ namespace Cygnus.GatewayTestHarness
             GatewayName = ConfigurationManager.AppSettings["GatewayName"];
             BaseUri = ConfigurationManager.AppSettings["GatewayBaseUri"];
             m_gatewayServer = new WebSocketServer(BaseUri);
+            m_apiProxy = new CygnusApiProxy();
         }
 
         public void Initialize()
@@ -55,29 +57,44 @@ namespace Cygnus.GatewayTestHarness
             {
                 File.WriteAllText(GuidFilePath, g.ToString());
             }
-            m_thisGatewayGuid = g;
+            m_gatewayId = g;
         }
 
         private void RegisterWithApi()
         {
-            var apiProxy = new CygnusApiProxy();
-            apiProxy.PostGateway(new Gateway()
+            m_apiProxy.PostGateway(new Gateway()
             {
-                Id = m_thisGatewayGuid,
+                Id = m_gatewayId,
                 Name = GatewayName
             });
 
+            // Remove resources we used to own but don't anymore
+            foreach(var resource in GetAlreadyRegisteredResources())
+            {
+                if (!ResourceManager.Instance.Contains(resource.Id))
+                {
+                    m_apiProxy.DeleteResource(resource);
+                }
+            }
+
+            // Register all existing resources
             foreach (var resource in ResourceManager.Instance.Resources)
             {
-                apiProxy.PostResource(new Resource()
+                m_apiProxy.PostResource(new Resource()
                 {
                     Id = resource.Guid,
                     Name = resource.Name,
                     Uri = BaseUri + "/resources",
                     Description = "",
-                    GatewayId = m_thisGatewayGuid
+                    GatewayId = m_gatewayId
                 });
             }
+        }
+
+        private List<Resource> GetAlreadyRegisteredResources()
+        {
+            var allResources = m_apiProxy.GetResources();
+            return allResources.Where(r => r.GatewayId == this.m_gatewayId).ToList();
         }
 
         private void OpenSocketServer()
@@ -88,9 +105,9 @@ namespace Cygnus.GatewayTestHarness
 
         private void CreateResources()
         {
-            ResourceManager.Instance.Add(new MockTemperatureSensor("Temperature1"));
-            ResourceManager.Instance.Add(new MockTemperatureSensor("Temperature2"));
-            ResourceManager.Instance.Add(new MockSwitch("LightSwitch1"));
+            ResourceManager.Instance.Add(new MockTemperatureSensor("LivingRoomTemp"));
+            ResourceManager.Instance.Add(new MockTemperatureSensor("StudyTemp"));
+            ResourceManager.Instance.Add(new MockSwitch("LivingRoomMainLights"));
         }
 
         /// <summary>
@@ -103,7 +120,7 @@ namespace Cygnus.GatewayTestHarness
                 () =>
                 {
                     var rs = new MultiplexedResourceService();
-                    rs.Initialize(m_thisGatewayGuid);
+                    rs.Initialize(m_gatewayId);
                     ResourceManager.Instance.Resources.ForEach(x => rs.Bind(x));
                     return rs;
                 });
