@@ -14,10 +14,16 @@ namespace Cygnus.GatewayInterface
         private WebSocket m_gatewaySocket = null;
         private Dictionary<Guid, Request> m_requestList = new Dictionary<Guid, Request>();
         private Guid m_clientId = Guid.NewGuid();
+        private string m_uri;
 
-        public GatewaySocketClient()
+        public GatewaySocketClient(string uri)
         {
-
+            this.m_uri = uri;
+        }
+        
+        ~GatewaySocketClient()
+        {
+            Disconnect();
         }
 
         public void SendSetResourceDataRequest(Guid resourceId, object data, INotifiableRequester sender)
@@ -50,9 +56,9 @@ namespace Cygnus.GatewayInterface
             SendRequest(request);
         }
 
-        private void Connect(string uri)
+        private void Connect()
         {
-            m_gatewaySocket = new WebSocket(uri);
+            m_gatewaySocket = new WebSocket(m_uri);
             m_gatewaySocket.OnMessage += this.OnMessage;
             m_gatewaySocket.Connect();
         }
@@ -75,14 +81,17 @@ namespace Cygnus.GatewayInterface
 
         private void SendRequest(ResourceMessage request)
         {
-            m_gatewaySocket.Send(JsonConvert.SerializeObject(request));
+            if (m_gatewaySocket.ReadyState == WebSocketState.Closed)
+            {
+                m_gatewaySocket.Send(JsonConvert.SerializeObject(request));
+            }
         }
 
 #region Test Harness
         public static void Test()
         {
-            var gwsc = new GatewaySocketClient();
-            gwsc.Connect("ws://localhost:9300/resources");
+            var gwsc = new GatewaySocketClient("ws://localhost:9300/resources");
+            gwsc.Connect();
             var request = new ResourceMessage()
             {
                 Command = "get",

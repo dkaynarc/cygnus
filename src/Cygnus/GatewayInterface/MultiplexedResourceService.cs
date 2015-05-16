@@ -81,7 +81,7 @@ namespace Cygnus.GatewayInterface
             }
             else
             { 
-                return CreateDefaultResponse(String.Format("No resource with guid: '{0}' exists.", resource.ToString()));
+                return CreateDefaultResponse(String.Format("No resource with guid: '{0}' exists.", request.TargetGuid.ToString()));
             }
         }
 

@@ -210,7 +210,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\GatewayManager.cs" />
+    <Compile Include="Managers\GatewayResourceProxy.cs" />
     <Compile Include="Migrations\201505160634161_initial.cs" />
     <Compile Include="Migrations\201505160634161_initial.Designer.cs">
       <DependentUpon>201505160634161_initial.cs</DependentUpon>

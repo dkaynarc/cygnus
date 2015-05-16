@@ -81,7 +81,14 @@ namespace Cygnus.Controllers.Api
                 return BadRequest(ModelState);
             }
 
-            db.Gateways.Add(gateway);
+            if (GatewayExists(gateway.Id))
+            {
+                db.Entry(gateway).State = EntityState.Modified;
+            }
+            else
+            {
+                db.Gateways.Add(gateway);
+            }
 
             try
             {

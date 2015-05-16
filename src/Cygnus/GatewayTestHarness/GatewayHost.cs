@@ -11,6 +11,7 @@ using System.IO;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 using Cygnus.GatewayInterface;
+using System.Configuration;
 
 namespace Cygnus.GatewayTestHarness
 {
@@ -19,11 +20,13 @@ namespace Cygnus.GatewayTestHarness
         private WebSocketServer m_gatewayServer;
         private Guid m_thisGatewayGuid;
         const string GuidFilePath = "guid.txt";
-        const string GatewayName = "CygnusGateway1";
-        const string BaseUri = "ws://localhost:9300";
+        string GatewayName = "CygnusGateway1";
+        string BaseUri = "ws://localhost:9300";
 
         public GatewayHost()
         {
+            GatewayName = ConfigurationManager.AppSettings["GatewayName"];
+            BaseUri = ConfigurationManager.AppSettings["GatewayBaseUri"];
             m_gatewayServer = new WebSocketServer(BaseUri);
         }
 
@@ -72,7 +75,7 @@ namespace Cygnus.GatewayTestHarness
                     Name = resource.Name,
                     Uri = BaseUri + "/resources",
                     Description = "",
-                    GatewayName = GatewayName
+                    GatewayId = m_thisGatewayGuid
                 });
             }
         }

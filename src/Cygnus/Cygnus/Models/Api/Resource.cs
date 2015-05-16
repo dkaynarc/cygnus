@@ -26,6 +26,6 @@ namespace Cygnus.Models.Api
         public string Name { get; set; }
         public string Uri { get; set; }
         public string Description { get; set; }
-        public string GatewayName { get; set; }
+        public Guid GatewayId { get; set; }
     }
 }
