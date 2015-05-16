@@ -30,7 +30,6 @@ namespace Cygnus.Controllers.Api
                                   Id = s.Id,
                                   Name = s.Name,
                                   Uri = s.Uri,
-                                  Description = s.Description,
                                   GatewayId = s.GatewayId
                               };
             });
@@ -48,7 +47,6 @@ namespace Cygnus.Controllers.Api
                     Id = s.Id,
                     Name = s.Name,
                     Uri = s.Uri,
-                    Description = s.Description,
                     GatewayId = s.GatewayId
                 }).SingleOrDefaultAsync(s => s.Id == id);
             if (resource == null)
@@ -61,7 +59,7 @@ namespace Cygnus.Controllers.Api
 
         // PUT: api/Resources/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutResource(Guid id, Resource resource)
+        public async Task<IHttpActionResult> PutResource(Guid id, ResourceDTO resource)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +71,9 @@ namespace Cygnus.Controllers.Api
                 return BadRequest();
             }
 
-            db.Entry(resource).State = EntityState.Modified;
+            var rawResource = ResourceFromResourceDTO(resource);
+
+            db.Entry(rawResource).State = EntityState.Modified;
 
             try
             {
@@ -95,13 +95,15 @@ namespace Cygnus.Controllers.Api
         }
 
         // POST: api/Resources
-        [ResponseType(typeof(Resource))]
-        public async Task<IHttpActionResult> PostResource(Resource resource)
+        [ResponseType(typeof(ResourceDTO))]
+        public async Task<IHttpActionResult> PostResource(ResourceDTO resource)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
+            var rawResource = ResourceFromResourceDTO(resource);
 
             if (ResourceExists(resource.Id))
             {
@@ -109,27 +111,16 @@ namespace Cygnus.Controllers.Api
             }
             else
             {
-                db.Resources.Add(resource);
-                GatewayResourceProxy.Instance.RegisterResource(resource);
+                db.Resources.Add(rawResource);
+                GatewayResourceProxy.Instance.RegisterResource(rawResource);
                 await db.SaveChangesAsync();
             }
-
-            db.Entry(resource).Reference(s => s.Gateway).Load();
-
-            var dto = new ResourceDTO()
-            {
-                Id = resource.Id,
-                Name = resource.Name,
-                Uri = resource.Uri,
-                Description = resource.Description,
-                GatewayId = resource.GatewayId
-            };
-
-            return CreatedAtRoute("DefaultApi", new { id = resource.Id }, dto);
+           
+            return Ok(resource);
         }
 
         // DELETE: api/Resources/5
-        [ResponseType(typeof(Resource))]
+        [ResponseType(typeof(ResourceDTO))]
         public async Task<IHttpActionResult> DeleteResource(Guid id)
         {
             Resource resource = await db.Resources.FindAsync(id);
@@ -142,7 +133,7 @@ namespace Cygnus.Controllers.Api
             await db.SaveChangesAsync();
             GatewayResourceProxy.Instance.UnregisterResource(resource);
 
-            return Ok(resource);
+            return Ok(ResourceDTOFromResource(resource));
         }
 
         protected override void Dispose(bool disposing)
@@ -159,16 +150,28 @@ namespace Cygnus.Controllers.Api
             return db.Resources.Count(e => e.Id == id) > 0;
         }
 
-        private Resource CreateResourceFromDTO(ResourceDTO dto)
+        private Resource ResourceFromResourceDTO(ResourceDTO dto)
         {
             var resource = new Resource()
             {
                 Id = dto.Id,
                 Name = dto.Name,
-                Description = dto.Description,
-                GatewayId = dto.GatewayId
+                GatewayId = dto.GatewayId,
+                Uri = dto.Uri
             };
             return resource;
+        }
+
+        private ResourceDTO ResourceDTOFromResource(Resource resource)
+        {
+            var dto = new ResourceDTO()
+            {
+                Id = resource.Id,
+                GatewayId = resource.GatewayId,
+                Name = resource.Name,
+                Uri = resource.Uri
+            };
+            return dto;
         }
     }
 }
