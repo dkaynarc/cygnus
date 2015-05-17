@@ -57,7 +57,8 @@ namespace Cygnus.GatewayInterface
         public Resource DeleteResource(Resource resource)
         {
             var request = new RestRequest(Method.DELETE);
-            request.Resource = "Resources";
+            request.Resource = "Resources/{ResourceId}";
+            request.AddParameter("ResourceId", resource.Id, ParameterType.UrlSegment);
             return Execute<Resource>(request);
         }
     }

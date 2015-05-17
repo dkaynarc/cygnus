@@ -59,7 +59,7 @@ namespace Cygnus.GatewayTestHarness
 
         public bool Contains(Guid id)
         {
-            return m_nameGuidMapping.ContainsValue(id);
+            return Resources.FindAll(x => x.Guid == id).ToList().Count() > 0;
         }
 
         private static Dictionary<string, Guid> ImportResourceMap()
