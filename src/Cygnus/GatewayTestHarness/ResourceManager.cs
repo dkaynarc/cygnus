@@ -32,7 +32,7 @@ namespace Cygnus.GatewayTestHarness
             m_nameGuidMapping = ImportResourceMap();
         }
 
-        public void Add (IResource resource)
+        public void Add(IResource resource)
         {
             Guid guid;
             if (m_nameGuidMapping.TryGetValue(resource.Name, out guid))
