@@ -21,6 +21,10 @@ namespace Cygnus.Managers
             }
         }
 
+        private UserRequestDispatcher()
+        {
+        }
+
         public void SetResourceDescription(Guid resourceId, string description)
         {
             var resource = m_db.Resources.Where(r => r.Id == resourceId).First();

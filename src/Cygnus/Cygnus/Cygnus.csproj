@@ -215,15 +215,6 @@
     <Reference Include="stanford-corenlp-3.5.1">
       <HintPath>..\packages\Stanford.NLP.CoreNLP.3.5.1\lib\stanford-corenlp-3.5.1.dll</HintPath>
     </Reference>
-    <Reference Include="stanford-ner">
-      <HintPath>..\packages\Stanford.NLP.NER.3.5.1\lib\stanford-ner.dll</HintPath>
-    </Reference>
-    <Reference Include="stanford-parser">
-      <HintPath>..\packages\Stanford.NLP.Parser.3.5.1\lib\stanford-parser.dll</HintPath>
-    </Reference>
-    <Reference Include="stanford-postagger-3.5.1">
-      <HintPath>..\packages\Stanford.NLP.POSTagger.3.5.1\lib\stanford-postagger-3.5.1.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -323,6 +314,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Managers\GatewayResourceProxy.cs" />
+    <Compile Include="Managers\NlpDecisionEngine.cs" />
     <Compile Include="Managers\UserRequestDispatcher.cs" />
     <Compile Include="Migrations\201505160634161_initial.cs" />
     <Compile Include="Migrations\201505160634161_initial.Designer.cs">
