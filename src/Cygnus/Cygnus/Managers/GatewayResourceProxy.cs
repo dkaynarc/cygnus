@@ -82,6 +82,16 @@ namespace Cygnus.Managers
             }
         }
 
+        public void SendSetCommunicationModeRequest(Guid resourceId, CommunicationMode mode)
+        {
+            GatewaySocketClient client = null;
+
+            if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
+            {
+                client.SendSetCommunicationMode(resourceId, mode);
+            }
+        }
+
         private string GetResourceUri(Guid resourceId)
         {
             return m_db.Resources.Where(r => r.Id == resourceId).Select(r => r.Uri).First();

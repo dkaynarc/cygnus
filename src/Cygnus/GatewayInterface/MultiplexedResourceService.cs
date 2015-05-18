@@ -77,12 +77,54 @@ namespace Cygnus.GatewayInterface
                 {
                     resource.SetResourceData(request.Data);
                 }
+                else if (request.Command.Contains("mode"))
+                {
+                    HandleModeChangeRequest(request);
+                    return CreateDefaultResponse("OK");
+                }
                 return CreateResponse(resource);
             }
             else
             { 
                 return CreateDefaultResponse(String.Format("No resource with guid: '{0}' exists.", request.TargetGuid.ToString()));
             }
+        }
+
+        private void HandleModeChangeRequest(ResourceMessage message)
+        {
+            var newMode = message.Data;
+            var resource = m_boundResources.Where(r => r.Guid == Guid.Parse(message.TargetGuid)).First();
+            if (newMode == "push" && resource.CommunicationMode == CommunicationMode.Poll)
+            {
+                resource.OnDataChanged += OnResourceDataChanged;
+                resource.CommunicationMode = CommunicationMode.Push;
+            }
+            else if (newMode == "poll" && resource.CommunicationMode == CommunicationMode.Push)
+            {
+                resource.OnDataChanged -= OnResourceDataChanged;
+                resource.CommunicationMode = CommunicationMode.Poll;
+            }
+        }
+        
+        private void OnResourceDataChanged(object sender, DataChangedEventArgs e)
+        {
+            IResource s = (IResource)sender;
+            if (s != null)
+            {
+                SendPushMessage(s, e.Data);
+            }
+        }
+
+        private void SendPushMessage(IResource resource, string resData)
+        {
+            var message = new ResourceMessage()
+            {
+                Command = "response",
+                Data = resData,
+                DataType = resource.GetResourceDataType(),
+                DataUnits = resource.GetResourceDataUnits(),
+                SenderGuid = resource.Guid.ToString()
+            };
         }
 
         #region Helpers

@@ -18,6 +18,7 @@ namespace Cygnus.GatewayInterface
         string GetMax();
         string GetMin();
         event DataChangedHandler OnDataChanged;
+        CommunicationMode CommunicationMode { get; set; }
         
     }
     public delegate void DataChangedHandler(object sender, DataChangedEventArgs e);
@@ -28,5 +29,10 @@ namespace Cygnus.GatewayInterface
         {
             this.Data = data;
         }
+    }
+    public enum CommunicationMode
+    {
+        Push,
+        Poll
     }
 }

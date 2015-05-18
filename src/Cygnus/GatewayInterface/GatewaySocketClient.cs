@@ -56,6 +56,19 @@ namespace Cygnus.GatewayInterface
             SendRequest(request);
         }
 
+        public void SendSetCommunicationMode(Guid resourceId, CommunicationMode mode)
+        {
+            var request = new ResourceMessage()
+            {
+                Command = "mode",
+                Data = mode.ToString().ToLower(),
+                TargetGuid = resourceId.ToString(),
+                SenderGuid = m_clientId.ToString(),
+                RequestGuid = Guid.NewGuid().ToString()
+            };
+            SendRequest(request);
+        }
+
         private void Connect()
         {
             m_gatewaySocket = new WebSocket(m_uri);
@@ -73,9 +86,11 @@ namespace Cygnus.GatewayInterface
         {
             var response = JsonConvert.DeserializeObject<ResourceMessage>(e.Data);
             Request originalRequest = null;
-            if (m_requestList.TryGetValue(Guid.Parse(response.RequestGuid), out originalRequest))
+            var responseGuid = Guid.Parse(response.RequestGuid);
+            if (m_requestList.TryGetValue(responseGuid, out originalRequest))
             {
                 originalRequest.Sender.Notify(response.Data);
+                m_requestList.Remove(responseGuid);
             }
         }
 

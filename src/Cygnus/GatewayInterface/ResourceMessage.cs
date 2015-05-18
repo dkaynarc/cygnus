@@ -8,7 +8,7 @@ namespace Cygnus.GatewayInterface
 {
     public struct ResourceMessage
     {
-        // get / set / response 
+        // get / set / response / mode
         public string Command { get; set; }
         public string TargetGuid { get; set; }
         public string SenderGuid { get; set; }

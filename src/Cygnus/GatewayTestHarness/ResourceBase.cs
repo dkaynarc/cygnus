@@ -14,11 +14,13 @@ namespace Cygnus.GatewayTestHarness
         public string Name { get; set; }
         protected bool m_isInitialized = false;
         public bool IsInitialized { get { return m_isInitialized; } }
+        public CommunicationMode CommunicationMode { get; set; }
 
         public ResourceBase(string name = "")
         {
             this.Name = name;
             this.Guid = Guid.NewGuid();
+            this.CommunicationMode = CommunicationMode.Poll;
         }
 
         public abstract string GetResourceData();
