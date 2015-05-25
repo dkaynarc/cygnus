@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,6 +38,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
@@ -315,6 +317,7 @@
     </Compile>
     <Compile Include="Managers\GatewayResourceProxy.cs" />
     <Compile Include="Managers\NlpDecisionEngine.cs" />
+    <Compile Include="Managers\NlpEngineThread.cs" />
     <Compile Include="Managers\UserRequestDispatcher.cs" />
     <Compile Include="Migrations\201505160634161_initial.cs" />
     <Compile Include="Migrations\201505160634161_initial.Designer.cs">

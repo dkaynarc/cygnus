@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using Cygnus.Managers;
+using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(Cygnus.Startup))]
@@ -9,6 +10,7 @@ namespace Cygnus
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            NlpDecisionEngine.Instance.Initialize();
         }
     }
 }

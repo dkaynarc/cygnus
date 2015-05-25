@@ -8,6 +8,9 @@ using java.util;
 using java.io;
 using System.IO;
 using System.Diagnostics;
+using edu.stanford.nlp.ling;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Cygnus.Managers
 {
@@ -23,36 +26,36 @@ namespace Cygnus.Managers
                 return m_instance;
             }
         }
-
-        private static string NlpJarRoot = @"C:\NlpModels\";
-
+        private NlpEngineThread m_engineThread = new NlpEngineThread();
+        
         private NlpDecisionEngine()
         {
         }
 
+        public void Initialize()
+        {
+            m_engineThread.Start();
+        }
+
         public void Test()
         {
-            var text = "The quick brown fox jumped over the lazy dog.";
+            MakeQuery("Sample text. The quick brown fox jumps over the lazy dog.");
+        }
 
-            // Annotation pipeline configuration
-            var props = new Properties();
-            props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
-            props.setProperty("sutime.binders", "0");
+        public void MakeQuery(string query)
+        {
+            m_engineThread.PushQuery(query);
+        }
+    }
 
-            var curDir = Environment.CurrentDirectory;
-            Directory.SetCurrentDirectory(NlpJarRoot);
-            var pipeline = new StanfordCoreNLP(props);
-            Directory.SetCurrentDirectory(curDir);
-
-            var annotation = new Annotation(text);
-            pipeline.annotate(annotation);
-
-            using (var stream = new ByteArrayOutputStream())
-            {
-                pipeline.prettyPrint(annotation, new PrintWriter(stream));
-                Debug.WriteLine(stream.toString());
-                stream.close();
-            }
+    public class NlpQuery
+    {
+        public string Text { get; set; }
+        public Guid Id { get; set; }
+        public NlpQuery(string text = "")
+        {
+            this.Text = text;
+            this.Id = Guid.NewGuid();
         }
     }
 }
