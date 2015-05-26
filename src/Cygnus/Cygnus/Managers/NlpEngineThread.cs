@@ -24,8 +24,9 @@ namespace Cygnus.Managers
         private Thread m_worker = null;
         private const int StackSize = 4 * 1024 * 1024;
         private ConcurrentQueue<NlpQuery> m_requestQueue = new ConcurrentQueue<NlpQuery>();
-        private ConcurrentDictionary<Guid, NlpQuery> m_responseBucket = new ConcurrentDictionary<Guid, NlpQuery>();
+        private ConcurrentDictionary<Guid, NlpAnalysis> m_responseBucket = new ConcurrentDictionary<Guid, NlpAnalysis>();
         private volatile bool m_keepThreadAlive = false;
+        private static AutoResetEvent m_waitEvent = new AutoResetEvent(false);
 
         public NlpEngineThread()
         {
@@ -62,20 +63,19 @@ namespace Cygnus.Managers
             m_keepThreadAlive = false;
         }
 
-        public void PushQuery(string queryText)
+        public NlpAnalysis AnalyseText(string queryText)
         {
-            this.m_requestQueue.Enqueue(new NlpQuery() { Text = queryText });
-        }
+            var query = new NlpQuery(queryText);
+            m_requestQueue.Enqueue(query);
+            m_waitEvent.WaitOne();
+            var analysis = new NlpAnalysis();
 
-        // placeholder
-        public object GetResponse(Guid ticket)
-        {
-            object response = null;
-            if (m_responseBucket.ContainsKey(ticket))
+            if (!m_responseBucket.TryRemove(query.Id, out analysis))
             {
-                //
+                throw new Exception("Could not remove analysis from the bucket.");
             }
-            return response;
+
+            return analysis;
         }
 
         private void Run()
@@ -85,7 +85,9 @@ namespace Cygnus.Managers
                 NlpQuery pending = null;
                 if (m_requestQueue.TryDequeue(out pending))
                 {
-                    this.ProcessQuery(pending);
+                    var analysis = AnalyseText(pending);
+                    m_responseBucket.AddOrUpdate(pending.Id, analysis, (key, prev) => analysis);
+                    m_waitEvent.Set();
                 }
                 else
                 {
@@ -94,25 +96,22 @@ namespace Cygnus.Managers
             }
         }
 
-        private void ProcessQuery(NlpQuery query)
+        private NlpAnalysis AnalyseText(NlpQuery query)
         {
+            var analysis = new NlpAnalysis();
             if (IsInitialized)
             {
-                //var text = "I went or a run. Then I went to work. I had a good lunch meeting with a friend name John Jr. The commute home was pretty good.";
                 var text = query.Text;
                 var annotation = new Annotation(text);
                 m_pipeline.annotate(annotation);
 
-                var sentences = annotation.get(typeof(CoreAnnotations.SentencesAnnotation));
-                if (sentences == null)
+                var sentences = annotation.get(typeof(CoreAnnotations.SentencesAnnotation)) as ArrayList;
+                if (sentences != null)
                 {
-                    return;
-                }
-                foreach (Annotation sentence in sentences as ArrayList)
-                {
-                    Trace.WriteLine(sentence);
+                    analysis.Sentences = sentences;
                 }
             }
+            return analysis;
         }
     }
 }

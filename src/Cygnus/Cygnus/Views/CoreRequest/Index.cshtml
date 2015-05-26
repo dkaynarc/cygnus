@@ -11,10 +11,21 @@
 
 <h2>Index</h2>
 @Html.Label("Enter your request")
-@Html.TextBox("RequestBox")
-
+<form action ="/" id="SearchForm" method="post">
+    @*@Html.TextBox("RequestBox")*@
+    <input type="text" id="request"/>
+    <button type="submit">Submit</button>
+</form>
 <script type="text/javascript">
-    $("#RequestBox").autocomplete({
+    $("#SearchForm").submit(function (event) {
+        $.ajax({
+            type: 'POST',
+            url: "@(Url.Action("Submit", "CoreRequest"))",
+            data: { "term": $("#request").val() }
+        })
+        event.preventDefault();
+    });
+    @*$("#RequestBox").autocomplete({
         source: function (request, response) {
             var customer = new Array();
             $.ajax({
@@ -53,5 +64,5 @@
                 }
             })
         }
-    });
+    });*@
 </script>

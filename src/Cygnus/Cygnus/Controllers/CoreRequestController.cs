@@ -40,6 +40,14 @@ namespace Cygnus.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        public JsonResult Submit(string term)
+        {
+            NlpDecisionEngine.Instance.MakeQuery(term);
+            // Temp
+            return Json("OK");
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult GetDetail(int id)
         {
             TestModels.TestModel model = new TestModels.TestModel();
