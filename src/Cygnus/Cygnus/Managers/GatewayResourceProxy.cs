@@ -62,34 +62,43 @@ namespace Cygnus.Managers
             m_gatewayClients.Clear();
         }
 
-        public void SendSetResourceDataRequest(Guid resourceId, object data, INotifiableRequester sender)
+        public Guid SendSetResourceDataRequest(Guid resourceId, object data, INotifiableRequester sender)
         {
             GatewaySocketClient client = null;
+            Guid requestGuid = Guid.Empty;
             
             if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
             {
-                client.SendSetResourceDataRequest(resourceId, data, sender);
+                requestGuid = client.SendSetResourceDataRequest(resourceId, data, sender);
             }
+
+            return requestGuid;
         }
 
-        public void SendGetResourceDataRequest(Guid resourceId, INotifiableRequester sender)
+        public Guid SendGetResourceDataRequest(Guid resourceId, INotifiableRequester sender)
         {
             GatewaySocketClient client = null;
+            Guid requestGuid = Guid.Empty;
             
             if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
             {
-                client.SendGetResourceDataRequest(resourceId, sender);
+                requestGuid = client.SendGetResourceDataRequest(resourceId, sender);
             }
+            
+            return requestGuid;
         }
 
-        public void SendSetCommunicationModeRequest(Guid resourceId, CommunicationMode mode)
+        public Guid SendSetCommunicationModeRequest(Guid resourceId, CommunicationMode mode)
         {
             GatewaySocketClient client = null;
+            Guid requestGuid = Guid.Empty;
 
             if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
             {
-                client.SendSetCommunicationMode(resourceId, mode);
+                requestGuid = client.SendSetCommunicationMode(resourceId, mode);
             }
+
+            return requestGuid;
         }
 
         private string GetResourceUri(Guid resourceId)

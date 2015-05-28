@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Cygnus.Models;
 using Cygnus.Models.Api;
+using Cygnus.Managers;
 
 namespace Cygnus.Controllers.Api
 {

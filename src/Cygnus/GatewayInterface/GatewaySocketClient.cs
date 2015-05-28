@@ -26,7 +26,7 @@ namespace Cygnus.GatewayInterface
             Disconnect();
         }
 
-        public void SendSetResourceDataRequest(Guid resourceId, object data, INotifiableRequester sender)
+        public Guid SendSetResourceDataRequest(Guid resourceId, object data, INotifiableRequester sender)
         {
             Guid requestGuid = Guid.NewGuid();
             var request = new ResourceMessage()
@@ -40,9 +40,10 @@ namespace Cygnus.GatewayInterface
             };
             m_requestList.Add(requestGuid, new Request { Id = requestGuid, Sender = sender });
             SendRequest(request);
+            return requestGuid;
         }
 
-        public void SendGetResourceDataRequest(Guid resourceId, INotifiableRequester sender)
+        public Guid SendGetResourceDataRequest(Guid resourceId, INotifiableRequester sender)
         {
             Guid requestGuid = Guid.NewGuid();
             var request = new ResourceMessage()
@@ -54,19 +55,22 @@ namespace Cygnus.GatewayInterface
             };
             m_requestList.Add(requestGuid, new Request { Id = requestGuid, Sender = sender });
             SendRequest(request);
+            return requestGuid;
         }
 
-        public void SendSetCommunicationMode(Guid resourceId, CommunicationMode mode)
+        public Guid SendSetCommunicationMode(Guid resourceId, CommunicationMode mode)
         {
+            var requestGuid = Guid.NewGuid();
             var request = new ResourceMessage()
             {
                 Command = "mode",
                 Data = mode.ToString().ToLower(),
                 TargetGuid = resourceId.ToString(),
                 SenderGuid = m_clientId.ToString(),
-                RequestGuid = Guid.NewGuid().ToString()
+                RequestGuid = requestGuid.ToString()
             };
             SendRequest(request);
+            return requestGuid;
         }
 
         private void Connect()
@@ -89,14 +93,18 @@ namespace Cygnus.GatewayInterface
             var responseGuid = Guid.Parse(response.RequestGuid);
             if (m_requestList.TryGetValue(responseGuid, out originalRequest))
             {
-                originalRequest.Sender.Notify(response.Data);
+                originalRequest.Sender.Notify(responseGuid, response.Data);
                 m_requestList.Remove(responseGuid);
             }
         }
 
         private void SendRequest(ResourceMessage request)
         {
-            if (m_gatewaySocket.ReadyState == WebSocketState.Closed)
+            if (m_gatewaySocket == null)
+            {
+                Connect();
+            }
+            if (m_gatewaySocket.ReadyState == WebSocketState.Open)
             {
                 m_gatewaySocket.Send(JsonConvert.SerializeObject(request));
             }

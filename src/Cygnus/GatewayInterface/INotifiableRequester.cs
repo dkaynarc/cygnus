@@ -8,6 +8,6 @@ namespace Cygnus.GatewayInterface
 {
     public interface INotifiableRequester
     {
-        void Notify(object data);
+        void Notify(Guid id, object data);
     }
 }
