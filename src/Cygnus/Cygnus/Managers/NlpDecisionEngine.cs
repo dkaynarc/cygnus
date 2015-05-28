@@ -125,6 +125,14 @@ namespace Cygnus.Managers
             return accumulator;
         }
 
+        private bool TryFindSubjectKeywords(Tree parseTree, out IEnumerable<string> keywords)
+        {
+            bool found = false;
+            keywords = null;
+
+            return found;
+        }
+
         private bool TryFindPredicate(Tree parseTree, out Predicate pred)
         {
             List<string> verbs = new List<string>();
@@ -132,20 +140,31 @@ namespace Cygnus.Managers
             foreach (Tree node in parseTree)
             {
                 // find verb phrase nodes
-                if (node.label().value().Equals("VP"))
-                {
-                    foreach (var child in node)
+                //if (node.label().value().Equals("VP"))
+                //{
+                //    foreach (var child in node)
+                //    {
+                //        if (node.label().value().Equals("VB"))
+                //        {
+                //            verbs.AddRange((string[])node.yieldWords().toArray());
+                //        }
+                //        if (node.label().value().Equals("PP"))
+                //        {
+                //            pps.Add(node);
+                //        }
+                //    }
+                //}
+
+                Traverse(parseTree, (x) => {
+                    if (x.label().value().Equals("VB"))
                     {
-                        if (node.label().value().Equals("VB"))
-                        {
-                            verbs.AddRange((string[])node.yieldWords().toArray());
-                        }
-                        if (node.label().value().Equals("PP"))
-                        {
-                            pps.Add(node);
-                        }
+                        verbs.AddRange((string[])node.yieldWords().toArray());
                     }
-                }
+                    if (x.label().value().Equals("PP"))
+                    {
+                        pps.Add(node);
+                    }
+                });
             }
 
             bool found = false;
@@ -166,11 +185,16 @@ namespace Cygnus.Managers
             return found;
         }
 
-        private void Traverse<T,TResult>(Tree tree, Func<T,TResult> f)
+        private void Traverse(Tree tree, Action<Tree> f)
         {
+            var curDepth = 0;
+            var maxDepth = tree.depth();
             foreach (var child in tree.children())
             {
+                if (curDepth > maxDepth) return;
+                f(child);
                 Traverse(child, f);
+                curDepth++;
             }
         }
 
@@ -247,11 +271,23 @@ namespace Cygnus.Managers
         {
             var keywords = query.Split(' ');
             var result = new List<Resource>();
+            var notFoundWords = new List<string>();
             foreach (var item in keywords)
             {
-                result = result.Union(m_dbContext.Resources.Where(r => r.Name.Equals(item)))
-                    .Union(m_dbContext.Resources.Where(r => r.Description.Contains(item))).ToList();
+                var initialResultCount = result.Count;
+                // Find exact matches, ignoring case, for resource names
+                result = result.Union(m_dbContext.Resources.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
+                // Keep track of words that aren't found as these are resource names.
+                if (result.Count == initialResultCount)
+                {
+                    notFoundWords.Add(item);
+                }
             }
+            
+            // Find descriptions that contain all keywords amongst those that haven't turned up results with the exact match against resource names.
+            // We filter these out because it's likely that the user won't be specifying exact device names when also providing keyword matches.
+            result = result.Union(m_dbContext.Resources
+                .Where(r => notFoundWords.All(kw => r.Description.ToLowerInvariant().Contains(kw.ToLower())))).ToList();
 
             return result;
         }
