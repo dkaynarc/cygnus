@@ -73,9 +73,15 @@ namespace Cygnus.GatewayTestHarness
 
         private void SetButtonState(bool state)
         {
-            m_buttonState = state;
-            m_button.BackColor = state ? Color.Green : Color.Red;
-            m_button.Text = state ? "ON" : "OFF";
+            if (IsHandleCreated)
+            {
+                this.BeginInvoke(new Action(() =>
+                {
+                    m_buttonState = state;
+                    m_button.BackColor = state ? Color.Green : Color.Red;
+                    m_button.Text = state ? "ON" : "OFF";
+                }));
+            }
         }
     }
 }

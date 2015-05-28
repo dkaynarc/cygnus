@@ -74,18 +74,21 @@ namespace Cygnus.GatewayTestHarness
         void m_valueTextBox_TextChanged(object sender, EventArgs e)
         {
             int tempVal = 0;
-            if (int.TryParse(m_valueTextBox.Text, out tempVal))
+            if (int.TryParse(m_valueTextBox.Text, out tempVal) && IsHandleCreated)
             {
-                if (ValidateInput(tempVal))
+                this.BeginInvoke(new Action( () => 
                 {
-                    m_slider.Value = tempVal;
-                    m_boundResource.SetResourceData(m_valueTextBox.Text);
-                    m_valueTextBox.BackColor = TextBox.DefaultBackColor;
-                }
-                else
-                {
-                    m_valueTextBox.BackColor = Color.Red;
-                }
+                    if (ValidateInput(tempVal))
+                    {
+                        m_slider.Value = tempVal;
+                        m_boundResource.SetResourceData(m_valueTextBox.Text);
+                        m_valueTextBox.BackColor = TextBox.DefaultBackColor;
+                    }
+                    else
+                    {
+                        m_valueTextBox.BackColor = Color.Red;
+                    }
+                }));
             }
         }
 
@@ -104,10 +107,13 @@ namespace Cygnus.GatewayTestHarness
             int tempVal = 0;
             if (int.TryParse(e.Data, out tempVal))
             {
-                if (ValidateInput(tempVal))
+                if (ValidateInput(tempVal) && IsHandleCreated)
                 {
-                    m_valueTextBox.Text = e.Data;
-                    m_slider.Value = tempVal;
+                    this.BeginInvoke(new Action(() =>
+                    {
+                        m_valueTextBox.Text = e.Data;
+                        m_slider.Value = tempVal;
+                    }));
                 }
             }
         }

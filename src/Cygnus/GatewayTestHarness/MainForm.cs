@@ -21,10 +21,15 @@ namespace Cygnus.GatewayTestHarness
         {
             InitializeComponent();
             m_gatewayHost = new GatewayHost();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
             m_gatewayHost.Initialize();
             InitializeResourceControls();
+            base.OnLoad(e);
         }
-     
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             m_gatewayHost.Shutdown();

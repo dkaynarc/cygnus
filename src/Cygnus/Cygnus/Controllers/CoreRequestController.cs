@@ -42,15 +42,23 @@ namespace Cygnus.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult Submit(string term)
         {
+            IEnumerable<UserResponsePackage> responses = null;
             try
             {
-                var responses = NlpDecisionEngine.Instance.ExecuteQuery(term);
+                responses = NlpDecisionEngine.Instance.ExecuteQuery(term);
             }
             catch (Exception e)
             {
                 return Json(e.Message);
             }
-            return Json("OK");
+
+            object response = "OK";
+            if (responses != null && responses.FirstOrDefault() != null)
+            { 
+                response = responses.FirstOrDefault().Data;
+            }
+
+            return Json(response);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]

@@ -42,7 +42,7 @@ namespace Cygnus.GatewayInterface
             Send(JsonConvert.SerializeObject(response));
         }
 
-        private ResourceMessage CreateResponse(IResource r)
+        private ResourceMessage CreateResponse(IResource r, string id)
         {
             var response = new ResourceMessage()
             {
@@ -51,7 +51,8 @@ namespace Cygnus.GatewayInterface
                 Data = r.GetResourceData(),
                 DataType = r.GetResourceDataType(),
                 DataUnits = r.GetResourceDataUnits(),
-                SenderGuid = r.Guid.ToString()
+                SenderGuid = r.Guid.ToString(),
+                RequestGuid = id
             };
             return response;
         }
@@ -62,7 +63,8 @@ namespace Cygnus.GatewayInterface
             {
                 Command = "default",
                 Data = message,
-                SenderGuid = m_serverGuid.ToString()
+                SenderGuid = m_serverGuid.ToString(),
+                RequestGuid = Guid.NewGuid().ToString()
             };
             return response;
         }
@@ -82,7 +84,7 @@ namespace Cygnus.GatewayInterface
                     HandleModeChangeRequest(request);
                     return CreateDefaultResponse("OK");
                 }
-                return CreateResponse(resource);
+                return CreateResponse(resource, request.RequestGuid);
             }
             else
             { 

@@ -90,24 +90,25 @@ namespace Cygnus.GatewayInterface
         {
             var response = JsonConvert.DeserializeObject<ResourceMessage>(e.Data);
             Request originalRequest = null;
-            var responseGuid = Guid.Parse(response.RequestGuid);
-            if (m_requestList.TryGetValue(responseGuid, out originalRequest))
+            if (response.RequestGuid != null)
             {
-                originalRequest.Sender.Notify(responseGuid, response.Data);
-                m_requestList.Remove(responseGuid);
+                var responseGuid = Guid.Parse(response.RequestGuid);
+                if (m_requestList.TryGetValue(responseGuid, out originalRequest))
+                {
+                    originalRequest.Sender.Notify(responseGuid, response.Data);
+                    m_requestList.Remove(responseGuid);
+                }
             }
         }
 
         private void SendRequest(ResourceMessage request)
         {
-            if (m_gatewaySocket == null)
+            
+            if (m_gatewaySocket == null || m_gatewaySocket.ReadyState == WebSocketState.Closed)
             {
                 Connect();
             }
-            if (m_gatewaySocket.ReadyState == WebSocketState.Open)
-            {
-                m_gatewaySocket.Send(JsonConvert.SerializeObject(request));
-            }
+            m_gatewaySocket.Send(JsonConvert.SerializeObject(request));
         }
 
 #region Test Harness

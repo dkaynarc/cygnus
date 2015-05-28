@@ -16,7 +16,6 @@ namespace Cygnus.Managers
     {
         private static UserRequestDispatcher m_instance;
         private ApplicationDbContext m_db = new ApplicationDbContext();
-        private ConcurrentQueue<Guid> m_requestQueue = new ConcurrentQueue<Guid>();
         private ConcurrentDictionary<Guid, UserResponsePackage> m_responseBucket = new ConcurrentDictionary<Guid, UserResponsePackage>();
         private static AutoResetEvent m_waitEvent = new AutoResetEvent(false);
         public static UserRequestDispatcher Instance 
@@ -50,15 +49,11 @@ namespace Cygnus.Managers
 
         public UserResponsePackage GetResourceData(Guid resourceId)
         {
+            Guid requestGuid = Guid.Empty;
             UserResponsePackage response = null;
-            Task.Run(() =>
-                {
-                    var requestGuid = GatewayResourceProxy.Instance.SendGetResourceDataRequest(resourceId, this);
-                    m_requestQueue.Enqueue(requestGuid);
-                    m_waitEvent.WaitOne();
-
-                    m_responseBucket.TryRemove(requestGuid, out response);
-                });
+            requestGuid = GatewayResourceProxy.Instance.SendGetResourceDataRequest(resourceId, this);
+            m_waitEvent.WaitOne();
+            m_responseBucket.TryRemove(requestGuid, out response);
             return response;
         }
 
@@ -69,9 +64,12 @@ namespace Cygnus.Managers
 
         public void Notify(Guid id, object data)
         {
-            var userPackage = new UserResponsePackage() { Data = data };
-            m_responseBucket.AddOrUpdate(id, userPackage, (key, prev) => userPackage);
-            m_waitEvent.Set();
+            Task.Run(() =>
+            {
+                var userPackage = new UserResponsePackage() { Data = data };
+                m_responseBucket.AddOrUpdate(id, userPackage, (key, prev) => userPackage);
+                m_waitEvent.Set();
+            });
         }
     }
 

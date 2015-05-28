@@ -142,17 +142,19 @@ namespace Cygnus.Managers
 
             // find the key verb (VB)
             string vbWord = null;
+            bool found = false;
             Traverse(parseTree, x =>
                 {
                     if (x.label().value().Equals("VB"))
                     {
                         vbWord = WordsListToStringList(x.yieldWords()).FirstOrDefault();
+                        found = true;
                         return false;
                     }
                     return true;
                 });
 
-            bool found = false;
+            
             string numberStr = null;
             pred = null;
             string boolReln;
@@ -163,16 +165,18 @@ namespace Cygnus.Managers
                 // Note that this would allow badly-formed sentences such as "<resource-noun> 54" and these would still 
                 // be treated as valid Set commands. Sentences with just a value provided, e.g. just "3213" would not pass muster as 
                 // no noun-phrase has been provided.
-                found = true;
                 pred = new Predicate(gov: vbWord, dep: numberStr, action: ActionType.Set);
             }
             else if (TryFindBooleanRelation(vp, out boolReln))
             {
                 if (vbWord != null)
                 {
-                    found = true;
                     pred = new Predicate(gov: vbWord, dep: boolReln);
                 }
+            }
+            else
+            {
+                pred = new Predicate(gov: vbWord);
             }
 
             return found;
