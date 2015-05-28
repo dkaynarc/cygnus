@@ -40,5 +40,22 @@ namespace Cygnus.Managers
                 throw;
             }
         }
+
+        public UserResponsePackage GetResourceData(Guid resourceId)
+        {
+            var response = new UserResponsePackage();
+
+            return response;
+        }
+
+        public void SetResourceData(Guid resourceId, object data)
+        {
+
+        }
+    }
+
+    public class UserResponsePackage
+    {
+
     }
 }

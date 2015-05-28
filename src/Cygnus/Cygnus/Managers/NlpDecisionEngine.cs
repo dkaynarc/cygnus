@@ -15,13 +15,14 @@ using edu.stanford.nlp.util;
 using edu.stanford.nlp.semgraph;
 using edu.stanford.nlp.trees;
 using NHunspell;
+using Cygnus.Models.Api;
 
 namespace Cygnus.Managers
 {
     public class NlpDecisionEngine
     {
         private static NlpDecisionEngine m_instance;
-        private ApplicationDbContext m_db = new ApplicationDbContext();
+        private ApplicationDbContext m_dbContext = new ApplicationDbContext();
         public static NlpDecisionEngine Instance
         {
             get
@@ -51,22 +52,25 @@ namespace Cygnus.Managers
 
         public void Test()
         {
-            //MakeQuery("Turn the main kitchen light off.");
             MakeQuery("Turn off the main kitchen light.");
         }
 
-        public void MakeQuery(string query)
+        public IEnumerable<UserResponsePackage> MakeQuery(string query)
         {
+            var allResponses = new List<UserResponsePackage>();
             var analysis = m_engineThread.AnalyseText(query);
             foreach (Annotation sentence in analysis.Sentences)
             {
-                AnalyseSentence(sentence);
+                var sentenceResponses = ExecuteSentenceRequest(sentence);
+                allResponses.AddRange(sentenceResponses);
             }
+            return allResponses;
         }
 
-        private void AnalyseSentence(Annotation sentence)
+        private IEnumerable<UserResponsePackage> ExecuteSentenceRequest(Annotation sentence)
         {
             var basicGraph = sentence.get(typeof(SemanticGraphCoreAnnotations.BasicDependenciesAnnotation)) as SemanticGraph;
+            var responses = new List<UserResponsePackage>();
             if (basicGraph != null)
             {
                 var deps = basicGraph.typedDependencies();
@@ -81,14 +85,17 @@ namespace Cygnus.Managers
                     }
                 }
 
+                // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
                 var subjectKeywords = GetSubjectKeywords(depMap);
-                var predicate = GetPredicate(depMap);
+                var predicate = GetActionablePredicate(depMap);
                 var action = DetermineActionType(predicate);
+                var resources = FindResources(subjectKeywords);
                 if (action != ActionType.Unknown)
                 {
-                    ExecuteAction(action, predicate.Dependent);
+                    responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
                 }
             }
+            return responses;
         }
 
         private string GetSubjectKeywords(Dictionary<string,List<TypedDependency>> depMap)
@@ -107,7 +114,7 @@ namespace Cygnus.Managers
             return accumulator;
         }
 
-        private Predicate GetPredicate(Dictionary<string, List<TypedDependency>> depMap)
+        private Predicate GetActionablePredicate(Dictionary<string, List<TypedDependency>> depMap)
         {
             var candidates = GetPredicateCandidates(depMap);
             
@@ -148,11 +155,44 @@ namespace Cygnus.Managers
             return action;
         }
 
-        private void ExecuteAction(ActionType action, string actionParam)
+        private List<UserResponsePackage> ExecuteAction(ActionType action, string actionParam, IEnumerable<Resource> resources)
         {
+            var responses = new List<UserResponsePackage>();
+            foreach (var resource in resources)
+            {
+                switch (action)
+                {
+                    case ActionType.Get:
+                        responses.Add(UserRequestDispatcher.Instance.GetResourceData(resource.Id));
+                        break;
+                    case ActionType.Set:
+                        UserRequestDispatcher.Instance.SetResourceData(resource.Id, actionParam);
+                        break;
+                    // No defined action handler for now
+                    case ActionType.Group:
+                    case ActionType.Unknown:
+                    default:
+                        break;
+                }
+            }
+            return responses;
         }
 
         #region Helpers
+
+        private List<Resource> FindResources(string query)
+        {
+            var keywords = query.Split(' ');
+            var result = new List<Resource>();
+            foreach (var item in keywords)
+            {
+                result = result.Concat(m_dbContext.Resources.Where(r =>
+                    r.Name.Contains(item) ||
+                    r.Description.Contains(item))).ToList();
+            }
+
+            return result;
+        }
 
         private void ExtractDepStringRepresentation(List<TypedDependency> deps, ref List<string> governors, ref List <string> dependents)
         {
