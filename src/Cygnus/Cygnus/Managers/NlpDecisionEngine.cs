@@ -91,15 +91,19 @@ namespace Cygnus.Managers
                         depMap[reln.getShortName()].Add(typedDep);
                     }
                 }
+                var parseTree = sentence.get(typeof(TreeCoreAnnotations.TreeAnnotation)) as Tree;
 
                 // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
                 var subjectKeywords = GetSubjectKeywords(depMap);
-                var predicate = GetActionablePredicate(depMap);
-                var action = DetermineActionType(predicate);
-                var resources = FindResources(subjectKeywords);
-                if (action != ActionType.Unknown)
+                Predicate predicate = null;
+                if (TryFindPredicate(parseTree, out predicate))
                 {
-                    responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
+                    var action = DetermineActionType(predicate);
+                    var resources = FindResources(subjectKeywords);
+                    if (action != ActionType.Unknown)
+                    {
+                        responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
+                    }
                 }
             }
             return responses;
@@ -121,38 +125,90 @@ namespace Cygnus.Managers
             return accumulator;
         }
 
-        private Predicate GetActionablePredicate(Dictionary<string, List<TypedDependency>> depMap)
+        private bool TryFindPredicate(Tree parseTree, out Predicate pred)
         {
-            var candidates = GetPredicateCandidates(depMap);
-            
-            // HACK
-            return candidates[0];
-        }
-
-        private List<Predicate> GetPredicateCandidates(Dictionary<string, List<TypedDependency>> depMap)
-        {
-            var candidates = new List<Predicate>();
-            var governors = new List<string>();
-            var dependents = new List<string>();
-
-            var searchRange = new List<TypedDependency>(depMap["advmod"]);
-            searchRange.AddRange(depMap["prt"]);
-            searchRange.AddRange(depMap["dobj"]);            
-
-            ExtractDepStringRepresentation(searchRange, ref governors, ref dependents);
-
-            if (governors.Count == dependents.Count)
+            List<string> verbs = new List<string>();
+            List<Tree> pps = new List<Tree>();
+            foreach (Tree node in parseTree)
             {
-                for (int i = 0; i < governors.Count; i++)
+                // find verb phrase nodes
+                if (node.label().value().Equals("VP"))
                 {
-                    candidates.Add(new Predicate(governors[i], dependents[i]));
+                    foreach (var child in node)
+                    {
+                        if (node.label().value().Equals("VB"))
+                        {
+                            verbs.AddRange((string[])node.yieldWords().toArray());
+                        }
+                        if (node.label().value().Equals("PP"))
+                        {
+                            pps.Add(node);
+                        }
+                    }
                 }
             }
 
-            return candidates;
+            bool found = false;
+            string numberStr = null;
+            pred = null;
             
+            if (TryFindNumberRelation(pps, out numberStr))
+            {
+                // Small edge case: assume that when the user inputs a number-type query,
+                // e.g. "<verb> <conj> <resource-noun> to 4.4", that they are trying to set some value
+                // Note that this would allow badly-formed sentences such as "<resource-noun> 54" and these would still 
+                // be treated as valid Set commands. Sentences with just a value provided, e.g. just "3213" would not pass muster as 
+                // no noun-phrase has been provided.
+                found = true;
+                pred = new Predicate(dep: numberStr, action: ActionType.Set);
+            }
+
+            return found;
         }
 
+        private void Traverse<T,TResult>(Tree tree, Func<T,TResult> f)
+        {
+            foreach (var child in tree.children())
+            {
+                Traverse(child, f);
+            }
+        }
+
+        private bool TryFindNumberRelation(List<Tree> candidateSubtrees, out string numberStr)
+        {
+            bool found = false;
+            numberStr = null;
+
+            foreach (var tree in candidateSubtrees)
+            {
+                var children = tree.flatten().getChildrenAsList();
+                foreach (Tree child in children as ArrayList)
+                {
+                    if (child.label().value().Equals("CD"))
+                    {
+                        found = true;
+                        numberStr = (string)child.yieldWords().toArray()[0];
+                    }
+                }
+            }
+            return found;
+        }
+
+        private bool TryFindBooleanRelation(List<Tree> candidateSubtrees, out bool result)
+        {
+            bool found = false;
+            result = false;
+
+            foreach (var tree in candidateSubtrees)
+            {
+                var children = tree.flatten().getChildrenAsList();
+                foreach (Tree child in children as ArrayList)
+                {
+                    
+                }
+            }
+            return found;
+        }
         private ActionType DetermineActionType(Predicate predicate)
         {
             ActionType action = ActionType.Unknown;
@@ -296,12 +352,14 @@ namespace Cygnus.Managers
 
     public class Predicate
     {
+        public ActionType Action { get; set; }
         public string Governor { get; set; }
         public string Dependent { get; set; }
-        public Predicate(string gov = "", string dep = "")
+        public Predicate(string gov = "", string dep = "", ActionType action = ActionType.Unknown)
         {
             this.Governor = gov;
             this.Dependent = dep;
+            this.Action = action;
         }
     }
 
