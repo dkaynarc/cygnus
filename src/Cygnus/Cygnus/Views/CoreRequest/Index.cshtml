@@ -12,17 +12,25 @@
 <h2>Index</h2>
 @Html.Label("Enter your request")
 <form action ="/" id="SearchForm" method="post">
-    @*@Html.TextBox("RequestBox")*@
-    <input type="text" id="request"/>
+    <input type="text" id="request" size="200"/>
     <button type="submit">Submit</button>
 </form>
+<div id="searchResponseArea">
+
+</div>
 <script type="text/javascript">
     $("#SearchForm").submit(function (event) {
         $.ajax({
             type: 'POST',
             url: "@(Url.Action("Submit", "CoreRequest"))",
-            data: { "term": $("#request").val() }
-        })
+            data: { "term": $("#request").val() },
+            dataType: "json",
+            success: function (data) {
+                if (data) {
+                    $("#searchResponseArea").html(data);
+                }
+            }
+        });
         event.preventDefault();
     });
     @*$("#RequestBox").autocomplete({

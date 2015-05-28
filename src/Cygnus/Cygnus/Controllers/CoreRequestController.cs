@@ -42,8 +42,14 @@ namespace Cygnus.Controllers
         [AcceptVerbs(HttpVerbs.Post)]
         public JsonResult Submit(string term)
         {
-            NlpDecisionEngine.Instance.MakeQuery(term);
-            // Temp
+            try
+            {
+                var responses = NlpDecisionEngine.Instance.ExecuteQuery(term);
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message);
+            }
             return Json("OK");
         }
 

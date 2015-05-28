@@ -65,16 +65,22 @@ namespace Cygnus.Managers
 
         public NlpAnalysis AnalyseText(string queryText)
         {
-            var query = new NlpQuery(queryText);
-            m_requestQueue.Enqueue(query);
-            m_waitEvent.WaitOne();
             var analysis = new NlpAnalysis();
-
-            if (!m_responseBucket.TryRemove(query.Id, out analysis))
+            if (IsInitialized)
             {
-                throw new Exception("Could not remove analysis from the bucket.");
-            }
+                var query = new NlpQuery(queryText);
+                m_requestQueue.Enqueue(query);
+                m_waitEvent.WaitOne();
 
+                if (!m_responseBucket.TryRemove(query.Id, out analysis))
+                {
+                    throw new Exception("Could not remove analysis from the bucket.");
+                }
+            }
+            else
+            {
+                throw new InvalidOperationException("NlpEngineThread not yet initialized");
+            }
             return analysis;
         }
 

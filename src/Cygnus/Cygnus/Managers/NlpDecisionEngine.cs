@@ -52,17 +52,24 @@ namespace Cygnus.Managers
 
         public void Test()
         {
-            MakeQuery("Turn off the main kitchen light.");
+            var resources = FindResources("room living light");
         }
 
-        public IEnumerable<UserResponsePackage> MakeQuery(string query)
+        public IEnumerable<UserResponsePackage> ExecuteQuery(string query)
         {
             var allResponses = new List<UserResponsePackage>();
-            var analysis = m_engineThread.AnalyseText(query);
-            foreach (Annotation sentence in analysis.Sentences)
+            try
             {
-                var sentenceResponses = ExecuteSentenceRequest(sentence);
-                allResponses.AddRange(sentenceResponses);
+                var analysis = m_engineThread.AnalyseText(query);
+                foreach (Annotation sentence in analysis.Sentences)
+                {
+                    var sentenceResponses = ExecuteSentenceRequest(sentence);
+                    allResponses.AddRange(sentenceResponses);
+                }
+            }
+            catch (InvalidOperationException e)
+            {
+                throw new Exception("Decision engine not yet initialized", e);
             }
             return allResponses;
         }
@@ -180,15 +187,14 @@ namespace Cygnus.Managers
 
         #region Helpers
 
-        private List<Resource> FindResources(string query)
+        private IEnumerable<Resource> FindResources(string query)
         {
             var keywords = query.Split(' ');
             var result = new List<Resource>();
             foreach (var item in keywords)
             {
-                result = result.Concat(m_dbContext.Resources.Where(r =>
-                    r.Name.Contains(item) ||
-                    r.Description.Contains(item))).ToList();
+                result = result.Union(m_dbContext.Resources.Where(r => r.Name.Equals(item)))
+                    .Union(m_dbContext.Resources.Where(r => r.Description.Contains(item))).ToList();
             }
 
             return result;

@@ -312,6 +312,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\GatewaysController.cs" />
     <Compile Include="Controllers\Api\ResourcesController.cs" />
+    <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\CoreRequestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
