@@ -52,7 +52,7 @@ namespace Cygnus.Managers
 
         public void Test()
         {
-            var resources = FindResources("room living light");
+            var resources = FindResources("room living light".Split(' '));
         }
 
         public IEnumerable<UserResponsePackage> ExecuteQuery(string query)
@@ -94,15 +94,19 @@ namespace Cygnus.Managers
                 var parseTree = sentence.get(typeof(TreeCoreAnnotations.TreeAnnotation)) as Tree;
 
                 // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
-                var subjectKeywords = GetSubjectKeywords(depMap);
-                Predicate predicate = null;
-                if (TryFindPredicate(parseTree, out predicate))
+                //var subjectKeywords = GetSubjectKeywords(depMap);
+                IEnumerable<string> subjectKeywords = null;
+                if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
                 {
-                    var action = DetermineActionType(predicate);
-                    var resources = FindResources(subjectKeywords);
-                    if (action != ActionType.Unknown)
+                    Predicate predicate = null;
+                    if (TryFindPredicate(parseTree, out predicate))
                     {
-                        responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
+                        var action = DetermineActionType(predicate);
+                        var resources = FindResources(subjectKeywords);
+                        if (action != ActionType.Unknown)
+                        {
+                            responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
+                        }
                     }
                 }
             }
@@ -128,50 +132,63 @@ namespace Cygnus.Managers
         private bool TryFindSubjectKeywords(Tree parseTree, out IEnumerable<string> keywords)
         {
             bool found = false;
-            keywords = null;
+            var words = new List<string>();
+            var conjunctions = new List<string>();
+            Tree np = null;
+            // Find the noun phrase part
+            Traverse(parseTree, x =>
+            {
+                if (x.label().value().Equals("NP"))
+                {
+                    np = x;
+                    return false;
+                }
+                return true;
+            });
 
+            if (np != null)
+            {
+                words.AddRange((string[])np.yieldWords().toArray());
+            }
+
+            // Conjunctions aren't really keywords so we'll filter them out
+            words.RemoveAll(x => conjunctions.Contains(x));
+
+            keywords = words;
             return found;
         }
 
         private bool TryFindPredicate(Tree parseTree, out Predicate pred)
         {
-            List<string> verbs = new List<string>();
-            List<Tree> pps = new List<Tree>();
-            foreach (Tree node in parseTree)
-            {
-                // find verb phrase nodes
-                //if (node.label().value().Equals("VP"))
-                //{
-                //    foreach (var child in node)
-                //    {
-                //        if (node.label().value().Equals("VB"))
-                //        {
-                //            verbs.AddRange((string[])node.yieldWords().toArray());
-                //        }
-                //        if (node.label().value().Equals("PP"))
-                //        {
-                //            pps.Add(node);
-                //        }
-                //    }
-                //}
+            Tree vp = null;
+            // find the verb 
+            Traverse(parseTree, x => 
+                {
+                    if (x.label().value().Equals("VP"))
+                    {
+                        vp = x;
+                        return false;
+                    }
+                    return true;
+                });
 
-                Traverse(parseTree, (x) => {
+            // find the key verb (VB)
+            string vbWord = null;
+            Traverse(parseTree, x =>
+                {
                     if (x.label().value().Equals("VB"))
                     {
-                        verbs.AddRange((string[])node.yieldWords().toArray());
+                        vbWord = (string)x.yieldWords().toArray()[0];
+                        return false;
                     }
-                    if (x.label().value().Equals("PP"))
-                    {
-                        pps.Add(node);
-                    }
+                    return true;
                 });
-            }
 
             bool found = false;
             string numberStr = null;
             pred = null;
-            
-            if (TryFindNumberRelation(pps, out numberStr))
+            bool boolReln;
+            if (TryFindNumberRelation(vp, out numberStr))
             {
                 // Small edge case: assume that when the user inputs a number-type query,
                 // e.g. "<verb> <conj> <resource-noun> to 4.4", that they are trying to set some value
@@ -179,58 +196,73 @@ namespace Cygnus.Managers
                 // be treated as valid Set commands. Sentences with just a value provided, e.g. just "3213" would not pass muster as 
                 // no noun-phrase has been provided.
                 found = true;
-                pred = new Predicate(dep: numberStr, action: ActionType.Set);
+                pred = new Predicate(gov: vbWord, dep: numberStr, action: ActionType.Set);
+            }
+            else if (TryFindBooleanRelation(vp, out boolReln))
+            {
+                if (vbWord != null)
+                {
+                    found = true;
+                    pred = new Predicate(gov: vbWord, dep: boolReln.ToString());
+                }
             }
 
             return found;
         }
 
-        private void Traverse(Tree tree, Action<Tree> f)
+        private void Traverse(Tree tree, Func<Tree, bool> f)
         {
             var curDepth = 0;
             var maxDepth = tree.depth();
             foreach (var child in tree.children())
             {
                 if (curDepth > maxDepth) return;
-                f(child);
+                if (!f(child)) return;
                 Traverse(child, f);
                 curDepth++;
             }
         }
 
-        private bool TryFindNumberRelation(List<Tree> candidateSubtrees, out string numberStr)
+        private bool TryFindNumberRelation(Tree tree, out string numberStr)
         {
             bool found = false;
-            numberStr = null;
+            string number = null;
 
-            foreach (var tree in candidateSubtrees)
-            {
-                var children = tree.flatten().getChildrenAsList();
-                foreach (Tree child in children as ArrayList)
+            Traverse(tree, x =>
                 {
-                    if (child.label().value().Equals("CD"))
+                    if (x.label().value().Equals("CD"))
                     {
                         found = true;
-                        numberStr = (string)child.yieldWords().toArray()[0];
+                        number = (string)x.yieldWords().toArray()[0];
+                        return false;
                     }
-                }
-            }
+                    return true;
+                });
+
+            numberStr = number;
             return found;
         }
 
-        private bool TryFindBooleanRelation(List<Tree> candidateSubtrees, out bool result)
+        private bool TryFindBooleanRelation(Tree tree, out bool result)
         {
             bool found = false;
-            result = false;
+            bool res = false;
 
-            foreach (var tree in candidateSubtrees)
-            {
-                var children = tree.flatten().getChildrenAsList();
-                foreach (Tree child in children as ArrayList)
+            Traverse(tree, x =>
                 {
-                    
-                }
-            }
+                    if (x.label().value().Equals("PRT") ||
+                        x.label().value().Equals("ADVP"))
+                    {
+                        if (Boolean.TryParse((string)x.yieldWords().toArray()[0], out res))
+                        {
+                            found = true;
+                            return false;
+                        }
+                    }
+                    return true;
+                });
+
+            result = res;
             return found;
         }
         private ActionType DetermineActionType(Predicate predicate)
@@ -267,9 +299,8 @@ namespace Cygnus.Managers
 
         #region Helpers
 
-        private IEnumerable<Resource> FindResources(string query)
+        private IEnumerable<Resource> FindResources(IEnumerable<string> keywords)
         {
-            var keywords = query.Split(' ');
             var result = new List<Resource>();
             var notFoundWords = new List<string>();
             foreach (var item in keywords)
