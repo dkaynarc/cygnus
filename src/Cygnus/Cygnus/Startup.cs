@@ -10,6 +10,9 @@ namespace Cygnus
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
+            // TODO: wrap these in some other management class or use dependency injection
+            GatewayResourceProxy.Instance.RegisterAllResources();
             NlpDecisionEngine.Instance.Initialize();
         }
     }

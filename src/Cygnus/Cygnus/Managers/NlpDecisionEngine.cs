@@ -32,7 +32,6 @@ namespace Cygnus.Managers
             }
         }
         private NlpEngineThread m_engineThread = new NlpEngineThread();
-        private static readonly Dictionary<string, ActionType> ActionTypeMap;
         private static readonly Dictionary<string, bool> BooleanTextMap;
 
         private NlpDecisionEngine()
@@ -41,7 +40,6 @@ namespace Cygnus.Managers
 
         static NlpDecisionEngine()
         {
-            ActionTypeMap = CreateActionTypeMap();
             BooleanTextMap = CreateBooleanTextMap();
         }
 
@@ -76,57 +74,23 @@ namespace Cygnus.Managers
 
         private IEnumerable<UserResponsePackage> ExecuteSentenceRequest(Annotation sentence)
         {
-            var basicGraph = sentence.get(typeof(SemanticGraphCoreAnnotations.BasicDependenciesAnnotation)) as SemanticGraph;
             var responses = new List<UserResponsePackage>();
-            if (basicGraph != null)
-            {
-                var deps = basicGraph.typedDependencies();
-                var depMap = CreateDepMap();
-                // Populate the dependency map with all relation types we understand
-                foreach (TypedDependency typedDep in deps as ArrayList)
-                {
-                    var reln = typedDep.reln();
-                    if (depMap.ContainsKey(reln.getShortName()))
-                    {
-                        depMap[reln.getShortName()].Add(typedDep);
-                    }
-                }
-                var parseTree = sentence.get(typeof(TreeCoreAnnotations.TreeAnnotation)) as Tree;
+            var parseTree = sentence.get(typeof(TreeCoreAnnotations.TreeAnnotation)) as Tree;
 
-                // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
-                //var subjectKeywords = GetSubjectKeywords(depMap);
-                IEnumerable<string> subjectKeywords = null;
-                if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
+            // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
+            //var subjectKeywords = GetSubjectKeywords(depMap);
+            IEnumerable<string> subjectKeywords = null;
+            if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
+            {
+                Predicate predicate = null;
+                if (TryFindPredicate(parseTree, out predicate))
                 {
-                    Predicate predicate = null;
-                    if (TryFindPredicate(parseTree, out predicate))
-                    {
-                        var action = DetermineActionType(predicate);
-                        var resources = FindResources(subjectKeywords);
-                        if (action != ActionType.Unknown)
-                        {
-                            responses.AddRange(ExecuteAction(action, predicate.Dependent, resources));
-                        }
-                    }
+                    var action = predicate.ResetActionType();
+                    var resources = FindResources(subjectKeywords);
+                    responses.AddRange(ExecuteAction(predicate.Action, predicate.Dependent, resources));
                 }
             }
             return responses;
-        }
-
-        private string GetSubjectKeywords(Dictionary<string,List<TypedDependency>> depMap)
-        {
-            var governors = new List<string>();
-            var dependents = new List<string>();
-            string accumulator = "";
-
-            var searchRange = new List<TypedDependency>(depMap["nn"]);
-            searchRange.AddRange(depMap["amod"]);
-
-            ExtractDepStringRepresentation(searchRange, ref governors, ref dependents);
-
-            accumulator = String.Join(" ", governors.Union(dependents));
-            
-            return accumulator;
         }
 
         private bool TryFindSubjectKeywords(Tree parseTree, out IEnumerable<string> keywords)
@@ -138,21 +102,25 @@ namespace Cygnus.Managers
             // Find the noun phrase part
             Traverse(parseTree, x =>
             {
-                if (x.label().value().Equals("NP"))
+                if (np == null && x.label().value().Equals("NP"))
                 {
                     np = x;
-                    return false;
+                }
+                if (x.label().value().Equals("DT"))
+                {
+                    conjunctions = WordsListToStringList(x.yieldWords());
                 }
                 return true;
             });
 
             if (np != null)
             {
-                words.AddRange((string[])np.yieldWords().toArray());
-            }
+                words = WordsListToStringList(np.yieldWords());
 
-            // Conjunctions aren't really keywords so we'll filter them out
-            words.RemoveAll(x => conjunctions.Contains(x));
+                // Conjunctions aren't really keywords so we'll filter them out
+                words.RemoveAll(x => conjunctions.Contains(x));
+                found = words.Count > 0;
+            }
 
             keywords = words;
             return found;
@@ -178,7 +146,7 @@ namespace Cygnus.Managers
                 {
                     if (x.label().value().Equals("VB"))
                     {
-                        vbWord = (string)x.yieldWords().toArray()[0];
+                        vbWord = WordsListToStringList(x.yieldWords()).FirstOrDefault();
                         return false;
                     }
                     return true;
@@ -187,7 +155,7 @@ namespace Cygnus.Managers
             bool found = false;
             string numberStr = null;
             pred = null;
-            bool boolReln;
+            string boolReln;
             if (TryFindNumberRelation(vp, out numberStr))
             {
                 // Small edge case: assume that when the user inputs a number-type query,
@@ -203,7 +171,7 @@ namespace Cygnus.Managers
                 if (vbWord != null)
                 {
                     found = true;
-                    pred = new Predicate(gov: vbWord, dep: boolReln.ToString());
+                    pred = new Predicate(gov: vbWord, dep: boolReln);
                 }
             }
 
@@ -227,14 +195,18 @@ namespace Cygnus.Managers
         {
             bool found = false;
             string number = null;
+            decimal placeholder = 0;
 
             Traverse(tree, x =>
                 {
                     if (x.label().value().Equals("CD"))
                     {
-                        found = true;
-                        number = (string)x.yieldWords().toArray()[0];
-                        return false;
+                        number = WordsListToStringList(x.yieldWords()).FirstOrDefault();
+                        if (decimal.TryParse(number, out placeholder))
+                        {
+                            found = true;
+                            return false;
+                        }
                     }
                     return true;
                 });
@@ -243,17 +215,18 @@ namespace Cygnus.Managers
             return found;
         }
 
-        private bool TryFindBooleanRelation(Tree tree, out bool result)
+        private bool TryFindBooleanRelation(Tree tree, out string result)
         {
             bool found = false;
-            bool res = false;
+            string res = null;
 
             Traverse(tree, x =>
                 {
                     if (x.label().value().Equals("PRT") ||
                         x.label().value().Equals("ADVP"))
                     {
-                        if (Boolean.TryParse((string)x.yieldWords().toArray()[0], out res))
+                        res = WordsListToStringList(x.yieldWords()).FirstOrDefault();
+                        if (!String.IsNullOrEmpty(res))
                         {
                             found = true;
                             return false;
@@ -264,14 +237,6 @@ namespace Cygnus.Managers
 
             result = res;
             return found;
-        }
-        private ActionType DetermineActionType(Predicate predicate)
-        {
-            ActionType action = ActionType.Unknown;
-
-            ActionTypeMap.TryGetValue(predicate.Governor.ToLower(), out action);
-
-            return action;
         }
 
         private List<UserResponsePackage> ExecuteAction(ActionType action, string actionParam, IEnumerable<Resource> resources)
@@ -296,9 +261,6 @@ namespace Cygnus.Managers
             }
             return responses;
         }
-
-        #region Helpers
-
         private IEnumerable<Resource> FindResources(IEnumerable<string> keywords)
         {
             var result = new List<Resource>();
@@ -314,49 +276,26 @@ namespace Cygnus.Managers
                     notFoundWords.Add(item);
                 }
             }
-            
+
             // Find descriptions that contain all keywords amongst those that haven't turned up results with the exact match against resource names.
             // We filter these out because it's likely that the user won't be specifying exact device names when also providing keyword matches.
             result = result.Union(m_dbContext.Resources
-                .Where(r => notFoundWords.All(kw => r.Description.ToLowerInvariant().Contains(kw.ToLower())))).ToList();
+                .Where(r => notFoundWords.All(kw => r.Description.ToLower().Contains(kw.ToLower())))).ToList();
 
             return result;
         }
 
-        private void ExtractDepStringRepresentation(List<TypedDependency> deps, ref List<string> governors, ref List <string> dependents)
-        {
-            if (governors == null || dependents == null)
-            {
-                throw new ArgumentNullException();
-            }
-            foreach (var dep in deps)
-            {
-                var govStr = dep.gov().toString();
-                var depStr = dep.dep().toString();
-                // Remove the information that trails behind the word
-                governors.Add(govStr.Remove(govStr.IndexOf('/')));
-                dependents.Add(depStr.Remove(depStr.IndexOf('/')));
-            }
-        }
+        #region Helpers
 
-        private static Dictionary<string, List<TypedDependency>> CreateDepMap()
+        private List<string> WordsListToStringList(ArrayList words)
         {
-            var map = new Dictionary<string, List<TypedDependency>>();
-            // Adverbial modifiers
-            map.Add("advmod", new List<TypedDependency>());
-            // Adjective modifiers
-            map.Add("amod", new List<TypedDependency>());
-            // Dependent objects
-            map.Add("dobj", new List<TypedDependency>());
-            // Determiners
-            map.Add("det", new List<TypedDependency>());
-            // nn modifier
-            map.Add("nn", new List<TypedDependency>());
-            // Phrasal Verb Partical
-            map.Add("prt", new List<TypedDependency>());
-            // Numerical 
-            map.Add("num", new List<TypedDependency>());
-            return map;
+            var strList = new List<string>();
+
+            foreach (Word word in words)
+            {
+                strList.Add(word.value());
+            }
+            return strList;
         }
 
         private static Dictionary<string, bool> CreateBooleanTextMap()
@@ -373,22 +312,6 @@ namespace Cygnus.Managers
             map.Add("inactive", false);
             map.Add("disable", false);
             map.Add("disabled", false);
-            return map;
-        }
-
-        private static Dictionary<string, ActionType> CreateActionTypeMap()
-        {
-            var map = new Dictionary<string, ActionType>()
-            {
-                { "set", ActionType.Set },
-                { "change", ActionType.Set },
-                { "alter", ActionType.Set },
-                
-                { "get", ActionType.Get },
-                { "show", ActionType.Get },
-                
-                { "group", ActionType.Group }
-            };
             return map;
         }
 
@@ -422,11 +345,40 @@ namespace Cygnus.Managers
         public ActionType Action { get; set; }
         public string Governor { get; set; }
         public string Dependent { get; set; }
+
+        private static Dictionary<string, ActionType> ActionTypeMap()
+        {
+            var map = new Dictionary<string, ActionType>()
+            {
+                { "set", ActionType.Set },
+                { "change", ActionType.Set },
+                { "alter", ActionType.Set },
+                { "turn", ActionType.Set },
+                
+                { "get", ActionType.Get },
+                { "show", ActionType.Get },
+                { "display", ActionType.Get },
+                
+                { "group", ActionType.Group }
+            };
+            return map;
+        }
+
         public Predicate(string gov = "", string dep = "", ActionType action = ActionType.Unknown)
         {
             this.Governor = gov;
             this.Dependent = dep;
             this.Action = action;
+        }
+
+        public ActionType ResetActionType()
+        {
+            ActionType action = ActionType.Unknown;
+
+            ActionTypeMap().TryGetValue(this.Governor.ToLowerInvariant(), out action);
+            this.Action = action;
+
+            return action;
         }
     }
 
