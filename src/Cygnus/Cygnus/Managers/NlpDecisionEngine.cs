@@ -243,6 +243,58 @@ namespace Cygnus.Managers
             return found;
         }
 
+        private bool TryFindConditionalExpression(Tree tree, out object conditional)
+        {
+            conditional = null;
+            bool found = false;
+
+            Tree condClause = TryFindConditionalClause(tree);
+            if (condClause != null)
+            {
+                IEnumerable<string> condSubjKeywords = null;
+                if (TryFindSubjectKeywords(condClause, out condSubjKeywords))
+                {
+                    if (condSubjKeywords.Count() > 0)
+                    {
+                        // Find verb part
+                    }
+                    // Find object part (either comma-seperated clause or base-level verb-phrase)
+                }
+            }
+
+            return found;
+        }
+
+        private Tree TryFindConditionalClause(Tree tree)
+        {
+            Tree sbar = null;
+
+            // Search for a clause introduced by a subordinating conjunction 
+            Traverse(tree, x =>
+            {
+                if (x.label().value().Equals("SBAR"))
+                {
+                    sbar = x;
+                    return false;
+                }
+                return true;
+            });
+
+            Tree subConj = null;
+            if (sbar != null)
+            {
+                // Get the subordinating conjunction that started this clause
+                if (sbar.firstChild().label().value().Equals("IN"))
+                {
+                    subConj = sbar.firstChild();
+                }
+            }
+
+            // We haven't found a non-empty conditional clause if either the clause itself is missing
+            // or there isn't a subordinating conjunction immediately following the clause start.
+            return (subConj != null) ? sbar : null;
+        }
+
         private List<UserResponsePackage> ExecuteAction(ActionType action, string actionParam, IEnumerable<Resource> resources)
         {
             var responses = new List<UserResponsePackage>();
