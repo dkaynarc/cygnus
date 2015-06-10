@@ -80,14 +80,22 @@ namespace Cygnus.Managers
             // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
             //var subjectKeywords = GetSubjectKeywords(depMap);
             IEnumerable<string> subjectKeywords = null;
-            if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
+            ConditionalExpression condExpr = null;
+            if (TryFindConditionalExpression(parseTree, out condExpr))
             {
-                Predicate predicate = null;
-                if (TryFindPredicate(parseTree, out predicate))
+                // Process conditional
+            }
+            else
+            {
+                if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
                 {
-                    var action = predicate.ResetActionType();
-                    var resources = FindResources(subjectKeywords);
-                    responses.AddRange(ExecuteAction(predicate.Action, predicate.Dependent, resources));
+                    Predicate predicate = null;
+                    if (TryFindPredicate(parseTree, out predicate))
+                    {
+                        var action = predicate.ResetActionType();
+                        var resources = FindResources(subjectKeywords);
+                        responses.AddRange(ExecuteAction(predicate.Action, predicate.Dependent, resources));
+                    }
                 }
             }
             return responses;
@@ -128,7 +136,19 @@ namespace Cygnus.Managers
 
         private bool TryFindPredicate(Tree parseTree, out Predicate pred)
         {
+            Tree verbPhrase = null;
+            return TryFindPredicate(parseTree, out pred, out verbPhrase);
+        }
+
+        private bool TryFindPredicate(Tree parseTree, out Predicate pred, out Tree verbPhrase)
+        {
             Tree vp = null;
+            verbPhrase = vp;
+            string numberStr = null;
+            pred = null;
+            string boolReln;
+
+            if (parseTree == null) { return false; }
             // find the verb 
             Traverse(parseTree, x => 
                 {
@@ -139,26 +159,40 @@ namespace Cygnus.Managers
                     }
                     return true;
                 });
-
-            // find the key verb (VB)
+            
             string vbWord = null;
             bool found = false;
-            Traverse(parseTree, x =>
+            Tree targetNode = vp;
+            // find the key verb (VB)
+            Traverse(vp, x =>
                 {
-                    if (x.label().value().Equals("VB"))
+                    // Try and find a prepositional phrase as this could indicate the useful part of a
+                    // conditional statement's predicate
+                    if (x.label().value().Equals("PP"))
+                    {
+                        if (TryFindConditionalPredicate(x))
+                        {
+                            targetNode = x;
+                            if (x.lastChild().label().value().Equals("NP"))
+                            {
+                                if (x.lastChild().lastChild().label().value().Equals("VP"))
+                                {
+                                    targetNode = x.lastChild().lastChild();
+                                }
+                            }
+                            return false;
+                        }
+                    }
+                    else if (x.label().value().StartsWith("VB"))
                     {
                         vbWord = WordsListToStringList(x.yieldWords()).FirstOrDefault();
-                        found = true;
-                        return false;
                     }
+
                     return true;
                 });
 
-            
-            string numberStr = null;
-            pred = null;
-            string boolReln;
-            if (TryFindNumberRelation(vp, out numberStr))
+
+            if (TryFindNumberRelation(targetNode, out numberStr))
             {
                 // Small edge case: assume that when the user inputs a number-type query,
                 // e.g. "<verb> <conj> <resource-noun> to 4.4", that they are trying to set some value
@@ -166,12 +200,14 @@ namespace Cygnus.Managers
                 // be treated as valid Set commands. Sentences with just a value provided, e.g. just "3213" would not pass muster as 
                 // no noun-phrase has been provided.
                 pred = new Predicate(gov: vbWord, dep: numberStr, action: ActionType.Set);
+                found = true;
             }
-            else if (TryFindBooleanRelation(vp, out boolReln))
+            else if (TryFindBooleanRelation(targetNode, out boolReln))
             {
                 if (vbWord != null)
                 {
                     pred = new Predicate(gov: vbWord, dep: boolReln);
+                    found = true;
                 }
             }
             else
@@ -179,20 +215,22 @@ namespace Cygnus.Managers
                 pred = new Predicate(gov: vbWord);
             }
 
+            verbPhrase = vp;
+
             return found;
         }
 
-        private void Traverse(Tree tree, Func<Tree, bool> f)
+        private bool TryFindConditionalPredicate(Tree parseTree)
         {
-            var curDepth = 0;
-            var maxDepth = tree.depth();
-            foreach (var child in tree.children())
+            bool found = false;
+
+            if (parseTree.firstChild().label().value().Equals("IN"))
             {
-                if (curDepth > maxDepth) return;
-                if (!f(child)) return;
-                Traverse(child, f);
-                curDepth++;
+                var conjunction = parseTree.firstChild();
+                found = ConditionalExpression.IsValidConstructType(conjunction.label().value());
             }
+
+            return found;
         }
 
         private bool TryFindNumberRelation(Tree tree, out string numberStr)
@@ -227,13 +265,17 @@ namespace Cygnus.Managers
             Traverse(tree, x =>
                 {
                     if (x.label().value().Equals("PRT") ||
-                        x.label().value().Equals("ADVP"))
+                        x.label().value().Equals("ADVP") ||
+                        x.label().value().Equals("PP"))
                     {
-                        res = WordsListToStringList(x.yieldWords()).FirstOrDefault();
-                        if (!String.IsNullOrEmpty(res))
+                        foreach (var child in x.children())
                         {
-                            found = true;
-                            return false;
+                            if (child.label().value().Equals("IN"))
+                            {
+                                res = WordsListToStringList(child.yieldWords()).FirstOrDefault();
+                                found = true;
+                                return false;
+                            }
                         }
                     }
                     return true;
@@ -243,22 +285,57 @@ namespace Cygnus.Managers
             return found;
         }
 
-        private bool TryFindConditionalExpression(Tree tree, out object conditional)
+        private bool TryFindConditionalExpression(Tree tree, out ConditionalExpression conditional)
         {
-            conditional = null;
+            conditional = new ConditionalExpression();
             bool found = false;
 
             Tree condClause = TryFindConditionalClause(tree);
+            
             if (condClause != null)
             {
-                IEnumerable<string> condSubjKeywords = null;
-                if (TryFindSubjectKeywords(condClause, out condSubjKeywords))
+                var condConstructType = WordsListToStringList(condClause.yieldWords()).FirstOrDefault();
+                if (!String.IsNullOrEmpty(condConstructType))
                 {
-                    if (condSubjKeywords.Count() > 0)
+                    conditional.SetConstructType(condConstructType);
+                    IEnumerable<string> condSubjKeywords = null;
+                    if (TryFindSubjectKeywords(condClause, out condSubjKeywords))
                     {
-                        // Find verb part
+                        if (condSubjKeywords.Count() > 0)
+                        {
+                            Predicate condPred = null;
+                            // This is the verb-phrase embedded within the main part of the conditional clause
+                            if (TryFindPredicate(condClause, out condPred))
+                            {
+                                // Find final action part (either comma-seperated clause or base-level verb-phrase)
+                                // This will be a subject + predicate pair
+                                found = TryFindConditionalObject(tree, out conditional);
+                            }
+                        }
                     }
-                    // Find object part (either comma-seperated clause or base-level verb-phrase)
+                }
+            }
+
+            return found;
+        }
+
+        private bool TryFindConditionalObject(Tree tree, out ConditionalExpression expr)
+        {
+            bool found = false;
+            expr = null;
+            Predicate pred = null;
+            Tree actualVp = null;
+
+            if (tree == null) { return false; }
+            found = TryFindPredicate(tree, out pred, out actualVp);
+
+            if (found)
+            {
+                IEnumerable<string> objKeywords = null;
+                found = false;
+                if (TryFindSubjectKeywords(actualVp, out objKeywords))
+                {
+                    found = true;
                 }
             }
 
@@ -371,6 +448,23 @@ namespace Cygnus.Managers
             return map;
         }
 
+        /// <summary>
+        /// Traverses a stanford NLP tree, executing f at each node before continuing to traverse.
+        /// </summary>
+        /// <param name="tree">The tree to traverse.</param>
+        /// <param name="f">The function to execute at each node. Returns true to continue traversal.</param>
+        private static void Traverse(Tree tree, Func<Tree, bool> f)
+        {
+            var curDepth = 0;
+            var maxDepth = tree.depth();
+            foreach (var child in tree.children())
+            {
+                if (curDepth > maxDepth) return;
+                if (!f(child)) return;
+                Traverse(child, f);
+                curDepth++;
+            }
+        }
         #endregion
     }
 
@@ -420,6 +514,7 @@ namespace Cygnus.Managers
             return map;
         }
 
+
         public Predicate(string gov = "", string dep = "", ActionType action = ActionType.Unknown)
         {
             this.Governor = gov;
@@ -440,6 +535,6 @@ namespace Cygnus.Managers
 
     public enum ActionType
     {
-        Get, Set, Group, Unknown
+        Unknown, Get, Set, Group
     }
 }
