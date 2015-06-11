@@ -178,7 +178,8 @@ namespace Cygnus.Nlp
                 {
                     var vbWordNode = x;
                     var possiblePP = vp.lastChild().firstChild();
-                    if (possiblePP.label().value().Equals("IN"))
+                    if (!x.label().value().Equals("VB") && 
+                        possiblePP.label().value().Equals("IN"))
                     {
                         vbWordNode = possiblePP;
                     }
@@ -224,7 +225,6 @@ namespace Cygnus.Nlp
             var conjunction = parseTree.firstChild();
             if (conjunction.label().value().Equals("IN"))
             {
-                //found = ConditionalExpression.IsValidConstructType(conjunction.label().value());
                 found = ConditionalExpression.IsValidConstructType(WordsListToStringList(conjunction.yieldWords()).FirstOrDefault());
             }
 
@@ -268,7 +268,7 @@ namespace Cygnus.Nlp
                     {
                         foreach (var child in x.children())
                         {
-                            if (child.label().value().Equals("IN") || 
+                            if (child.label().value().Equals("IN") ||
                                 child.label().value().Equals("RP"))
                             {
                                 res = WordsListToStringList(child.yieldWords()).FirstOrDefault();
@@ -293,9 +293,8 @@ namespace Cygnus.Nlp
         {
             conditional = new ConditionalExpression();
             bool found = false;
-
-            Tree condClause = TryFindConditionalClause(tree);
-            
+            Tree condParent = null;
+            Tree condClause = TryFindConditionalClause(tree, out condParent);
             if (condClause != null)
             {
                 var condConstructType = WordsListToStringList(condClause.yieldWords()).FirstOrDefault();
@@ -313,6 +312,8 @@ namespace Cygnus.Nlp
                             {
                                 // Find final action part (either comma-seperated clause or base-level verb-phrase)
                                 // This will be a subject + predicate pair
+                                var idx = condParent.objectIndexOf(condClause);
+                                var pruned = condParent.removeChild(idx);
                                 found = TryFindConditionalObject(tree, ref conditional);
                                 conditional.SetConstructType(condConstructType);
                                 conditional.Condition.Predicate = condPred;
@@ -351,20 +352,27 @@ namespace Cygnus.Nlp
             return found;
         }
 
-        private Tree TryFindConditionalClause(Tree tree)
+        private Tree TryFindConditionalClause(Tree tree, out Tree condParent)
         {
             Tree sbar = null;
+            condParent = null;
+            Tree cParent = null;
 
             // Search for a clause introduced by a subordinating conjunction 
             Traverse(tree, x =>
             {
-                if (x.label().value().Equals("SBAR"))
+                foreach (var child in x.children())
                 {
-                    sbar = x;
-                    return false;
+                    if (child.label().value().Equals("SBAR"))
+                    {
+                        sbar = child;
+                        cParent = x;
+                        return false;
+                    }
                 }
                 return true;
             });
+            condParent = cParent;
 
             Tree subConj = null;
             if (sbar != null)
