@@ -56,12 +56,12 @@ namespace Cygnus.Managers
         private void OnMessage(object sender, MessageReceivedEventArgs e)
         {
             var originalExpr = m_pendingExpressions.Where(x => x.ConditionalResource.Id == e.ResourceId).FirstOrDefault();
-            TryExecuteExpression(originalExpr, e);
+            ExecuteExpression(originalExpr, e);
         }
 
-        private void TryExecuteExpression(ResolvedExpression expr, MessageReceivedEventArgs e)
+        private void ExecuteExpression(ResolvedExpression expr, MessageReceivedEventArgs e)
         {
-            // Compare the result with the trigger value
+            expr.Execute(e.Data);
         }
     }
 
@@ -109,6 +109,16 @@ namespace Cygnus.Managers
                     this.ConditionalResource != null &&
                     this.ConsequantResources.Count() > 0
                 );
+        }
+
+        public IEnumerable<UserResponsePackage> Execute(string data)
+        {
+            var responses = new List<UserResponsePackage>();
+            if (this.Condition.Evaluate(data))
+            {
+                responses.AddRange(this.Consequant.Predicate.ExecuteAction(this.ConsequantResources));
+            }
+            return responses;
         }
     }
 }

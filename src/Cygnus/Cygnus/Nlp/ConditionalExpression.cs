@@ -157,11 +157,28 @@ namespace Cygnus.Nlp
             return OperatorTypeMap().ContainsKey(s);
         }
 
-        public bool Result(object arg, Type t)
+        public bool Evaluate(string arg)
         {
-            var convertedArg = Convert.ChangeType(arg, t, CultureInfo.InvariantCulture);
-            var convertedDep = Convert.ChangeType(this.Predicate.Dependent, t, CultureInfo.InvariantCulture);
-
+            bool result = false;
+            decimal dArg = 0;
+            bool bArg = false;
+            var handler = ExpressionActionMap()[this.OperatorType];
+            if (Decimal.TryParse(arg, out dArg))
+            {
+                decimal dPred;
+                if (Decimal.TryParse(this.Predicate.Dependent, out dPred))
+                {
+                    result = handler(dArg, dPred);
+                }
+            }
+            else if (Boolean.TryParse(arg, out bArg))
+            {
+                bool bPred = false;
+                if (Boolean.TryParse(this.Predicate.Dependent, out bPred))
+                {
+                    result = handler(bPred, bArg);
+                }
+            }
             return false;
         }
         #endregion

@@ -103,7 +103,7 @@ namespace Cygnus.Nlp
                     {
                         var action = predicate.ResetActionType();
                         var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
-                        responses.AddRange(ExecuteAction(predicate.Action, predicate.Dependent, resources));
+                        responses.AddRange(predicate.ExecuteAction(resources));
                     }
                 }
             }
@@ -387,28 +387,6 @@ namespace Cygnus.Nlp
             return (subConj != null) ? sbar : null;
         }
 
-        private List<UserResponsePackage> ExecuteAction(ActionType action, string actionParam, IEnumerable<Resource> resources)
-        {
-            var responses = new List<UserResponsePackage>();
-            foreach (var resource in resources)
-            {
-                switch (action)
-                {
-                    case ActionType.Get:
-                        responses.Add(UserRequestDispatcher.Instance.GetResourceData(resource.Id));
-                        break;
-                    case ActionType.Set:
-                        UserRequestDispatcher.Instance.SetResourceData(resource.Id, actionParam);
-                        break;
-                    // No defined action handler for now
-                    case ActionType.Group:
-                    case ActionType.Unknown:
-                    default:
-                        break;
-                }
-            }
-            return responses;
-        }
 
         #region Helpers
 
@@ -527,6 +505,29 @@ namespace Cygnus.Nlp
         public bool IsValid()
         {
             return this.Action != ActionType.Unknown;
+        }
+
+        public List<UserResponsePackage> ExecuteAction(IEnumerable<Resource> resources)
+        {
+            var responses = new List<UserResponsePackage>();
+            foreach (var resource in resources)
+            {
+                switch (this.Action)
+                {
+                    case ActionType.Get:
+                        responses.Add(UserRequestDispatcher.Instance.GetResourceData(resource.Id));
+                        break;
+                    case ActionType.Set:
+                        UserRequestDispatcher.Instance.SetResourceData(resource.Id, this.Dependent);
+                        break;
+                    // No defined action handler for now
+                    case ActionType.Group:
+                    case ActionType.Unknown:
+                    default:
+                        break;
+                }
+            }
+            return responses;
         }
     }
 
