@@ -85,7 +85,6 @@ namespace Cygnus.GatewayTestHarness
                     Id = resource.Guid,
                     Name = resource.Name,
                     Uri = BaseUri + "/resources",
-                    Description = "",
                     GatewayId = m_gatewayId
                 });
             }

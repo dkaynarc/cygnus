@@ -129,11 +129,13 @@ namespace Cygnus.Nlp
                 { "under", ConditionalOperatorType.LessThan },
                 { "below", ConditionalOperatorType.LessThan },
                 { "less", ConditionalOperatorType.LessThan },
+                { "fewer", ConditionalOperatorType.LessThan },
 
-                { "greaterthan", ConditionalOperatorType.LessThan },
-                { "over", ConditionalOperatorType.LessThan },
-                { "above", ConditionalOperatorType.LessThan },
-                { "more", ConditionalOperatorType.LessThan },
+                { "greaterthan", ConditionalOperatorType.GreaterThan },
+                { "over", ConditionalOperatorType.GreaterThan },
+                { "above", ConditionalOperatorType.GreaterThan },
+                { "more", ConditionalOperatorType.GreaterThan },
+                { "greater", ConditionalOperatorType.GreaterThan }
             };
             return map;
         }
@@ -177,7 +179,7 @@ namespace Cygnus.Nlp
                     result = handler(bPred, bArg);
                 }
             }
-            return false;
+            return result;
         }
         #endregion
     }

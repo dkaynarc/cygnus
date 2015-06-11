@@ -41,7 +41,16 @@ namespace Cygnus.Managers
                 throw new Exception("Expression was not valid.");
             }
 
-            this.m_pendingExpressions.Add(resolvedExpr);
+            // Remove all expressions that have the same conditional resource target as the newest one
+            // We will replace those with what the new rule.
+            int removed = m_pendingExpressions.RemoveAll(x => x.ConditionalResource.Id == resolvedExpr.ConditionalResource.Id);
+
+            for (int i = 0; i < removed; i++)
+            {
+                GatewayResourceProxy.Instance.UnregisterOnMessageEvent(resolvedExpr.ConditionalResource.Id, OnMessage);
+            }
+
+            m_pendingExpressions.Add(resolvedExpr);
             this.PrepareConditionalObject(resolvedExpr);
         }
 

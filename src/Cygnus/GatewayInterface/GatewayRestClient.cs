@@ -68,7 +68,6 @@ namespace Cygnus.GatewayInterface
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Uri { get; set; }
-        public string Description { get; set; }
         public Guid GatewayId { get; set; }
     }
 

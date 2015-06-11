@@ -207,7 +207,7 @@ namespace Cygnus.Nlp
                     found = true;
                 }
             }
-            else
+            else if (!string.IsNullOrEmpty(vbWord))
             {
                 pred = new Predicate(gov: vbWord);
             }
@@ -272,8 +272,13 @@ namespace Cygnus.Nlp
                                 child.label().value().Equals("RP"))
                             {
                                 res = WordsListToStringList(child.yieldWords()).FirstOrDefault();
-                                found = true;
-                                return false;
+                                bool converted;
+                                if (BooleanTextMap.TryGetValue(res, out converted))
+                                {
+                                    res = converted.ToString();
+                                    found = true;
+                                    return false;
+                                }
                             }
                         }
                     }
