@@ -1,4 +1,5 @@
 ﻿using Cygnus.Managers;
+using Cygnus.Nlp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace Cygnus.Controllers
             var result3 = result.Where(s => s.Value.ToLower().Contains(term.ToLower())).Select(w => w).ToList();
 
             // Test Hook
+            
             NlpDecisionEngine.Instance.Test();
 
             return Json(result3, JsonRequestBehavior.AllowGet);

@@ -9,8 +9,11 @@ using WebSocketSharp;
 
 namespace Cygnus.GatewayInterface
 {
+    public delegate void MessageReceivedHandler(object sender, MessageReceivedEventArgs e);
     public class GatewaySocketClient
     {
+        public event MessageReceivedHandler OnMessageReceived;
+
         private WebSocket m_gatewaySocket = null;
         private Dictionary<Guid, Request> m_requestList = new Dictionary<Guid, Request>();
         private Guid m_clientId = Guid.NewGuid();
@@ -98,9 +101,26 @@ namespace Cygnus.GatewayInterface
                     originalRequest.Sender.Notify(responseGuid, response.Data);
                     m_requestList.Remove(responseGuid);
                 }
+
+                // This might be a push style message with no corresponding request so fire the event
+                this.RaiseOnMessageReceivedEvent(new MessageReceivedEventArgs()
+                {
+                    ResourceId = Guid.Parse(response.SenderGuid),
+                    Data = response.Data,
+                    DataUnits = response.DataUnits,
+                    DataType = response.DataType
+                });
             }
         }
 
+        private void RaiseOnMessageReceivedEvent(MessageReceivedEventArgs e)
+        {
+            if (OnMessageReceived != null)
+            {
+                OnMessageReceived(this, e);
+            }
+        }
+        
         private void SendRequest(ResourceMessage request)
         {
             
@@ -127,9 +147,17 @@ namespace Cygnus.GatewayInterface
 #endregion
     }
 
-    public class Request
+    internal class Request
     {
         public Guid Id;
         public INotifiableRequester Sender;
+    }
+
+    public class MessageReceivedEventArgs
+    {
+        public string Data { get; set; }
+        public string DataType { get; set; }
+        public string DataUnits { get; set; }
+        public Guid ResourceId { get; set; }
     }
 }

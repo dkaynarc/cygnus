@@ -12,7 +12,7 @@
 <h2>Index</h2>
 @Html.Label("Enter your request")
 <form action ="/" id="SearchForm" method="post">
-    <input type="text" id="request" size="200"/>
+    <input type="text" id="request" size="500"/>
     <button type="submit">Submit</button>
 </form>
 <div id="searchResponseArea">
@@ -33,44 +33,5 @@
         });
         event.preventDefault();
     });
-    @*$("#RequestBox").autocomplete({
-        source: function (request, response) {
-            var customer = new Array();
-            $.ajax({
-                async: false,
-                cache: false,
-                type: "POST",
-                url: "@(Url.Action("AutoComplete", "CoreRequest"))",
-                data: { "term": request.term },
-                success: function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        customer[i] = { label: data[i].Value, Id: data[i].Key };
-                    }
-                }
-            });
-            response(customer);
-        },
-        select: function (event, ui) {
-            // Fill form
-            $.ajax({
-                cache: false,
-                async: false,
-                type: "POST",
-                url: "@(Url.Action("GetDetail", "CoreRequest"))",
-                data: { "id": ui.item.Id },
-
-                success: function (data) {
-                    $('#VisitorDetail').show();
-                    $("#Name").html(data.VisitorName)
-                    $("#Id").html(data.Id)
-                    $("#Mobile").val(data.Mobile)
-
-                    action = data.Action;
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert('Failed to retrieve states.');
-                }
-            })
-        }
-    });*@
+    
 </script>

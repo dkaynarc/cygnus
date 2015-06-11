@@ -101,6 +101,26 @@ namespace Cygnus.Managers
             return requestGuid;
         }
 
+        public void RegisterOnMessageEvent(Guid resourceId, MessageReceivedHandler handler)
+        {
+            GatewaySocketClient client = null;
+
+            if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
+            {
+                client.OnMessageReceived += handler;
+            }
+        }
+
+        public void UnregisterOnMessageEvent(Guid resourceId, MessageReceivedHandler handler)
+        {
+            GatewaySocketClient client = null;
+
+            if (m_gatewayClients.TryGetValue(GetResourceUri(resourceId), out client))
+            {
+                client.OnMessageReceived -= handler;
+            }
+        }
+
         private string GetResourceUri(Guid resourceId)
         {
             return m_db.Resources.Where(r => r.Id == resourceId).Select(r => r.Uri).First();

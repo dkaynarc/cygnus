@@ -319,10 +319,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Managers\ConditionalExpression.cs" />
+    <Compile Include="Managers\ConditionalRequestManager.cs" />
+    <Compile Include="Managers\ResourceSearchEngine.cs" />
+    <Compile Include="Nlp\ConditionalExpression.cs" />
     <Compile Include="Managers\GatewayResourceProxy.cs" />
-    <Compile Include="Managers\NlpDecisionEngine.cs" />
-    <Compile Include="Managers\NlpEngineThread.cs" />
+    <Compile Include="Nlp\NlpDecisionEngine.cs" />
+    <Compile Include="Nlp\NlpEngineThread.cs" />
     <Compile Include="Managers\UserRequestDispatcher.cs" />
     <Compile Include="Migrations\201505160634161_initial.cs" />
     <Compile Include="Migrations\201505160634161_initial.Designer.cs">
@@ -352,12 +354,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Hunspellx64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Hunspellx86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <Content Include="PrivateSettings.config" />
     <None Include="Properties\PublishProfiles\Cygnus7885.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />

@@ -16,13 +16,14 @@ using edu.stanford.nlp.semgraph;
 using edu.stanford.nlp.trees;
 using NHunspell;
 using Cygnus.Models.Api;
+using Cygnus.Managers;
 
-namespace Cygnus.Managers
+namespace Cygnus.Nlp
 {
     public class NlpDecisionEngine
     {
         private static NlpDecisionEngine m_instance;
-        private ApplicationDbContext m_dbContext = new ApplicationDbContext();
+        
         public static NlpDecisionEngine Instance
         {
             get
@@ -50,7 +51,7 @@ namespace Cygnus.Managers
 
         public void Test()
         {
-            var resources = FindResources("room living light".Split(' '));
+            var resources = ResourceSearchEngine.Instance.FindResources("room living light".Split(' '));
         }
 
         public IEnumerable<UserResponsePackage> ExecuteQuery(string query)
@@ -77,13 +78,21 @@ namespace Cygnus.Managers
             var responses = new List<UserResponsePackage>();
             var parseTree = sentence.get(typeof(TreeCoreAnnotations.TreeAnnotation)) as Tree;
 
-            // It is possible to expand further here by extracting more than one predicate/subject pair and acting upon them. 
-            //var subjectKeywords = GetSubjectKeywords(depMap);
             IEnumerable<string> subjectKeywords = null;
             ConditionalExpression condExpr = null;
             if (TryFindConditionalExpression(parseTree, out condExpr))
             {
                 // Process conditional
+                var response = new UserResponsePackage() { Data = "Success." };
+                try
+                {
+                    ConditionalRequestManager.Instance.AddExpression(condExpr);
+                }
+                catch (Exception e)
+                {
+                    response.Data = e;
+                }
+                responses.Add(response);
             }
             else
             {
@@ -93,7 +102,7 @@ namespace Cygnus.Managers
                     if (TryFindPredicate(parseTree, out predicate))
                     {
                         var action = predicate.ResetActionType();
-                        var resources = FindResources(subjectKeywords);
+                        var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
                         responses.AddRange(ExecuteAction(predicate.Action, predicate.Dependent, resources));
                     }
                 }
@@ -224,10 +233,11 @@ namespace Cygnus.Managers
         {
             bool found = false;
 
-            if (parseTree.firstChild().label().value().Equals("IN"))
+            var conjunction = parseTree.firstChild();
+            if (conjunction.label().value().Equals("IN"))
             {
-                var conjunction = parseTree.firstChild();
-                found = ConditionalExpression.IsValidConstructType(conjunction.label().value());
+                //found = ConditionalExpression.IsValidConstructType(conjunction.label().value());
+                found = ConditionalExpression.IsValidConstructType(WordsListToStringList(conjunction.yieldWords()).FirstOrDefault());
             }
 
             return found;
@@ -309,7 +319,11 @@ namespace Cygnus.Managers
                             {
                                 // Find final action part (either comma-seperated clause or base-level verb-phrase)
                                 // This will be a subject + predicate pair
-                                found = TryFindConditionalObject(tree, out conditional);
+                                found = TryFindConditionalObject(tree, ref conditional);
+                                conditional.SetConstructType(condConstructType);
+                                conditional.Condition.Predicate = condPred;
+                                conditional.Condition.CoerceOperatorFromPredicate();
+                                conditional.Condition.ObjectKeywords.AddRange(condSubjKeywords);
                             }
                         }
                     }
@@ -319,14 +333,13 @@ namespace Cygnus.Managers
             return found;
         }
 
-        private bool TryFindConditionalObject(Tree tree, out ConditionalExpression expr)
+        private bool TryFindConditionalObject(Tree tree, ref ConditionalExpression expr)
         {
             bool found = false;
-            expr = null;
             Predicate pred = null;
             Tree actualVp = null;
 
-            if (tree == null) { return false; }
+            if (tree == null || expr == null) { return false; }
             found = TryFindPredicate(tree, out pred, out actualVp);
 
             if (found)
@@ -336,6 +349,8 @@ namespace Cygnus.Managers
                 if (TryFindSubjectKeywords(actualVp, out objKeywords))
                 {
                     found = true;
+                    expr.Consequant.Predicate = pred;
+                    expr.Consequant.ObjectKeywords.AddRange(objKeywords);
                 }
             }
 
@@ -393,29 +408,6 @@ namespace Cygnus.Managers
                 }
             }
             return responses;
-        }
-        private IEnumerable<Resource> FindResources(IEnumerable<string> keywords)
-        {
-            var result = new List<Resource>();
-            var notFoundWords = new List<string>();
-            foreach (var item in keywords)
-            {
-                var initialResultCount = result.Count;
-                // Find exact matches, ignoring case, for resource names
-                result = result.Union(m_dbContext.Resources.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
-                // Keep track of words that aren't found as these are resource names.
-                if (result.Count == initialResultCount)
-                {
-                    notFoundWords.Add(item);
-                }
-            }
-
-            // Find descriptions that contain all keywords amongst those that haven't turned up results with the exact match against resource names.
-            // We filter these out because it's likely that the user won't be specifying exact device names when also providing keyword matches.
-            result = result.Union(m_dbContext.Resources
-                .Where(r => notFoundWords.All(kw => r.Description.ToLower().Contains(kw.ToLower())))).ToList();
-
-            return result;
         }
 
         #region Helpers
@@ -530,6 +522,11 @@ namespace Cygnus.Managers
             this.Action = action;
 
             return action;
+        }
+
+        public bool IsValid()
+        {
+            return this.Action != ActionType.Unknown;
         }
     }
 
