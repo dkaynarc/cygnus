@@ -65,7 +65,7 @@ namespace Cygnus.Managers
         }
     }
 
-    internal class ResolvedExpression<TCond> : ConditionalExpression
+    internal class ResolvedExpression : ConditionalExpression
     {
         public IEnumerable<Cygnus.Models.Api.Resource> ConsequantResources { get; set; }
         public Cygnus.Models.Api.Resource ConditionalResource { get; set; }

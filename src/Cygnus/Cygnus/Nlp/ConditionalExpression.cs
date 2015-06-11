@@ -7,15 +7,15 @@ using System.Web;
 
 namespace Cygnus.Nlp
 {
-    public class ConditionalExpression<TCond>
+    public class ConditionalExpression
     {
         public ConditionalConstructType ConstructType { get; set; }
-        public BooleanCondition<TCond> Condition { get; set; }
+        public BooleanCondition Condition { get; set; }
         public Consequant Consequant { get; set; }
 
         public ConditionalExpression()
         {
-            Condition = new BooleanCondition<TCond>();
+            Condition = new BooleanCondition();
             Consequant = new Consequant();
         }
 
@@ -79,7 +79,7 @@ namespace Cygnus.Nlp
         }
     }
 
-    public class BooleanCondition<T>
+    public class BooleanCondition
     {
         public ConditionalOperatorType OperatorType { get; set; }
         public List<string> ObjectKeywords { get; set; }
