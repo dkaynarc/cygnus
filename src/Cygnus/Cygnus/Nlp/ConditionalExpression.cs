@@ -11,12 +11,12 @@ namespace Cygnus.Nlp
     {
         public ConditionalConstructType ConstructType { get; set; }
         public BooleanCondition Condition { get; set; }
-        public Consequant Consequant { get; set; }
+        public Consequant Consequent { get; set; }
 
         public ConditionalExpression()
         {
             Condition = new BooleanCondition();
-            Consequant = new Consequant();
+            Consequent = new Consequant();
         }
 
         public void SetConstructType(string s)
@@ -30,18 +30,16 @@ namespace Cygnus.Nlp
 
         public void CoercePredicateActions()
         {
-            Consequant.CoercePredicateAction();
+            Consequent.CoercePredicateAction();
             Condition.CoercePredicateAction();
         }
 
         public virtual bool IsValid()
         {
-            return 
-            (
-                this.ConstructType != ConditionalConstructType.Unknown &&
-                this.Condition.IsValid() &&
-                this.Consequant.Predicate.IsValid()
-            );
+            var valid = this.ConstructType != ConditionalConstructType.Unknown &&
+                    this.Condition.IsValid() &&
+                    this.Consequent.Predicate.IsValid();
+            return valid;
         }
 
         #region static methods
@@ -114,7 +112,7 @@ namespace Cygnus.Nlp
 
         public bool IsValid()
         {
-            return OperatorType != ConditionalOperatorType.Unknown && this.Predicate.IsValid();
+            return OperatorType != ConditionalOperatorType.Unknown;
         }
 
         #region static methods

@@ -172,35 +172,23 @@ namespace Cygnus.Nlp
             string vbWord = null;
             bool found = false;
             Tree targetNode = vp;
-            // find the key verb (VB)
             Traverse(vp, x =>
+            {
+                if (x.label().value().StartsWith("VB"))
                 {
-                    // Try and find a prepositional phrase as this could indicate the useful part of a
-                    // conditional statement's predicate
-                    if (x.label().value().Equals("PP"))
+                    var vbWordNode = x;
+                    var possiblePP = vp.lastChild().firstChild();
+                    if (possiblePP.label().value().Equals("IN"))
                     {
-                        if (TryFindConditionalPredicate(x))
-                        {
-                            targetNode = x;
-                            if (x.lastChild().label().value().Equals("NP"))
-                            {
-                                if (x.lastChild().lastChild().label().value().Equals("VP"))
-                                {
-                                    targetNode = x.lastChild().lastChild();
-                                }
-                            }
-                            return false;
-                        }
+                        vbWordNode = possiblePP;
                     }
-                    else if (x.label().value().StartsWith("VB"))
-                    {
-                        vbWord = WordsListToStringList(x.yieldWords()).FirstOrDefault();
-                    }
+                    vbWord = WordsListToStringList(vbWordNode.yieldWords()).FirstOrDefault();
+                    return false;
+                }
 
-                    return true;
-                });
-
-
+                return true;
+            });
+            
             if (TryFindNumberRelation(targetNode, out numberStr))
             {
                 // Small edge case: assume that when the user inputs a number-type query,
@@ -280,7 +268,8 @@ namespace Cygnus.Nlp
                     {
                         foreach (var child in x.children())
                         {
-                            if (child.label().value().Equals("IN"))
+                            if (child.label().value().Equals("IN") || 
+                                child.label().value().Equals("RP"))
                             {
                                 res = WordsListToStringList(child.yieldWords()).FirstOrDefault();
                                 found = true;
@@ -349,8 +338,8 @@ namespace Cygnus.Nlp
                 if (TryFindSubjectKeywords(actualVp, out objKeywords))
                 {
                     found = true;
-                    expr.Consequant.Predicate = pred;
-                    expr.Consequant.ObjectKeywords.AddRange(objKeywords);
+                    expr.Consequent.Predicate = pred;
+                    expr.Consequent.ObjectKeywords.AddRange(objKeywords);
                 }
             }
 
@@ -425,14 +414,10 @@ namespace Cygnus.Nlp
         /// <param name="f">The function to execute at each node. Returns true to continue traversal.</param>
         private static void Traverse(Tree tree, Func<Tree, bool> f)
         {
-            var curDepth = 0;
-            var maxDepth = tree.depth();
             foreach (var child in tree.children())
             {
-                if (curDepth > maxDepth) return;
                 if (!f(child)) return;
                 Traverse(child, f);
-                curDepth++;
             }
         }
         #endregion

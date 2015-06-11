@@ -42,6 +42,7 @@ namespace Cygnus.Managers
             }
 
             this.m_pendingExpressions.Add(resolvedExpr);
+            this.PrepareConditionalObject(resolvedExpr);
         }
 
         private void PrepareConditionalObject(ResolvedExpression expr)
@@ -49,14 +50,17 @@ namespace Cygnus.Managers
             // We will be watching changes of this resources' value, so set its mode to push
             GatewayResourceProxy.Instance.RegisterOnMessageEvent(expr.ConditionalResource.Id, OnMessage);
             GatewayResourceProxy.Instance.SendSetCommunicationModeRequest(expr.ConditionalResource.Id,
-                    CommunicationMode.Push);            
-
+                    CommunicationMode.Push);
         }
 
         private void OnMessage(object sender, MessageReceivedEventArgs e)
         {
             var originalExpr = m_pendingExpressions.Where(x => x.ConditionalResource.Id == e.ResourceId).FirstOrDefault();
-            ExecuteExpression(originalExpr, e);
+
+            if (originalExpr != null)
+            {
+                ExecuteExpression(originalExpr, e);
+            }
         }
 
         private void ExecuteExpression(ResolvedExpression expr, MessageReceivedEventArgs e)
@@ -67,7 +71,7 @@ namespace Cygnus.Managers
 
     internal class ResolvedExpression : ConditionalExpression
     {
-        public IEnumerable<Cygnus.Models.Api.Resource> ConsequantResources { get; set; }
+        public IEnumerable<Cygnus.Models.Api.Resource> ConsequentResources { get; set; }
         public Cygnus.Models.Api.Resource ConditionalResource { get; set; }
         public ResolvedExpression() : base()
         {
@@ -77,14 +81,14 @@ namespace Cygnus.Managers
         public ResolvedExpression(ConditionalExpression expr)
         {
             this.Condition = expr.Condition;
-            this.Consequant = expr.Consequant;
+            this.Consequent = expr.Consequent;
             this.ConstructType = expr.ConstructType;
             this.Initialize();
         }
 
         private void Initialize()
         {
-            this.ConsequantResources = new List<Cygnus.Models.Api.Resource>();
+            this.ConsequentResources = new List<Cygnus.Models.Api.Resource>();
             this.ConditionalResource = null;
         }
 
@@ -97,18 +101,17 @@ namespace Cygnus.Managers
 
         public void Resolve()
         {
-            this.ConsequantResources = ResourceSearchEngine.Instance.FindResources(this.Consequant.ObjectKeywords);
+            this.CoercePredicateActions();
+            this.ConsequentResources = ResourceSearchEngine.Instance.FindResources(this.Consequent.ObjectKeywords);
             this.ConditionalResource = ResourceSearchEngine.Instance.FindResources(this.Condition.ObjectKeywords).FirstOrDefault();
         }
 
         public override bool IsValid()
         {
-            return
-                (
-                    base.IsValid() &&
+            var valid = base.IsValid() &&
                     this.ConditionalResource != null &&
-                    this.ConsequantResources.Count() > 0
-                );
+                    this.ConsequentResources.Count() > 0;
+            return valid;
         }
 
         public IEnumerable<UserResponsePackage> Execute(string data)
@@ -116,7 +119,7 @@ namespace Cygnus.Managers
             var responses = new List<UserResponsePackage>();
             if (this.Condition.Evaluate(data))
             {
-                responses.AddRange(this.Consequant.Predicate.ExecuteAction(this.ConsequantResources));
+                responses.AddRange(this.Consequent.Predicate.ExecuteAction(this.ConsequentResources));
             }
             return responses;
         }

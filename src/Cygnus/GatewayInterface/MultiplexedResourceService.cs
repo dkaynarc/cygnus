@@ -121,12 +121,13 @@ namespace Cygnus.GatewayInterface
         {
             var message = new ResourceMessage()
             {
-                Command = "response",
+                Command = "push-response",
                 Data = resData,
                 DataType = resource.GetResourceDataType(),
                 DataUnits = resource.GetResourceDataUnits(),
                 SenderGuid = resource.Guid.ToString()
             };
+            Send(JsonConvert.SerializeObject((message)));
         }
 
         #region Helpers

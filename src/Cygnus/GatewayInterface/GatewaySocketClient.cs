@@ -102,6 +102,7 @@ namespace Cygnus.GatewayInterface
                     m_requestList.Remove(responseGuid);
                 }
 
+                if (response.Command == "push-response")
                 // This might be a push style message with no corresponding request so fire the event
                 this.RaiseOnMessageReceivedEvent(new MessageReceivedEventArgs()
                 {
