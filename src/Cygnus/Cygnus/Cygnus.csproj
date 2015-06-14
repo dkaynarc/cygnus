@@ -311,6 +311,7 @@
     <Compile Include="Common\Strings.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\GatewaysController.cs" />
+    <Compile Include="Controllers\Api\ResourceGroupsController.cs" />
     <Compile Include="Controllers\Api\ResourcesController.cs" />
     <Compile Include="Controllers\Api\TestController.cs" />
     <Compile Include="Controllers\CoreRequestController.cs" />
@@ -321,16 +322,25 @@
     </Compile>
     <Compile Include="Managers\ConditionalRequestManager.cs" />
     <Compile Include="Managers\ResourceSearchEngine.cs" />
+    <Compile Include="Migrations\201506140740411_initial.cs" />
+    <Compile Include="Migrations\201506140740411_initial.Designer.cs">
+      <DependentUpon>201506140740411_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506140753307_fkey1.cs" />
+    <Compile Include="Migrations\201506140753307_fkey1.Designer.cs">
+      <DependentUpon>201506140753307_fkey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506140804143_fkey2.cs" />
+    <Compile Include="Migrations\201506140804143_fkey2.Designer.cs">
+      <DependentUpon>201506140804143_fkey2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Api\ResourceGroup.cs" />
     <Compile Include="Nlp\ConditionalExpression.cs" />
     <Compile Include="Managers\GatewayResourceProxy.cs" />
     <Compile Include="Nlp\NlpDecisionEngine.cs" />
     <Compile Include="Nlp\NlpEngineThread.cs" />
     <Compile Include="Managers\UserRequestDispatcher.cs" />
-    <Compile Include="Migrations\201505160634161_initial.cs" />
-    <Compile Include="Migrations\201505160634161_initial.Designer.cs">
-      <DependentUpon>201505160634161_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Api\Gateway.cs" />
     <Compile Include="Models\Api\Resource.cs" />
@@ -428,8 +438,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505160634161_initial.resx">
-      <DependentUpon>201505160634161_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506140740411_initial.resx">
+      <DependentUpon>201506140740411_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506140753307_fkey1.resx">
+      <DependentUpon>201506140753307_fkey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506140804143_fkey2.resx">
+      <DependentUpon>201506140804143_fkey2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

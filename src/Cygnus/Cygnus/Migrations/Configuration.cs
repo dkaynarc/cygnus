@@ -9,7 +9,7 @@ namespace Cygnus.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Cygnus.Models.ApplicationDbContext context)

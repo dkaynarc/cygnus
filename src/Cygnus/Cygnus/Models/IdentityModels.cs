@@ -33,5 +33,24 @@ namespace Cygnus.Models
         public System.Data.Entity.DbSet<Cygnus.Models.Api.Gateway> Gateways { get; set; }
 
         public System.Data.Entity.DbSet<Cygnus.Models.Api.Resource> Resources { get; set; }
+
+        public System.Data.Entity.DbSet<Cygnus.Models.Api.ResourceGroup> ResourceGroups { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Cygnus.Models.Api.Resource>()
+                .HasOptional(r => r.ResourceGroup)
+                .WithMany(g => g.Resources)
+                .HasForeignKey(r => r.ResourceGroupId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Cygnus.Models.Api.Resource>()
+                .HasRequired(r => r.Gateway)
+                .WithMany()
+                .HasForeignKey(r => r.GatewayId)
+                .WillCascadeOnDelete(false);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

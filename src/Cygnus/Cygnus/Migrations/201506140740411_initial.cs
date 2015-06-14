@@ -17,6 +17,16 @@ namespace Cygnus.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.ResourceGroups",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        Name = c.String(),
+                        Description = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Resources",
                 c => new
                     {
@@ -25,10 +35,13 @@ namespace Cygnus.Migrations
                         Uri = c.String(),
                         Description = c.String(),
                         GatewayId = c.Guid(nullable: false),
+                        ResourceGroupId = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Gateways", t => t.GatewayId, cascadeDelete: true)
-                .Index(t => t.GatewayId);
+                .ForeignKey("dbo.ResourceGroups", t => t.ResourceGroupId)
+                .Index(t => t.GatewayId)
+                .Index(t => t.ResourceGroupId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -106,6 +119,7 @@ namespace Cygnus.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Resources", "ResourceGroupId", "dbo.ResourceGroups");
             DropForeignKey("dbo.Resources", "GatewayId", "dbo.Gateways");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
@@ -113,6 +127,7 @@ namespace Cygnus.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Resources", new[] { "ResourceGroupId" });
             DropIndex("dbo.Resources", new[] { "GatewayId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
@@ -120,6 +135,7 @@ namespace Cygnus.Migrations
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Resources");
+            DropTable("dbo.ResourceGroups");
             DropTable("dbo.Gateways");
         }
     }

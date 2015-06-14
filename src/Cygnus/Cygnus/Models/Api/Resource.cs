@@ -18,6 +18,10 @@ namespace Cygnus.Models.Api
         public Guid GatewayId { get; set; }
         // Navigation property
         public virtual Gateway Gateway { get; set; }
+
+        // Foreign Key
+        public Guid? ResourceGroupId { get; set; }
+        public virtual ResourceGroup ResourceGroup{ get; set; }
     }
 
     public class ResourceDTO

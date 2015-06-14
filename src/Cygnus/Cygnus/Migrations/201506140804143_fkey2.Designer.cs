@@ -7,13 +7,13 @@ namespace Cygnus.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class initial : IMigrationMetadata
+    public sealed partial class fkey2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fkey2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201505160634161_initial"; }
+            get { return "201506140804143_fkey2"; }
         }
         
         string IMigrationMetadata.Source

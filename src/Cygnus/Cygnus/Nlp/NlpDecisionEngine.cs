@@ -123,9 +123,10 @@ namespace Cygnus.Nlp
                 {
                     np = x;
                 }
-                if (x.label().value().Equals("DT"))
+                if (x.label().value().Equals("DT") ||
+                    x.label().value().Equals("IN"))
                 {
-                    conjunctions = WordsListToStringList(x.yieldWords());
+                    conjunctions.AddRange(WordsListToStringList(x.yieldWords()));
                 }
                 return true;
             });
@@ -178,7 +179,7 @@ namespace Cygnus.Nlp
                 {
                     var vbWordNode = x;
                     var possiblePP = vp.lastChild().firstChild();
-                    if (!x.label().value().Equals("VB") && 
+                    if (x.label().value().Equals("VBZ") && 
                         possiblePP.label().value().Equals("IN"))
                     {
                         vbWordNode = possiblePP;
