@@ -25,9 +25,9 @@ namespace Cygnus.Controllers.Api
         }
 
         // GET: api/ResourceGroups
-        public IQueryable<ResourceGroup> GetResourceGroups()
+        public ICollection<ResourceGroup> GetResourceGroups()
         {
-            var groups = db.ResourceGroups.Include(g => g.Resources);
+            var groups = db.ResourceGroups.Include(g => g.Resources).ToArray();
             return groups;
         }
 
@@ -123,6 +123,18 @@ namespace Cygnus.Controllers.Api
             await db.SaveChangesAsync();
 
             return Ok(resourceGroup);
+        }
+
+        public async void AddResourcesToGroup(ResourceGroup group, IEnumerable<Resource> resources)
+        {
+            if (group == null) { return; }
+
+            foreach (var resource in resources)
+            {
+                resource.ResourceGroupId = group.Id;
+            }
+
+            await db.SaveChangesAsync();
         }
 
         protected override void Dispose(bool disposing)

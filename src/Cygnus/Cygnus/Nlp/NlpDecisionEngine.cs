@@ -17,6 +17,7 @@ using edu.stanford.nlp.trees;
 using NHunspell;
 using Cygnus.Models.Api;
 using Cygnus.Managers;
+using Cygnus.Common;
 
 namespace Cygnus.Nlp
 {
@@ -72,7 +73,6 @@ namespace Cygnus.Nlp
             }
             return allResponses;
         }
-
         private IEnumerable<UserResponsePackage> ExecuteSentenceRequest(Annotation sentence)
         {
             var responses = new List<UserResponsePackage>();
@@ -80,6 +80,11 @@ namespace Cygnus.Nlp
 
             IEnumerable<string> subjectKeywords = null;
             ConditionalExpression condExpr = null;
+            GroupExpression groupExpr = null;
+            if (TryFindGroupExpression(parseTree, out groupExpr))
+            {
+                responses.AddRange(ResourceGroupManager.Instance.ExecuteExpressions(groupExpr.Yield()));
+            }
             if (TryFindConditionalExpression(parseTree, out condExpr))
             {
                 // Process conditional
@@ -103,6 +108,8 @@ namespace Cygnus.Nlp
                     {
                         var action = predicate.ResetActionType();
                         var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
+                        var groups = ResourceSearchEngine.Instance.FindGroups(subjectKeywords);
+                        //responses.AddRange(ResourceGroupManager.Instance.ExecuteExpressions()
                         responses.AddRange(predicate.ExecuteAction(resources));
                     }
                 }
@@ -124,7 +131,9 @@ namespace Cygnus.Nlp
                     np = x;
                 }
                 if (x.label().value().Equals("DT") ||
-                    x.label().value().Equals("IN"))
+                    x.label().value().Equals("IN") || 
+                    x.label().value().Equals("CC") || 
+                    x.label().value().StartsWith(","))
                 {
                     conjunctions.AddRange(WordsListToStringList(x.yieldWords()));
                 }
@@ -390,6 +399,60 @@ namespace Cygnus.Nlp
             return (subConj != null) ? sbar : null;
         }
 
+        private bool TryFindGroupExpression(Tree tree, out GroupExpression groupExpr)
+        {
+            groupExpr = new GroupExpression();
+            if (tree == null) { return false; }
+            bool found = false;
+            Tree vp = null;
+
+            Traverse(tree, x =>
+            {
+                if (x.label().value().Equals("VP"))
+                {
+                    vp = x;
+                    return false;
+                }
+                return true;
+            });
+
+            if (vp != null)
+            {
+                var allWords = WordsListToStringList(vp.yieldWords());
+                if (allWords.Contains("add", StringComparer.InvariantCultureIgnoreCase))
+                {
+                    IEnumerable<string> resKeywords = null;
+                    if (TryFindSubjectKeywords(vp, out resKeywords))
+                    {
+                        Tree pp = null;
+                        Traverse(vp, x =>
+                            {
+                                if (x.label().value().Equals("PP"))
+                                {
+                                    pp = x;
+                                    return false;
+                                }
+                                return true;
+                            });
+                        if (pp != null)
+                        {
+                            IEnumerable<string> groupKeywords = null;
+                            if (TryFindSubjectKeywords(pp, out groupKeywords))
+                            {
+                                if (groupKeywords.Count() > 0)
+                                {
+                                    found = true;
+                                    groupExpr.GroupKeywords = groupKeywords;
+                                    groupExpr.ResourceKeywords = resKeywords;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return found;
+        }
 
         #region Helpers
 
@@ -441,12 +504,10 @@ namespace Cygnus.Nlp
     {
         public string Text { get; set; }
         public Guid Id { get; set; }
-        public AutoResetEvent WaitEvent { get; set; }
         public NlpQuery(string text = "")
         {
             this.Text = text;
             this.Id = Guid.NewGuid();
-            this.WaitEvent = new AutoResetEvent(false);
         }
     }
 
@@ -476,9 +537,7 @@ namespace Cygnus.Nlp
                 
                 { "get", ActionType.Get },
                 { "show", ActionType.Get },
-                { "display", ActionType.Get },
-                
-                { "group", ActionType.Group }
+                { "display", ActionType.Get }
             };
             return map;
         }
@@ -519,8 +578,6 @@ namespace Cygnus.Nlp
                     case ActionType.Set:
                         UserRequestDispatcher.Instance.SetResourceData(resource.Id, this.Dependent);
                         break;
-                    // No defined action handler for now
-                    case ActionType.Group:
                     case ActionType.Unknown:
                     default:
                         break;
@@ -532,6 +589,6 @@ namespace Cygnus.Nlp
 
     public enum ActionType
     {
-        Unknown, Get, Set, Group
+        Unknown, Get, Set
     }
 }

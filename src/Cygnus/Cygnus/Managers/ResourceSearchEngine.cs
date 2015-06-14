@@ -43,5 +43,17 @@ namespace Cygnus.Managers
 
             return result;
         }
+
+        public IEnumerable<ResourceGroup> FindGroups(IEnumerable<string> keywords)
+        {
+            var result = new List<ResourceGroup>();
+            foreach (var item in keywords)
+            {
+                // Basic search on on resource group names
+                result = result.Union(m_dbContext.ResourceGroups.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
+            }
+
+            return result;
+        }
     }
 }

@@ -308,6 +308,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Extensions.cs" />
     <Compile Include="Common\Strings.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\GatewaysController.cs" />
@@ -321,6 +322,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Managers\ConditionalRequestManager.cs" />
+    <Compile Include="Managers\ResourceGroupManager.cs" />
     <Compile Include="Managers\ResourceSearchEngine.cs" />
     <Compile Include="Migrations\201506140740411_initial.cs" />
     <Compile Include="Migrations\201506140740411_initial.Designer.cs">
@@ -334,10 +336,15 @@
     <Compile Include="Migrations\201506140804143_fkey2.Designer.cs">
       <DependentUpon>201506140804143_fkey2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506141028085_fkey3.cs" />
+    <Compile Include="Migrations\201506141028085_fkey3.Designer.cs">
+      <DependentUpon>201506141028085_fkey3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Api\ResourceGroup.cs" />
     <Compile Include="Nlp\ConditionalExpression.cs" />
     <Compile Include="Managers\GatewayResourceProxy.cs" />
+    <Compile Include="Nlp\GroupExpression.cs" />
     <Compile Include="Nlp\NlpDecisionEngine.cs" />
     <Compile Include="Nlp\NlpEngineThread.cs" />
     <Compile Include="Managers\UserRequestDispatcher.cs" />
@@ -446,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506140804143_fkey2.resx">
       <DependentUpon>201506140804143_fkey2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506141028085_fkey3.resx">
+      <DependentUpon>201506141028085_fkey3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

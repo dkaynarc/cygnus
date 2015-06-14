@@ -22,11 +22,11 @@ namespace Cygnus.Managers
         }
 
         private ApplicationDbContext m_db = new ApplicationDbContext();
-        private List<ResolvedExpression> m_pendingExpressions;
+        private List<ResolvedConditionalExpression> m_pendingExpressions;
 
         private ConditionalRequestManager()
         {
-            m_pendingExpressions = new List<ResolvedExpression>();
+            m_pendingExpressions = new List<ResolvedConditionalExpression>();
         }
 
         public void AddExpression(ConditionalExpression expression)
@@ -35,7 +35,7 @@ namespace Cygnus.Managers
             {
                 throw new ArgumentNullException("Expression was null.");
             }
-            var resolvedExpr = ResolvedExpression.CreateFromUnresolved(expression);
+            var resolvedExpr = ResolvedConditionalExpression.CreateFromUnresolved(expression);
             if (!resolvedExpr.IsValid())
             {
                 throw new Exception("Expression was not valid.");
@@ -54,7 +54,7 @@ namespace Cygnus.Managers
             this.PrepareConditionalObject(resolvedExpr);
         }
 
-        private void PrepareConditionalObject(ResolvedExpression expr)
+        private void PrepareConditionalObject(ResolvedConditionalExpression expr)
         {
             // We will be watching changes of this resources' value, so set its mode to push
             GatewayResourceProxy.Instance.RegisterOnMessageEvent(expr.ConditionalResource.Id, OnMessage);
@@ -72,22 +72,22 @@ namespace Cygnus.Managers
             }
         }
 
-        private void ExecuteExpression(ResolvedExpression expr, MessageReceivedEventArgs e)
+        private void ExecuteExpression(ResolvedConditionalExpression expr, MessageReceivedEventArgs e)
         {
             expr.Execute(e.Data);
         }
     }
 
-    internal class ResolvedExpression : ConditionalExpression
+    internal class ResolvedConditionalExpression : ConditionalExpression
     {
         public IEnumerable<Cygnus.Models.Api.Resource> ConsequentResources { get; set; }
         public Cygnus.Models.Api.Resource ConditionalResource { get; set; }
-        public ResolvedExpression() : base()
+        public ResolvedConditionalExpression() : base()
         {
             this.Initialize();
         }
 
-        public ResolvedExpression(ConditionalExpression expr)
+        public ResolvedConditionalExpression(ConditionalExpression expr)
         {
             this.Condition = expr.Condition;
             this.Consequent = expr.Consequent;
@@ -101,9 +101,9 @@ namespace Cygnus.Managers
             this.ConditionalResource = null;
         }
 
-        public static ResolvedExpression CreateFromUnresolved(ConditionalExpression unresolvedExpr)
+        public static ResolvedConditionalExpression CreateFromUnresolved(ConditionalExpression unresolvedExpr)
         {
-            var resolved = new ResolvedExpression(unresolvedExpr);
+            var resolved = new ResolvedConditionalExpression(unresolvedExpr);
             resolved.Resolve();
             return resolved;
         }

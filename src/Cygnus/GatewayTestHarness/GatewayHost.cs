@@ -62,31 +62,38 @@ namespace Cygnus.GatewayTestHarness
 
         private void RegisterWithApi()
         {
-            m_apiProxy.PostGateway(new Gateway()
+            try
             {
-                Id = m_gatewayId,
-                Name = GatewayName
-            });
-
-            // Remove resources we used to own but don't anymore
-            foreach(var resource in GetAlreadyRegisteredResources())
-            {
-                if (!ResourceManager.Instance.Contains(resource.Id))
+                m_apiProxy.PostGateway(new Gateway()
                 {
-                    m_apiProxy.DeleteResource(resource);
+                    Id = m_gatewayId,
+                    Name = GatewayName
+                });
+
+                // Remove resources we used to own but don't anymore
+                foreach (var resource in GetAlreadyRegisteredResources())
+                {
+                    if (!ResourceManager.Instance.Contains(resource.Id))
+                    {
+                        m_apiProxy.DeleteResource(resource);
+                    }
+                }
+
+                // Register all existing resources
+                foreach (var resource in ResourceManager.Instance.Resources)
+                {
+                    m_apiProxy.PostResource(new Resource()
+                    {
+                        Id = resource.Guid,
+                        Name = resource.Name,
+                        Uri = BaseUri + "/resources",
+                        GatewayId = m_gatewayId
+                    });
                 }
             }
-
-            // Register all existing resources
-            foreach (var resource in ResourceManager.Instance.Resources)
+            catch (Exception ex)
             {
-                m_apiProxy.PostResource(new Resource()
-                {
-                    Id = resource.Guid,
-                    Name = resource.Name,
-                    Uri = BaseUri + "/resources",
-                    GatewayId = m_gatewayId
-                });
+                Trace.WriteLine(ex.Message);
             }
         }
 
@@ -107,6 +114,9 @@ namespace Cygnus.GatewayTestHarness
             ResourceManager.Instance.Add(new MockTemperatureSensor("LivingRoomTemp"));
             ResourceManager.Instance.Add(new MockTemperatureSensor("StudyTemp"));
             ResourceManager.Instance.Add(new MockSwitch("LivingRoomMainLights"));
+            ResourceManager.Instance.Add(new MockSwitch("StudyLight1"));
+            ResourceManager.Instance.Add(new MockSwitch("StudyLight2"));
+            ResourceManager.Instance.Add(new MockSwitch("StudyLight3"));
         }
 
         /// <summary>

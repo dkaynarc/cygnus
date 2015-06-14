@@ -158,7 +158,6 @@ namespace Cygnus.Controllers.Api
                 Name = dto.Name,
                 GatewayId = dto.GatewayId,
                 Uri = dto.Uri,
-                ResourceGroupId = Guid.Empty
             };
             return resource;
         }
