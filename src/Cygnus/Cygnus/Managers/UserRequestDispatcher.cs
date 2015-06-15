@@ -15,7 +15,6 @@ namespace Cygnus.Managers
     public class UserRequestDispatcher : INotifiableRequester
     {
         private static UserRequestDispatcher m_instance;
-        private ApplicationDbContext m_db = new ApplicationDbContext();
         private ConcurrentDictionary<Guid, UserResponsePackage> m_responseBucket = new ConcurrentDictionary<Guid, UserResponsePackage>();
         private static AutoResetEvent m_waitEvent = new AutoResetEvent(false);
         public static UserRequestDispatcher Instance 
@@ -33,17 +32,20 @@ namespace Cygnus.Managers
 
         public void SetResourceDescription(Guid resourceId, string description)
         {
-            var resource = m_db.Resources.Where(r => r.Id == resourceId).First();
-            resource.Description = description;
-            m_db.Entry(resource).State = EntityState.Modified;
+            using (var context = new ApplicationDbContext())
+            {
+                var resource = context.Resources.Where(r => r.Id == resourceId).First();
+                resource.Description = description;
+                context.Entry(resource).State = EntityState.Modified;
 
-            try
-            {
-                m_db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                throw;
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    throw;
+                }
             }
         }
 

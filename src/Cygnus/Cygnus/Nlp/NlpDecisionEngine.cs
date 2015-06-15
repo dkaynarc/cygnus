@@ -85,7 +85,7 @@ namespace Cygnus.Nlp
             {
                 responses.AddRange(ResourceGroupManager.Instance.ExecuteExpressions(groupExpr.Yield()));
             }
-            if (TryFindConditionalExpression(parseTree, out condExpr))
+            else if (TryFindConditionalExpression(parseTree, out condExpr))
             {
                 // Process conditional
                 var response = new UserResponsePackage() { Data = "Success." };
@@ -99,19 +99,16 @@ namespace Cygnus.Nlp
                 }
                 responses.Add(response);
             }
-            else
+            else if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
             {
-                if (TryFindSubjectKeywords(parseTree, out subjectKeywords))
+                Predicate predicate = null;
+                if (TryFindPredicate(parseTree, out predicate))
                 {
-                    Predicate predicate = null;
-                    if (TryFindPredicate(parseTree, out predicate))
-                    {
-                        var action = predicate.ResetActionType();
-                        var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
-                        var groups = ResourceSearchEngine.Instance.FindGroups(subjectKeywords);
-                        //responses.AddRange(ResourceGroupManager.Instance.ExecuteExpressions()
-                        responses.AddRange(predicate.ExecuteAction(resources));
-                    }
+                    var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
+                    var groups = ResourceSearchEngine.Instance.FindGroups(subjectKeywords);
+                    predicate.ResetActionType();
+                    responses.AddRange(ResourceGroupManager.Instance.ExecuteOnGroups(groups, predicate));
+                    responses.AddRange(predicate.ExecuteAction(resources));
                 }
             }
             return responses;

@@ -19,7 +19,6 @@ namespace Cygnus.Nlp
     {
         public bool IsInitialized { get; private set; }
         private StanfordCoreNLP m_pipeline;
-        private ApplicationDbContext m_db = new ApplicationDbContext();
         private const string NlpJarRoot = @"C:\NlpModels\stanford-corenlp-3.5.1-models";
         private Thread m_worker = null;
         private const int StackSize = 4 * 1024 * 1024;

@@ -21,7 +21,6 @@ namespace Cygnus.Managers
             }
         }
 
-        private ApplicationDbContext m_db = new ApplicationDbContext();
         private List<ResolvedConditionalExpression> m_pendingExpressions;
 
         private ConditionalRequestManager()

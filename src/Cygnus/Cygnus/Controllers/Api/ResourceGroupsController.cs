@@ -16,10 +16,11 @@ namespace Cygnus.Controllers.Api
 {
     public class ResourceGroupsController : ApiController
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db;
 
-        public ResourceGroupsController()
+        public ResourceGroupsController(ApplicationDbContext dbContext = null)
         {
+            this.db = (dbContext == null) ? new ApplicationDbContext() : dbContext;
             db.Configuration.LazyLoadingEnabled = true;
             db.Configuration.ProxyCreationEnabled = true;
         }
@@ -33,9 +34,9 @@ namespace Cygnus.Controllers.Api
 
         // GET: api/ResourceGroups/5
         [ResponseType(typeof(ResourceGroup))]
-        public async Task<IHttpActionResult> GetResourceGroup(Guid id)
+        public IHttpActionResult GetResourceGroup(Guid id)
         {
-            ResourceGroup resourceGroup = await db.ResourceGroups.FindAsync(id);
+            ResourceGroup resourceGroup =  db.ResourceGroups.Find(id);
             if (resourceGroup == null)
             {
                 return NotFound();
@@ -46,7 +47,7 @@ namespace Cygnus.Controllers.Api
 
         // PUT: api/ResourceGroups/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutResourceGroup(Guid id, ResourceGroup resourceGroup)
+        public IHttpActionResult PutResourceGroup(Guid id, ResourceGroup resourceGroup)
         {
             if (!ModelState.IsValid)
             {
@@ -62,7 +63,7 @@ namespace Cygnus.Controllers.Api
 
             try
             {
-                await db.SaveChangesAsync();
+                 db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -81,7 +82,7 @@ namespace Cygnus.Controllers.Api
 
         // POST: api/ResourceGroups
         [ResponseType(typeof(ResourceGroup))]
-        public async Task<IHttpActionResult> PostResourceGroup(ResourceGroup resourceGroup)
+        public  IHttpActionResult PostResourceGroup(ResourceGroup resourceGroup)
         {
             if (!ModelState.IsValid)
             {
@@ -92,7 +93,7 @@ namespace Cygnus.Controllers.Api
 
             try
             {
-                await db.SaveChangesAsync();
+                 db.SaveChanges();
             }
             catch (DbUpdateException)
             {
@@ -111,30 +112,30 @@ namespace Cygnus.Controllers.Api
 
         // DELETE: api/ResourceGroups/5
         [ResponseType(typeof(ResourceGroup))]
-        public async Task<IHttpActionResult> DeleteResourceGroup(Guid id)
+        public IHttpActionResult DeleteResourceGroup(Guid id)
         {
-            ResourceGroup resourceGroup = await db.ResourceGroups.FindAsync(id);
+            ResourceGroup resourceGroup =  db.ResourceGroups.Find(id);
             if (resourceGroup == null)
             {
                 return NotFound();
             }
 
             db.ResourceGroups.Remove(resourceGroup);
-            await db.SaveChangesAsync();
+            db.SaveChanges();
 
             return Ok(resourceGroup);
         }
 
-        public async void AddResourcesToGroup(ResourceGroup group, IEnumerable<Resource> resources)
+        public  void AddResourcesToGroup(ResourceGroup group, IEnumerable<Guid> resourceIds)
         {
             if (group == null) { return; }
 
+            var resources = db.Resources.Where(x => resourceIds.Contains(x.Id));
             foreach (var resource in resources)
             {
                 resource.ResourceGroupId = group.Id;
             }
-
-            await db.SaveChangesAsync();
+             db.SaveChanges();
         }
 
         protected override void Dispose(bool disposing)
@@ -149,6 +150,24 @@ namespace Cygnus.Controllers.Api
         private bool ResourceGroupExists(Guid id)
         {
             return db.ResourceGroups.Count(e => e.Id == id) > 0;
+        }
+        public static void Rollback(DbContext context)
+        {
+            var changedEntries = context.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
+
+            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Modified))
+            {
+                entry.CurrentValues.SetValues(entry.OriginalValues);
+                entry.State = EntityState.Unchanged;
+            }
+            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Added))
+            {
+                entry.State = EntityState.Modified;
+            }
+            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Deleted))
+            {
+                entry.State = EntityState.Unchanged;
+            }
         }
     }
 }

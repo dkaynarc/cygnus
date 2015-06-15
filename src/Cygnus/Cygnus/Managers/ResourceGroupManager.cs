@@ -21,6 +21,9 @@ namespace Cygnus.Managers
             }
         }
 
+        private ResourceGroupManager()
+        { }
+
         public IEnumerable<UserResponsePackage> ExecuteExpressions(IEnumerable<GroupExpression> expressions, Predicate p = null)
         {
             var results = new List<UserResponsePackage>();
@@ -77,14 +80,13 @@ namespace Cygnus.Managers
         public IEnumerable<UserResponsePackage> Execute(Predicate p = null)
         {
             var responses = new List<UserResponsePackage>();
-            var controller = new ResourceGroupsController();
             // Add operation
             // Try to add the group. This will fail internally if it's already in the database.
             if (p == null)
             {
-                var task = controller.PostResourceGroup(this.Group);
-                task.Wait();
-                controller.AddResourcesToGroup(this.Group, this.Resources);
+                (new ResourceGroupsController()).PostResourceGroup(this.Group);
+                var resourceIds = this.Resources.Select(x => x.Id);
+                (new ResourceGroupsController()).AddResourcesToGroup(this.Group, resourceIds);
             }
             // Operation that executes a predicate on resources in this group.
             else

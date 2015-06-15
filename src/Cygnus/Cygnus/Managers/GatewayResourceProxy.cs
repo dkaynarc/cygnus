@@ -11,7 +11,6 @@ namespace Cygnus.Managers
     public class GatewayResourceProxy
     {
         private static GatewayResourceProxy m_instance;
-        private ApplicationDbContext m_db = new ApplicationDbContext();
         public static GatewayResourceProxy Instance
         {
             get
@@ -29,13 +28,16 @@ namespace Cygnus.Managers
         
         public void RegisterAllResources()
         {
-            var resources = m_db.Resources;
-            foreach (var resource in resources)
+            using (var context = new ApplicationDbContext())
             {
-                if (!m_gatewayClients.ContainsKey(resource.Uri))
+                var resources = context.Resources;
+                foreach (var resource in resources)
                 {
-                    var client = new GatewaySocketClient(resource.Uri);
-                    m_gatewayClients.Add(resource.Uri, client);
+                    if (!m_gatewayClients.ContainsKey(resource.Uri))
+                    {
+                        var client = new GatewaySocketClient(resource.Uri);
+                        m_gatewayClients.Add(resource.Uri, client);
+                    }
                 }
             }
         }
@@ -123,7 +125,12 @@ namespace Cygnus.Managers
 
         private string GetResourceUri(Guid resourceId)
         {
-            return m_db.Resources.Where(r => r.Id == resourceId).Select(r => r.Uri).First();
+            string uri = string.Empty;
+            using (var context = new ApplicationDbContext())
+            {
+                uri = context.Resources.Where(r => r.Id == resourceId).Select(r => r.Uri).First();
+            }
+            return uri;
         }
     }
 }
