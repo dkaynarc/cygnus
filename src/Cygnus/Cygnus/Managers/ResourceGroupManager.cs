@@ -1,4 +1,5 @@
 ﻿using Cygnus.Controllers.Api;
+using Cygnus.Models;
 using Cygnus.Models.Api;
 using Cygnus.Nlp;
 using System;
@@ -29,7 +30,11 @@ namespace Cygnus.Managers
             var results = new List<UserResponsePackage>();
             foreach (var expr in expressions)
             {
-                var resolved = new ResolvedGroupExpression(expr);
+                var resolved = expr as ResolvedGroupExpression;
+                if (resolved == null)
+                {
+                    resolved = new ResolvedGroupExpression(expr);
+                }
                 var exprResult = resolved.Execute(p);
                 results.AddRange(exprResult);
             }
@@ -38,12 +43,20 @@ namespace Cygnus.Managers
 
         public IEnumerable<UserResponsePackage> ExecuteOnGroups(IEnumerable<ResourceGroup> groups, Predicate p = null)
         {
-            var expressions = groups.Select(s => new ResolvedGroupExpression()
-                {
-                    Group = s,
-                    Resources = s.Resources
-                });
-            return this.ExecuteExpressions(expressions, p);
+            var result = new List<UserResponsePackage>();
+            using (var context = new ApplicationDbContext())
+            {
+                var groupIds = groups.Select(x => x.Id).ToList();
+                var expressions = context.ResourceGroups.Where(x => groupIds.Contains(x.Id))
+                            .Select(s => new ResolvedGroupExpression()
+                            {
+                                Group = s,
+                                Resources = s.Resources
+                            }).ToList();
+                result.AddRange(this.ExecuteExpressions(expressions, p));
+            }
+
+            return result;
         }
     }
 

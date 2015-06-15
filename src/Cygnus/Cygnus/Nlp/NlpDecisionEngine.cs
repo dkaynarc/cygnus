@@ -69,7 +69,7 @@ namespace Cygnus.Nlp
             }
             catch (InvalidOperationException e)
             {
-                throw new Exception("Decision engine not yet initialized", e);
+                throw new Exception("Decision engine error.", e);
             }
             return allResponses;
         }
@@ -276,7 +276,8 @@ namespace Cygnus.Nlp
                         foreach (var child in x.children())
                         {
                             if (child.label().value().Equals("IN") ||
-                                child.label().value().Equals("RP"))
+                                child.label().value().Equals("RP") ||
+                                child.label().value().Equals("RB"))
                             {
                                 res = WordsListToStringList(child.yieldWords()).FirstOrDefault();
                                 bool converted;

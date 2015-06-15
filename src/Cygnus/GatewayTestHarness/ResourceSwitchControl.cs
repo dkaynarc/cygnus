@@ -19,11 +19,16 @@ namespace Cygnus.GatewayTestHarness
         public ResourceSwitchControl(IResource r = null)
         {
             InitializeComponent();
-            ResetControls();
             if (r != null)
             {
                 BindResource(r);
             }
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            this.ResetControls();
+            base.OnLoad(e);
         }
 
         public void BindResource(IResource resource)
