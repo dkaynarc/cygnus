@@ -79,7 +79,7 @@ namespace Cygnus.Managers
 
     internal class ResolvedConditionalExpression : ConditionalExpression
     {
-        public IEnumerable<Cygnus.Models.Api.Resource> ConsequentResources { get; set; }
+        public List<Cygnus.Models.Api.Resource> ConsequentResources { get; set; }
         public Cygnus.Models.Api.Resource ConditionalResource { get; set; }
         public ResolvedConditionalExpression() : base()
         {
@@ -113,12 +113,12 @@ namespace Cygnus.Managers
             using (var context = new ApplicationDbContext())
             {
                 var se = new ResourceSearchEngine(context);
-                this.ConsequentResources = se.FindResources(this.Consequent.ObjectKeywords);
+                this.ConsequentResources = se.FindResources(this.Consequent.ObjectKeywords).ToList();
                 this.ConditionalResource = se.FindResources(this.Condition.ObjectKeywords).FirstOrDefault();
 
                 var possibleGroups = se.FindGroups(this.Consequent.ObjectKeywords);
+                this.ConsequentResources.AddRange(possibleGroups.SelectMany(x => x.Resources));
             }
-            
         }
 
         public override bool IsValid()
