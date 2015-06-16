@@ -110,8 +110,15 @@ namespace Cygnus.Managers
         public void Resolve()
         {
             this.CoercePredicateActions();
-            this.ConsequentResources = ResourceSearchEngine.Instance.FindResources(this.Consequent.ObjectKeywords);
-            this.ConditionalResource = ResourceSearchEngine.Instance.FindResources(this.Condition.ObjectKeywords).FirstOrDefault();
+            using (var context = new ApplicationDbContext())
+            {
+                var se = new ResourceSearchEngine(context);
+                this.ConsequentResources = se.FindResources(this.Consequent.ObjectKeywords);
+                this.ConditionalResource = se.FindResources(this.Condition.ObjectKeywords).FirstOrDefault();
+
+                var possibleGroups = se.FindGroups(this.Consequent.ObjectKeywords);
+            }
+            
         }
 
         public override bool IsValid()

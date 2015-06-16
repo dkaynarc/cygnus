@@ -9,44 +9,33 @@ namespace Cygnus.Managers
 {
     public sealed class ResourceSearchEngine
     {
-        private static ResourceSearchEngine m_instance;
-        public static ResourceSearchEngine Instance
+        ApplicationDbContext m_context = null;
+        public ResourceSearchEngine(ApplicationDbContext context)
         {
-            get
-            {
-                if (m_instance == null) m_instance = new ResourceSearchEngine();
-                return m_instance;
-            }
+            if (context != null) { this.m_context = context; }
         }
-        private ResourceSearchEngine()
-        {
-        }
-
         public IEnumerable<Resource> FindResources(IEnumerable<string> keywords)
         {
             var result = new List<Resource>();
-            using (var context = new ApplicationDbContext())
+            var notFoundWords = new List<string>();
+            foreach (var item in keywords)
             {
-                var notFoundWords = new List<string>();
-                foreach (var item in keywords)
+                var initialResultCount = result.Count;
+                // Find exact matches, ignoring case, for resource names
+                result = result.Union(m_context.Resources.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
+                // Keep track of words that aren't found as these are resource names.
+                if (result.Count == initialResultCount)
                 {
-                    var initialResultCount = result.Count;
-                    // Find exact matches, ignoring case, for resource names
-                    result = result.Union(context.Resources.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
-                    // Keep track of words that aren't found as these are resource names.
-                    if (result.Count == initialResultCount)
-                    {
-                        notFoundWords.Add(item);
-                    }
+                    notFoundWords.Add(item);
                 }
+            }
 
-                // Find descriptions that contain all keywords amongst those that haven't turned up results with the exact match against resource names.
-                // We filter these out because it's likely that the user won't be specifying exact device names when also providing keyword matches.
-                if (notFoundWords.Count() > 0)
-                {
-                    result = result.Union(context.Resources
-                        .Where(r => notFoundWords.All(kw => r.Description.ToLower().Contains(kw.ToLower())))).ToList();
-                }
+            // Find descriptions that contain all keywords amongst those that haven't turned up results with the exact match against resource names.
+            // We filter these out because it's likely that the user won't be specifying exact device names when also providing keyword matches.
+            if (notFoundWords.Count() > 0)
+            {
+                result = result.Union(m_context.Resources
+                    .Where(r => notFoundWords.All(kw => r.Description.ToLower().Contains(kw.ToLower())))).ToList();
             }
             return result;
         }
@@ -54,16 +43,18 @@ namespace Cygnus.Managers
         public IEnumerable<ResourceGroup> FindGroups(IEnumerable<string> keywords)
         {
             var result = new List<ResourceGroup>();
-            using (var context = new ApplicationDbContext())
+            foreach (var item in keywords)
             {
-                foreach (var item in keywords)
-                {
-                    // Basic search on on resource group names
-                    result = result.Union(context.ResourceGroups.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
-                }
+                // Basic search on on resource group names
+                result = result.Union(m_context.ResourceGroups.Where(r => r.Name.Equals(item, StringComparison.InvariantCultureIgnoreCase))).ToList();
             }
 
             return result;
         }
+
+        //public IEnumerable<Resource> FindResourcesByGroupKeywords(IEnumerable<string> keywords)
+        //{
+
+        //}
     }
 }

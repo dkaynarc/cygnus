@@ -75,19 +75,23 @@ namespace Cygnus.Managers
 
         private void Resolve()
         {
-            // Only supporting a single group for the moment, so select the first one.
-            this.Group = ResourceSearchEngine.Instance.FindGroups(GroupKeywords).FirstOrDefault();
-            var candidateName = this.GroupKeywords.FirstOrDefault();
-            if (this.Group == null && !String.IsNullOrEmpty(candidateName))
+            using (var context = new ApplicationDbContext())
             {
-                this.Group = new ResourceGroup()
+                var se = new ResourceSearchEngine(context);
+                // Only supporting a single group for the moment, so select the first one.
+                this.Group = se.FindGroups(GroupKeywords).FirstOrDefault();
+                var candidateName = this.GroupKeywords.FirstOrDefault();
+                if (this.Group == null && !String.IsNullOrEmpty(candidateName))
                 {
-                    Name = candidateName,
-                    Description = String.Empty,
-                    Id = Guid.NewGuid()
-                };
+                    this.Group = new ResourceGroup()
+                    {
+                        Name = candidateName,
+                        Description = String.Empty,
+                        Id = Guid.NewGuid()
+                    };
+                }
+                this.Resources = se.FindResources(this.ResourceKeywords);
             }
-            this.Resources = ResourceSearchEngine.Instance.FindResources(this.ResourceKeywords);
         }
 
         public IEnumerable<UserResponsePackage> Execute(Predicate p = null)

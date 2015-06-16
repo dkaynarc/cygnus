@@ -13,7 +13,6 @@ namespace Cygnus.Controllers.Api
     {
         public IHttpActionResult GetTest()
         {
-            NlpDecisionEngine.Instance.Test();
             return Ok();
         }
     }

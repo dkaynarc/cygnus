@@ -50,11 +50,6 @@ namespace Cygnus.Nlp
             m_engineThread.Start();
         }
 
-        public void Test()
-        {
-            var resources = ResourceSearchEngine.Instance.FindResources("room living light".Split(' '));
-        }
-
         public IEnumerable<UserResponsePackage> ExecuteQuery(string query)
         {
             var allResponses = new List<UserResponsePackage>();
@@ -104,11 +99,15 @@ namespace Cygnus.Nlp
                 Predicate predicate = null;
                 if (TryFindPredicate(parseTree, out predicate))
                 {
-                    var resources = ResourceSearchEngine.Instance.FindResources(subjectKeywords);
-                    var groups = ResourceSearchEngine.Instance.FindGroups(subjectKeywords);
-                    predicate.ResetActionType();
-                    responses.AddRange(ResourceGroupManager.Instance.ExecuteOnGroups(groups, predicate));
-                    responses.AddRange(predicate.ExecuteAction(resources));
+                    using (var context = new ApplicationDbContext())
+                    {
+                        var se = new ResourceSearchEngine(context);
+                        var resources = se.FindResources(subjectKeywords);
+                        var groups = se.FindGroups(subjectKeywords);
+                        predicate.ResetActionType();
+                        responses.AddRange(ResourceGroupManager.Instance.ExecuteOnGroups(groups, predicate));
+                        responses.AddRange(predicate.ExecuteAction(resources));
+                    }
                 }
             }
             return responses;
