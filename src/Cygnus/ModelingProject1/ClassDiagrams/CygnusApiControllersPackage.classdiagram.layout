@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CygnusApiControllersPackage">
+  <logicalClassDesignerModelMoniker Id="3b5d514f-9bd8-44fc-ad4f-1092775c2ef1" />
+  <nestedChildShapes>
+    <packageShape Id="5e2a1c2c-84ba-4646-bdce-a9fb0b9a7113" absoluteBounds="0.5, 0.5, 6.625, 3.25" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="0a0e37ec-3bfc-45e0-ad2c-5856a0c939dc" LastKnownName="Api" />
+      <nestedChildShapes>
+        <classShape Id="d895eb07-d18a-424c-b941-507093fa34ae" absoluteBounds="2.75, 0.875, 2.125, 2.6292418247461318" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+          <classMoniker Id="c625c8f0-6579-4a1b-84d9-b6746f272dc0" LastKnownName="ResourceGroupsController" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="4e8532b4-0113-427d-bee0-d4f65ae9a27b" absoluteBounds="2.765, 1.3903356393178306, 2.0949999999999998, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="9f51654d-e93f-473b-b38b-5b79cb4a39c7" absoluteBounds="2.765, 1.7616637519001961, 2.0949999999999998, 1.6425780728459358" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="4df1c1c3-03b0-4755-b2fb-ae3c52edfad3" absoluteBounds="5, 0.875, 2, 2.4690855797131857" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+          <classMoniker Id="7eb645c6-d476-43e9-b552-5fe36c943795" LastKnownName="GatewaysController" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="2f410cc8-c0e8-413d-b57c-ba858dfb0b1b" absoluteBounds="5.015, 1.3903356393178306, 1.9700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="bf175fa3-e362-4869-8c42-57057b18692e" absoluteBounds="5.015, 1.7616637519001961, 1.9700000000000002, 1.4824218278129895" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+        <classShape Id="77571204-c95d-427b-9d4f-fa123f003b06" absoluteBounds="0.625, 0.875, 2, 2.7893980697790783" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+          <classMoniker Id="09a1e3c3-c229-4fc3-83a8-661a0912293d" LastKnownName="ResourcesController" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="a90c9c4d-d98a-4c55-9db7-0f6c209cfe6a" absoluteBounds="0.64000000000000012, 1.39033563931783, 1.9700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="3e232b53-f2b9-4f46-a908-608e91f0a213" absoluteBounds="0.64000000000000012, 1.7616637519001959, 1.9700000000000002, 1.8027343178788819" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

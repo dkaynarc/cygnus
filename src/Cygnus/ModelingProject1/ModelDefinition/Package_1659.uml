@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6b30e922-204e-4de0-a5b1-710200df6da2"
+  name="Properties"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3d3e1354-623c-42f7-8420-c49adc75da13"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.GatewayTestHarness.Properties"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="84434902-0676-4d82-8563-16a23a74a1a5"
+        name="Resources"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1e080629-1037-4b7a-9317-008543e7e8e1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7e705146-28b7-43f5-b1a3-c6e33efdd8d6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="00ad507f-6564-4da5-b38b-e2b9c1bc79e1">
+                <propertyInstance
+                  Id="494bd5c5-fc4f-4858-85f7-584bd1deab52"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7864f99-d3cd-4823-af19-3007a3dc9d71">
+                <propertyInstance
+                  Id="bec9d0c1-2a94-43fc-8353-f6a00d2b7956"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0126b21f-2338-4e7c-87e9-d5226c215ac8">
+                <propertyInstance
+                  Id="63c4f211-29aa-46cd-ab65-7c0fd9f7b543"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a8b4ac63-233a-4402-91b2-857067f22f30">
+                <propertyInstance
+                  Id="82643db9-d6e6-47f3-9e19-a9ed7dd008b1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8de3e978-0c69-4ba1-bb07-37df6277607f">
+                <propertyInstance
+                  Id="395465ed-2c9e-4512-9f02-13ee195c47e2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c41fdfd7-625b-433b-b649-0017cb4e83aa"
+            name="ResourceManager"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6efc6cdd-c99c-4602-8b61-e569e600bd08"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources Member%3DResourceManager"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2d14da6b-216f-42ae-bd50-57e1d3a7aa37"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ed0c9f0-e4fc-4fc6-8441-2cb96c4cf622">
+                    <propertyInstance
+                      Id="b92dd230-6515-4eac-9b13-38faa9ef1276"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="964cfb7a-bff8-451b-b6ec-795dd630f26c">
+                    <propertyInstance
+                      Id="b4cd3e81-0dc7-4cef-8e32-3591a6c79efd"
+                      name="Get"
+                      value="package" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2991921c-6ef3-4ac3-85da-1b0e2dcc4c46">
+                    <propertyInstance
+                      Id="c3659fda-14f4-459a-a29b-c73e630b2c20"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32bd17de-0b89-45ea-87ff-a7d932afd9e9">
+                    <propertyInstance
+                      Id="769dd9fc-5673-472f-bbe7-55f07d6a8c23"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e481dca9-68d6-460b-9d17-887e148938b0">
+                    <propertyInstance
+                      Id="3c0b00b4-4859-4588-9197-771979020d90"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e32faea-e4e5-4412-a1fe-87b5784a9056">
+                    <propertyInstance
+                      Id="f955d250-b5cb-492f-a7eb-82e91d88bf02"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1e7c6a3-7f9c-4e3d-b870-f7fc9b4e9975">
+                    <propertyInstance
+                      Id="8804235d-d196-476d-962f-72774103cc6f"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ae64bf90-44ad-4f16-b1b6-1efa39ee24be"
+                LastKnownName="ResourceManager"
+                LastKnownLocation="Package1_1659.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e6820859-8390-4e79-9e4c-be8035b27209"
+            name="Culture"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0fbb9870-458c-42e8-a433-a15bb069382d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources Member%3DCulture"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a3438d1-6df4-4364-a4b2-10b3204eb745"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51670d44-b6f9-4987-a4fb-1208e2b230a4">
+                    <propertyInstance
+                      Id="04d04931-0ee1-453a-8078-a4fd6cfbc2c0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24f2195d-e63d-4a3e-90d3-8b66b55e3c10">
+                    <propertyInstance
+                      Id="d044c0ab-5f44-4ce5-940e-6a63c2f98bcd"
+                      name="Get"
+                      value="package" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14ff2ce3-8a5d-4519-86b6-7c8d952b26e4">
+                    <propertyInstance
+                      Id="a336923a-9890-4171-b517-6506701820a5"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88380809-dc9a-40c1-a5f6-e09959693431">
+                    <propertyInstance
+                      Id="f411770e-11fd-4df2-b798-2618b421d2fd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bbe4f1f-b6f2-4d39-9dcc-382d5d44e82a">
+                    <propertyInstance
+                      Id="27bf4274-1588-427a-ba08-07571319eafc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4aef41d8-2404-4a67-99ae-fc6fe720cf46">
+                    <propertyInstance
+                      Id="1f044938-0a52-4631-bb5d-321a4f880cca"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f88f6d4-42d2-486d-b6ed-b42729e6db8b">
+                    <propertyInstance
+                      Id="90ab0266-e10e-46b6-a4cc-43bc1dc02a19"
+                      name="Set"
+                      value="package" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b55f3db9-49da-4e9b-a3e7-e376914ee01c"
+                LastKnownName="CultureInfo"
+                LastKnownLocation="Package2_1659.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ae776b1e-5f44-4b4c-b317-b83776c145f0"
+            name="resourceMan"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4f00ac53-5bfb-4878-a755-77e94343a9da"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources Member%3DresourceMan"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="09f076f8-4047-4bca-850b-1020e7623c17"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f254462-3ecf-42e5-9ef8-415df35cdf9d">
+                    <propertyInstance
+                      Id="7e621734-d27e-4c7a-af60-122dc5039424"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d72d7be8-126b-459e-b796-f36b3f7c9687">
+                    <propertyInstance
+                      Id="d1040bbe-e50f-4139-93b0-2c9305c7b114"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39762a6e-edb7-4dc3-9a04-d88408cb54ce">
+                    <propertyInstance
+                      Id="eebc951d-ad98-45cf-8953-d453665c5249"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="539a2052-7f7e-4942-a056-facf6c31082d">
+                    <propertyInstance
+                      Id="0cfe35b9-fde3-480a-b80f-1dd48d3e6d45"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69fb9944-5eba-4ed5-b958-681106004b54">
+                    <propertyInstance
+                      Id="85fe3655-932b-4252-a582-a022570b4ba4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ae64bf90-44ad-4f16-b1b6-1efa39ee24be"
+                LastKnownName="ResourceManager"
+                LastKnownLocation="Package1_1659.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="81a5c58d-7777-4328-9eb3-a0f61efccca4"
+            name="resourceCulture"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6a9371c8-c231-4bcc-9acc-ec08bf9c439b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources Member%3DresourceCulture"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dd7026fd-cd8b-44aa-81ff-e0468300ab20"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c9cfdb3-cb01-4dfe-baf6-70022d295c9e">
+                    <propertyInstance
+                      Id="2ad5d18a-2e3d-4c83-bc50-3ffb52edb5ce"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c571bac1-503d-47fd-99df-86341ed212b5">
+                    <propertyInstance
+                      Id="d94ae779-4a8b-4a13-8a14-8718550c8331"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="221ee28a-d226-46d9-87fa-0f506a544371">
+                    <propertyInstance
+                      Id="0641a295-9fb8-4070-9bcb-b73909694bcd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e65f9cfe-ed38-48b3-94d4-615a47ed55be">
+                    <propertyInstance
+                      Id="68928bfb-82cf-4bd0-94a4-ba3ee2227cf6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2197ebb8-dc11-4cab-890d-dcf6d783d88f">
+                    <propertyInstance
+                      Id="bd6f8c57-7d60-4c15-bf5b-1c9bb0ed23dd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b55f3db9-49da-4e9b-a3e7-e376914ee01c"
+                LastKnownName="CultureInfo"
+                LastKnownLocation="Package2_1659.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="480c30f7-d42f-407c-9a93-4c3fbf270076"
+            name="Resources"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6237fbb3-4a18-4960-9d3d-d0a293902d72"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DResources Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8acbd3e8-bad7-4e6d-8998-112092787d87"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a67f941-7111-466b-9069-ef87d7ea792d">
+                    <propertyInstance
+                      Id="e6257f08-4e98-4ef5-9f8c-b24fd6cbad02"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ade59c8-d88f-447d-8a77-b7808ea89416">
+                    <propertyInstance
+                      Id="361c5a22-0ce8-4661-a038-c50f458233d1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4450c693-36c3-4a94-9d98-dbea97705622">
+                    <propertyInstance
+                      Id="f01088eb-b58d-4377-b977-91ece30b5bbf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91f23a34-a88a-4819-9841-b93b1f4cd53e">
+                    <propertyInstance
+                      Id="384916b8-5d13-46d6-bb61-ab87e748a9b1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b79829c-06e4-4467-803c-6a5813f6ebd5">
+                    <propertyInstance
+                      Id="ff0b0705-00a3-4819-a8e8-5823fbb7f491"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99b177d0-1761-4aad-8e5c-fea2d8b3ee6d">
+                    <propertyInstance
+                      Id="bd81197b-c0c4-4bb0-b8fe-53700beb4fe8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1543791b-4472-4685-9f7d-bd2354a1c99e"
+        name="Settings"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3bf8bb16-e4fc-4bf9-bbfb-f65b7c67af29"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DSettings"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="28772bcd-e5a7-4342-ae92-6b1ccb5b1f0e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b82f42f5-3b3a-41cb-bf63-687b5f21eea1">
+                <propertyInstance
+                  Id="8dafe19b-7855-4275-beaf-f50ec82cdeba"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77872937-8d01-4192-aef6-f1403b8cbed7">
+                <propertyInstance
+                  Id="c06b4b4a-f256-49c6-a6e3-a079c46465c2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9bf64833-0478-4139-af2f-5526b3f9eaa1">
+                <propertyInstance
+                  Id="1a266e38-94de-43e5-8446-17a4de8c7bef"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3f03313d-0ed7-48a2-bf81-991c7482118d">
+                <propertyInstance
+                  Id="a29045e1-46c0-40fb-8541-c397816eaa4e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b030a30-2578-4f86-b9a4-88ca7c6962ac">
+                <propertyInstance
+                  Id="62229f13-c42c-4f24-ba3c-46468e1013d9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="99dd3c77-8d9f-477e-bbd5-63c637964a91"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2a9ab4ae-9434-4850-991e-f0c526ee86f0"
+              LastKnownName="ApplicationSettingsBase"
+              LastKnownLocation="Package3_1659.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="8ca5cb7d-f19f-4366-9523-8c2272387fbb"
+            isDerived="false"
+            sourceEndRoleName="Settings"
+            targetEndRoleName="Default"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1543791b-4472-4685-9f7d-bd2354a1c99e"
+              LastKnownName="Settings"
+              LastKnownLocation="Package_1659.uml" />
+            <description>Property Default references type Settings.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83dcff6e-6ba5-49a1-8c95-98681d43ffc7"
+                  name="Settings"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="03e0f321-223d-458a-80bd-fb5f07f2141b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2f95bda4-ac5d-482f-a68b-6300d68810ed"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="faee33e1-fb85-404d-ba09-ff1dbdd67eb9"
+                  name="Default"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0f8f46c2-b525-4ba1-89ca-b5673f1dfde3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b5900da7-4517-4a75-8dc8-32c43617840f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3cb41108-596d-413a-8595-b9a5a4561a55"
+            name="Default"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a1f37988-542c-44b7-88b7-0338c97b2b1b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DSettings Member%3DDefault"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="87b38646-1725-493a-8380-829db14bc381"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b77ab1f9-3ddc-4e80-bdc5-a0342fd7a1b8">
+                    <propertyInstance
+                      Id="c4ccc612-0579-42e7-aa1f-deb8fb4fd4d4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13b8fda1-7a37-4213-9f67-e834d4e50a3d">
+                    <propertyInstance
+                      Id="4a954c80-68cd-40c1-947b-bb01303d8f13"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ce66d30-1285-4116-977a-8b46bf2e9ee6">
+                    <propertyInstance
+                      Id="f24ded3e-7b86-4e70-84fb-4bd02ad87589"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea348aaf-1891-448c-bab1-2bf7dcc39211">
+                    <propertyInstance
+                      Id="d30ebf35-ad59-4c00-8e3e-1c525ae4d5b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ae015ca-98ea-4417-b0c5-1df622eee938">
+                    <propertyInstance
+                      Id="68c369a6-e638-4c4c-80f3-3475e0b1267a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04850568-3fa8-4f74-98f5-5f140bc9a139">
+                    <propertyInstance
+                      Id="5883b577-baf4-49e2-8bb3-7df2f19f2473"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dc53668-b95e-424e-9953-1cdc4c78c903">
+                    <propertyInstance
+                      Id="79c74a8c-3ee2-4999-ae2c-c2755af150c6"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1543791b-4472-4685-9f7d-bd2354a1c99e"
+                LastKnownName="Settings"
+                LastKnownLocation="Package_1659.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="74409d77-c239-43e3-a924-d7b821262967"
+            name="defaultInstance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0f3745c4-f925-4be2-a96b-e6bddf3b1c30"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DSettings Member%3DdefaultInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0daf9157-2170-4c0d-85b1-837cf2cebd71"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="645844da-7f01-4404-af5a-63be72406edb">
+                    <propertyInstance
+                      Id="9695bfd6-20e7-435c-90cf-a98b07fa630e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f659e6a-3f63-4d6e-ac3c-9e581fd03f79">
+                    <propertyInstance
+                      Id="eebbaac2-9d9c-4a15-a9b7-11059c8e0917"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30f75c9b-7d8a-47d1-a497-2e4b26bb58bd">
+                    <propertyInstance
+                      Id="76ef1c4b-d223-49e4-9c67-7df4d3dcbbbd"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe60c5e3-b933-414a-a5c7-f82734776f61">
+                    <propertyInstance
+                      Id="b20e0c7f-353c-4304-b71b-6e08ed9bde22"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15ac8685-0a6b-4170-9ed0-595021e94792">
+                    <propertyInstance
+                      Id="4ab99fa7-a796-4a5b-ba9e-7dbf39715c08"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1543791b-4472-4685-9f7d-bd2354a1c99e"
+                LastKnownName="Settings"
+                LastKnownLocation="Package_1659.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0af4dc65-bbd4-4846-a993-dc7b08664fdd"
+            name="Settings"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ca691a18-6729-4201-a750-f8f65c142423"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness.Properties Type%3DSettings Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eddcaabc-1c6f-4d0e-ba2c-8fb63a32b72b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0dfb4058-871d-4d79-8826-47c9092d68c3">
+                    <propertyInstance
+                      Id="ed6c0730-e073-47bb-8331-0e1b26bd858c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5175f379-01f1-4d33-bfde-2dd36eab4b5f">
+                    <propertyInstance
+                      Id="fa4dec79-45a7-4e42-8e63-5e5a7045db6b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="712e2ca0-073b-47bd-9886-e45c952fcdca">
+                    <propertyInstance
+                      Id="8f003299-ba6a-4de1-b205-0e5e06e1e4e2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7de02f5a-bd18-488f-9017-867ac0ee5c0c">
+                    <propertyInstance
+                      Id="0b48bb06-c274-4c96-8537-442b852442af"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="becd175b-ef9a-4a28-87bf-50a0c4eaa551">
+                    <propertyInstance
+                      Id="fa82ab70-a6a5-4f1d-9a87-21ae0f93102a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6206ab6f-1254-476b-ba1b-8b1ce870f3d7">
+                    <propertyInstance
+                      Id="8c69a03e-74e7-4ea8-a2e0-b8fce901473b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

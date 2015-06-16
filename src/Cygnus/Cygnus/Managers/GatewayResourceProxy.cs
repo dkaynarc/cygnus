@@ -33,11 +33,7 @@ namespace Cygnus.Managers
                 var resources = context.Resources;
                 foreach (var resource in resources)
                 {
-                    if (!m_gatewayClients.ContainsKey(resource.Uri))
-                    {
-                        var client = new GatewaySocketClient(resource.Uri);
-                        m_gatewayClients.Add(resource.Uri, client);
-                    }
+                    this.RegisterResource(resource);
                 }
             }
         }

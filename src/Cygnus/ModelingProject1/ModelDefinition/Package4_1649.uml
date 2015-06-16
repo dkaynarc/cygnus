@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="157da965-d903-4dea-8e20-d0f2822c4efc"
+  name="nlp"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="00cc6056-2bc4-46ca-98c5-74dce4aa918e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Dedu.stanford.nlp"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="491e9269-f7ca-403c-a3c0-ab905e47b0bb"
+        LastKnownName="pipeline"
+        LastKnownLocation="Package5_1649.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3269d5a3-495d-4687-a908-b8439bdc157c"
+        LastKnownName="trees"
+        LastKnownLocation="Package6_1649.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

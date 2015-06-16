@@ -11,12 +11,12 @@ namespace Cygnus.Nlp
     {
         public ConditionalConstructType ConstructType { get; set; }
         public BooleanCondition Condition { get; set; }
-        public Consequant Consequent { get; set; }
+        public Consequent Consequent { get; set; }
 
         public ConditionalExpression()
         {
             Condition = new BooleanCondition();
-            Consequent = new Consequant();
+            Consequent = new Consequent();
         }
 
         public void SetConstructType(string s)
@@ -60,12 +60,12 @@ namespace Cygnus.Nlp
         #endregion
     }
 
-    public class Consequant
+    public class Consequent
     {
         public Predicate Predicate { get; set; }
         public List<string> ObjectKeywords { get; set; }
 
-        public Consequant()
+        public Consequent()
         {
             this.Predicate = new Predicate();
             this.ObjectKeywords = new List<string>();

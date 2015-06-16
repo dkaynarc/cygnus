@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e8feb6fe-76d0-4eb4-909f-f92dd02f26ac"
+  name="WebSocketSharp"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ffea3dc3-550c-4554-887c-25c815b6c1ee"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWebSocketSharp"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="6c0b0e9a-3852-4617-a9ca-8850a48cb8ba">
+      <profileInstance
+        Id="57b7a36e-1fc1-4623-a1ff-b0539d8a3623"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="475eefbb-385e-4552-a349-d55232a78af1"
+        name="MessageEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0ea46d1d-bfa0-4d28-a4fc-e938000af21d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FWebSocketSharp.1.0.3-rc7%2Flib%2Fwebsocket-sharp.dll&quot; Namespace%3DWebSocketSharp Type%3DMessageEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="03c895ad-69df-4538-847f-a2496506d627"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="571a0598-1389-4a3d-b48f-c8760fa8272d">
+                <propertyInstance
+                  Id="298b7208-cc97-4195-8586-827ff78c831a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ac2c3bd-b6b2-433d-84d6-46176b357dc9">
+                <propertyInstance
+                  Id="cced9059-ef3e-4a2b-98c3-000ab6594dca"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f1940be-8304-4bb6-b83c-21dbfd8dfdc2">
+                <propertyInstance
+                  Id="1b6e126c-9649-4518-bb2d-7c7e8a9790f2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d488fedf-cfcf-4604-8ff1-501f5616c99f">
+                <propertyInstance
+                  Id="c8669d86-c7d6-421d-96db-ca7694607262"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae174df6-835f-4cd5-9311-019f43c06e6b">
+                <propertyInstance
+                  Id="6f87e512-d414-4bb5-bf8a-ea184fc2121d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="bf3c77a8-d08c-4b72-a492-253656c16d35"
+            isSubstitutable="false">
+            <classMoniker
+              Id="070b5133-ab52-4fe7-b1cf-d181c11e8630"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package3_1614.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ddb045db-b579-4ec2-8281-1d6748047006"
+        name="WebSocket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a694efc4-47d3-4822-be69-61aca43a00c6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FWebSocketSharp.1.0.3-rc7%2Flib%2Fwebsocket-sharp.dll&quot; Namespace%3DWebSocketSharp Type%3DWebSocket"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="310ed5fe-db05-4c33-aa2f-55e82d202169"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cbb7100a-3737-4389-a96a-92f2efe2970f">
+                <propertyInstance
+                  Id="a2918765-c740-4982-a672-90db6a70e36f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="545f37e0-d3c2-4882-b132-da9731461f33">
+                <propertyInstance
+                  Id="35dfdcfa-d583-4f70-ae55-d177564570b0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="79ca39f1-dbae-4b89-8784-cec019642e13">
+                <propertyInstance
+                  Id="37d413b9-d5f6-4e00-b263-bec56c7401be"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d5d3d4c-8b37-4850-9de7-2c9626ef4877">
+                <propertyInstance
+                  Id="d7bde551-2d87-4964-9ef9-0508c9fce3d0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f7c6d94-c5d7-42ca-b24c-319f486f2cb3">
+                <propertyInstance
+                  Id="ff38d8b7-986e-4ffb-944a-0b0fe0a373a0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cabd8a8e-b330-4e4a-b925-105a05fab243"
+        LastKnownName="Server"
+        LastKnownLocation="Package7_1614.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

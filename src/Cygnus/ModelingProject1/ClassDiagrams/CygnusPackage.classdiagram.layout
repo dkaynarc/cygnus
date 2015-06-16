@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CygnusPackage">
+  <logicalClassDesignerModelMoniker Id="58a0f235-dc93-4b3c-b5d1-6d802bb01d28" />
+  <nestedChildShapes>
+    <packageShape Id="a776561b-9b8b-40b6-a398-dcff837c448d" absoluteBounds="0.5, 0.5, 6, 4.125" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="e139885e-9385-4c11-ab83-a316523faf15" LastKnownName="Cygnus" />
+      <nestedChildShapes>
+        <packageShape Id="0de9934f-99e7-4e98-9939-bc3b7960b65b" isExpanded="false" absoluteBounds="0.625, 0.875, 2.625, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="3a709c39-4785-4c56-bc5f-8d4b4e1494ed" LastKnownName="Nlp" />
+        </packageShape>
+        <packageShape Id="2bbb9ae9-45fa-4966-a485-3b66520fd3e5" isExpanded="false" absoluteBounds="0.625, 1.625, 3.25, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="de0c0d31-b902-480f-a9c7-3e7dfe7b6dd0" LastKnownName="GatewayInterface" />
+        </packageShape>
+        <packageShape Id="160c9ffc-631e-4930-ad0e-94811e5373a6" isExpanded="false" absoluteBounds="0.625, 2.375, 2.625, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="a5b86ff3-473c-453c-a959-d1e289269872" LastKnownName="Api" />
+        </packageShape>
+        <packageShape Id="a8244d1f-9b45-4fd5-867d-7e61d032edc0" isExpanded="false" absoluteBounds="0.625, 3.125, 3.25, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="0d79f789-042e-4357-b6b2-267e338e95e3" LastKnownName="GatewayTestHarness" />
+        </packageShape>
+        <packageShape Id="7f006a22-2ae8-44c9-b6af-88ed8ab7950d" isExpanded="false" absoluteBounds="0.625, 3.875, 2.625, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="8d8fb460-255a-40ec-af5a-8ae7022c4bb0" LastKnownName="Controllers" />
+        </packageShape>
+        <packageShape Id="25497a72-8624-4eaf-aea0-76f071380b88" isExpanded="false" absoluteBounds="3.375, 0.875, 2.625, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="5a319b72-eae9-4953-9a27-4d61f5451242" LastKnownName="Models" />
+        </packageShape>
+        <packageShape Id="8963cc2b-8687-49ae-8985-e0ff43bd195c" isExpanded="false" absoluteBounds="3.375, 2.375, 2.625, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="e216e0d5-a1e6-4983-a1b6-6840da3e6c07" LastKnownName="Managers" />
+        </packageShape>
+        <packageShape Id="672d2925-6e0e-45b8-9c52-63ad3ffa57c0" isExpanded="false" absoluteBounds="3.375, 3.875, 3, 0.625" customColor="255, 249, 230" hideQualifiedName="false">
+          <packageMoniker Id="8e048697-8db7-4072-9fcf-96832f7b5d7a" LastKnownName="Api" />
+        </packageShape>
+      </nestedChildShapes>
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

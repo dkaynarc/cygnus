@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="30212952-64f8-4953-98dd-d2da0075e989"
+  name="util"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8cce4786-7669-4ca7-bcde-5633f458bbe8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Djava.util"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="330b256f-0159-487f-ae75-3f5de6bab388"
+        name="ArrayList"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ad4f1250-39ea-4bde-b1c9-d3f5b29ff9a1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FIKVM.8.0.5449.1%2Flib%2FIKVM.OpenJDK.Core.dll&quot; Namespace%3Djava.util Type%3DArrayList"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="00143b2b-c287-4a68-899b-f0b0c0ffd7bd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="47cd984c-eb9b-4821-802c-a04e2d147633">
+                <propertyInstance
+                  Id="bddb874b-0a48-4241-8c7f-e4c23640d527"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2dfca597-4afe-4c95-adc2-e140089122fc">
+                <propertyInstance
+                  Id="def5d530-f81e-4323-90ac-0bf22f72dd30"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9776059f-2571-4f27-9b2b-88eb18a2e1b3">
+                <propertyInstance
+                  Id="0c393f92-fb32-4a74-805a-1a7cfde19390"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6b78e6ef-8398-449a-a96f-7e73002699cf">
+                <propertyInstance
+                  Id="358afcf7-e711-48f5-8f03-ca3764275b2d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a5bd4fee-f799-4f3c-a6a3-cf8aaace6b0a">
+                <propertyInstance
+                  Id="71d05bbd-9d11-41dc-8029-0345427e0391"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3269d5a3-495d-4687-a908-b8439bdc157c"
+  name="trees"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e05a3034-05ef-4dd4-89fc-6db83bee796e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Dedu.stanford.nlp.trees"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7de002d8-6092-4cce-8bf6-543ff519ec4d"
+        name="Tree"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="05e26d7e-524b-4b44-b2ef-15074e867e4e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8046bd3a-cd64-42c2-93b8-e7b387b38f38"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ed35365-59b3-498b-a3e9-def1aa68226d">
+                <propertyInstance
+                  Id="e879b003-7eeb-41fe-9576-2f909fd33068"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66af1b30-5a23-4ac1-bb1c-2bc1e5cbba33">
+                <propertyInstance
+                  Id="eed088f9-3be1-4b97-8068-0d1f89923bcd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b66ac5f-ba23-405e-a285-e5f5436bdc27">
+                <propertyInstance
+                  Id="e4e32978-8b79-49f5-bb1d-009254958245"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f72ca2c2-85c7-4382-b09e-57a32944e6f4">
+                <propertyInstance
+                  Id="8c82f856-e749-43c6-b65b-de84166c33f1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="25d5c3bf-8b94-401f-96d7-8847c3b30ecd">
+                <propertyInstance
+                  Id="77811cad-77f4-458e-8d4d-eccee39c23b5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,3066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8d01463a-123d-45ce-adc6-f0b0c564ec7f"
+  name="Api"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e124d980-8495-42e0-9fb9-05328f94a561"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.Models.Api"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="013881e5-f889-4501-be7e-0f6974d014e8"
+        name="Gateway"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9dcc8145-6514-4e5e-b285-eb095b033276"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DGateway"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="29ea692b-6a96-4d72-9549-afcb577e1835"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6513915c-2970-4414-a9d7-24076aa7ec9f">
+                <propertyInstance
+                  Id="af17006d-77a0-4f1e-9343-38892d8accee"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5d263ad-f2c3-44b3-bc85-fe61c6d7ba79">
+                <propertyInstance
+                  Id="5dc8d380-72ee-45b3-bbb3-5736359f2e64"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3abca512-9d99-4217-a812-d6df75d65760">
+                <propertyInstance
+                  Id="d23b6cbd-3259-4525-ab39-ed8dfe188ff5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="425e650b-acc5-4df4-8ff9-b5e2fc2341dd">
+                <propertyInstance
+                  Id="8767f8f7-a409-4aa4-9d49-cbcf78a5db4d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9985950b-765a-4639-b950-ed44fa44140d">
+                <propertyInstance
+                  Id="c4f55276-45e8-46cb-bb97-eb4a249c94be"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="d6ef789b-69a2-4989-ae69-008ef5c1281d"
+            isDerived="false"
+            sourceEndRoleName="Gateway"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property Id references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46832138-05d5-4893-97b0-d1f288d427a5"
+                  name="Gateway"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="30e5a665-6364-47b4-a48b-ced79384db15"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a3bf37d7-ec3e-4e29-b6c6-a4ddabe7d203"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="28bc3fba-d4c7-4d42-b056-827e511b4e71"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d31a6f88-c2d1-4881-9a7a-560c1912f18a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2d8a9a49-c037-48d6-ab4b-3ededa830071"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c625ff6b-1809-477b-8a59-4b63592a041c"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0d74372c-6c6e-489f-8dd3-7ef930f522be"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DGateway Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0a6a1094-df11-4585-be54-391618b1afcd"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5881c1c-e886-40ba-b7ca-8368b50266a2">
+                    <propertyInstance
+                      Id="1df6970f-c082-4eca-99db-3b7de2e5ea9e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90d9ec16-30c5-47a1-bf59-d123d09dea1b">
+                    <propertyInstance
+                      Id="a479757e-4e57-42bc-a381-6b32bed46c25"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c0f73ca-ff86-4417-8a5a-f3a2e843ccae">
+                    <propertyInstance
+                      Id="33c8ff69-0d19-4e1e-8c72-754a8f48decc"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa22cbaf-a9fa-4c7d-a924-0e02111fc175">
+                    <propertyInstance
+                      Id="5b4d280d-5e2d-4dbd-a6f7-781e01988bf8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be7caa8b-1b0c-4b7f-aac9-321a2610c6a0">
+                    <propertyInstance
+                      Id="45416d93-2162-415b-a00e-332414c176fe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="638cec08-dcd7-429a-b213-549455fa2013">
+                    <propertyInstance
+                      Id="43d9efc1-492b-4784-ba25-e24166c07c7e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b7de13f-71bd-428f-a520-6fd1ef890a3b">
+                    <propertyInstance
+                      Id="e4538211-766b-4094-b0fa-62fb6e79f503"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a1829ad0-44de-45d2-aba4-98ead4ed5308"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="abedf28f-0a2d-43f9-bb7b-5082491637e1"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DGateway Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9db20e12-dea0-437e-beb3-39be1c964d6f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="047ebd5a-993d-43fe-b194-bc7fd527dde9">
+                    <propertyInstance
+                      Id="684e8705-da05-4768-b46c-207d08a8f02f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae33247d-b102-4c8d-9ac3-980e374db777">
+                    <propertyInstance
+                      Id="f265db1b-ee0b-431b-8a38-4e8ea66ddb1e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="187c63e8-18ea-4fdc-a7d9-2e8d02469852">
+                    <propertyInstance
+                      Id="871c8cf2-813a-4b6a-9940-11b1c76fc38e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6edf3112-5b0d-433c-8474-3c7f7361845a">
+                    <propertyInstance
+                      Id="faf7d4c3-2bfc-4d61-a802-7df958a96089"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe7c5f15-be32-4837-8582-f07f3d003d99">
+                    <propertyInstance
+                      Id="188cdd3f-31d0-4401-8528-f0a264b5df49"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dec9c43b-57f3-4a12-b87d-cae4b2ed808f">
+                    <propertyInstance
+                      Id="80162551-5232-4508-ba2c-b5c9b7cf1bbd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f318969e-3460-44e9-8674-3be8d3f5d093">
+                    <propertyInstance
+                      Id="693d09ce-099d-4337-8606-d3a9fd181409"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="94fcd93c-5c4d-43e6-943e-5af5c57f2cca"
+            name="Gateway"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="14421ebb-542e-45a7-b692-13ed7671c708"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DGateway Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9bcfc8b2-e632-49ff-acec-d1abb8fc685c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac1fab8d-877b-473d-89d0-498679554e6c">
+                    <propertyInstance
+                      Id="ed7cd0bd-dd23-473d-ad81-73ca6d1d900c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b60e649-d737-4e6b-a857-f38dab66134d">
+                    <propertyInstance
+                      Id="ad63076f-0ea7-4e5f-ad2a-273dbe033d6a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff65bca5-3eae-4c04-9d59-9cc715bc3570">
+                    <propertyInstance
+                      Id="ba072742-dded-4562-9254-82b9530ce5f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2850d40a-88cb-4ca3-8778-8b8b76ba59ca">
+                    <propertyInstance
+                      Id="1da1d2a6-2794-4071-88d6-948b39056a67"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bcdd646-6749-4615-b70b-997305cb4e16">
+                    <propertyInstance
+                      Id="206db548-09d1-477f-91ed-037df9619b16"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="173dc023-7f1a-4b1c-bd57-ec963e29cfae">
+                    <propertyInstance
+                      Id="3b72b335-ae5f-4e5e-8c84-f17116a2064d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="479f9ccc-b766-464d-9cc9-82bf3e1b5403"
+        name="ResourceGroup"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4ca80f94-b694-49fd-80ca-8f366efa06dc"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5f87764f-67a9-48bf-ae01-13ca8a898f19"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="396301d3-193d-4700-9522-eba8139ca717">
+                <propertyInstance
+                  Id="35bbe9d2-6fb8-491a-b90e-3115654a4e00"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a14394e3-4d0f-47d0-9764-dc8d11a051b7">
+                <propertyInstance
+                  Id="67539e45-ada3-431f-9e60-1139454a38d3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0bae0adf-55c2-44f1-b4d3-ae422ecb5322">
+                <propertyInstance
+                  Id="737511e8-b9fd-4fa2-a77b-17c6b39841de"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="96144341-6e21-476d-947c-84cf8057e01f">
+                <propertyInstance
+                  Id="3e503ffc-6e3d-499c-a8d7-0b84cad773b4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="982f76b5-aa61-4d17-b640-5686b6a66b4c">
+                <propertyInstance
+                  Id="17732418-69cb-4610-98a6-579a927ab5c5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="a752001c-3826-4f1c-a21a-6b711ecaa31b"
+            isDerived="false"
+            sourceEndRoleName="ResourceGroup"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property Id references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="303c95e4-cffa-400b-b97b-a6405b399095"
+                  name="ResourceGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="11238912-fd0d-4b66-9a9b-9fea5e724ac6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0af34078-fb27-44ae-9fe3-fab4982241aa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c7e314c-a720-442d-b164-4b0367aa370b"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="29fa08a0-6e79-4adb-8cbe-21b065f039fc"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bf957a11-087d-4319-9851-8a33caf2c708"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="72cd396e-6055-4d78-81f2-e5295ed1131f"
+            isDerived="false"
+            sourceEndRoleName="ResourceGroup"
+            targetEndRoleName="Resources"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="a2994352-e108-484d-9a1a-4d5931b97f80"
+              LastKnownName="ICollection&lt;Resource‎&gt;"
+              LastKnownLocation="Package5_1614.uml" />
+            <description>Property Resources references type ICollection&lt;Resource‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96503334-df32-4a5f-9b89-b5f795f40f04"
+                  name="ResourceGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cf2b300b-f101-4633-9f9b-ef5e498035e0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7c822eff-3af0-4a04-b56a-4d54acb8cbda"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd58f7ec-aeb3-46f3-a3c5-85722a3386d2"
+                  name="Resources"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="14cf4bfe-d067-402c-a992-48dd895a2f1c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3f546134-97c1-434d-87bd-8697769fbca7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="43cd083a-084e-4f8d-8de8-6a8a49fbfaff"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="af69a06f-c61a-41a4-aa94-ffe071322f51"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eb4b503d-005b-4a52-98a5-49a71adc14e3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d05c8cf-890a-42f5-ac35-141020041b05">
+                    <propertyInstance
+                      Id="9a497511-e368-4cbf-a6ee-9e4926a58cc7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f9984a3-4e5d-41c2-8056-f8347b1d8603">
+                    <propertyInstance
+                      Id="60f41dad-f849-4715-bd14-375d10826a70"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f696583f-4868-491b-adc8-815844244ab4">
+                    <propertyInstance
+                      Id="846964b8-f34c-426d-8371-5c4dcd52ee7c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe937921-6f6e-4474-8ce6-87068aafa8bc">
+                    <propertyInstance
+                      Id="6e946e63-74a5-49b5-a8bf-41ea541d9656"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f31b5b82-49e5-4821-a3e8-cbf1d3fcf564">
+                    <propertyInstance
+                      Id="003890a3-5ae3-4aa7-b492-d87c357739e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa2d7c2e-b6d7-4e73-ac65-87fe5391a278">
+                    <propertyInstance
+                      Id="9f9f27eb-b7f2-40ac-b036-5455a70f60e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36c149d1-046d-4b1f-b10d-2c79beca4ced">
+                    <propertyInstance
+                      Id="516f845d-e29c-4e3c-aeae-b8c9cbb6ad0f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e547d9ee-fd00-46f3-b4a4-5eb656dd7245"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="17f3ea9c-98f1-4286-895c-7a21e879b366"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b09ff052-d95c-4d0f-ba65-cfebb0e6ac22"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9cae942-470d-4d4d-9b25-4f5fc0493beb">
+                    <propertyInstance
+                      Id="f04ba4fb-8103-4d09-9566-0250485ccb02"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c2a1220-8707-4e38-9002-3de6c1b0ad54">
+                    <propertyInstance
+                      Id="2abdd75c-3a61-4e1d-b0b8-33527818d704"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9e011ad-e49b-4609-ac59-c8dd9b2f51e3">
+                    <propertyInstance
+                      Id="1de38efc-9e8a-4ab6-a66b-7c7868ed4b91"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25ffb8a7-eaa4-4614-bbea-6286afe68b33">
+                    <propertyInstance
+                      Id="92c14369-3ed8-4432-aab2-d299da87a1b2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a6bb246-b60a-4070-aec8-d4877f2ae98c">
+                    <propertyInstance
+                      Id="324fe5f2-4201-4f7c-ab53-4c6e91f53aff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64325041-b770-468b-aff4-72b56b5b6231">
+                    <propertyInstance
+                      Id="317e4d6e-4c65-4584-a619-a23124aea087"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f1ae5bf-8fd9-4e9a-8b70-cb1ce55fce65">
+                    <propertyInstance
+                      Id="6e3831f3-622d-417e-8f50-71b9bb3f179a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="993162ce-fe63-4363-a598-0af525e3b310"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5c54745a-1bcd-4e96-806a-07610110e0f5"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c15ad50-a2ba-4e70-b90b-7cdec17994e3"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af2fb740-ca65-40d6-8213-ec3d6217645b">
+                    <propertyInstance
+                      Id="e178aeee-206f-4ed0-b8f2-a4bc1bb20752"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f09f1a48-a195-44b4-b1ce-b6d55d1945c7">
+                    <propertyInstance
+                      Id="b5c39447-8cd7-4dab-8a60-a07c7ac4e83c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51e3e00c-f93e-4d75-86c3-c57571a8e8d3">
+                    <propertyInstance
+                      Id="382908f8-3a39-47f5-b532-c5f9d4e6bbc3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e4a8b2a-a81a-4545-97ae-cda6db669c72">
+                    <propertyInstance
+                      Id="d81c3aea-26dd-421c-b94a-16311f670819"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b07722e3-6d95-42b0-8c53-07e88ee798b8">
+                    <propertyInstance
+                      Id="45cc6167-504f-46ed-b5bd-2ba59b429d74"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57248855-6d65-4553-a807-0bbe4b11b885">
+                    <propertyInstance
+                      Id="9cec54f6-c70a-4cc1-824b-de1605ab2221"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb987624-4f29-40c4-b2de-5e3605936ed2">
+                    <propertyInstance
+                      Id="db7a6486-1f21-41ba-b7fc-fd7bd559e4a9"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="66047bc3-a836-4575-aad5-90267cf77ede"
+            name="Resources"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="17bbf48c-a1c7-48d8-8fb2-9f5527cc4c3d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup Member%3DResources"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f56a2e88-ab1d-4113-959a-7d2a9396306d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b35ebcc-3b61-4986-a1c3-0519c2a7c7b3">
+                    <propertyInstance
+                      Id="210c16e4-684a-4d3c-8113-1b80402cd913"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dfa9c3f-6226-4256-b4aa-45dac22c5b10">
+                    <propertyInstance
+                      Id="b8310f92-c13a-4e09-b4b5-07717e9c4663"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e87a0728-f5a0-4479-807f-f4872d8715d6">
+                    <propertyInstance
+                      Id="0f76da0e-2003-4d64-87b8-9519c32e5c69"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1b882c7-f7bd-4402-b312-60b7de5a2196">
+                    <propertyInstance
+                      Id="25bf20df-2824-4da0-b16d-ac8df1eb7aa6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="451a70a5-cab9-4554-b593-0c2126501505">
+                    <propertyInstance
+                      Id="c85926c4-cb16-47dc-890c-18fe821f4fd1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="682c1565-a685-4336-8c86-6fa514b731f3">
+                    <propertyInstance
+                      Id="86be6e1f-b244-439c-b5e6-7de4ab5552d2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="776f0d26-c44e-4e1e-82e2-d81b540f5886">
+                    <propertyInstance
+                      Id="f4ed4f07-f3c0-4312-aea3-fc761154c37d"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a2994352-e108-484d-9a1a-4d5931b97f80"
+                LastKnownName="ICollection&lt;Resource‎&gt;"
+                LastKnownLocation="Package5_1614.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c11b1c85-c77d-48b9-997b-43fae189c851"
+            name="ResourceGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b1fb68df-f460-42d9-91b7-b0ba9c97fcb9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="423e24e3-3300-4681-9bc2-36144abac446"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="583e37d7-1b56-4522-a657-b75d88da1361">
+                    <propertyInstance
+                      Id="15d98cc8-a62b-4db2-b144-25e1a9ef04f9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a27659a-d610-4b94-bd44-cc651b2391a7">
+                    <propertyInstance
+                      Id="0f67b268-b339-41b2-b56a-1f17be66ebd9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2390e2c4-c668-483c-9fb4-68c1f53a3a26">
+                    <propertyInstance
+                      Id="10b3def8-662c-4591-8885-d0fdf57f8134"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e754eb9-8660-493a-9c16-b6b3f5daafbf">
+                    <propertyInstance
+                      Id="6969e2c6-3484-4f89-b422-5c2f3a475bb5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72956a25-63cb-4628-a2ac-6b9165a03557">
+                    <propertyInstance
+                      Id="6e7490b5-4e0c-4d2b-a9ec-bd08aa4340e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8d4ae13-f5f4-4dd9-830d-b232263ad6e2">
+                    <propertyInstance
+                      Id="8ecf0923-43ed-4353-ae33-c4c9be6bbb23"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a79296ed-7f6e-4046-83a9-64824351e435"
+        name="ResourceDTO"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="51887c1f-6908-4ce0-9a36-c0123296421e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="75111b1b-5d94-40a3-bf96-3213432f328b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7903033-7960-4818-bf46-535eb3bba004">
+                <propertyInstance
+                  Id="c22071f6-e849-48a5-bc60-55f9688e4509"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a339d4f2-75ff-472f-a371-59ed46424b2a">
+                <propertyInstance
+                  Id="5b7aaf6b-ce8e-451a-96ae-cb807bb86550"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="037cc9c8-0515-4689-8910-0c74f7edd498">
+                <propertyInstance
+                  Id="e60f90be-e3af-4161-9a38-adb4701f01d3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f0046fb-bf0c-44b2-8da4-b83b0523ee9d">
+                <propertyInstance
+                  Id="234ff53c-428a-4ce1-a327-49c630324ca7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="601695f9-a6c2-45ab-a6b4-80eb5f0e8f86">
+                <propertyInstance
+                  Id="18affc98-37b7-4a52-99e7-62465d2971a3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="c1d89052-e189-45a6-b138-b351f903a1a4"
+            isDerived="false"
+            sourceEndRoleName="ResourceDTO"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property Id references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8d28ec40-487e-4c64-98ab-f51b8db49955"
+                  name="ResourceDTO"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="da9372cd-9404-43a2-8c2c-5bd88b516af1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7937d28e-1564-4f81-b0ed-d1b0611a1410"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b8d77ab7-573a-4bf9-b3a2-df77ee24c4d2"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7210f2a3-4059-442c-9a98-384c1e1fa507"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d5e613e4-2a0f-41f2-bed9-6b0bccf17e50"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="813b6042-2038-4395-a373-f4727664cb13"
+            isDerived="false"
+            sourceEndRoleName="ResourceDTO"
+            targetEndRoleName="GatewayId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property GatewayId references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e5c9962f-4b22-4498-93af-9ee37273e82d"
+                  name="ResourceDTO"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="286c824f-b1f0-4eff-a22b-ae6823165ac5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6547822b-a755-4197-915e-a8fe13a686aa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51213e4f-785a-4650-b899-24b6d5ca2510"
+                  name="GatewayId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8a140852-bc06-405a-8a21-8b2bdb3e9381"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7940589a-bbdc-43cf-b887-85ab6e7ee7e5"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="7973637a-5e04-45fb-83ba-d637b35341eb"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9970871d-5f4f-449a-943f-bf3ef707ab71"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2f6f259-28b9-43f9-ad23-5e237639a82e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ee378ea-814a-4b9f-9f3c-b4d2ab72b4f0">
+                    <propertyInstance
+                      Id="42fc8a48-ed7c-469c-bb91-20572e7ea19b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87fad5d2-0acf-4e38-a535-2fd55d7971e6">
+                    <propertyInstance
+                      Id="1656093e-1066-4552-9e37-1634f5c98569"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="365252ca-f5ea-44ca-86b0-45aea9ad9669">
+                    <propertyInstance
+                      Id="1441b71a-e2d2-4044-9f39-b657def039dc"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b179f89b-787b-41e4-bd63-bf3009d2e1bb">
+                    <propertyInstance
+                      Id="88128a60-a084-40bf-890f-38aa5eb869e4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d100258-2fd0-4c8f-bf17-e8e756c08a23">
+                    <propertyInstance
+                      Id="f93d4e00-6c23-411e-a2fb-5cda2a3e600d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ef5f92a-b0b0-48ec-929d-4c77e8933275">
+                    <propertyInstance
+                      Id="d67f34ec-7f22-4514-bbdd-efd88f2b654d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6634833-ffd4-4c61-99f4-c2196082ccb4">
+                    <propertyInstance
+                      Id="6636bf53-1db2-4fbf-8e74-2d78103f0645"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a2a2b7cc-4efb-4d83-bbc7-94ae17c3ca3c"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7f50f884-ded2-459a-8cc4-f3733dd39f4a"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b8603594-e8ea-4f74-b2b9-d2f7d25c5af0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7eb0b238-2029-490d-8459-a21558ff1a1a">
+                    <propertyInstance
+                      Id="274d32ce-6c51-40e1-ac00-0efc9e27cce3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa50c7fb-4b0e-4351-9355-bab933990b12">
+                    <propertyInstance
+                      Id="aab6f76f-c467-4097-8949-190bd5559b7f"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92be195c-9399-4ed8-8515-a22c089fe1de">
+                    <propertyInstance
+                      Id="ab8926d9-404e-4ab4-ba66-aa2da7271262"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2925b10-f75c-4fe5-b9a9-f37dad52b11c">
+                    <propertyInstance
+                      Id="33a3a54f-216c-4100-976f-83ae86fba59c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe35f38c-b17f-4d22-956b-e5b584f32d9b">
+                    <propertyInstance
+                      Id="cb3ef689-6503-476a-bda7-3039f4f75e3e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6921ec00-b7df-4a8c-9c7c-fadb9171580e">
+                    <propertyInstance
+                      Id="901803d1-4bd9-4992-a26c-00f2b7d3f6c2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e003f354-859e-4f15-9aa2-943ab3f0b9a6">
+                    <propertyInstance
+                      Id="c31dcc3d-e7fc-418d-bccf-1cb4a60141b8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="de7ecfd4-a714-46ba-a41d-63acf8fbb4cb"
+            name="Uri"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fea2a5e1-41cc-4f55-adf4-bfc99de3012d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO Member%3DUri"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5ae89846-1c23-465d-b797-cbfa102703f5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8e506af-f3cc-45d6-820f-aaf2b5c18016">
+                    <propertyInstance
+                      Id="48b5ee10-44de-46db-b9d9-f2d5512c2fcb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28a41dba-98ce-4081-9809-3b4c5ac0a7a3">
+                    <propertyInstance
+                      Id="e8083d57-03f2-4f64-bb6c-5f293f7b3560"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdd9ada3-4dd9-4e98-9c23-9222655d6894">
+                    <propertyInstance
+                      Id="a4526ade-e545-4d59-9d4b-fec7f3d02ec3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35ce91ca-6f2e-48f0-bb05-ae6b43966840">
+                    <propertyInstance
+                      Id="232a3d21-09c0-415a-be63-e7d39a74a30c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a494392c-a162-410e-a514-55fad2074da9">
+                    <propertyInstance
+                      Id="41ca8181-c784-478b-9cb9-e9f9b692be3d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a22ca94-7c80-4f90-8ad1-fbbd83526eda">
+                    <propertyInstance
+                      Id="da612994-d1d2-4d4a-b01e-05d3ca2367c4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e09c424d-51b7-441a-b057-64e88ce477c5">
+                    <propertyInstance
+                      Id="e518c02d-390e-4fe0-9b07-e281b522cd66"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c544bd10-6456-4b69-8830-09d79f7709b8"
+            name="GatewayId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dcdc45f1-7767-4dac-8859-877f4df5efb7"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO Member%3DGatewayId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="31ceb06d-d68f-4a44-a558-ea769f240121"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ca77c96-84d8-4172-83c9-684ab34e8af9">
+                    <propertyInstance
+                      Id="da46b9bd-597d-4e4e-be7f-909a38942a83"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="329d2c63-3526-49f2-b835-5ec5cea004d3">
+                    <propertyInstance
+                      Id="3ad7e717-1f2f-4735-9b3f-a62b2cfad745"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9dde5da1-5ca7-4f9a-bf73-193c0bad1727">
+                    <propertyInstance
+                      Id="9dd75b94-0549-40ea-bd41-3ab01cf84703"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ace47340-bccf-4bd0-8a5a-2e6be07fce4b">
+                    <propertyInstance
+                      Id="899b86e1-9766-4a7b-93a2-a567f859c640"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04bea4c5-0b5c-456c-ab1e-116e0b5e2251">
+                    <propertyInstance
+                      Id="01a40937-068d-4d44-9613-2689b9aae7c9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="faebb61b-c913-4363-952a-8a2b7113d2f1">
+                    <propertyInstance
+                      Id="309814ff-4e02-46b4-b205-b2ed28aec656"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="110cdcd9-f320-4624-93b0-290f3d316062">
+                    <propertyInstance
+                      Id="73ccd1a4-0bbb-4da0-80ad-286335f57cf1"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d91d0f39-63b3-463f-8096-2ccc06baa76d"
+            name="ResourceDTO"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c37a6ac7-f4a0-4b34-ab1c-bcfae4b003e1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceDTO Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4329d06b-89a7-4919-be40-84bca2865b69"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b72866c1-3867-45e5-8f9e-3e4deed07143">
+                    <propertyInstance
+                      Id="b3c061db-9bd2-4e9d-ba5c-f0db09ed71fc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2187674-c9a3-4e8d-bfd3-f986920f34b6">
+                    <propertyInstance
+                      Id="5da03c00-5438-4a51-90b5-cd7ab4983fc4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a024175-7af3-4ae8-bd12-4153b2b190a1">
+                    <propertyInstance
+                      Id="f047c1cc-8cc6-462e-9f0c-a8c0a3a73558"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eba47bf2-a430-480c-8eea-9a0edb1deaba">
+                    <propertyInstance
+                      Id="3036107d-9fdb-4d32-be69-5365ac551b86"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcc65457-4bf7-4ffb-88ce-0dcd83600505">
+                    <propertyInstance
+                      Id="cc6c02b5-ecd4-4efe-823f-578efe31063d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31200570-9434-45ec-b444-4110cfd85f9e">
+                    <propertyInstance
+                      Id="af8d0d6a-8ab1-40f3-8ae9-653bea828976"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="30d3df4b-133c-4b44-afe3-fbd4624f1e32"
+        name="Resource"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="64ebe39c-be06-4add-9687-e50490f0cd3b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="382c2fdf-1e8a-4a40-b58d-25b76273de8b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9440c7f9-1eea-47a5-a490-92a939e58654">
+                <propertyInstance
+                  Id="eb6edabc-c6ec-4e5e-9c2a-e8635197e492"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="befc6d99-119c-4042-9a83-9df57e0308d9">
+                <propertyInstance
+                  Id="ed432158-d5a3-4ff0-914a-73c45e3963ab"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9e6adcc-f477-44f5-a5b3-f469a2672e14">
+                <propertyInstance
+                  Id="5fb4bfd4-d848-4c29-83bc-350e620e237a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1c0e0388-8097-4e8e-854c-fa5726545e5e">
+                <propertyInstance
+                  Id="2956e15e-1357-43ae-9e8e-ca38cbb0cc57"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4a96f0b8-f332-4a6a-9799-b688f52510be">
+                <propertyInstance
+                  Id="003f154d-ffdf-4dba-ac24-fbdfea5f8164"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="b3cb1077-6ace-4cab-9181-4d807524fc0d"
+            isDerived="false"
+            sourceEndRoleName="Resource"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property Id references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9be65e1f-4502-4a6a-8c35-0eae8579c3e0"
+                  name="Resource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e304bf9c-ac63-490d-be05-78d996b4ae83"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1a8d884-de85-4bb8-9fbb-33d2a16de667"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea0bda96-f773-43f2-982e-1d05eb3dade5"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a1692fda-5349-40c5-9f50-9c3376aa8cb5"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f18c4793-fbfc-423a-b550-89b940b064ab"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e5d2a47b-2c11-45c9-a827-ef43383016a4"
+            isDerived="false"
+            sourceEndRoleName="Resource"
+            targetEndRoleName="GatewayId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property GatewayId references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c33e29f-4065-43a5-931a-79c74be3c7cf"
+                  name="Resource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="341b729a-54cc-4e0c-96eb-239308a368a5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a17ebf54-65e6-476d-94cc-4be637ecb557"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="62748b11-21e3-47fb-8394-1e6a529a13d6"
+                  name="GatewayId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d3a62554-9fca-4c61-b9d0-4e10eeaee868"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f5f62aa2-6990-42f2-8afc-d3e0ef968a1c"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="74fb9fca-0a27-4af3-90da-b59c2ad23f2d"
+            isDerived="false"
+            sourceEndRoleName="Resource"
+            targetEndRoleName="Gateway"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="013881e5-f889-4501-be7e-0f6974d014e8"
+              LastKnownName="Gateway"
+              LastKnownLocation="Package4_1620.uml" />
+            <description>Property Gateway references type Gateway.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6932a524-2fd7-4c38-ba6b-b3d2d56d5678"
+                  name="Resource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="14deced6-891d-4ff8-b4d9-8e848db4d710"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f13f4a02-419f-4faf-9c58-40c811787224"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5baed6ab-7916-4ada-8a8d-e5469f8c7ec1"
+                  name="Gateway"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="08a1752b-522e-4b86-bbd1-579e01015a2e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c83cf4e9-eddc-482b-8b0d-666de965f023"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b9498757-8f1c-4635-81f0-e7888dc94bc3"
+            isDerived="false"
+            sourceEndRoleName="Resource"
+            targetEndRoleName="ResourceGroupId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c43ad4ee-f942-40a1-be7e-5871705e7457"
+              LastKnownName="Nullable&lt;Guid‎&gt;"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property ResourceGroupId references type Nullable&lt;Guid‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e86d19c2-e70f-41b7-80b9-cfcc966e6846"
+                  name="Resource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9012ce33-3af8-409b-82d2-d1f3b31c3914"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8fda8b78-1d8f-4b81-bf81-f05433873f71"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7b71e47d-122f-4262-961e-341106435903"
+                  name="ResourceGroupId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2eb665d2-cf21-4758-ad74-0fa451fcfc86"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a352b10e-446d-4898-b1fd-a105ecfc4361"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="34442e13-e93d-48ab-84d0-48540d9e75ad"
+            isDerived="false"
+            sourceEndRoleName="Resource"
+            targetEndRoleName="ResourceGroup"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="479f9ccc-b766-464d-9cc9-82bf3e1b5403"
+              LastKnownName="ResourceGroup"
+              LastKnownLocation="Package4_1620.uml" />
+            <description>Property ResourceGroup references type ResourceGroup.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="61827bb0-442c-4218-9f4d-0300aa36dda9"
+                  name="Resource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7811806e-093d-4d40-ad76-2d025b2438a2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bbc849e5-bd5a-4deb-832b-96ab283e9532"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa3d50b0-d095-4587-a907-8a7a59ba5736"
+                  name="ResourceGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e6505034-abc1-4da1-8e49-bec1d1600b29"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6349b17c-fd65-4291-afe8-2425e99812a4"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="2ddbc7f5-bf67-4baf-b23e-3d5199021dd6"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d18ec932-6645-43da-9862-5f7a1e003e84"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="62843c5d-cfa8-49b4-9f7d-51fadaee7961"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99d3580d-ab0d-4942-b49d-f4ab3e65be14">
+                    <propertyInstance
+                      Id="c0548463-0804-4944-a68a-24806ff862fb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5902cc9-e69e-4ec2-a76f-d0e1a7be4308">
+                    <propertyInstance
+                      Id="54b24cba-1f02-4b98-b931-43bff2912520"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a964d587-55e7-4cd9-b43a-7fdfca610171">
+                    <propertyInstance
+                      Id="05ea5d61-42a2-4089-bf6e-a246672630ba"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d31beb76-0059-49c7-986f-6e5c77094d4f">
+                    <propertyInstance
+                      Id="39ab0cf2-3bdb-4458-959d-0e452a87258d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d876dd2c-5bf1-4655-b475-987af3116735">
+                    <propertyInstance
+                      Id="3531054d-b72a-4cd7-bf20-b2c49bee6f7c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7626aba3-7f4a-4810-8427-0ea6135b724b">
+                    <propertyInstance
+                      Id="6a421e32-c049-4e1a-bf00-aa4ed78281c7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78de96f0-1da7-43c8-8327-af2abd1e0d3c">
+                    <propertyInstance
+                      Id="7f9f81be-f5da-4a01-9caf-ca704f6fec13"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ee4b8fdd-5dc8-4c8f-87f2-29a25bce20de"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="52d11beb-45e1-4cca-a425-e3aafa53f105"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1dc829f2-79f9-4dc0-b940-9888fcdb0732"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2f9739e-d6df-410d-8f08-4d8b67ea5231">
+                    <propertyInstance
+                      Id="7e6a5e48-2a74-44fa-901b-06b8a0408b62"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4198ff1-9aa2-4506-9d20-16c0df43e1d4">
+                    <propertyInstance
+                      Id="960db8f2-a730-48bb-b657-2159d5f3ff39"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23edf90e-a339-468f-a8aa-ae135d925d55">
+                    <propertyInstance
+                      Id="b0f59070-88cd-4bfa-bdaf-50c600c4bff8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e3723c6-efc2-44ac-91c5-916c30852064">
+                    <propertyInstance
+                      Id="b0d2d3dc-c9c2-43f4-a103-b7a2380d62f9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af6e0355-e5e9-4c86-b646-53ea4579cae7">
+                    <propertyInstance
+                      Id="ef11be89-69fd-4f69-8ab4-55ae9122a95c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ffbb8e9-0a23-41ba-bbbc-4eb35ebadc95">
+                    <propertyInstance
+                      Id="d0a7f3fe-cdf2-407e-9a46-c72e8fefcc17"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d816638d-7b62-464a-9ff2-66ade204e00d">
+                    <propertyInstance
+                      Id="d6db4256-4d00-4f5f-aa78-f1a77f34a52b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a8ebb9ab-cd65-419a-ac24-ee5f81073b9e"
+            name="Uri"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="00b62ab3-96a1-4b32-9bfd-100518bc4e5c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DUri"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d44889b0-5df8-4a21-9910-7c8766d305a1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c25a348a-c5c4-476b-b236-31ee6a89c5e8">
+                    <propertyInstance
+                      Id="c01fda59-d072-48d9-9684-de4e83e70729"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5808871-9bed-4f73-856c-6a283c0ed3de">
+                    <propertyInstance
+                      Id="2816e86d-3ca0-4936-938d-3fd0baf63445"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2da39512-e941-4430-a701-332c470041b0">
+                    <propertyInstance
+                      Id="60393845-bda4-4186-9bdb-886dc64a6544"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82f21984-b263-4623-a7fb-09e0d09e6bf3">
+                    <propertyInstance
+                      Id="ff4736cb-1b78-4581-9e23-63333eff1809"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6414d2c9-f8e9-4281-a68f-73186b5b0ab6">
+                    <propertyInstance
+                      Id="9ca8475a-b1c5-4028-9354-0df0dc21cf5e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9df0aadd-457b-4f9e-90fc-5766c774db3c">
+                    <propertyInstance
+                      Id="f6bf4bf8-057f-43c7-bf00-5cf8cda13153"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b843a033-873a-4f0d-b601-9a0d48d70857">
+                    <propertyInstance
+                      Id="7a2edda9-bcf5-4c87-a506-e69dc64bd26c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6a6dcfb-dc27-4da7-8424-1c3ea6f15ff8"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3bdcbe3e-5b4a-4598-91da-f593b48b6788"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c91277be-a1f8-4262-8639-d218f4212cfe"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0edece5-e704-4308-aa4f-ff2ce7a2242a">
+                    <propertyInstance
+                      Id="588ca676-2b95-41db-8b21-cd4ad8dc32f4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3d7204c-a6a5-43ea-8e08-7aae95623a67">
+                    <propertyInstance
+                      Id="dede4106-7e69-4927-9252-36b55b285c61"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="230fbbdd-27af-403e-b4b5-9c9bdce186b9">
+                    <propertyInstance
+                      Id="e7c1054f-0ad7-4b49-8fde-6d6f0cb75293"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69940c91-06f3-4d76-bde4-36016773ec7a">
+                    <propertyInstance
+                      Id="ed48709f-1d98-4736-b6c5-a6d7b32ad71a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae0cdd3c-d0ea-41e5-8f12-46074b6c0a71">
+                    <propertyInstance
+                      Id="921769fc-bfe2-475a-8be9-ee4a10e1db7e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0651f0b7-5cb6-4c27-9085-14979b834969">
+                    <propertyInstance
+                      Id="6713579b-3196-44f2-8a6f-0764cba55cba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b301e49-6b57-4d19-83df-c7520389e254">
+                    <propertyInstance
+                      Id="b2c42c2f-bd70-4d6e-b994-251e63c64cc4"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="80fbb1f7-314f-4218-8e9e-9ad886aa7461"
+            name="GatewayId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dcea74c2-f16c-40ce-ae9d-aac4d8414d85"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DGatewayId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d1cdfaba-5759-443a-8100-b5675e0827d2"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b86d5b3c-6b9f-46fb-885a-8c1d8e8e89c9">
+                    <propertyInstance
+                      Id="63f123a3-1857-47c0-bbe8-384270bb4477"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38dde359-e8c5-4cd4-915d-877cd1e4ab4a">
+                    <propertyInstance
+                      Id="b704ad8e-16ee-49a4-88d4-c535a54c4a6d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59bc5909-be08-4b6e-8ae6-fb45929a9058">
+                    <propertyInstance
+                      Id="bed6762e-bbe0-40e7-894f-d09eaa8df922"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce1cff53-a29a-4f5f-a50f-a5cd95b7045e">
+                    <propertyInstance
+                      Id="40ebe98a-8840-4226-a394-0b99521275e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8a48bc5-5e47-4cef-8abc-cbfd5a4c7acc">
+                    <propertyInstance
+                      Id="8ec1d8ed-54b8-46be-abce-cd788be2fc98"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73bd98ac-7616-460b-aba2-5a093a67bffc">
+                    <propertyInstance
+                      Id="703c7455-6125-44df-906a-bef724a194d7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a070ccb-5062-4596-88e1-fc7afa446aae">
+                    <propertyInstance
+                      Id="a9985a08-cd65-48bc-bde3-c59c093fa7a7"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6c04eaaf-304e-4ddd-a5cf-e3cbb9bc31f4"
+            name="Gateway"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5feb5d80-2dc1-47ee-b03f-9a3055bf7b97"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DGateway"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="569d4a9a-8378-44cd-a6d8-494164e5d68e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98dfd7e7-3300-4c4c-9c5a-6dfb98709737">
+                    <propertyInstance
+                      Id="8dd94e1d-6b42-4f90-aa20-0c827acc8393"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0c1dfba-c8f6-4d9b-af0d-ede8e816c3cc">
+                    <propertyInstance
+                      Id="ee1290ef-dd29-404e-8bcb-f19609cfffd0"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eeb11483-b154-4cf2-95fd-d8d06adce4b9">
+                    <propertyInstance
+                      Id="a31e8831-3bec-40c1-b188-c09402155256"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a053443a-b204-4941-b38c-96832f574354">
+                    <propertyInstance
+                      Id="0890d370-92d5-4307-9c6d-10d71175fbe3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d75944df-a3bf-43f4-861e-63823147ab3e">
+                    <propertyInstance
+                      Id="22f7c754-d8c9-4935-8c0f-0b4ceb1a9756"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7affd4e-edec-49eb-9afd-7ddaca8816b6">
+                    <propertyInstance
+                      Id="7281d56e-30c6-41cd-8267-73afbb7f1f15"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e958c29-d291-4295-a4c8-ea47b904baa1">
+                    <propertyInstance
+                      Id="d78bcc87-718a-4da9-8c82-80e523af4f07"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="013881e5-f889-4501-be7e-0f6974d014e8"
+                LastKnownName="Gateway"
+                LastKnownLocation="Package4_1620.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bb723d95-652a-4df2-8fe6-2268f7f2ee0a"
+            name="ResourceGroupId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bf5f9f0e-b121-483b-b668-72fc0e577c6b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DResourceGroupId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="477c33dc-7d49-494d-89c3-fa6e8cfc96a1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be640c7a-6ebc-4e73-b47a-88f1b3f5b46c">
+                    <propertyInstance
+                      Id="90a9a319-91f3-4c9c-b961-0e135f4bde8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64ade0f5-ffee-4a72-b29e-ec4b4582f6e8">
+                    <propertyInstance
+                      Id="a8ec3721-b34d-4dea-89a6-5cd58f6f6291"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d5684e3-8f1e-4e39-a7ad-b90f093215b0">
+                    <propertyInstance
+                      Id="73ac77f5-bba5-43d1-996c-a5d48eb095ab"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18fa70c-6532-4d54-aa30-2a16a5f4c904">
+                    <propertyInstance
+                      Id="8a32b555-df45-488f-b313-63bb82778d74"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f4af28c-a4ba-4647-8353-81278e43c33f">
+                    <propertyInstance
+                      Id="6ab09690-00cd-4aac-96e1-95ec2b161502"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa484e31-1cb0-40cd-84a3-965b7c6d996f">
+                    <propertyInstance
+                      Id="9ab34bdf-aaa7-4c83-8da8-6369899da0a0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21968d9d-6eff-4013-a3d0-f9b064910371">
+                    <propertyInstance
+                      Id="5a68c1fa-b341-4e91-9e2b-e2e8f57a61fb"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c43ad4ee-f942-40a1-be7e-5871705e7457"
+                LastKnownName="Nullable&lt;Guid‎&gt;"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="21fb2fdd-bd61-450a-9c18-9b2e050136aa"
+            name="ResourceGroup"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="36a56420-0603-41b9-b500-192448357ff5"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3DResourceGroup"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c81899cf-b776-462f-b300-2fa643b3689f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dafd0947-8af3-4f10-bf3a-beedbc58e734">
+                    <propertyInstance
+                      Id="fe163a36-5a50-4227-a4f6-c8d8cdcb34ee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd3cdc04-7f2f-41f2-9db6-1c22d27cbfc0">
+                    <propertyInstance
+                      Id="1f3f7a55-ff67-4522-9290-f1ad64a62a23"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="491e525e-f430-40f1-912e-ae410488db19">
+                    <propertyInstance
+                      Id="a89da8db-b723-4716-8f95-433156380167"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47a6fc3a-ad4a-445a-805e-b01163ff89d3">
+                    <propertyInstance
+                      Id="f12588fe-35cb-4c4d-a907-89fc0dafba26"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3eaecdaf-49ea-4b86-a6ff-0cd3e0dc6a06">
+                    <propertyInstance
+                      Id="c93cb7f7-57cb-4685-ab93-d26cd24ba877"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6482441d-71c4-458d-8bb2-a3848db95494">
+                    <propertyInstance
+                      Id="229560a6-abc7-41ca-aa83-8d88fc53d538"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc7a2b09-5e28-475a-b063-5fe386eca7d6">
+                    <propertyInstance
+                      Id="60b1bbad-b5d1-44b7-80ee-d7ce942c0244"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="479f9ccc-b766-464d-9cc9-82bf3e1b5403"
+                LastKnownName="ResourceGroup"
+                LastKnownLocation="Package4_1620.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="13e80274-c196-4b6e-a5e0-9b993dd896e3"
+            name="Resource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="84301c70-f7d7-4aad-9353-a041e431ffda"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d52bcef6-5de1-4617-bf8b-8b3545297ff2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="330c35ec-19bd-4787-8192-253b494e61ac">
+                    <propertyInstance
+                      Id="fc911788-b6cf-4297-aa25-6a1bc714acd6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58f6ff5f-8b17-4d4f-8db8-471f326edefd">
+                    <propertyInstance
+                      Id="5939438d-a7a3-43bf-9b94-ab62c72751d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0552bc8b-b9df-4273-ad90-bf16bbaa40fe">
+                    <propertyInstance
+                      Id="3e4a6265-75df-4914-9c8e-87e4387231cb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87b061ae-a9f8-4e81-9ae1-9568982e78ed">
+                    <propertyInstance
+                      Id="a58e23b2-463a-4d96-8e29-6595cbd95862"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa7a33e1-7177-473d-b0ec-70949af0582d">
+                    <propertyInstance
+                      Id="d87414f0-8ecb-4f5e-906b-802b43c22e7d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48ce09d9-9018-4169-b6dc-c2baace23045">
+                    <propertyInstance
+                      Id="ecee014a-be99-4e89-a54c-9a471b696844"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="78a9ccd9-ee63-4162-9445-f75c6a1b8269"
+        name="ResourceGroupDTO"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d673cdb8-52ea-4ab2-9814-24fa450d6303"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroupDTO"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2bf1e819-60ad-4d99-8de7-90c6b40f56d2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38ccf8c3-9238-4c41-b92d-91ac4331a669">
+                <propertyInstance
+                  Id="c69b11d7-1cfa-4f7f-97d4-4deddb86ec74"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f7e7bc57-8986-4cb0-b1da-9faaaf733515">
+                <propertyInstance
+                  Id="145193ef-a190-4699-9cc6-d9c416cc61e7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6991ef47-73f2-408d-b370-a22488cd1540">
+                <propertyInstance
+                  Id="69f3b097-6117-426a-aae8-ae3553284887"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8741c184-d42e-47e5-85c4-1c34d8619250">
+                <propertyInstance
+                  Id="e179883a-43c4-4d8c-b7d9-79f0b6db317a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3dcf36dd-f23f-4703-b272-d2f5c575a1c4">
+                <propertyInstance
+                  Id="6a0b16f5-4015-464b-a214-667b61645c70"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="0869b83d-01c0-4857-b8ed-1898992f7d8f"
+            isDerived="false"
+            sourceEndRoleName="ResourceGroupDTO"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+              LastKnownName="Guid"
+              LastKnownLocation="Package3_1614.uml" />
+            <description>Property Id references type Guid.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="091c5519-5aa7-489f-bf8a-1b6554fa81b1"
+                  name="ResourceGroupDTO"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5c7eb049-10ba-41b4-b54e-c054db71feb6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7adfb0f4-9e2b-4363-81f0-5ec3e65d660c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b90b545-0181-429f-9195-4009786946c6"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9a9060f0-6c54-4459-bb33-21727f211c1e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5ab17e0f-5b1f-4750-933a-823de4fdaa26"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="2ac502ce-012a-4744-8818-a8608faf63a7"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="09547b8f-05b9-40d6-97d3-f434de2bd2dc"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroupDTO Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e2f90f64-c26b-43b9-b0dc-55d9117cd307"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b35ed420-9dd3-4adf-9f81-45f4e44e2c47">
+                    <propertyInstance
+                      Id="e3ba6065-800d-4753-8a06-743c24951cf4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fac92317-7209-4142-a305-9cd65273f4ed">
+                    <propertyInstance
+                      Id="8425bbe1-1ce5-448e-b277-72b5b0e2e029"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="944811c5-1102-4ba1-ae45-7908f91cd8af">
+                    <propertyInstance
+                      Id="3e24bfcc-db6f-4703-8f48-a088c49dc69d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="346d49b1-5cf9-4d1e-aca3-5b1b728a21db">
+                    <propertyInstance
+                      Id="ba680238-0a64-4e50-845e-42e5f20aebf4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2490eee-c919-46a4-8136-7588d1610d20">
+                    <propertyInstance
+                      Id="bd188a6d-e999-47ac-82ca-aa632fc3d3bb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0930900-1f2f-43d2-8199-0ec519ca73c3">
+                    <propertyInstance
+                      Id="eb55e1a7-2904-4505-874d-5d0d2114e594"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e7d65ca-2427-4128-a8e7-64523f10c555">
+                    <propertyInstance
+                      Id="cf400e50-2029-45dd-8b29-16586e595a4f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5772bb1-eb41-47c3-852d-17621ba3962b"
+                LastKnownName="Guid"
+                LastKnownLocation="Package3_1614.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="168d4357-6512-4ce5-8835-d4ab407a990d"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dbe355a7-e765-45a4-a6da-c8cdff6353a8"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroupDTO Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3e6794f1-bea1-4257-ab73-4f8465977691"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d670ddc8-2ca2-48db-a7e6-b1dc7b052952">
+                    <propertyInstance
+                      Id="5deda904-855b-4ba2-8df7-8842fcd79ecf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="684e868e-e936-4055-b475-8c7c5817e462">
+                    <propertyInstance
+                      Id="54f351b0-4684-4de9-a054-19bd0fdc7018"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35c3aa09-e409-400c-b7ff-17aba1cd292a">
+                    <propertyInstance
+                      Id="f5d999c3-46db-43c6-b56a-3cc51072e538"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7161a56d-8352-4abb-b138-461d12832551">
+                    <propertyInstance
+                      Id="2725170b-7e3e-4eea-951e-ffbbc5008f27"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22605c3a-ce04-41b7-aa0d-2c2c0b10d10c">
+                    <propertyInstance
+                      Id="a3a093f6-cff2-4a27-a3b0-c94d8b4e1aca"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c3c1f8a-eb89-4c40-93d1-a7dbd2e21cf7">
+                    <propertyInstance
+                      Id="2009869a-4348-4ae5-acf7-9446c9181759"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d0af723-e4b2-4a48-b6e4-db368bf932da">
+                    <propertyInstance
+                      Id="2d655525-25d4-4427-9ea3-afaa1c50d1c0"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="07d0dd22-a22b-4712-889a-e288b9d71408"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="06f0bbfc-7042-43d0-96d8-5959565373af"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroupDTO Member%3DDescription"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4440a802-2172-4751-8a54-01044dbdb851"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00185d6c-8896-4f8e-b935-587f6101fd91">
+                    <propertyInstance
+                      Id="2500461c-4c63-46a7-b49c-ed77848967a9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04e9028c-e80d-49ae-961c-d1256785ea23">
+                    <propertyInstance
+                      Id="7ef7cb17-dc0b-40a8-aaad-81f8088f2424"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6136e034-90dd-4836-813f-ff63c175bfb2">
+                    <propertyInstance
+                      Id="c9b9cfcf-c499-48f8-bd59-0cf76b12dd2c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3db795ef-b2ba-466c-ae8a-3ccf478e49ff">
+                    <propertyInstance
+                      Id="d5ccdf72-96b0-41a1-b970-1826d5eaa1e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b68f717d-9b4c-438d-ad88-048c51962a47">
+                    <propertyInstance
+                      Id="5e94cd36-a7fb-4f9a-88af-49fd4c06b89c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87cf5e39-83ca-4a64-a821-07c3a0cb1574">
+                    <propertyInstance
+                      Id="14056660-d0b1-4ded-a22b-903b5aa3f47b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18b691b-a74d-4498-9fdb-30cf9201323f">
+                    <propertyInstance
+                      Id="b49aa9f4-b27a-424d-83c1-7a60dcba35bd"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8cc4010f-03e9-498c-8d37-f005f74900f7"
+            name="ResourceGroupDTO"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d1d3ba81-0a47-4193-b031-025d1e1db25d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroupDTO Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3071709f-690f-4d61-8634-fc8479521a3f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fd5f579-af8c-4432-8af6-bd4ad75687e2">
+                    <propertyInstance
+                      Id="f253ad7e-1131-4f9c-9bf3-8534d07c3862"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fd04934-308e-430b-976c-57e5f469892c">
+                    <propertyInstance
+                      Id="00544434-0cdc-485f-a329-85373feea05d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec9a19af-6537-4ff5-bf12-a5364cb9cf96">
+                    <propertyInstance
+                      Id="6f6ca2df-0a7a-45ac-bba6-91af1818eaa0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37e69aa4-382f-4a73-8896-909a70c4af1b">
+                    <propertyInstance
+                      Id="6da9025c-cffc-415f-8492-f7eb886a5899"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d900eafd-6f50-49af-8e8e-f035a59200ba">
+                    <propertyInstance
+                      Id="b2886752-a4ad-4d83-ad25-43e41bfbcafd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c512021-5977-42c7-a82c-863c3478da45">
+                    <propertyInstance
+                      Id="ceb4171f-be56-4827-bc73-187c26f4a264"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

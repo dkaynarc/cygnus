@@ -151,23 +151,5 @@ namespace Cygnus.Controllers.Api
         {
             return db.ResourceGroups.Count(e => e.Id == id) > 0;
         }
-        public static void Rollback(DbContext context)
-        {
-            var changedEntries = context.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-
-            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Modified))
-            {
-                entry.CurrentValues.SetValues(entry.OriginalValues);
-                entry.State = EntityState.Unchanged;
-            }
-            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Added))
-            {
-                entry.State = EntityState.Modified;
-            }
-            foreach (var entry in changedEntries.Where(x => x.State == EntityState.Deleted))
-            {
-                entry.State = EntityState.Unchanged;
-            }
-        }
     }
 }

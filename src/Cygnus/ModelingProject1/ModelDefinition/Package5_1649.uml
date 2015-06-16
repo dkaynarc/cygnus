@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="491e9269-f7ca-403c-a3c0-ab905e47b0bb"
+  name="pipeline"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="aca234d7-2ae9-4529-8349-be33390367e2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Dedu.stanford.nlp.pipeline"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d214e784-79e4-4598-a65d-98f7643383ea"
+        name="Annotation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="16bded2b-8336-4e4f-b3ce-32cec19457ce"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.pipeline Type%3DAnnotation"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d77174b6-9f76-41a3-b717-2ea66f197e83"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="59772e82-31d7-42d4-a807-d869c2bc6096">
+                <propertyInstance
+                  Id="c7621229-8338-4e26-a3a5-28cc89d3ac37"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8b697a9-c351-4f00-b05a-3ac9b1ae4333">
+                <propertyInstance
+                  Id="53d81708-8742-478a-a680-016d8b8a5f35"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="501d6750-15d9-4d52-9c13-339e48860b19">
+                <propertyInstance
+                  Id="fdcaa692-5890-4b2f-bc0a-e8eba0b001a7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43fd8e38-5d28-4876-9a93-3c53702da1fd">
+                <propertyInstance
+                  Id="4022a8ce-80e4-4911-9220-3d38dfae9d85"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad6fc54b-a322-4fa9-b3fe-042d50c80f46">
+                <propertyInstance
+                  Id="6d3f1eb4-afd2-424f-a693-b96b6142165d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d8009577-ba8f-4fb0-bcbc-4c91bf8eeb49"
+        name="StanfordCoreNLP"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d2c83374-c1ba-4aff-9180-ce1da18d3af4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.pipeline Type%3DStanfordCoreNLP"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="11f3e03c-62b0-48e3-b097-aa6ec26dfd94"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9e0b3a24-6253-4369-9df6-c095d5699a7c">
+                <propertyInstance
+                  Id="4247bc1e-395b-4b66-8818-77309ba7fc47"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1696d34-5010-4e77-9065-759f939020e0">
+                <propertyInstance
+                  Id="b19f7d6b-7ba4-4ed2-999b-7fc39880b1d0"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ac21da34-b551-4a52-8b67-fae15e7283e8">
+                <propertyInstance
+                  Id="f8066c14-0851-44f5-a2d8-2a1676dac671"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3856d282-5c87-4262-a81e-518724aa6156">
+                <propertyInstance
+                  Id="9c995c23-a61a-4400-957f-b5cdff8c6aa1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45a30069-4c7f-4416-babe-0cec2cd164fe">
+                <propertyInstance
+                  Id="032bacbb-9885-4f17-8c90-0ffd7eddfea6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
