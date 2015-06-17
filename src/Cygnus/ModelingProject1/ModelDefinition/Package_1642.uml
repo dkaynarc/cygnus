@@ -738,7 +738,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="bbdddf94-5a8b-4539-9714-67b356ea1861"
+            Id="76eab1b2-31bc-4396-908a-d53cdacd4fd1"
             name="ConditionalRequestManager"
             visibility="Private"
             isLeaf="false"
@@ -748,54 +748,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="0a90cc1f-7197-4e19-9874-bbf1847c6e35"
+                Id="f590ef6f-ece5-4a26-887a-c23e86d17696"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DConditionalRequestManager Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="731ece92-1122-4548-9e8d-d1f99b810f81"
+                Id="823a5643-527f-4b56-9cc1-93f51c141575"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="eee8ad56-ba59-45a2-bd04-d47fabb8ac8e">
+                    Id="8ab1a04d-6e17-4d79-8e69-03ac3d79606e">
                     <propertyInstance
-                      Id="723ead08-b24f-4c56-9d92-5d41b34d4a24"
+                      Id="a8b67d08-ebb8-49c2-b719-47d130fa1cbf"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1b74f49f-8526-4143-b3fb-8968780908e4">
+                    Id="c12b0ed8-6bb7-41ea-a781-8bf11cb0b569">
                     <propertyInstance
-                      Id="bfdcc61e-09f1-4a6c-a23e-dc9a218e2428"
+                      Id="dd24d2e5-8604-4372-a006-79d8c7d97864"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c72e2bce-c61d-4780-acd5-66b163aaff90">
+                    Id="4c1e9420-950a-46e2-9035-7a437abbe052">
                     <propertyInstance
-                      Id="a782e97d-b62e-494f-8523-b3a3e3dc8bae"
+                      Id="1d154f5e-8bd0-4bda-a1d7-8948c6f5488f"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f6d1fc01-540e-4ef3-b1f5-9478b3d432be">
+                    Id="0812cdad-f021-41c1-b5df-0b70ca14b28d">
                     <propertyInstance
-                      Id="cad029fc-5b8c-4527-9a9f-7efe505bdf21"
+                      Id="b53ff1b7-a680-473c-b849-5f18abb8bc01"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c087733e-14ec-42bb-a683-3815f672d211">
+                    Id="38c4bdfe-6cbc-4082-9ceb-af7b465a5910">
                     <propertyInstance
-                      Id="e8fd1552-d265-488e-85f0-091714af3705"
+                      Id="8137547d-4684-47fa-aa18-1d06ad4ed788"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4694ef5a-4761-4f90-9aa6-77b142a567a0">
+                    Id="00cf59ee-f5b2-43e4-8ae1-2557f3a9236b">
                     <propertyInstance
-                      Id="0caecbae-a332-48c0-a5d7-5d172e98bdcf"
+                      Id="2c2fe018-20dd-4a9e-974f-eb624abbd2ef"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -875,72 +875,6 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="0e31dd4b-8a7c-45b9-8258-8870898e7f97"
-            isDerived="false"
-            sourceEndRoleName="ResolvedConditionalExpression"
-            targetEndRoleName="ConditionalResource"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="30d3df4b-133c-4b44-afe3-fbd4624f1e32"
-              LastKnownName="Resource"
-              LastKnownLocation="Package4_1620.uml" />
-            <description>Property ConditionalResource references type Resource.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0795932b-f91e-4bd9-ae65-7de00fa04501"
-                  name="ResolvedConditionalExpression"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="baadc0a0-2f15-4452-b7a6-6b76a5fb9a56"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b868fd2a-d94a-4614-9f15-8337bee0de53"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="dddf6ef1-cd62-4dda-9893-12ff1d65f4ae"
-                  name="ConditionalResource"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="a8a54433-f08b-402a-9378-d7155f6bfc35"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="9e4dbf87-665a-4f0a-b23b-09a934707fc9"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="68108407-78ac-4c61-803e-edec50676e32"
             isDerived="false"
             sourceEndRoleName="ResolvedConditionalExpression"
@@ -999,6 +933,72 @@
                   <upperValueInternal>
                     <literalString
                       Id="5ea633b0-8a3b-4fbe-a716-b960b43efac9"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9441fb1d-9ba1-400c-9862-dd604f9f7f78"
+            isDerived="false"
+            sourceEndRoleName="ResolvedConditionalExpression"
+            targetEndRoleName="ConditionalResource"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f38d5f6e-535e-4690-bb19-6c489788060b"
+              LastKnownName="Resource"
+              LastKnownLocation="Package_1421.uml" />
+            <description>Property ConditionalResource references type Resource.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b79183cd-1813-4b84-aa70-bdd47bd482dd"
+                  name="ResolvedConditionalExpression"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2f774840-dad3-4d7e-8175-5c4496e29668"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8b622278-eb20-4e89-b100-c49929ec8618"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59c8a02d-2691-48d2-9e7e-c8b9ebf06081"
+                  name="ConditionalResource"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d0f6d9a5-6d14-4723-b3b9-1d3ff854aecb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="06d65896-4bea-41fe-ab27-b040c57daac2"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -1083,9 +1083,9 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <classMoniker
-                Id="30d3df4b-133c-4b44-afe3-fbd4624f1e32"
+                Id="f38d5f6e-535e-4690-bb19-6c489788060b"
                 LastKnownName="Resource"
-                LastKnownLocation="Package4_1620.uml" />
+                LastKnownLocation="Package_1421.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1663,7 +1663,7 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="06c1e1aa-2754-42e2-a49f-181afa5340b3"
+            Id="619d0f51-ee2b-41f2-9aad-4418d5e4719f"
             name="ResolvedConditionalExpression"
             isLeaf="false"
             isStatic="false"
@@ -1672,54 +1672,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="a66dc20a-8950-4fdc-a501-ee754e51a5b3"
+                Id="a6d7cb16-0b14-408e-9b24-a3e52494394b"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResolvedConditionalExpression Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="774bf054-fbf7-42ca-935d-7d2b43f691b5"
+                Id="9eada1f5-79ef-435d-ba19-a6e1ef7b6f88"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3bbd595e-e35e-455d-845f-0a9c06341872">
+                    Id="97a32bd9-ab55-40f9-a722-02844143a24b">
                     <propertyInstance
-                      Id="70e85519-614e-40b8-8476-fefa59d3f8c7"
+                      Id="b49a41d9-3605-4f0c-a657-c95fed7e7282"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d05aea3f-6f41-4810-b299-dda67aeb3744">
+                    Id="519a0e27-93ab-4b1a-afe2-6207f67d009b">
                     <propertyInstance
-                      Id="ad109774-1a7a-4853-be72-a38d2a770807"
+                      Id="e00995db-3582-40b3-a554-436e794836f4"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a699f813-e290-4ae7-b88b-a17b1e573c2e">
+                    Id="911b5e1e-ffac-4591-9cc9-d1fdafd1a659">
                     <propertyInstance
-                      Id="3d3f9925-0c01-4e45-bdc9-dbb052f94525"
+                      Id="37485ecd-1ed4-483a-a0f3-4dea9eb030c1"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="931909ad-3f35-483d-bc64-5d25fbca2c22">
+                    Id="e3d1c2be-78f5-4823-87a5-f5fff2cfd07d">
                     <propertyInstance
-                      Id="fd473d63-ba50-4217-a098-4e03b808c895"
+                      Id="b600dd33-9e01-4daa-99fb-96b5b6bb958e"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9e4f9c80-48d5-473e-ae21-6142af1e1b52">
+                    Id="2daf8c4c-1bce-44a7-9c2d-45c7b0df9350">
                     <propertyInstance
-                      Id="8b47b3b7-1adf-4eb0-95b8-37e871dc4479"
+                      Id="9650d150-1e15-46a6-a63e-2ff52765237a"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8d2f64af-514e-4b64-b46a-108596e04ded">
+                    Id="a6606994-0442-499d-a1c8-c4938a079f86">
                     <propertyInstance
-                      Id="8e6385d7-22c4-4f1d-83ee-aadca5719d0c"
+                      Id="e33915bc-8fb6-426e-9dd8-905702adde7c"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2464,178 +2464,6 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="9b88b423-ec61-4eab-ac3b-5460d58b3774"
-            name="RegisterResource"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="5c3ec78c-4937-471e-9d08-dca9b664bc3e"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DRegisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="b9457d35-a647-4514-8487-8a9e45068bd6"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d3bdbb51-df45-48d0-b12c-8cf4719afc6d">
-                    <propertyInstance
-                      Id="9fdc91a9-17e0-4b16-95d4-50d94215d614"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f969d268-4048-4a97-9c58-79c7c528a7e4">
-                    <propertyInstance
-                      Id="9feb50dc-1aa1-489e-9bd6-d6117a66fbfb"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8a2351dd-4c71-4e20-b16b-44240f3f1291">
-                    <propertyInstance
-                      Id="9a7f5443-0c9c-4fee-a0c8-eff4c677ba22"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8f5ec92e-82b7-4e74-b556-10e7dc77694b">
-                    <propertyInstance
-                      Id="317c716c-28cf-4371-a9ad-a7ba91d343d6"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5fb7bd74-7345-47a1-b9f3-45f3c111d194">
-                    <propertyInstance
-                      Id="cda6ce1f-3cb0-4d0f-bbdc-06157190e209"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e72b4416-9eb4-49ec-b5ed-a5b632a7cf8f">
-                    <propertyInstance
-                      Id="4e4901aa-7196-45a2-82f0-379941cc6795"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9462cd20-31ee-4d7a-9d97-8e994be348bb"
-                  name="resource"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="888850c5-7a8c-4aee-9ae6-5c2616035e58"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DRegisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]) ParameterIdentifier%3Dresource"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="30d3df4b-133c-4b44-afe3-fbd4624f1e32"
-                      LastKnownName="Resource"
-                      LastKnownLocation="Package4_1620.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="27a400d2-63fb-4f03-a089-844c40c81156"
-            name="UnregisterResource"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="e5d5f2d0-cb69-4333-ae4f-72c936fe9e07"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DUnregisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="85009aed-8e7c-4024-8449-abc3d463d1f3"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="772d247f-9c57-4758-8bf6-46ec257b78a2">
-                    <propertyInstance
-                      Id="e742c1f2-c495-42ed-84e4-a84a83d8c8d2"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="028d5a9b-1dbc-4d15-b01f-0757edeb2a57">
-                    <propertyInstance
-                      Id="f68f3f18-9d57-4cda-b88d-4ea0f8219d00"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="26076d47-b90f-4356-858e-a7c1f1cd3b04">
-                    <propertyInstance
-                      Id="d9e7676d-ffb6-41b7-824d-b2134c40fe69"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3f02adf1-09d0-4779-a486-de9bbe4ff2ef">
-                    <propertyInstance
-                      Id="b8be49e2-32fa-46c3-87bc-7c1a75417d0a"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6a54ffff-a248-4e25-a9a0-ccf15e73bf86">
-                    <propertyInstance
-                      Id="2e87b540-9eb0-4dda-8f04-a9562c3475b1"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e7495b3f-4fad-4a06-8b2d-4e2e54945238">
-                    <propertyInstance
-                      Id="eb930644-46d2-4376-8d6f-88a17107eb74"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1e4d44d1-dd75-42d9-872c-5a48e36bf0ce"
-                  name="resource"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="843a5e90-4159-46e2-8027-d5fe8a983117"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DUnregisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]) ParameterIdentifier%3Dresource"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="30d3df4b-133c-4b44-afe3-fbd4624f1e32"
-                      LastKnownName="Resource"
-                      LastKnownLocation="Package4_1620.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="bc4ff913-145d-4667-b047-ffccfdf5140b"
             name="UnregisterAllResources"
             isLeaf="false"
@@ -3053,7 +2881,179 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="c07650c6-3760-4266-aa63-d08de3ff16cc"
+            Id="832e1821-dff3-4caa-99bc-b282a2ac7315"
+            name="RegisterResource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ed64cdd5-15f7-410f-8a20-5d2a6f79e91c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DRegisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ab14214d-5267-4224-9bbe-0e6efa2eeea9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78e17cc1-0c2c-4e11-a779-03bd43572b29">
+                    <propertyInstance
+                      Id="f5364287-a8a5-4270-982e-1c4445263bbb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a52bff4-db5b-4897-b8c1-34a4b370a71a">
+                    <propertyInstance
+                      Id="defa1e3a-9dbc-4ba7-835a-1d749396b113"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b51710f-2116-44d7-a7b6-aa13356bcce5">
+                    <propertyInstance
+                      Id="1a34d085-ecd7-43ff-a9ae-be021c4676a2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74283fd7-1e41-4c05-b1bd-c45c9cfead98">
+                    <propertyInstance
+                      Id="5dd61608-b899-41fb-8ebc-f74196fca31b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d367fa8c-a14a-4a21-82bb-e73ca7c01369">
+                    <propertyInstance
+                      Id="5a49c60b-7eef-4c0f-9088-cb56adbbce45"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69cff377-5122-4c60-98ea-885783d2791e">
+                    <propertyInstance
+                      Id="94641463-35b3-41b8-88fb-f0f78303636a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="13abbbfa-89e5-4c8f-9c34-0e8a1124822a"
+                  name="resource"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8e8f13ba-88d2-4e3f-b06a-a3f1ee9cfb07"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DRegisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]) ParameterIdentifier%3Dresource"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f38d5f6e-535e-4690-bb19-6c489788060b"
+                      LastKnownName="Resource"
+                      LastKnownLocation="Package_1421.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="68701ed9-a69d-4459-8207-ea52c3ea8485"
+            name="UnregisterResource"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="54c29a11-03f7-4fa0-ba96-43ef2151e9e5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DUnregisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="537d680e-571a-4ac8-981b-13b86a2f60d9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf0ae30c-44fd-41a5-8800-1a5b1ae8fe04">
+                    <propertyInstance
+                      Id="1447b114-3016-45d4-954f-fb56cfdd04c6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da370d54-78bd-4c9e-ad07-dca1c222ef2e">
+                    <propertyInstance
+                      Id="4e2e4456-e05c-4151-a11a-55a8c4aca371"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01ab5ffc-6f14-4f5e-acaa-3cb4962acfe4">
+                    <propertyInstance
+                      Id="2c47e0d0-aa3a-4f59-89b1-5b893d0e8a08"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43ceeec7-5c7a-4e81-b2c5-e3388884af75">
+                    <propertyInstance
+                      Id="3bac28e7-0364-40c0-a873-917ed2b3aa6a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ef35ffa-861d-489b-b5c4-f177d4663268">
+                    <propertyInstance
+                      Id="c5533a65-e839-4919-b990-b4a3db0e7a68"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0deb67b-8cde-404a-8d24-ec56024e7bfc">
+                    <propertyInstance
+                      Id="5c19cccd-fa2d-4f59-a2de-9d8c742c85a9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f1b5fb4-3e42-48d6-81b7-32487a711795"
+                  name="resource"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="69a8bbf4-939e-4f6d-8742-7b22e291b538"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D(Name%3DUnregisterResource OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]) ParameterIdentifier%3Dresource"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f38d5f6e-535e-4690-bb19-6c489788060b"
+                      LastKnownName="Resource"
+                      LastKnownLocation="Package_1421.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="636effcd-86f4-4562-a9f0-efa7755f58cf"
             name="GatewayResourceProxy"
             visibility="Private"
             isLeaf="false"
@@ -3063,54 +3063,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="fdf38a1b-47ea-4721-aac3-d3a0c29b48af"
+                Id="5127bb1c-1d60-465c-910a-4a4365ee2d94"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DGatewayResourceProxy Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4785aac2-9815-4ff9-8543-5faed48b8ff6"
+                Id="3cc42bb2-2e0b-40a4-bf8c-090e43c101a0"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d8843ea1-307b-4d4d-86ba-37297c9aeaa3">
+                    Id="02d8a5ee-d24f-49c7-b24e-d00830443819">
                     <propertyInstance
-                      Id="9d641ced-e241-461d-b4b2-ee3ac835759e"
+                      Id="b081e85c-4276-4ff6-ae58-d30e06529f7c"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0e653f9a-1192-4933-80ee-492856b73477">
+                    Id="ab954da1-d975-4ffa-b52b-12c7218db915">
                     <propertyInstance
-                      Id="96f58bca-4ae4-4afd-8d71-b94837d419da"
+                      Id="83310d25-d7d3-4235-951a-85a8805ce75b"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="80e59e61-e337-4c5a-a7d1-b0627f763392">
+                    Id="7191c8b0-4dc9-4557-b50d-d7f554c63a7e">
                     <propertyInstance
-                      Id="4febc922-f8a2-4e96-bfd0-5fce511b54d2"
+                      Id="0003803e-6e13-42aa-8f43-70927a2dab3d"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="634cc71b-d6a2-4246-b301-6254c6e9f3c9">
+                    Id="3d63c1e7-1cb2-47b0-9e14-36092268317e">
                     <propertyInstance
-                      Id="c34ceee9-aa24-405e-a6eb-6f0c8d501a85"
+                      Id="f2015b10-5f26-4a9e-80bd-9ba465d5b925"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="715aa054-6c7b-4452-8bdd-4458a60c9b99">
+                    Id="3dada011-1c40-4152-aaf2-33c526766b03">
                     <propertyInstance
-                      Id="b1c0a22d-3eec-4f07-aee6-e5cdb7027b9e"
+                      Id="64282f8b-d19c-489d-92b7-7b74808f3035"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6078dc91-a95d-46e6-bff9-97d23e45f9ed">
+                    Id="daa71f15-f0a7-4195-8ec0-192aa6a58573">
                     <propertyInstance
-                      Id="92c66663-50ae-42cc-8f9c-7c96be579723"
+                      Id="764a19d1-cb90-462d-bf3f-ba972f0fbde1"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -3465,72 +3465,6 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="34b9d48a-b09b-43c0-9fb6-dd2642634a6f"
-            isDerived="false"
-            sourceEndRoleName="ResolvedGroupExpression"
-            targetEndRoleName="Group"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="479f9ccc-b766-464d-9cc9-82bf3e1b5403"
-              LastKnownName="ResourceGroup"
-              LastKnownLocation="Package4_1620.uml" />
-            <description>Property Group references type ResourceGroup.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ee009652-e338-4be2-bd4f-93f142ac17bd"
-                  name="ResolvedGroupExpression"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="356ac0db-20b8-4f39-bc81-a2ed6236dd02"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="4fd34e1f-e142-41ce-9751-fd8b44e55888"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="4916d434-a3fb-4d98-b957-8df1c57eba7c"
-                  name="Group"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="8a4130bd-aa21-494a-b397-290ac95b754a"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b050d49b-84d3-4ab3-b5f0-bb89acc20a60"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="bc42bece-c7a5-49ff-83d3-c172ec86e5bf"
             isDerived="false"
             sourceEndRoleName="ResolvedGroupExpression"
@@ -3589,6 +3523,72 @@
                   <upperValueInternal>
                     <literalString
                       Id="caae98ba-37d5-4220-8667-5d5e5a9fe1d5"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cedd42d3-05af-4e85-a021-413182458beb"
+            isDerived="false"
+            sourceEndRoleName="ResolvedGroupExpression"
+            targetEndRoleName="Group"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="870c5d3e-09e4-4973-a787-254b239b1a24"
+              LastKnownName="ResourceGroup"
+              LastKnownLocation="Package_1421.uml" />
+            <description>Property Group references type ResourceGroup.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98ce8446-b0ee-4757-b19b-e207ea5dc889"
+                  name="ResolvedGroupExpression"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="52123e6d-52c1-49a9-b02a-4121a64c3259"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d860c050-a629-47a4-ae61-d804fb2e599c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b05cc3e5-1bf6-4c3b-9c74-53fa075e2b6b"
+                  name="Group"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c257c574-40cc-485f-a266-252a07da906f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b68f5488-e092-49aa-8f8c-9003dc4e7030"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -3673,9 +3673,9 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <classMoniker
-                Id="479f9ccc-b766-464d-9cc9-82bf3e1b5403"
+                Id="870c5d3e-09e4-4973-a787-254b239b1a24"
                 LastKnownName="ResourceGroup"
-                LastKnownLocation="Package4_1620.uml" />
+                LastKnownLocation="Package_1421.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4011,7 +4011,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="318b7410-b688-48f5-ba97-3ceac15b8981"
+            Id="e30ab83f-08f5-4bfe-becd-47c0c07ebc93"
             name="ResolvedGroupExpression"
             isLeaf="false"
             isStatic="false"
@@ -4020,54 +4020,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="8cf97607-6302-4bf8-aa9a-3b0d1573ba90"
+                Id="aa29f5e8-5c14-40bb-acd3-2241dddde000"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResolvedGroupExpression Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="0fd3c0fe-b9be-4c64-8aa6-ce667fb9b985"
+                Id="5f7e76d3-0349-4b59-abb0-6ec3510d6ae5"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="396703d5-4125-4678-a2bb-6da5e115ec67">
+                    Id="ad326806-55a1-4d87-af14-fcd894f03adb">
                     <propertyInstance
-                      Id="24ba09a6-ace9-4cca-bd66-290f576c1ff3"
+                      Id="6e9bb877-501e-4430-9787-be7917798f6f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ebd0a4e9-57c7-407c-95af-1d8938dbe187">
+                    Id="1b031ca5-9f77-4ed8-85d7-bfae97330044">
                     <propertyInstance
-                      Id="0ef98f83-7123-4461-86eb-aa16b0204795"
+                      Id="ca1d66e1-6be8-4e48-a149-4102de35380a"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="11aabb7a-81df-4a8b-941f-9cedbe00aeab">
+                    Id="70fef024-5b53-4876-9fbf-bd874cc338af">
                     <propertyInstance
-                      Id="02970884-f260-478d-8d2c-426994c5093d"
+                      Id="9e74bae5-8026-4195-bc52-a3480e157d1c"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4a21d194-3fd7-4df9-bd3f-33b83771d647">
+                    Id="70d5e1da-e5ff-437a-8930-169977e61be6">
                     <propertyInstance
-                      Id="1139938b-3db9-48b8-b0ca-48d7bb70f4aa"
+                      Id="7d62ac33-ff4c-4ae7-aec9-81e9c203da0f"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f0179c05-040a-4d28-a936-f6398e08489b">
+                    Id="a10c0882-53d6-438a-9535-30f507817020">
                     <propertyInstance
-                      Id="657cfe92-4a38-4059-882b-80653e0eced4"
+                      Id="4aa52f7a-9f30-478e-b40e-c396eb4dab11"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="291e38f3-8310-4504-9d4c-611666ac1511">
+                    Id="c2edea34-612b-4b5e-b9ef-49e2a7ce7a36">
                     <propertyInstance
-                      Id="079a4bde-1e3b-4d66-acad-a97ac4275520"
+                      Id="ffeb750c-f091-44f9-9663-bd59ac7650d2"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4353,7 +4353,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="11f28521-0e70-4b77-8e78-a2f68e44e52c"
+            Id="226fe2f7-0f5b-4303-8bf1-95aba26d2f65"
             name="ResourceGroupManager"
             visibility="Private"
             isLeaf="false"
@@ -4363,54 +4363,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="9440f46b-39f3-4139-bd8f-6d3c94052d89"
+                Id="e0088150-1d5d-4295-a5a5-4224d153592b"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="60f8caeb-4573-4dfa-a4bf-4791b8a3b2e7"
+                Id="85a4409e-8d06-4437-ad18-2741c437a6e3"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="df68c7e5-98d3-4ee3-b282-f7f44fc40b33">
+                    Id="2b0e495d-a058-4171-ab90-b8ad5941ab89">
                     <propertyInstance
-                      Id="790cf9e2-c0a9-4de1-aa56-ead8fa2ef57c"
+                      Id="f6dc845b-3a66-4240-b99b-38b5c240079f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="56b34eac-a8da-4413-8e25-c81d462cee93">
+                    Id="0e2b6e85-563c-4405-907a-8c144487733f">
                     <propertyInstance
-                      Id="d457e47e-ce57-4773-a6db-a8b03cd6c4e2"
+                      Id="94cfb789-c8f0-49e0-9480-900a94d5e568"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="29e2be9d-95dc-4092-ae5a-c0ab7666eba5">
+                    Id="bc90b5c1-cec1-4cd0-9c21-bcc9edd02110">
                     <propertyInstance
-                      Id="fc0507d4-6c69-4521-ab82-7edcc9c563f6"
+                      Id="fc8a1674-0984-4333-8cda-a320ddf83afd"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c36da48d-984a-464e-8a64-e63e4da458f9">
+                    Id="77f7fddf-d4a2-4df1-8546-862ce6773b11">
                     <propertyInstance
-                      Id="985c5708-1792-43e7-b835-6df4dadd67c7"
+                      Id="b6d75cee-0c54-4e63-9b39-61d8101612de"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3d3ea3e6-6944-4f76-93c4-6ebd56a7f7c1">
+                    Id="eba84324-4e1a-46e9-95c5-7b276a12e915">
                     <propertyInstance
-                      Id="2b91c6fe-f81a-4526-b45f-820f203c8ac8"
+                      Id="18f5127d-3bdf-4ea3-b2dc-cc3787f47d66"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bfaecbd5-4151-457f-903e-e1f465dec21c">
+                    Id="b5638246-1dcf-4bc8-b7f4-cb8fd28e753c">
                     <propertyInstance
-                      Id="ec0b2264-1659-480c-88a0-d32efdac7e29"
+                      Id="0210c586-1cf4-43a4-bcdd-5ed8a5886f96"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4419,7 +4419,7 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="39c65aaf-70c6-4644-96c4-483d32550d75"
+            Id="e9f59568-6947-4bc5-afb4-7d7c608b5949"
             name="ExecuteExpressions"
             isLeaf="false"
             isStatic="false"
@@ -4428,54 +4428,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="0820f778-ad64-4b4d-b170-e472c1879558"
+                Id="40b6b399-5e46-4f31-8e85-a3ecfd63081d"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteExpressions OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DGroupExpression)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="1a48a25c-4489-4544-b9fd-21e4be9dd2f4"
+                Id="e9edb41c-7f1a-458f-b9ae-2e4b6d61e5f5"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bfe79352-7dbf-4b12-be5f-3bf076d8dea2">
+                    Id="561775e1-e395-427b-926d-019c2a1726d4">
                     <propertyInstance
-                      Id="03f54cc9-0b95-4c79-82dc-9ed7ce578444"
+                      Id="4c682bfd-cbb5-4572-b415-21c69c0d80db"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5c069217-505e-4ca3-a3d9-d2b0f01aa20d">
+                    Id="184cfc69-3d54-4281-8b46-3b271b514d65">
                     <propertyInstance
-                      Id="3c86ea10-560a-44a4-b9c1-90c19883ddc4"
+                      Id="8cf457a9-5cc4-4c2e-a83f-6ea9d76042df"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f41d6200-103d-4ebb-a2b1-9327bf3511c6">
+                    Id="e8899c14-c374-4b18-b4b0-2de7b503ea9a">
                     <propertyInstance
-                      Id="ccece493-76d2-4fbf-af87-153ebc2a347b"
+                      Id="c8ea20d3-9c2c-4f73-8ca8-8ade4e6504d1"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a308aaeb-9731-4562-a455-adba3d962bc0">
+                    Id="facc3543-671e-4fff-8a2b-8b55a22907d0">
                     <propertyInstance
-                      Id="268a4311-f18f-4866-be82-f8aa6b331c97"
+                      Id="8381cc15-bfa0-4695-8182-dbebdb4600ba"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4eb69a3a-0c8d-49a7-99bf-e40f4a21bd2f">
+                    Id="a2510699-e032-4551-a738-18b68b70f97e">
                     <propertyInstance
-                      Id="5376689b-f3f2-456d-a0a4-5d95349550ff"
+                      Id="efff77c0-d60e-4ccd-8001-b12a4815644d"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d030bbac-3e1b-4a5e-8fda-c38049d32cfa">
+                    Id="316b75f1-4bb5-4c6a-af86-049e99b13c26">
                     <propertyInstance
-                      Id="9fbf00aa-f30e-4d9c-8559-8cc8d7eb69a4"
+                      Id="539d1c49-cba4-48a3-8758-526b38fda8cd"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4485,7 +4485,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="08a01690-77f7-416f-a3d9-1b7818bab316"
+                  Id="0e2eef38-cc0a-4e84-88b4-b80ed1b4f8ff"
                   direction="Return">
                   <type_NamedElement>
                     <interfaceMoniker
@@ -4497,12 +4497,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3318bcbd-eeba-4060-a7d7-7b0bfc870894"
+                  Id="db818d83-a9be-4bdf-a5a7-1d7b75ab892a"
                   name="expressions"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="f50794d1-d68d-46e3-bfb5-fb8cf20ad5a7"
+                      Id="bcfca6c7-22da-4bf7-8277-c82612f4b70c"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteExpressions OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DGroupExpression)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)]) ParameterIdentifier%3Dexpressions"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4516,12 +4516,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="59945fc6-4631-48bd-8b4e-71d5266004ee"
+                  Id="96d2b57a-aefe-456c-993d-ca9e2e1edc11"
                   name="p"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="da2202bd-af59-46a1-b2a3-f2c98b97541e"
+                      Id="0eda8452-50bb-4726-a60a-ef09a9af0094"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteExpressions OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DGroupExpression)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)]) ParameterIdentifier%3Dp"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4536,7 +4536,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="437077f4-007e-4625-a996-be60a1cbf83a"
+            Id="bf9ea25b-2879-4a12-9128-2e86ee408c8f"
             name="ExecuteOnGroups"
             isLeaf="false"
             isStatic="false"
@@ -4545,54 +4545,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="a74b9ee6-40c0-414d-8dbb-e2b3bea2933d"
+                Id="dc941f57-6f8d-41e1-adef-d357774d8d15"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteOnGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="53a15ee6-40eb-44d3-9e89-a450996fd8ca"
+                Id="10e91e99-9941-4988-8fbc-42599ef29b3d"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="10b91633-b510-448e-88b5-98b19e562e53">
+                    Id="adf2ad9b-2d0d-4c12-bfc3-97e1bde3c643">
                     <propertyInstance
-                      Id="4c781de7-c240-4e94-8ef7-42fd424a05e1"
+                      Id="aa61242b-4ca8-4898-887e-e83f216525c7"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e7e372d7-a6d7-4215-8dad-868ab7e348ee">
+                    Id="640e3411-3715-41f3-b015-d16086fb78be">
                     <propertyInstance
-                      Id="5fe2eab4-84ef-421d-97ea-d3cfdf3c0e61"
+                      Id="643bedad-f83a-4413-84b1-3451176a8ef6"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="973df661-6f5c-46cb-a4be-5ccec2ae26a8">
+                    Id="a3fc6dd1-b7ef-4911-bc83-7af7503f0b3c">
                     <propertyInstance
-                      Id="f388b8d7-3390-42eb-b548-117a2af29e2b"
+                      Id="4366b3e5-246c-4cd5-9523-d928fbd50687"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ed8e0d7c-2c39-47fe-8173-7e42ffe3a47a">
+                    Id="7491c87a-e3ad-41c6-8de5-dd6abe3f72dc">
                     <propertyInstance
-                      Id="144397fd-70df-42b1-8814-0e1aea3cac16"
+                      Id="e35e953c-d625-4cc1-b128-31fe33c4adbd"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="01f49f28-e602-4022-b767-2477542c549a">
+                    Id="ad30ea45-e089-4aa7-a6a8-99dee907ccea">
                     <propertyInstance
-                      Id="3af2621a-3b6b-4b88-8c9e-d8a587ad7c8c"
+                      Id="9b504391-225e-4d93-85c7-fa58ffe14ebb"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8b6348c4-7353-4494-93e7-7c7923e8a5d7">
+                    Id="5b1ed1d2-8b30-4e88-bd6d-a7061e0f01f5">
                     <propertyInstance
-                      Id="aa1df516-e1fe-49b8-8f74-4664b00640af"
+                      Id="d989e443-bf73-4f33-b11b-27539df8f687"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4602,7 +4602,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="50d4ca86-b78f-4ab6-8b1f-07f9a9499764"
+                  Id="313100dd-e4c0-444c-9f56-bdc285e95904"
                   direction="Return">
                   <type_NamedElement>
                     <interfaceMoniker
@@ -4614,12 +4614,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="abf6d3ec-e493-429a-8907-dcb2f69dabd6"
+                  Id="84565fc7-9439-4fd0-b70c-3e8c3e448772"
                   name="groups"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="d0f5cbab-a89a-4af4-af3d-d5333d826081"
+                      Id="877952a6-09c3-4fb2-be7a-e975362b4f17"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteOnGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)]) ParameterIdentifier%3Dgroups"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4633,12 +4633,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fae42b3d-53e9-453c-b0e4-9f20e5214255"
+                  Id="384dd854-b12d-4d46-803b-4f0037227b9a"
                   name="p"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="34cc39b8-6677-40c6-a92c-396cb3f9f7d6"
+                      Id="318348c4-defe-4f93-ac85-6380c5b3b1a6"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceGroupManager Member%3D(Name%3DExecuteOnGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate)]) ParameterIdentifier%3Dp"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4868,8 +4868,8 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="a166c35c-f700-48eb-b5d3-775199ac96a4"
-            name="FindResources"
+            Id="84dc5a2e-78cf-40c3-b813-c41a237d22d4"
+            name="FindGroups"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -4877,54 +4877,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="9738b5b2-f690-4083-a0f2-5a5edb724ced"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindResources OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
+                Id="f43832c2-1723-47eb-943f-527c01da2e13"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="09ae1a62-5c3b-4f52-904f-c1cbcae33077"
+                Id="4a00ba3a-732e-4fed-8842-8135040fc511"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="10db3c42-d882-4246-8f63-ebe2e6ad6bd3">
+                    Id="54a37a96-3d18-4e8c-bce9-0e6e4908a8b7">
                     <propertyInstance
-                      Id="649c813d-f9f4-437d-a1c2-f1a36b07de2f"
+                      Id="2ea1a323-d243-484b-a096-54540d488af3"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="45c25bfa-17f6-48e4-b5e8-b86bab81a101">
+                    Id="92485d4a-e90d-43b8-a664-d674b3ae264b">
                     <propertyInstance
-                      Id="7fc6a989-3237-49e2-a1a9-3462ff6b0559"
+                      Id="c8430a8e-7891-4e9d-b2fe-55418e7a0714"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c00b5f95-678a-4cf8-912d-d8bc741a6775">
+                    Id="a9974d66-8422-406e-a3cb-4381f36ae3f7">
                     <propertyInstance
-                      Id="18750dad-2936-47d8-a142-bb4e3f2cc503"
+                      Id="fd5d3cca-29e8-4d84-8081-ea407e6520c6"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="588e2bdf-7294-468a-8b19-c1759ac578c9">
+                    Id="9e3bd5b4-d4f3-4baf-a023-b4181615e274">
                     <propertyInstance
-                      Id="9b9dd93d-7b3b-4672-9e52-04a5cd7a9703"
+                      Id="0ae07eba-15a6-4af9-939d-b57b3b3c88cf"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="61bab6a3-c303-4a04-847b-e979dcb6f0d1">
+                    Id="951ef9a6-149f-4e22-8c21-d178f1436e95">
                     <propertyInstance
-                      Id="03f9e1dc-7a43-4f46-ad69-9688c141eb2b"
+                      Id="e04c0e39-0414-4e80-80a8-013901117f3d"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6aa99c04-cbbd-477c-861a-8129af321180">
+                    Id="360f51a8-418c-4e0a-a517-e822c559100d">
                     <propertyInstance
-                      Id="0b2a0d72-936d-4f59-8077-8766b9625848"
+                      Id="47342f6d-c818-4609-b4ac-1b4f9ee9589c"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4934,25 +4934,25 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1e72e377-d423-41e9-adef-f61b6dc2e57d"
+                  Id="ea1e6a5f-0cdc-4e24-83f9-496c500f08ac"
                   direction="Return">
                   <type_NamedElement>
                     <interfaceMoniker
-                      Id="65bc935b-0318-4d38-bf27-880b79ef0880"
-                      LastKnownName="IEnumerable&lt;Resource‎&gt;"
+                      Id="f5e0fca6-527d-4402-b809-6693c64060d9"
+                      LastKnownName="IEnumerable&lt;ResourceGroup‎&gt;"
                       LastKnownLocation="Package5_1614.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5a07af53-8cb6-49f6-b3de-9d5fb828c731"
+                  Id="5885d525-71c4-4b0e-8116-8f94ad0891d6"
                   name="keywords"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="f0018e2a-8856-49b4-8abc-0cd6b407ade2"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindResources OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3Dkeywords"
+                      Id="113c3fcc-d6d6-4667-b248-fd8597c48637"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3Dkeywords"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -4966,8 +4966,8 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="22e83b04-d57e-44ff-92f5-d5e92c05bc66"
-            name="FindGroups"
+            Id="066bdef1-7596-49ce-9524-d0c7c30d85ce"
+            name="FindResources"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -4975,54 +4975,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="c1a58cd5-d207-47f8-9e95-ca7f766efc19"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
+                Id="de8dfafa-9fde-426a-ab4f-5320b7e82540"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindResources OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="ee467e98-5e9b-4b7f-b310-79fd1d6632cd"
+                Id="82d53519-f3ce-4dde-b209-95616d64fee8"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="af3ad85b-942e-469a-ade9-8d8abdad3429">
+                    Id="f3367464-1c0d-4cf8-b8a8-7719f1763b8e">
                     <propertyInstance
-                      Id="ddeaf58d-b0d5-41a7-ba69-8c31e04fa2ec"
+                      Id="ffa13352-d188-402a-9082-1cfaafa7b483"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fae38569-f9c8-4fe5-9a52-1f2bacec1d83">
+                    Id="3e07b328-5f70-454f-80b7-51591fc74928">
                     <propertyInstance
-                      Id="c1cb5b99-df56-4c1d-8a98-384e0a0cbc60"
+                      Id="81d1062e-37d4-40ce-a6b3-4438e2632806"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dd85a53d-b759-4eaf-995d-23eb8d4b9ad2">
+                    Id="bea24ac2-f498-4a25-a07b-15ea37585396">
                     <propertyInstance
-                      Id="913cc5f4-7159-4181-819a-d7dedb431e00"
+                      Id="04e868f0-1ebe-48ab-8d84-f5ea53baf71b"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="84af2375-abc4-4599-9613-8347b0ef035c">
+                    Id="41bee9a2-0231-44c4-a019-a54d4b85ac4b">
                     <propertyInstance
-                      Id="6e347ed3-d4c6-4528-b626-31d3a5650b66"
+                      Id="8eb66418-6da1-46ad-9745-512dec03d22e"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c27ae564-ade5-4060-a231-7c5ee7fc2963">
+                    Id="d57ffe27-10cd-4cb7-a0e3-c887265a2472">
                     <propertyInstance
-                      Id="7932e644-3200-45f1-910f-2a18be896afa"
+                      Id="b1ab6937-8232-45da-8556-db55c352278c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="177b7a1f-31b7-45c2-b85f-4409e2ea3b7d">
+                    Id="a7e82d27-bbd7-4a94-8b01-cfebe153dfe6">
                     <propertyInstance
-                      Id="a8efbf9d-a156-4122-bdb7-60747ad4bdbd"
+                      Id="0f5dd10a-849c-465d-8331-a1c2e248fda4"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -5032,25 +5032,25 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7a3a6511-9061-4e8b-a2d5-fd6d5eb76037"
+                  Id="2777e1c9-a140-4bc6-8b4e-5edee294785a"
                   direction="Return">
                   <type_NamedElement>
                     <interfaceMoniker
-                      Id="f5e0fca6-527d-4402-b809-6693c64060d9"
-                      LastKnownName="IEnumerable&lt;ResourceGroup‎&gt;"
+                      Id="65bc935b-0318-4d38-bf27-880b79ef0880"
+                      LastKnownName="IEnumerable&lt;Resource‎&gt;"
                       LastKnownLocation="Package5_1614.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ea4b9a14-ffc4-431c-83be-cf188608ce98"
+                  Id="826f627f-5bb3-4cfc-b415-a8566bc7e61d"
                   name="keywords"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="3b95ba67-6cdd-403d-b755-ce4a3c537b60"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindGroups OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3Dkeywords"
+                      Id="608db31e-3d69-41ec-bbb0-db4cf051b0c5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DResourceSearchEngine Member%3D(Name%3DFindResources OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3Dkeywords"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -5897,7 +5897,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="61dda65a-fa8a-4de0-b07c-6548508ebbdb"
+            Id="4025b61e-a576-4d6f-9d6d-82fe00d2918e"
             name="UserRequestDispatcher"
             visibility="Private"
             isLeaf="false"
@@ -5907,54 +5907,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="b113b49d-2aaa-4ec1-8e1c-79eb32b29f80"
+                Id="a89858b9-d9c2-406b-a6d2-5ef0c69b5ba6"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Managers Type%3DUserRequestDispatcher Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="05ecb16a-4d0e-4b70-b1ce-d59b43b948c9"
+                Id="7f985896-fde3-4de8-a641-acc9181f3ee7"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2b6ee84a-e596-45c6-9196-ea5344ec6674">
+                    Id="d9784de0-8c72-4eda-9382-474c3ad93f61">
                     <propertyInstance
-                      Id="f32b606e-cc9f-4cfb-b864-29df8131984b"
+                      Id="36d15dde-dc54-4f8b-9ab9-8a55e6c64144"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b7fc5f20-5696-492b-86fa-9da4938fc4b2">
+                    Id="3c5fb4a7-9860-4327-acce-1e3353c0a16c">
                     <propertyInstance
-                      Id="eb97a409-779e-4265-a885-aef55ad0c67b"
+                      Id="0e5ba6e3-861f-4059-b9b1-9d9efcf57e82"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bfbb28f0-9109-47e6-a9f0-11fbde30a691">
+                    Id="4fe9bf99-ac3b-4293-92cf-461981e36098">
                     <propertyInstance
-                      Id="7e671c27-70c0-4941-b982-5bd81e901a76"
+                      Id="b77c45a6-e06d-4a01-80d5-e56478fffe43"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4311524e-062d-4ae0-bcce-baf96e584579">
+                    Id="d74d83e6-3869-4493-a0b5-6ae3a72545ad">
                     <propertyInstance
-                      Id="13332cfd-eabb-4a9b-a27e-d8b1d6faecf1"
+                      Id="13387121-48e1-478e-b187-5e6c2e7c8d38"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2cdb1595-b2b7-4a43-9bf4-38f7ebd32e3e">
+                    Id="57a6dac5-de1b-428b-ae94-49b774fdf810">
                     <propertyInstance
-                      Id="9063d8da-180e-40bd-bad8-6b59171bdffc"
+                      Id="24dd90a5-146f-48f4-94a4-983de5160d68"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f2ebbf1f-f3bf-4261-95c0-a8067d7ce2c8">
+                    Id="e886823c-6630-4991-9bbe-f45d99541ee8">
                     <propertyInstance
-                      Id="d98f9ee6-1cab-4b4c-a0ca-7fc7aa5b3570"
+                      Id="5f833133-9396-4da1-9400-6fac37a35635"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

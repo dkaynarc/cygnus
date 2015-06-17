@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="24adc11d-d070-41a2-8d4a-3720d17ccf54" name="GatewayHost_RegisterWithApi" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="24adc11d-d070-41a2-8d4a-3720d17ccf54" name="GatewayHost_RegisterWithApi" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="b4d86d4c-012a-4b7c-9a68-e22f1688d5b2" name="GatewayHost_RegisterWithApi" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -357,14 +357,14 @@
               <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="47206714-c6f0-4ca5-a4f9-64f120227154" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="17414371-7e41-4da8-9de6-bfdd42796845" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="47206714-c6f0-4ca5-a4f9-64f120227154" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="2a397bae-c8f5-4867-94fd-a4c5d0b62f3d" name="MessageOccurrenceSpecification">
@@ -449,6 +449,21 @@
               <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
             </covered>
           </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="64128527-07fb-4385-9a13-a1f24d85a4d4" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b049a6d8-8913-45fd-ba16-6b88cd6d8d38" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="93c850d3-233d-49d0-ba0e-21c4dbcff673" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="22f99cce-917c-4d5f-a5c3-f8ed7b7ae3cd" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
@@ -457,21 +472,6 @@
           <operandOccurrenceSpecification Id="20ad19e2-1d70-4738-a5eb-5ffe2d2ed6a2" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="b049a6d8-8913-45fd-ba16-6b88cd6d8d38" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="64128527-07fb-4385-9a13-a1f24d85a4d4" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="93c850d3-233d-49d0-ba0e-21c4dbcff673" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification Id="12d151d3-91f9-4cce-9e01-6d135c092cd8" name="MessageOccurrenceSpecification">
@@ -576,14 +576,14 @@
               <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
             </covered>
           </operandOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="05cf586c-5b8c-4c1a-a1e5-36a448ebf987" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8ce2d8c8-1014-4a24-bbba-8d2da934bf02" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="05cf586c-5b8c-4c1a-a1e5-36a448ebf987" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="8aa63152-9319-42bb-858d-283abab70d46" name="ExecutionOccurrenceSpecification">
@@ -709,14 +709,14 @@
               <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
             </covered>
           </operandOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="7f6952f9-3c65-4106-bb59-308a7827c946" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="9d666cdd-3ec5-416e-8fe3-32e87ef82ab9" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7f6952f9-3c65-4106-bb59-308a7827c946" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="fac2d140-96aa-4b4e-b6ea-31be6ae74d79" name="ExecutionOccurrenceSpecification">
@@ -821,14 +821,14 @@
               <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="1cb870f9-0325-4b20-92ca-5e5cce6e97ed" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="0d572ee2-3ffe-4148-ae77-1dd32bef0142" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1cb870f9-0325-4b20-92ca-5e5cce6e97ed" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="9ff54e80-ca3a-498b-bc02-160a7cabe7e3" name="OperandOccurrenceSpecification">
@@ -1003,29 +1003,9 @@
               <lifelineMoniker Id="50430be7-c2a8-4ba8-9790-9d79b2409804" LastKnownName="resource : Resource" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="a6e2539d-f4ed-4fa9-aa2d-dabd6b230366" name="OperandOccurrenceSpecification">
+          <operandOccurrenceSpecification Id="2a1a7f0b-941b-49d8-99c3-716fa605f844" name="OperandOccurrenceSpecification">
             <covered>
-              <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="de780de0-4e04-4150-8076-55f0d191efba" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="e041e5a9-9767-4865-91ec-9080ea1699c5" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="c82489da-1e1a-489a-a66b-f3dba6698d80" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="7e02d122-929e-4981-951a-3685690d3232" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
+              <lifelineMoniker Id="50430be7-c2a8-4ba8-9790-9d79b2409804" LastKnownName="resource : Resource" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="20c78fc4-a856-4320-bc00-c96f3f61bbfe" name="OperandOccurrenceSpecification">
@@ -1033,9 +1013,29 @@
               <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="2a1a7f0b-941b-49d8-99c3-716fa605f844" name="OperandOccurrenceSpecification">
+          <operandOccurrenceSpecification Id="7e02d122-929e-4981-951a-3685690d3232" name="OperandOccurrenceSpecification">
             <covered>
-              <lifelineMoniker Id="50430be7-c2a8-4ba8-9790-9d79b2409804" LastKnownName="resource : Resource" />
+              <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e041e5a9-9767-4865-91ec-9080ea1699c5" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="de780de0-4e04-4150-8076-55f0d191efba" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="a6e2539d-f4ed-4fa9-aa2d-dabd6b230366" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="c82489da-1e1a-489a-a66b-f3dba6698d80" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="b72755ec-66c6-4952-be5f-970ded3ad326" name="OperandOccurrenceSpecification">
@@ -1073,26 +1073,6 @@
               <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="b7044f4f-d830-4732-9e12-452657e4c231" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="9ec90d0e-b827-44b9-8f9e-4026d4b50967" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="00aee83e-e7e2-457e-a10d-9907c606b793" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="50430be7-c2a8-4ba8-9790-9d79b2409804" LastKnownName="resource : Resource" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="580f2198-db72-4ddf-9677-4b3c6b80e008" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="e495ebbc-b66e-495b-b010-610dbc8bbbb1" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="e9f7a365-fa14-4591-9a49-9f6c656b67a5" LastKnownName="gateway : Gateway" />
@@ -1103,9 +1083,29 @@
               <lifelineMoniker Id="8f243bfb-46ca-4b50-928e-f4661647c193" LastKnownName="this : GatewayHost" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="580f2198-db72-4ddf-9677-4b3c6b80e008" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="07a39fef-62b4-48e6-a911-4d53427fda0e" LastKnownName="this.m_apiProxy : CygnusApiProxy" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="a73c62d5-97b3-4262-88dd-559da00f5475" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="198501da-4c19-4448-aff5-30cc970a87f4" LastKnownName="allResources : List&lt;Resource&gt;" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="9ec90d0e-b827-44b9-8f9e-4026d4b50967" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="56851227-3999-4cc8-917f-25b92f3046ac" LastKnownName="source : List&lt;IResource&gt;" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b7044f4f-d830-4732-9e12-452657e4c231" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="3ec84825-fc0d-4d72-9892-0cc024338ea9" LastKnownName="ResourceManager.m_instance : ResourceManager" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="00aee83e-e7e2-457e-a10d-9907c606b793" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="50430be7-c2a8-4ba8-9790-9d79b2409804" LastKnownName="resource : Resource" />
             </covered>
           </operandOccurrenceSpecification>
           <executionOccurrenceSpecification Id="acf5ffc0-0367-4604-908d-6bf19e5586b9" name="ExecutionOccurrenceSpecification">

@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9ceea6b9-3f0a-49be-b337-14a89da6954d" name="NLPPackage" linkedPackageId="f52e4484-c6c7-4729-92dd-230f6fabb5fd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="0ac7eafb-3517-4b78-a1d4-25c52ce65e18">
-      <profileInstance Id="a0b6169e-0db3-40f1-89f5-c43b7c9320ab" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="21129f15-a66a-4441-bc2d-51b61d456732">
-      <profileInstance Id="2c8230c0-d78a-4bb3-9c2e-306800c9ffcf" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="b6cb0ebb-c4df-462d-bbf7-e1fbd490300e">
-      <profileInstance Id="b6410979-3eb5-4311-a02d-6c5e6bf3b1f1" name="CSharpProfile">
-        <elementDefinition Id="2aef4ee1-76c4-45ae-b365-82c8272d1873" />
-      </profileInstance>
-      <elementDefinition Id="f028d207-0ed4-4317-9e91-2b7e5957bb7c" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="13260471-3ae3-4afd-8d04-d84809a9e372" name="Nlp" visibility="Private">
@@ -801,7 +781,7 @@
                       <parameter Id="7737c0f6-1805-4f07-8a27-d953794e9172" direction="Return">
                         <elementDefinition Id="6e5ecc98-241f-4149-9dd4-e43fb7aaeefb" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="faae0cdd-1c52-4d95-9495-edc096d78809" LastKnownName="Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;" />
+                          <referencedTypeMoniker Id="001868b2-612c-44f2-8efa-2b7ec0e60e80" LastKnownName="Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -955,56 +935,56 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="f83eebe5-0245-407d-8276-34f8c534f99d" name="BooleanCondition" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="62a869fc-0b34-426f-91d3-210be7420303" name="BooleanCondition" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="6c9be68f-9b4f-4e90-9725-6f372f06a8d3" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DBooleanCondition Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="437d58d3-1909-4d35-beca-ab01406f0a24" />
+                    <reference Id="f21b9f21-0d83-4c3f-a566-b8e80da30455" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DBooleanCondition Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="d518d0f0-ab5e-4f1c-9e13-f8005b6e8c38" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="8e5d7aee-39ce-4f38-a3e6-570b57d09b97" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="6fbdbe13-da5f-4041-835e-e90b689efab1" />
+                    <stereotypeInstance Id="5c481d63-4fdc-49f9-b496-29642cdfbeee" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="e80950ee-ba88-4f97-8f56-4243dcfa3871" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="89182ee7-bbe4-4eb2-af74-ae19d5fa643d">
-                          <propertyInstance Id="5aa95912-611e-440d-9461-bd79c80f4c7b" name="ClrAttributes">
-                            <elementDefinition Id="be058dcb-8b14-45bc-a84c-7d7ad8a350db" />
+                        <stereotypeInstanceHasPropertyInstances Id="59dae974-0f1c-4a32-ad07-e1095672e362">
+                          <propertyInstance Id="00c6c33a-ee4a-40bc-ad86-b17625bd838a" name="ClrAttributes">
+                            <elementDefinition Id="91ba9c22-efec-4998-896b-48a786bad83c" />
                           </propertyInstance>
-                          <elementDefinition Id="71ea31de-685b-4bad-a2fd-8c8818c51ce9" />
+                          <elementDefinition Id="2a2b9fb8-9f2b-4a18-b38c-8fe63e74f7c2" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="48085702-7b86-43f0-b3ed-63a5d7c67784">
-                          <propertyInstance Id="fbd18c1e-dc63-4221-aa52-7ac00c942806" name="IsPartial" value="false">
-                            <elementDefinition Id="2db4a4ee-be49-4c75-8689-ef7aaeee1d7e" />
+                        <stereotypeInstanceHasPropertyInstances Id="b523160b-ad0a-49ee-ac57-62e965aec6a9">
+                          <propertyInstance Id="d15fdde5-859e-4742-90d9-3d21e03d7061" name="IsPartial" value="false">
+                            <elementDefinition Id="1643fd10-8a1e-46aa-af5a-8d9d5cf7db3a" />
                           </propertyInstance>
-                          <elementDefinition Id="992ce41e-32bc-48d3-9ecf-a852cd24b28e" />
+                          <elementDefinition Id="9059c51f-a524-438f-8442-297587e120d8" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="54cc8069-9bf1-4ca6-8806-c8fd3f46e63f">
-                          <propertyInstance Id="59e3c47f-2713-4812-83bc-bafabdc2a12a" name="IsUnsafe" value="false">
-                            <elementDefinition Id="74635988-9d7a-424c-bbc5-047722c6dae1" />
+                        <stereotypeInstanceHasPropertyInstances Id="8de0e70a-572c-4605-8f4f-34ebf25ab5c6">
+                          <propertyInstance Id="85b7dfd4-41c6-4092-a356-130f9fce9dee" name="IsUnsafe" value="false">
+                            <elementDefinition Id="fb962b94-5b6b-4333-8c70-6d7444f15984" />
                           </propertyInstance>
-                          <elementDefinition Id="62efef45-6347-43c5-9ada-a49e2238ed55" />
+                          <elementDefinition Id="46241f61-7a30-411c-a0e1-7ba4a583da07" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="dac1e097-6a2b-4b23-9781-11002f95456d">
-                          <propertyInstance Id="0d2b18e8-1ecc-4633-a019-c3212ddf84c9" name="Inheritance" value="none">
-                            <elementDefinition Id="c4b337b5-dc9b-4495-b769-39db36fd5100" />
+                        <stereotypeInstanceHasPropertyInstances Id="8141ed8f-ceed-41b5-a535-25746ed66eb2">
+                          <propertyInstance Id="682cc213-9dfa-4ed5-a91f-2d8c9e6c4930" name="Inheritance" value="none">
+                            <elementDefinition Id="416bc132-9afd-400d-a8ed-6f5e93a5c5c5" />
                           </propertyInstance>
-                          <elementDefinition Id="d5d9ff02-7c8a-4dba-83c0-89f1bb0117cd" />
+                          <elementDefinition Id="b09d2f24-a9fe-4b7a-8f65-93368ea5f971" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="492a139c-235b-4f7a-a4f7-93fda83b6050">
-                          <propertyInstance Id="26fafc6b-8e68-4fc0-97f8-ee23fa1611cb" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="ab2e770b-615e-40cd-903f-291d6c4a7f1d" />
+                        <stereotypeInstanceHasPropertyInstances Id="35b82e88-5613-4fdb-a222-1e2158a1d14f">
+                          <propertyInstance Id="9ca20322-1d15-45e1-938e-db43a31b0bc8" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="d1b5b8de-42b5-4b08-8772-613d2c0df4ba" />
                           </propertyInstance>
-                          <elementDefinition Id="bd2e2838-cde6-478a-83ce-45c85d7a455f" />
+                          <elementDefinition Id="d0b8eb76-f0fb-4c96-88d3-af9f97623983" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="972313d0-4fe0-4076-b7a1-02a8bf1c4d16">
-                          <propertyInstance Id="f95406fd-04dc-43fb-9224-b203df822068" name="params" value="false">
-                            <elementDefinition Id="632f46f7-d20b-42ed-826f-f0dd4ec99388" />
+                        <stereotypeInstanceHasPropertyInstances Id="f99b6d34-f409-4d46-b11e-e336f2e1819c">
+                          <propertyInstance Id="e2c494df-dc5e-4eb3-ad68-8711dcc24104" name="params" value="false">
+                            <elementDefinition Id="f27ee962-871d-46c9-9e33-701ac75b30f6" />
                           </propertyInstance>
-                          <elementDefinition Id="89d4715e-8eda-447a-9b1c-17dfffa1653d" />
+                          <elementDefinition Id="d5457e75-3362-4320-8391-3fdd01fe83d7" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="789cf79e-2461-4a4b-b486-8bf3f6f0ec54" />
+                  <elementDefinition Id="9aee9e5f-3e46-4d23-bfa2-a1d2e8cc6423" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1663,56 +1643,56 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="6f4cdfb4-8a1b-4191-a0d7-9bbbe980fda8" name="ConditionalExpression" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="0cafdc7c-d744-4273-862f-8b8e4577d0f3" name="ConditionalExpression" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="ec0c535d-c72b-493e-9cd2-587737f35365" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DConditionalExpression Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="2274500a-843e-43e2-8bb9-f1b99ef513c7" />
+                    <reference Id="93f6f55b-be66-4eb2-9e02-a55607ada3d0" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DConditionalExpression Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="932a89a7-8495-4e83-8e1c-7a3c61038a82" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="adca9c10-feec-4dc8-958f-c164810f4a6e" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="1455fdfe-aa72-436e-9842-e7ee9337f3d5" />
+                    <stereotypeInstance Id="33e09bcf-0c40-4078-b1e5-6f1f9adfe7f9" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="abae0ee0-98e6-4001-ada9-b04364337ed5" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="2b38bb3a-7184-4391-a3a1-a18a05bae8e7">
-                          <propertyInstance Id="f10debf5-01f6-477f-a4a4-17501a064657" name="ClrAttributes">
-                            <elementDefinition Id="905de246-f924-4778-bdb0-d44505d1038d" />
+                        <stereotypeInstanceHasPropertyInstances Id="84d636da-76fd-40d3-8838-e8bbb3085d8c">
+                          <propertyInstance Id="a968b177-1dbc-44c6-8f44-64f2cb680a1b" name="ClrAttributes">
+                            <elementDefinition Id="32f9fa22-d14e-41fa-835b-99f5ec17bb65" />
                           </propertyInstance>
-                          <elementDefinition Id="7a41d0c6-5ade-4c68-ae99-be2b785362e5" />
+                          <elementDefinition Id="615fed68-82a6-4c5b-ad36-1764f7689b85" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="0c0d4aca-342c-4e44-825d-52afcaebc062">
-                          <propertyInstance Id="e178967a-f1b8-4faf-8f28-18fb5d2f8bd6" name="IsPartial" value="false">
-                            <elementDefinition Id="524e7164-9279-4c9f-a4ef-89555b999a30" />
+                        <stereotypeInstanceHasPropertyInstances Id="dbd64078-6d34-4691-a3a8-d8ec220a708e">
+                          <propertyInstance Id="a4529515-d545-4273-8377-49bfc375d74f" name="IsPartial" value="false">
+                            <elementDefinition Id="40ead989-074c-4036-a0f5-16a772a34e5f" />
                           </propertyInstance>
-                          <elementDefinition Id="a75b427d-87f5-4a6a-9363-50db7ee4265d" />
+                          <elementDefinition Id="ce75d19d-57b4-4f0a-b93e-21a701186650" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="b9bb189d-7da6-41ae-9e31-7a86523f79b4">
-                          <propertyInstance Id="68d73def-16e5-4b6b-96b0-96ae5c66a919" name="IsUnsafe" value="false">
-                            <elementDefinition Id="de4b89c7-9763-4f3f-8070-1b4ea21c09fe" />
+                        <stereotypeInstanceHasPropertyInstances Id="18086004-653a-4890-b18e-7efe4d2af6e4">
+                          <propertyInstance Id="eeaba109-67d9-47b8-ba40-4ac105894ebc" name="IsUnsafe" value="false">
+                            <elementDefinition Id="8a681520-9759-458b-8585-2600d94a1e82" />
                           </propertyInstance>
-                          <elementDefinition Id="a1552489-1d3e-47df-b6cd-8b16f2cffed8" />
+                          <elementDefinition Id="64f169a6-cc87-4de6-b67f-8f359216e96f" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="6288d758-f0c4-42ab-97d1-7d7419748ff4">
-                          <propertyInstance Id="2db34ecb-7781-4ab2-b88d-a64624d63dd1" name="Inheritance" value="none">
-                            <elementDefinition Id="0bddfc3a-ed78-436d-b3ee-205b331b9393" />
+                        <stereotypeInstanceHasPropertyInstances Id="ccf65d0f-a239-4ccb-ba54-8d34d858db53">
+                          <propertyInstance Id="6515d9b0-4b74-4974-afc1-734b936b703b" name="Inheritance" value="none">
+                            <elementDefinition Id="ddb7cadb-3b63-4400-9d7b-11acf573854f" />
                           </propertyInstance>
-                          <elementDefinition Id="44518575-361f-484c-a5c8-0bdd6f1ce9db" />
+                          <elementDefinition Id="0c752b75-0068-4bb9-9494-64108e510c48" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="4472a137-5afd-42e1-bb8f-9e82d8af260e">
-                          <propertyInstance Id="b95cb8a3-b244-4791-96db-8d0f241577ff" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="183ddcd1-3515-4d4b-8adc-8789d9d11bb1" />
+                        <stereotypeInstanceHasPropertyInstances Id="9bbd18c1-8c97-41e4-a708-2561ca3ac1eb">
+                          <propertyInstance Id="861d4ea1-c3a0-4bf6-b072-73cd7f89f5fe" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="d7e716fe-7a5c-4e43-9367-ce961c9e0d74" />
                           </propertyInstance>
-                          <elementDefinition Id="6fc40392-5fbc-44b6-a77a-5d417c251a34" />
+                          <elementDefinition Id="49b1e10e-bd61-449e-ac0c-6e77a6015f23" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="dd55999f-2b31-4d75-9dd2-72e5e28adedb">
-                          <propertyInstance Id="0e85a6b4-6037-4b7b-9924-1c36cae285b8" name="params" value="false">
-                            <elementDefinition Id="0ce0764f-c0b7-4104-84ec-ee60ebb2ccd5" />
+                        <stereotypeInstanceHasPropertyInstances Id="ab42cc33-7868-42cd-96bf-00e84a6723f6">
+                          <propertyInstance Id="f2c37f4b-2574-4170-81ea-c5c0a30b00d2" name="params" value="false">
+                            <elementDefinition Id="d93806c6-3cde-4a2a-9cb7-be02e8353685" />
                           </propertyInstance>
-                          <elementDefinition Id="04859478-ce2e-4012-a5af-445551134590" />
+                          <elementDefinition Id="4bc8e3cb-0321-46fd-8878-75cc3534fd35" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="d11137ce-29c4-4548-af4b-1b6858b20472" />
+                  <elementDefinition Id="266c027e-d762-4fcc-a7b0-d794dd8f5cb3" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1975,56 +1955,56 @@
                   </appliedStereotypesInternal>
                   <elementDefinition Id="18417926-4247-43a6-859a-0c10435d3b7f" />
                 </operation>
-                <operation Id="8cecb978-cb6a-4fe9-82d6-6f720dbfa020" name="Consequent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="14f6f8dd-86dc-4971-aafc-94c21ea050da" name="Consequent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="07d045fc-1a0a-4114-9ba3-5a0dbc4421d3" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DConsequent Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="8c56ac10-b957-4e19-984d-a1963f4fa5be" />
+                    <reference Id="3dcc1887-b9b8-4c66-b9a3-5f02dea9a9a1" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DConsequent Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="43ff1c9e-28b4-460a-bd88-a8c45afabdf6" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="db98bce9-2da8-4908-9229-4878c0c22709" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="680feccb-71c6-4832-bb55-c92c1fe9f1a0" />
+                    <stereotypeInstance Id="780e0e98-dc1d-4790-acdc-72a52f35646e" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="16a5c740-3e31-4632-b615-6cc071368998" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="5a092ae0-fd76-48b4-98b3-a39658b66858">
-                          <propertyInstance Id="55f3c1a9-1538-47be-b71c-bad25d92a9e9" name="ClrAttributes">
-                            <elementDefinition Id="73f632c9-4987-4d5b-944b-153db78ddb49" />
+                        <stereotypeInstanceHasPropertyInstances Id="6da67a85-d7f7-4ff2-87ae-7f6425d0cee4">
+                          <propertyInstance Id="6dd7a289-b10a-464d-a4ef-7bdad5d01398" name="ClrAttributes">
+                            <elementDefinition Id="f3fcddfe-c69c-40e3-b7fd-88976b2a0d29" />
                           </propertyInstance>
-                          <elementDefinition Id="a22e2124-5c38-452c-b9a0-db0e6bb1cfd7" />
+                          <elementDefinition Id="98d55c39-340e-4d5d-ac12-c83796143bed" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="93a7809e-9052-47d2-92a9-812036b8dfde">
-                          <propertyInstance Id="a17ea50e-8651-42d9-84ea-54415ecc65e0" name="IsPartial" value="false">
-                            <elementDefinition Id="d1bc532a-4ad5-4a21-9d40-0e9323c0d646" />
+                        <stereotypeInstanceHasPropertyInstances Id="0682ba42-d3e4-4233-8819-5cb3dfe66603">
+                          <propertyInstance Id="e3d72c8b-ea1a-4a1c-8928-cf97767f32d3" name="IsPartial" value="false">
+                            <elementDefinition Id="806ef170-0250-4551-b84f-54e8cc612e14" />
                           </propertyInstance>
-                          <elementDefinition Id="ef09f6fa-3ee9-4f49-a188-0a2dca4dd056" />
+                          <elementDefinition Id="b044ab97-2fab-4513-876f-f9a299c4d119" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="2fc86d92-b7b9-4935-be41-01bacc68e098">
-                          <propertyInstance Id="aeece2fa-4a4a-4bf5-ac89-65e84ad98a7b" name="IsUnsafe" value="false">
-                            <elementDefinition Id="fa11ea9d-cdb5-43c8-a415-24b53b21b75d" />
+                        <stereotypeInstanceHasPropertyInstances Id="b9aff4a2-0688-4670-aecf-9be1963c90cf">
+                          <propertyInstance Id="eea890f4-db03-45a5-8934-8c13d3decb0a" name="IsUnsafe" value="false">
+                            <elementDefinition Id="e3d2dc9c-f0b5-42e4-852a-09ae565b0aad" />
                           </propertyInstance>
-                          <elementDefinition Id="caedb8e5-cdf9-4e3d-8071-ece28c969e62" />
+                          <elementDefinition Id="0702dac6-e892-4909-b2a2-3d87c6b01e59" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="96d8f6ac-ca97-4a09-aa1b-b1f6df3ec766">
-                          <propertyInstance Id="4c95739e-0489-4c24-aa6d-d84edebc5990" name="Inheritance" value="none">
-                            <elementDefinition Id="941833d5-728f-4dcf-8c6f-7c204e4f232d" />
+                        <stereotypeInstanceHasPropertyInstances Id="108e69a9-310e-4606-8d86-048b5cf861a0">
+                          <propertyInstance Id="b9631159-7765-4fa2-8f37-137ddb864fcd" name="Inheritance" value="none">
+                            <elementDefinition Id="664ac633-0b1d-4e25-bc30-7deb06e4a1e0" />
                           </propertyInstance>
-                          <elementDefinition Id="18c0f497-b9d7-473f-8ff6-5b11d2f5279a" />
+                          <elementDefinition Id="6b21bb52-486f-4ef4-82e7-d24d2d0fd75e" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="4abe446d-712c-42c7-87d1-6ce9a20a6697">
-                          <propertyInstance Id="2a7c1b33-e0a5-461c-9eb1-0d1a7f4c0d9d" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="d5692f29-8f33-4ef1-8f0f-e7efab568a48" />
+                        <stereotypeInstanceHasPropertyInstances Id="3fd3ef7d-20df-4f0a-969a-149cba4ccc62">
+                          <propertyInstance Id="61f53f2d-2568-44bb-ac8e-2ffb6ba26da1" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="d402c208-65af-4d59-8f66-38a7c628f732" />
                           </propertyInstance>
-                          <elementDefinition Id="028b4b18-5fb3-4c84-896f-7f47fab01c4a" />
+                          <elementDefinition Id="aa3afe2d-b04c-44b9-a4cd-42b2cabc1ca1" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="b236b53e-b74e-4649-a200-58cfa8da1eae">
-                          <propertyInstance Id="598bd12a-cda9-443e-868b-a00f0ea70905" name="params" value="false">
-                            <elementDefinition Id="ec4e727e-d377-4281-86b6-fe7a6c3a9c98" />
+                        <stereotypeInstanceHasPropertyInstances Id="09d5978f-dae6-48a2-9a0c-e0806876f6e2">
+                          <propertyInstance Id="c0fcfda6-9be6-406e-af3d-1726a36f1f7a" name="params" value="false">
+                            <elementDefinition Id="b6a3272e-83ee-437f-bbca-9833b5903f89" />
                           </propertyInstance>
-                          <elementDefinition Id="ed579681-4a5e-4272-9c3c-f845522818ee" />
+                          <elementDefinition Id="edc8ac10-ed92-41dc-8513-3f967b8b7cf8" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="9642c7c3-6fea-4195-9dd6-b867f1dfb5e7" />
+                  <elementDefinition Id="4ece0450-3b4b-4bd5-a443-9fdff563f58d" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -2571,73 +2551,73 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="71013d7a-47e0-44b7-9710-787ddeea24f8" name="ExecuteAction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="de8ea2cc-fecb-4763-b936-b358cbef976d" name="ExecuteAction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="286c146a-3da7-4486-921b-53909d03ee6a" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate Member%3D(Name%3DExecuteAction OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]))])" tag="ViewCode">
-                      <elementDefinition Id="6dad8bfe-6498-4ebf-a8a9-1a80a432adad" />
+                    <reference Id="7779e98a-744f-45e9-9e6a-840aee3df9ac" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate Member%3D(Name%3DExecuteAction OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]))])" tag="ViewCode">
+                      <elementDefinition Id="c92e56f4-19fe-42e5-ba90-9ee95cf994aa" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="4bf1fee4-2cbc-4667-b246-4cf1b092bde2" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="f0cb215e-2243-41c1-847b-36a9f2a39f21" />
+                    <stereotypeInstance Id="05241617-96b7-4481-9406-f811b8c7bff0" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="6b2a3f42-640b-4ce0-ab3d-79e12d10d4c0" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="e9f5c420-bed0-49d7-b9c1-5ff0f68da021">
-                          <propertyInstance Id="e47d514b-6588-46f7-a0fb-443db68b1577" name="ClrAttributes">
-                            <elementDefinition Id="72977d2b-113b-4042-b169-38e45b368d3e" />
+                        <stereotypeInstanceHasPropertyInstances Id="259909cf-ab22-4e8c-93be-c9da122415a5">
+                          <propertyInstance Id="16ea4402-a78f-49d7-892b-a3e4abeb3ab7" name="ClrAttributes">
+                            <elementDefinition Id="37cee667-ef5d-4096-b95a-7f9e56073490" />
                           </propertyInstance>
-                          <elementDefinition Id="6f6c56a2-d25f-46ef-89b8-8279b0c951e7" />
+                          <elementDefinition Id="9a8b7964-7247-45a3-8e21-5723a2635f8f" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="9b829aa9-06c6-4fe8-a8f4-104015b6d8eb">
-                          <propertyInstance Id="92bbc8e8-1437-476b-92e2-569b574083b5" name="IsPartial" value="false">
-                            <elementDefinition Id="a4fa1606-9da5-4495-9a22-63db0d02b9e4" />
+                        <stereotypeInstanceHasPropertyInstances Id="07e3ea4d-ed6b-460a-91b3-e610b6b04f20">
+                          <propertyInstance Id="1ba77616-9bba-41d7-a213-911a361ba766" name="IsPartial" value="false">
+                            <elementDefinition Id="4c151962-e423-413b-b3dd-609a34ecb2a1" />
                           </propertyInstance>
-                          <elementDefinition Id="689f6152-e742-468e-b6a8-8f1059167c03" />
+                          <elementDefinition Id="d73525a9-f747-4c03-9e97-6f9e252719ba" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="e07e758b-a9eb-4e94-bf6c-2c5e6e47df9b">
-                          <propertyInstance Id="c54686f9-86c3-4ba2-81b2-7707975a0b5f" name="IsUnsafe" value="false">
-                            <elementDefinition Id="b71590f9-7b7f-4506-ab39-cdce4f59c3c6" />
+                        <stereotypeInstanceHasPropertyInstances Id="a0a83a3f-6dfc-4970-b944-72c77a5b8e36">
+                          <propertyInstance Id="62b5c64f-5c7e-41fc-9b12-78fb7d36cc6b" name="IsUnsafe" value="false">
+                            <elementDefinition Id="aa0f561d-8aeb-4304-9149-0ce6a97a3909" />
                           </propertyInstance>
-                          <elementDefinition Id="c4e32db5-4813-4cb3-b329-20a03a2d1656" />
+                          <elementDefinition Id="dc563443-c6f5-4b79-b0e8-a4a840b55d91" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="380a1342-48d6-42a3-a903-500ccf672a9f">
-                          <propertyInstance Id="4bcc8e01-7e15-420b-80b3-532c026d8d33" name="Inheritance" value="none">
-                            <elementDefinition Id="e4335e39-5ed2-4f01-b135-112bea166449" />
+                        <stereotypeInstanceHasPropertyInstances Id="462aa57e-5813-4989-bf3c-4166ae410ab2">
+                          <propertyInstance Id="ef1c8f5b-23af-4f4c-b91a-24063e5f755f" name="Inheritance" value="none">
+                            <elementDefinition Id="dcdd0c4e-6572-49f7-ba10-d9659d4cf43c" />
                           </propertyInstance>
-                          <elementDefinition Id="f1e16aec-8283-46e9-a880-22ea8c2b4e5e" />
+                          <elementDefinition Id="e94470f5-4f8c-4f65-9d9d-326ac1cf44a7" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="e4d4b4e8-dd2c-441a-887f-c25e19321bae">
-                          <propertyInstance Id="87d6f2ba-35f5-42dc-bec6-df19d990811b" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="0167acc6-5a6c-4bbe-89d8-92aa5887a295" />
+                        <stereotypeInstanceHasPropertyInstances Id="f47745f5-c859-4b82-81a7-503d691a18b3">
+                          <propertyInstance Id="90084ca4-dd22-4baa-87ce-12043934ba9d" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="df50d584-83b7-4768-86a2-4e3a566812d3" />
                           </propertyInstance>
-                          <elementDefinition Id="d633edd2-deb0-4272-99bc-670c7250d223" />
+                          <elementDefinition Id="944048ab-0cd5-455a-a06b-a559c9d49a45" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="454907a0-bd59-4a1f-9b65-f01a0eda1a0d">
-                          <propertyInstance Id="f4236ce8-9de4-4fc6-b401-ebfb49848927" name="params" value="false">
-                            <elementDefinition Id="73f5c3be-0530-4aa9-9b95-2a6c6e666db8" />
+                        <stereotypeInstanceHasPropertyInstances Id="c33da33c-19a2-4450-aeb8-2984afec3637">
+                          <propertyInstance Id="e1c078ea-15c8-4ea5-a697-d33d2097d78e" name="params" value="false">
+                            <elementDefinition Id="e863ee6f-80b8-4d34-9a8f-23a868b08b82" />
                           </propertyInstance>
-                          <elementDefinition Id="91432dd1-7364-476c-b9e9-049a888166af" />
+                          <elementDefinition Id="053d7a53-366a-4cd0-b212-43849e315791" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="f86fa4eb-7dff-4b9f-bb91-c58d4761b18d" />
+                  <elementDefinition Id="e0ae0c59-43ab-4c71-a5d9-ba82fbb8cfff" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="a98220cf-1800-4bb3-8d69-695e68ee51ae" direction="Return">
-                        <elementDefinition Id="69b6870a-3d63-4ecc-b048-c842364863a8" />
+                      <parameter Id="84c1c127-4fad-4a35-a286-c36704778c09" direction="Return">
+                        <elementDefinition Id="13eb663a-e203-478b-b52f-54945c7ab00b" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="9f8d7209-d123-4de6-a58e-2d9d0755181a" LastKnownName="List&lt;UserResponsePackage‎&gt;" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="21231067-1d13-4445-a484-af32449c8c01" name="resources" direction="In">
+                      <parameter Id="236ccfc9-add6-423e-9363-ba60b6ee2ad1" name="resources" direction="In">
                         <referencesInternal>
-                          <reference Id="3115cccb-d08d-4715-8887-530d741af59b" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate Member%3D(Name%3DExecuteAction OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]))]) ParameterIdentifier%3Dresources" tag="ViewCode">
-                            <elementDefinition Id="a193259a-3026-46df-a3a2-fb526dcaaf61" />
+                          <reference Id="ddd58221-0fcb-47b6-ba91-632ee502ba4b" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DPredicate Member%3D(Name%3DExecuteAction OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource)]))]) ParameterIdentifier%3Dresources" tag="ViewCode">
+                            <elementDefinition Id="0f023f9e-8e9f-4c91-81f6-64d55c8ddcff" />
                           </reference>
                         </referencesInternal>
-                        <elementDefinition Id="feb64561-a9bd-4c84-86f9-d27b55a5b6c5" />
+                        <elementDefinition Id="9bbf08a8-1e67-4162-af1a-84981c089a40" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="97e3e713-22fd-499d-8904-08b869abd748" LastKnownName="IEnumerable&lt;Resource‎&gt;" />
                         </type_NamedElement>
@@ -4006,56 +3986,56 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="0a07e7f7-0d39-4044-8a69-ab8d08d8280f" name="NlpEngineThread" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="cbd28504-1625-4fbc-b788-b868b21bade2" name="NlpEngineThread" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="af210ef9-f32c-4a69-a173-b6188074fba9" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpEngineThread Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="cb4dc897-0577-4435-acdc-896755d262b1" />
+                    <reference Id="4f2b8031-e309-451d-a599-cd034a52657b" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpEngineThread Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="8534a767-1af2-4b18-840c-073492e4cb6b" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="6f20b2df-f949-4000-9468-35e82ed340c3" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="0ee7ab54-e8f3-4d73-a8df-b141b0fdd599" />
+                    <stereotypeInstance Id="755dcf12-9aa3-4f59-8d3b-2350b5aa398f" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="3dfe8aa2-09a7-4915-876d-22cf35f82405" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="295efe23-8dfe-4b14-94ac-780f2f8ef6db">
-                          <propertyInstance Id="30dd51fa-0a74-4909-aab2-4f1a8e9bd8f4" name="ClrAttributes">
-                            <elementDefinition Id="1cdae54c-fbd6-484f-8ba1-61429b3f40f9" />
+                        <stereotypeInstanceHasPropertyInstances Id="f35faa61-7ddd-4349-a37e-29c14ec3b8b2">
+                          <propertyInstance Id="8a6b6f08-08d2-4ba6-8373-89e360158787" name="ClrAttributes">
+                            <elementDefinition Id="80e48c8d-fc23-47e4-aa56-e3f44263fa7c" />
                           </propertyInstance>
-                          <elementDefinition Id="a466abdc-d53b-4848-b6fd-8dff23ecdbfb" />
+                          <elementDefinition Id="8e33dd6d-32c6-4bf3-b5b1-1364dfdca84a" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="9207d446-7b04-43c3-bbff-21df3de0c799">
-                          <propertyInstance Id="aff33053-c7c9-4a36-9cee-585b994562c0" name="IsPartial" value="false">
-                            <elementDefinition Id="08bf004f-97f3-4908-87c4-f1d3110c8910" />
+                        <stereotypeInstanceHasPropertyInstances Id="0a1ccd31-5b72-49a1-b184-a2d0a35e9f8d">
+                          <propertyInstance Id="8b0b8ec2-daae-43a2-9b65-051c6a488b69" name="IsPartial" value="false">
+                            <elementDefinition Id="6a5f4940-cb55-4d59-8ae3-fad89f029e53" />
                           </propertyInstance>
-                          <elementDefinition Id="9ff2f639-a8bd-4d0b-ab1a-c9e2f59c327c" />
+                          <elementDefinition Id="bcb44c37-b4b4-456c-a401-2da7ec2ffc7a" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="99d859c7-3e11-4a09-bef4-62c23143063f">
-                          <propertyInstance Id="90513e80-ae61-42e4-8122-6a09a08477f4" name="IsUnsafe" value="false">
-                            <elementDefinition Id="c64ef867-589d-4f69-ad9c-e8b0b4d3c773" />
+                        <stereotypeInstanceHasPropertyInstances Id="0556168a-6ede-43ad-8a13-608a8d3241ca">
+                          <propertyInstance Id="8d9f9280-c2ea-4b63-911f-90697d0c2176" name="IsUnsafe" value="false">
+                            <elementDefinition Id="99dc9fb4-71c6-4b37-84f5-56b907a20ee5" />
                           </propertyInstance>
-                          <elementDefinition Id="61d8344a-8ce0-4c0c-adf2-2aaceab49e51" />
+                          <elementDefinition Id="eb9bbf30-cc04-451f-818b-a7c742a17f4c" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="eae7d661-62a7-45bb-93bc-7df7ba9a393a">
-                          <propertyInstance Id="44bece1e-373d-450e-ac3d-25fc7355c165" name="Inheritance" value="none">
-                            <elementDefinition Id="fce7533c-86ab-47da-af66-51be82782a49" />
+                        <stereotypeInstanceHasPropertyInstances Id="92acb88b-ea6e-4a6c-85d3-661c3d5c04a2">
+                          <propertyInstance Id="c5817623-1aa3-46d4-bd56-f57328aa2290" name="Inheritance" value="none">
+                            <elementDefinition Id="e92e0421-53bd-4082-b4df-a1efd7d89a46" />
                           </propertyInstance>
-                          <elementDefinition Id="2a49292e-2671-420e-9191-c8376db83d6c" />
+                          <elementDefinition Id="db12d6b7-3fb0-4406-a974-92fb2961d6a0" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="f738cb15-bbfa-45bc-8c4c-2f063f6a736e">
-                          <propertyInstance Id="b92b31d5-00dd-4724-a53a-77503d495c09" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="06cb9b2f-847c-44a3-9df1-cba0c6dceb1c" />
+                        <stereotypeInstanceHasPropertyInstances Id="2cb054d8-5410-458d-afc0-4144af789523">
+                          <propertyInstance Id="a4d335cf-385d-4f36-8cad-ce0d92d92290" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="b0ae93cc-8d0b-49cf-85ee-5ddbbabad0f8" />
                           </propertyInstance>
-                          <elementDefinition Id="e31bd2af-f76e-4d21-80ba-27a9a8769ebe" />
+                          <elementDefinition Id="5140d603-1130-468c-874c-9b4b44c757a7" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="bde0e37f-e698-498c-a4da-e0ee3c0b9b03">
-                          <propertyInstance Id="53bdcc02-8366-4b94-9363-2a647428d93d" name="params" value="false">
-                            <elementDefinition Id="46c3271a-ae2d-411b-90d5-709e4bfea8ba" />
+                        <stereotypeInstanceHasPropertyInstances Id="deb74063-c0a5-4f06-aafc-5710ba57d329">
+                          <propertyInstance Id="16fb499f-64eb-4742-a49d-8c311ca8960d" name="params" value="false">
+                            <elementDefinition Id="6776e9f6-4cbb-4cd6-a881-bcc2e0bfe158" />
                           </propertyInstance>
-                          <elementDefinition Id="e430c333-c592-4842-9127-4dcc427c8118" />
+                          <elementDefinition Id="d3620060-6507-4456-87bb-bacf7e3d5060" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="5a9210e1-fb7d-436a-ae20-e179d630a232" />
+                  <elementDefinition Id="ebac07e0-930f-4377-be75-22a729c5984c" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -5630,188 +5610,165 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="feaf0f05-3189-407b-9b61-3d461a84fc58" name="NlpDecisionEngine" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="ad9f18fd-abb5-40bb-ad13-5ce8faca3910" name="Traverse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="0cf48798-30d1-48f8-9c9a-ad3ac80036f6" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="331d1589-ae3f-4872-8b45-e2efa384c01a" />
+                    <reference Id="42481b6b-7003-44cf-a73d-1fc5f12014ea" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))])" tag="ViewCode">
+                      <elementDefinition Id="d2dfd41e-ce61-4105-aa60-618476847dbd" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="7e543484-ee6b-4d86-8e61-ff14f0ac17fa" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="0b1e3218-5729-4000-9f9b-473b05a83cc5" />
+                    <stereotypeInstance Id="3ff86933-e45a-412b-8af7-ce25a7cd04c1" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="ba5a2784-3005-429b-a4b2-297e30ab1095" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="5955edb9-0177-43ad-8811-f3f07049618a">
-                          <propertyInstance Id="ae983d50-b40c-4e21-9a80-80ea75286b42" name="ClrAttributes">
-                            <elementDefinition Id="b6d016c4-d579-45ff-a8ed-3e15c056357e" />
+                        <stereotypeInstanceHasPropertyInstances Id="bca4efb5-792a-487b-ba0a-7aea69a14d01">
+                          <propertyInstance Id="071ee464-f708-4e2e-a962-eecbb323439f" name="ClrAttributes">
+                            <elementDefinition Id="a1a7d4b0-c6e5-48e1-9444-2c62bd1f731a" />
                           </propertyInstance>
-                          <elementDefinition Id="12907fa7-2e96-42c7-a252-d52c22f7986b" />
+                          <elementDefinition Id="191e9faa-bb1d-40d7-9302-db5f15dd0a18" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="1018ff7a-5ff2-4538-8d37-c5c41a46422a">
-                          <propertyInstance Id="c82c0f9f-9ee1-488e-a134-bff30b9e3aed" name="IsPartial" value="false">
-                            <elementDefinition Id="d837a3ca-eb2a-4b5d-a0be-aa58a528d106" />
+                        <stereotypeInstanceHasPropertyInstances Id="3e118ae9-4ee0-446a-af11-9b589c637ea2">
+                          <propertyInstance Id="ce01f8c4-48b8-4300-a634-f4e030775cd5" name="IsPartial" value="false">
+                            <elementDefinition Id="c0448956-8db1-4baf-b6ec-0cd133e9a046" />
                           </propertyInstance>
-                          <elementDefinition Id="fe8dbf6a-68d9-441b-9ee8-2abe758e008a" />
+                          <elementDefinition Id="28a8e189-7c09-4f9d-ac95-915eb5c8e797" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="99c6417f-053b-45df-9926-742cdc0a1bf6">
-                          <propertyInstance Id="0fd53c78-0d12-4d03-aa8b-ebede0c56b2c" name="IsUnsafe" value="false">
-                            <elementDefinition Id="bdda0885-3eab-48d2-b4ab-9a274469aacf" />
+                        <stereotypeInstanceHasPropertyInstances Id="c0c43e41-5eae-4561-9e0e-fe5b83dcee4c">
+                          <propertyInstance Id="926be670-6c30-4342-8066-7e999eb2e250" name="IsUnsafe" value="false">
+                            <elementDefinition Id="d41ab9ea-51fb-489c-8fc0-0e858203d8aa" />
                           </propertyInstance>
-                          <elementDefinition Id="e9d38b27-01cb-4d71-874c-9aedaa1e6993" />
+                          <elementDefinition Id="5a796a61-41aa-451d-a364-dc4f3ce7658a" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="7f6fd873-3ff5-4f0f-8b79-91a2d0f2ba6f">
-                          <propertyInstance Id="23173d47-0eea-4296-98b7-2c30964cfa47" name="Inheritance" value="none">
-                            <elementDefinition Id="789d3a3a-7a4a-45fb-9d36-520adcabfc16" />
+                        <stereotypeInstanceHasPropertyInstances Id="3df36936-244d-49fb-a007-448a0ccc3e52">
+                          <propertyInstance Id="7eb3a2d5-a493-4013-a6b8-c973b902d41a" name="Inheritance" value="none">
+                            <elementDefinition Id="34399fb5-08fa-4c60-801d-725b11c35829" />
                           </propertyInstance>
-                          <elementDefinition Id="7053f141-9fe3-4926-9a81-5be3e8718145" />
+                          <elementDefinition Id="e014aed1-67cb-4778-a7af-815c7833f0b8" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="5fab9cd6-dd06-4157-acaa-6872e7bb57e0">
-                          <propertyInstance Id="44d2f984-4522-4d20-a74b-dc97ac7f92a4" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="c280d4d8-9a06-4fe1-b54b-938952b4d928" />
+                        <stereotypeInstanceHasPropertyInstances Id="867ea4bd-fae2-41a8-9333-fc274f253db8">
+                          <propertyInstance Id="6373f0af-6ccc-4e5c-82e2-bca30e0f62b5" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="4c0824b8-56ac-476b-889f-b2b533c10ff5" />
                           </propertyInstance>
-                          <elementDefinition Id="d4adcf1b-6d36-4116-adfd-0158b9e688df" />
+                          <elementDefinition Id="a234db63-1708-4951-a7a6-9091037ff5c8" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="111819d0-27e2-47ef-b4cc-d67a363fba5d">
-                          <propertyInstance Id="46e91e6c-63e0-4ad5-8f12-cb186a12a496" name="params" value="false">
-                            <elementDefinition Id="e34b4304-ef3b-4a04-898a-9983e10c16fd" />
+                        <stereotypeInstanceHasPropertyInstances Id="185b1358-d8d1-485c-87c8-2215f2684d57">
+                          <propertyInstance Id="9223c798-9645-483d-b8d9-544ed78b5194" name="params" value="false">
+                            <elementDefinition Id="08a31b56-7c53-4eb6-9fa7-ad3297ece921" />
                           </propertyInstance>
-                          <elementDefinition Id="fa0d6031-4968-4bf0-9c1d-912d3966fdf1" />
+                          <elementDefinition Id="61ae6611-e74f-4bf9-919f-0b1db82f94cc" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="861437e3-5b55-491b-8a72-b9741946286f" />
-                </operation>
-                <operation Id="7c28708a-55f0-4ddd-86eb-afca6ceeccf2" name="static NlpDecisionEngine" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <referencesInternal>
-                    <reference Id="46c8a75f-e4b7-4302-9681-7581714f7c6d" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D.cctor" tag="ViewCode">
-                      <elementDefinition Id="a1708dbd-0f6d-4503-b48a-a9c862257a1e" />
-                    </reference>
-                  </referencesInternal>
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance Id="053a6ec0-a8ef-4729-8935-acc920d7e2e8" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="ff748462-5936-4eee-88be-1ac9633ebbab" />
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="f2dae248-3a0e-4e78-b705-86bc702a411c">
-                          <propertyInstance Id="2a8ea7df-0882-4743-ba70-27332b36ba88" name="ClrAttributes">
-                            <elementDefinition Id="a0234690-6e51-4c28-b8ee-d6051dc746c9" />
-                          </propertyInstance>
-                          <elementDefinition Id="fae5ecc8-6197-4cea-86c7-292dcd8e2bad" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="71ca7160-2314-4299-b798-1d27be4dd967">
-                          <propertyInstance Id="f7e09dcf-4df6-456d-a78c-06a250342f63" name="IsPartial" value="false">
-                            <elementDefinition Id="0dd03607-72b6-4744-a6d5-53ad43985d2d" />
-                          </propertyInstance>
-                          <elementDefinition Id="7adf8d60-21b1-4602-9747-20b433564dbb" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="03c52916-251d-451a-8227-19d90ce3fab2">
-                          <propertyInstance Id="c16211e5-c3d2-4df9-b411-99b4de1d731d" name="IsUnsafe" value="false">
-                            <elementDefinition Id="5fd26388-37aa-48a4-87dd-090db30f105e" />
-                          </propertyInstance>
-                          <elementDefinition Id="3408e729-53ba-4016-a0cd-6cca41252a21" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="72451ed0-3dc9-48a5-a444-73eeecbd1102">
-                          <propertyInstance Id="0cc26391-3521-496c-926f-4550f182fdb5" name="Inheritance" value="none">
-                            <elementDefinition Id="554d65b5-5126-48f1-a47a-6d82df0175d9" />
-                          </propertyInstance>
-                          <elementDefinition Id="fce58ff2-450d-437f-ad0a-684cc6c22d3a" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="b7c15504-f75d-48a5-8fdf-d96717a34693">
-                          <propertyInstance Id="4f63de17-e83a-43a3-814a-b1bf88236a72" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="eca9813e-0700-4745-8ef5-efa8c6d2b6de" />
-                          </propertyInstance>
-                          <elementDefinition Id="7974eb2a-946c-4150-8016-439216604476" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="b033942f-1fd2-4fd2-b858-b40666d6593b">
-                          <propertyInstance Id="68ada582-54bd-4423-8149-6171c81c7c9b" name="params" value="false">
-                            <elementDefinition Id="b0490320-b0ae-45c7-a2ab-2ef662894b74" />
-                          </propertyInstance>
-                          <elementDefinition Id="818d8498-3020-438c-913c-4b4983fcd395" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <elementDefinition Id="017c1e8b-5370-4c47-8295-816bbd7b891f" />
-                </operation>
-                <operation Id="b8c68929-dd51-4cf0-ae10-9c27de0ad7a4" name="TryFindSubjectKeywords" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <referencesInternal>
-                    <reference Id="20df6684-d472-4858-9b7e-76c33c9bab60" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)])" tag="ViewCode">
-                      <elementDefinition Id="d16bbf6d-8845-4ff1-8415-3bde5751a43a" />
-                    </reference>
-                  </referencesInternal>
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance Id="b182a319-8168-433f-b219-9a0d5bf201d1" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="38737bac-0433-4408-b73d-c48bf9a214aa" />
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="f7e9f085-6178-46e5-9b15-829b241b9df5">
-                          <propertyInstance Id="09ba0e60-0523-48e5-9e43-1b839f9e6d89" name="ClrAttributes">
-                            <elementDefinition Id="f861e6a6-0ba0-4e21-b4de-5e2aed0812bb" />
-                          </propertyInstance>
-                          <elementDefinition Id="a4322c03-ece9-40b3-ae3e-524465e238cc" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="f0a378a1-9a4b-4057-9705-5ad1876fa67d">
-                          <propertyInstance Id="339d9949-f1ee-413d-a90c-525e09c1764d" name="IsPartial" value="false">
-                            <elementDefinition Id="879f6b75-5166-4a24-87a6-00fda7d7af42" />
-                          </propertyInstance>
-                          <elementDefinition Id="a41f7ab9-4dbf-4201-9e4e-742164bb677a" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="ab1f167b-e64f-4962-bb57-e4df3e70fe2c">
-                          <propertyInstance Id="1e4a1169-558b-44b2-9f36-71febffc919c" name="IsUnsafe" value="false">
-                            <elementDefinition Id="5cee5b6b-653b-4b4a-8fae-6699b84a6715" />
-                          </propertyInstance>
-                          <elementDefinition Id="77da96a3-a275-449d-af23-5e987176bf74" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="89736485-a69f-4371-ba9f-782f0993f669">
-                          <propertyInstance Id="b02e4c94-7d2e-4559-9351-55bf2ce57c7f" name="Inheritance" value="none">
-                            <elementDefinition Id="cf8cd8df-3f9e-4029-b702-6dca683fbeb1" />
-                          </propertyInstance>
-                          <elementDefinition Id="54479d0c-e9fd-493e-beb3-623b978c0ef1" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="8291fad5-7928-47b9-a829-e9d51ecfced6">
-                          <propertyInstance Id="fb57e8d0-ef1d-4aa9-8ed2-b048171d374a" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="99340468-b1b7-45c9-8eb9-e7366fd62b15" />
-                          </propertyInstance>
-                          <elementDefinition Id="fd770a64-10c2-41c6-af07-9aa14e92691d" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="e430e14d-811b-4301-833c-e6fe1341828f">
-                          <propertyInstance Id="33fcb999-90d7-4e1a-afc5-d9a51ecd4136" name="params" value="false">
-                            <elementDefinition Id="5ec531fb-76b8-4a09-be1c-025ff415cb17" />
-                          </propertyInstance>
-                          <elementDefinition Id="9d5f179f-92cf-4aa3-87c7-e3e2a56b96a7" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <elementDefinition Id="de1e6904-8f0b-4d92-b5ca-1dc41e925f9c" />
+                  <elementDefinition Id="8b9f9a70-f5a1-4368-84ef-703acbb25ed7" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="5a69a889-0330-4621-b68b-a37cda9193a8" direction="Return">
-                        <elementDefinition Id="154b5dcc-d763-440a-a00e-b36d79801ef4" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="c69ba702-2ab3-45a3-a845-9a01871bbcdb" LastKnownName="Boolean" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="273ca20d-bb07-4b4e-ad02-4daaf9120646" name="parseTree" direction="In">
+                      <parameter Id="bcf32cce-51e7-4aa6-bb00-b45b9864fe0a" name="tree" direction="In">
                         <referencesInternal>
-                          <reference Id="d061ccc9-33e0-4310-a318-1b53dc5e78dc" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)]) ParameterIdentifier%3DparseTree" tag="ViewCode">
-                            <elementDefinition Id="7ebdcf79-2a87-4bf3-9466-d5e09a3086eb" />
+                          <reference Id="3023a0cd-a10a-4389-b4f1-0897f7ae68a5" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3Dtree" tag="ViewCode">
+                            <elementDefinition Id="4c5c30bc-b6aa-4a7e-9c5d-7af87a1262b9" />
                           </reference>
                         </referencesInternal>
-                        <elementDefinition Id="b7158fb4-2e64-491e-ab4e-152cc82111e1" />
+                        <elementDefinition Id="c43349fb-468a-4d8d-b7d8-e11dc1572682" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="df684e68-c7de-44f4-b991-fc9a2749f64d" LastKnownName="Tree" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="d138abe3-ef3e-41f9-94dd-fd6cc713b003" name="keywords" direction="Out">
+                      <parameter Id="cff794e2-cef9-47ae-8ea2-6f2b877c40ab" name="f" direction="In">
                         <referencesInternal>
-                          <reference Id="0e61e20d-53d7-480b-92de-b4e995ad0822" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)]) ParameterIdentifier%3Dkeywords" tag="ViewCode">
-                            <elementDefinition Id="f8c357c8-4580-4013-89b8-c11ef94e41c3" />
+                          <reference Id="c2e496d8-160a-432b-bfba-2e1db222ec00" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3Df" tag="ViewCode">
+                            <elementDefinition Id="354e46c4-a343-4f92-b375-6acba93701b8" />
                           </reference>
                         </referencesInternal>
-                        <elementDefinition Id="42eeb411-0b6e-489c-b53b-e6484ac14aa0" />
+                        <elementDefinition Id="00a6c716-db25-487e-9a1a-13f6fcffb15e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d136e083-4a99-45d3-89b3-52b6abaf4474" LastKnownName="Func&lt;Tree‎, Boolean‎&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="04200ec7-a792-4b8b-b486-ffdb1b3be447" name="TryFindSubjectKeywords" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="4cd018c1-9233-4631-a29e-3f51016575da" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)])" tag="ViewCode">
+                      <elementDefinition Id="d3bfb67f-0887-4b08-9ff9-7b36f81a7cd9" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="c15c1523-5e1c-48c5-a812-307eeba0c717" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="e1f46c8a-ee33-41d1-b429-40903d4dbcf2" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="1f5f804a-bcef-4e99-b5d5-1400bfd19bcc">
+                          <propertyInstance Id="353e7c4d-ea1f-46d2-9138-67555aaa2324" name="ClrAttributes">
+                            <elementDefinition Id="3315717c-13f5-46c1-8dc1-de981de0b307" />
+                          </propertyInstance>
+                          <elementDefinition Id="12a69451-50a6-49d0-a9d6-2e2a20095337" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="5884e424-5287-432b-9344-5c8e3b212530">
+                          <propertyInstance Id="609f7f64-5751-45da-94f6-25cf021cb77b" name="IsPartial" value="false">
+                            <elementDefinition Id="49b87a7e-03f3-4816-88ee-41aea5cfee72" />
+                          </propertyInstance>
+                          <elementDefinition Id="e23e9d6c-6291-4465-9f12-b0c2a5c6e18d" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="0de23cbe-4b9f-4c6e-826e-fad792ea011e">
+                          <propertyInstance Id="a79b104a-7a28-47ac-a3c2-71e81d1d3e85" name="IsUnsafe" value="false">
+                            <elementDefinition Id="a57d4f34-70bd-43a7-9af4-419a602ee670" />
+                          </propertyInstance>
+                          <elementDefinition Id="8754a2c8-b006-4a86-ae76-62d0bf5a508b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="99548786-cc78-4aec-9fd2-d2a09ac253f0">
+                          <propertyInstance Id="65b54028-4084-4ffa-b586-e5e567fcf1d3" name="Inheritance" value="none">
+                            <elementDefinition Id="1f01e480-cb8b-4ce4-8c3f-82936eff416b" />
+                          </propertyInstance>
+                          <elementDefinition Id="99301923-f95c-43bb-b59c-3ae544d2139d" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="06cfe9f3-3f15-4f65-9f4d-dd83241fa85e">
+                          <propertyInstance Id="03f01582-2bb0-4f6d-8d19-ee19c0bbedbe" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="f85f0805-38d7-4a9d-8844-6b2c06cc6f31" />
+                          </propertyInstance>
+                          <elementDefinition Id="384d63df-26d8-429d-b8e4-446277b36342" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f72cf90f-94a6-4167-9372-410bea2e103c">
+                          <propertyInstance Id="deede735-980e-4e71-97e3-2591cfa04e83" name="params" value="false">
+                            <elementDefinition Id="6bc91ba9-173f-4934-a189-a6a07f7a4fa3" />
+                          </propertyInstance>
+                          <elementDefinition Id="2a960275-35f5-47d0-9203-b8ecbd12ed5c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="c6eb67fa-1f57-481c-9774-55731bebdc1c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="68340501-335b-4d00-8dab-9aeb57d153ce" direction="Return">
+                        <elementDefinition Id="fd0cf21b-a44c-4577-b820-9007b073735e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c69ba702-2ab3-45a3-a845-9a01871bbcdb" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="13979859-ad37-4208-a160-a007b1859ab6" name="parseTree" direction="In">
+                        <referencesInternal>
+                          <reference Id="6c1635cc-7968-4196-9043-712d5587797f" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)]) ParameterIdentifier%3DparseTree" tag="ViewCode">
+                            <elementDefinition Id="0146e428-1c51-4d42-a5d4-26b32b474681" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="bd1d0ac3-67de-4b1b-828d-c53c5575b092" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="df684e68-c7de-44f4-b991-fc9a2749f64d" LastKnownName="Tree" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="af358c37-77a7-42fb-a26e-4ec84b40c59b" name="keywords" direction="Out">
+                        <referencesInternal>
+                          <reference Id="13707c83-bd71-4759-ac46-a69e012b547c" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTryFindSubjectKeywords OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParamKind%3DRef)]) ParameterIdentifier%3Dkeywords" tag="ViewCode">
+                            <elementDefinition Id="8abb3fd5-c054-4d50-bd3b-7f5b4325a99a" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="311c4b40-f719-4142-8e77-830f85613b0c" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="85b53f27-282d-4df6-bc6d-e80383b6462b" LastKnownName="IEnumerable&lt;String‎&gt;" />
                         </type_NamedElement>
@@ -5819,84 +5776,107 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="6f583a14-bfa8-443f-96ae-241055392156" name="Traverse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="f5d41b01-a412-42b3-9017-514abf94e594" name="static NlpDecisionEngine" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="89107232-cdc3-40ba-8de3-7bad6515f372" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))])" tag="ViewCode">
-                      <elementDefinition Id="8ee03bd6-3d7d-465b-81be-65e27a60e9e1" />
+                    <reference Id="36fdf53c-6568-4ade-9084-28b753a7f6c9" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D.cctor" tag="ViewCode">
+                      <elementDefinition Id="b86e399b-5780-44eb-9af3-03517944b86c" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="696390a2-0327-4828-99e5-e401ec14a3be" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="80c062ce-a9f4-43df-94b8-213d56168710" />
+                    <stereotypeInstance Id="4fe8b1a5-5c71-4f97-baa2-9ef1738a624d" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="42040d78-46b3-477f-8705-85863fdecd06" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="ee7fcd14-8941-41fb-8012-e0b77015fa1e">
-                          <propertyInstance Id="2673172f-ccb1-4192-853e-ce514cfa59f7" name="ClrAttributes">
-                            <elementDefinition Id="25f13aeb-a7bc-465b-9a9d-863c72f784a7" />
+                        <stereotypeInstanceHasPropertyInstances Id="87d00a24-3710-42a6-9e47-a04157ddcb1d">
+                          <propertyInstance Id="82d8c0df-2fb6-462c-aef5-52e7cf4b9a82" name="ClrAttributes">
+                            <elementDefinition Id="4da3a9c6-096c-4279-ab86-6624bad929d7" />
                           </propertyInstance>
-                          <elementDefinition Id="ddeb5741-1c62-4255-8bc9-e857e3a154d6" />
+                          <elementDefinition Id="65ffaefe-a746-4131-b695-fddfb209c443" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="23d1e52e-89a6-43fd-be38-574b06aa9fab">
-                          <propertyInstance Id="7a8b36fb-bdab-46d3-a06e-9c377da88e0c" name="IsPartial" value="false">
-                            <elementDefinition Id="e2023d6a-7283-4494-a23c-9fdceef9393b" />
+                        <stereotypeInstanceHasPropertyInstances Id="be067148-795f-4c2f-8154-66c5fe3557c3">
+                          <propertyInstance Id="c674c683-01ab-47f7-8a95-ccd847f9a54e" name="IsPartial" value="false">
+                            <elementDefinition Id="e22fb648-5070-413e-a885-d410a4b28336" />
                           </propertyInstance>
-                          <elementDefinition Id="7328df82-945f-4a6d-97c3-8dee09a56af5" />
+                          <elementDefinition Id="42d6dee4-f9ac-4ce1-bea5-56d88f23cffd" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="19f3aadb-f42c-4c46-81e4-42087caec13b">
-                          <propertyInstance Id="d6c8a658-9e97-4070-bc7d-8de1e4118769" name="IsUnsafe" value="false">
-                            <elementDefinition Id="1cffb76f-54e9-4daa-8bac-567a50c37f3f" />
+                        <stereotypeInstanceHasPropertyInstances Id="9df6cb13-464f-4bd8-82ec-617c45763e31">
+                          <propertyInstance Id="1f0f5a08-eba0-4be9-bd60-f9e1fcd807f8" name="IsUnsafe" value="false">
+                            <elementDefinition Id="d6f21234-cdfa-4450-ba08-34662e54fefb" />
                           </propertyInstance>
-                          <elementDefinition Id="b6f27b67-ba4a-4d15-879e-06dd63077ac2" />
+                          <elementDefinition Id="53a92b8a-d6f0-499f-98df-e3c15b9ab0cd" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="be556e39-ddfe-4559-a06e-6361817f6ab3">
-                          <propertyInstance Id="adc77719-55a6-4390-82aa-9a282922b79b" name="Inheritance" value="none">
-                            <elementDefinition Id="71e6841d-0705-40e5-93ff-9ceee233385d" />
+                        <stereotypeInstanceHasPropertyInstances Id="0b397c5b-4988-4a2d-9db8-ba2f99c0becd">
+                          <propertyInstance Id="f675bba4-b894-4219-9735-eba9120248a6" name="Inheritance" value="none">
+                            <elementDefinition Id="cf3109ba-e3e7-4633-9d42-3842a342dc2c" />
                           </propertyInstance>
-                          <elementDefinition Id="5fb7bf2d-6836-4fc9-8ad3-5513036190f6" />
+                          <elementDefinition Id="a76c62d9-2aec-4eb0-b56d-a96884ef7644" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="f816c082-1d86-47e6-a5c4-be86a4fbd1bd">
-                          <propertyInstance Id="830cdb66-8e4c-4449-a904-4818222abe7a" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="07943721-9d54-41ba-a1e0-31525ae9cf15" />
+                        <stereotypeInstanceHasPropertyInstances Id="cd7c8a32-0a2f-477a-aa43-7c58d87a606e">
+                          <propertyInstance Id="1be4c044-34e4-4241-bc28-ae81fa75d500" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="dab51dff-cdf8-4698-8f12-c8b013453b78" />
                           </propertyInstance>
-                          <elementDefinition Id="adcc139a-e87b-487b-ac2f-28d1a5ffc08f" />
+                          <elementDefinition Id="4d4aec26-e21e-4bdf-9173-7b26fb5a6d5d" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="21125c54-9057-44ab-9e56-2173ea0f8612">
-                          <propertyInstance Id="8228e9e0-1459-4dd1-b8de-8a262b5be55d" name="params" value="false">
-                            <elementDefinition Id="3d116b0d-010f-48b1-8e02-ee5b457afc8c" />
+                        <stereotypeInstanceHasPropertyInstances Id="33c5a0a3-dd39-4d34-b957-65647c6f5499">
+                          <propertyInstance Id="8b4407d9-c2db-4bf9-8c77-e03932806230" name="params" value="false">
+                            <elementDefinition Id="aa111cdd-83a4-4a4f-9d9c-4cf0768ba063" />
                           </propertyInstance>
-                          <elementDefinition Id="8ca78958-8abf-4ee5-8463-9b2d48f028f4" />
+                          <elementDefinition Id="f38b2ebf-27f3-4e0a-98f2-65bc91f162ab" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="7374ec9d-0d75-438d-ace7-89241736f2f1" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="c244062e-dce5-446f-a52e-d5b1085450bb" name="tree" direction="In">
-                        <referencesInternal>
-                          <reference Id="f411d1c4-3ee5-4a6a-a4ef-b6081f627051" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3Dtree" tag="ViewCode">
-                            <elementDefinition Id="b387d95c-672c-4ee6-944b-f0da1115ac4b" />
-                          </reference>
-                        </referencesInternal>
-                        <elementDefinition Id="d44d9735-3fe7-4953-a4a5-cab1bc455983" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="df684e68-c7de-44f4-b991-fc9a2749f64d" LastKnownName="Tree" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="724859b0-68e6-4cd2-b06c-e96c527e345b" name="f" direction="In">
-                        <referencesInternal>
-                          <reference Id="bd6d5ab4-f73e-4877-adc2-a610f1c88d4f" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D(Name%3DTraverse OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2Fpackages%2FStanford.NLP.CoreNLP.3.5.1%2Flib%2Fstanford-corenlp-3.5.1.dll&quot; Namespace%3Dedu.stanford.nlp.trees Type%3DTree)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]))]) ParameterIdentifier%3Df" tag="ViewCode">
-                            <elementDefinition Id="6d1636a3-e4c9-41fc-b838-9dc56aa3f255" />
-                          </reference>
-                        </referencesInternal>
-                        <elementDefinition Id="df2dbd41-d4bb-4c20-bdcb-f0d4b45ac5e5" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="d136e083-4a99-45d3-89b3-52b6abaf4474" LastKnownName="Func&lt;Tree‎, Boolean‎&gt;" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
+                  <elementDefinition Id="c4cdf8c5-05fc-4d9f-bbcf-9e32eb5c49a2" />
+                </operation>
+                <operation Id="e1c1b5a8-7be3-4718-9f09-8e0fe99ccb9a" name="NlpDecisionEngine" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="e83ef15b-51b4-454e-ac9f-2c219dc40a89" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Nlp Type%3DNlpDecisionEngine Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="40ff137f-add2-4a66-9aae-4cefd56fb308" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="43407b7b-3507-40b2-92fa-0761dc22d3bb" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="7cc276d0-a883-4c36-a8c6-57d0f116bccc" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="29b81ae6-2c08-4437-b5ab-df11ed727a62">
+                          <propertyInstance Id="aab4d02e-c1dc-4776-967b-93ca6983fcac" name="ClrAttributes">
+                            <elementDefinition Id="a0f28487-3e7f-4c5e-8415-5bd5b2360615" />
+                          </propertyInstance>
+                          <elementDefinition Id="afb544da-2a98-46b1-b5a6-ab24d1041cf9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="7021b0ac-0710-4e2e-b5d9-3d4df25466a3">
+                          <propertyInstance Id="f7da58ae-4cc9-422b-acca-a72b2b2c479b" name="IsPartial" value="false">
+                            <elementDefinition Id="38e2fbb1-7ae8-4138-a9a0-24f74547ca29" />
+                          </propertyInstance>
+                          <elementDefinition Id="98be0080-db43-4b87-8e66-ecb44fed064e" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="2074faf9-87c7-406c-bed7-14224a2df558">
+                          <propertyInstance Id="9155e569-53bb-4b31-b66c-6f40889a4a4b" name="IsUnsafe" value="false">
+                            <elementDefinition Id="d419d9ec-5c9d-46ea-98c5-537e8804d39b" />
+                          </propertyInstance>
+                          <elementDefinition Id="dff5b7ee-110d-42f6-a7de-32679cc6ad9c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="83b7010f-00fe-454c-aa38-8d4c3c274db5">
+                          <propertyInstance Id="8a2e173b-81ad-43b4-a419-fa87c6cf7394" name="Inheritance" value="none">
+                            <elementDefinition Id="330cd422-479b-4d91-be31-e6b24d986f28" />
+                          </propertyInstance>
+                          <elementDefinition Id="def939af-71b8-43fa-bd1f-13f1b385144f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="2e119fb7-594b-4409-ab5b-86a2165ec9e8">
+                          <propertyInstance Id="04fa33e9-2b36-42d1-b5b4-fcda42c25d79" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="ffe8b6b5-7987-4aae-9c0d-f5ef11d3a9c2" />
+                          </propertyInstance>
+                          <elementDefinition Id="66c6f749-d3c8-4b36-bf92-91697ce5e773" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="23d24d81-62ac-4876-b1ff-0e074415e5e2">
+                          <propertyInstance Id="974299e4-4b36-4e18-a9b2-95e3b3ab30f7" name="params" value="false">
+                            <elementDefinition Id="4a5773ed-682f-45cc-9c69-14affc4c3645" />
+                          </propertyInstance>
+                          <elementDefinition Id="d1707362-141b-457e-993f-921693e3ce7f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="e2921651-24fe-4414-b8b7-6c169c263b14" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -6070,12 +6050,32 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="faae0cdd-1c52-4d95-9495-edc096d78809" name="Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Collections::Generic::Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;">
-        <elementDefinition Id="734cf2cf-1815-4b40-8260-3ed4b37d11a2" />
+      <referencedType Id="001868b2-612c-44f2-8efa-2b7ec0e60e80" name="Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Collections::Generic::Dictionary&lt;ConditionalOperatorType‎, Func‎&lt;IComparable‎, IComparable‎, Boolean‎&gt;‎&gt;">
+        <elementDefinition Id="d4bb35c4-4786-4761-8be0-f009ee9950a9" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="f52e4484-c6c7-4729-92dd-230f6fabb5fd" name="ModelingProject1">
     <elementDefinition Id="5f951517-31ed-4a43-9fb5-c61324d7deea" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0ac7eafb-3517-4b78-a1d4-25c52ce65e18">
+        <profileInstance Id="a0b6169e-0db3-40f1-89f5-c43b7c9320ab" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="21129f15-a66a-4441-bc2d-51b61d456732">
+        <profileInstance Id="2c8230c0-d78a-4bb3-9c2e-306800c9ffcf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b6cb0ebb-c4df-462d-bbf7-e1fbd490300e">
+        <profileInstance Id="b6410979-3eb5-4311-a02d-6c5e6bf3b1f1" name="CSharpProfile">
+          <elementDefinition Id="2aef4ee1-76c4-45ae-b365-82c8272d1873" />
+        </profileInstance>
+        <elementDefinition Id="f028d207-0ed4-4317-9e91-2b7e5957bb7c" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

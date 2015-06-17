@@ -177,7 +177,6 @@ namespace Cygnus.Nlp
             
             string vbWord = null;
             bool found = false;
-            Tree targetNode = vp;
             Traverse(vp, x =>
             {
                 if (x.label().value().StartsWith("VB"))
@@ -195,8 +194,8 @@ namespace Cygnus.Nlp
 
                 return true;
             });
-            
-            if (TryFindNumberRelation(targetNode, out numberStr))
+
+            if (TryFindNumberRelation(vp, out numberStr))
             {
                 // Small edge case: assume that when the user inputs a number-type query,
                 // e.g. "<verb> <conj> <resource-noun> to 4.4", that they are trying to set some value
@@ -206,7 +205,7 @@ namespace Cygnus.Nlp
                 pred = new Predicate(gov: vbWord, dep: numberStr, action: ActionType.Set);
                 found = true;
             }
-            else if (TryFindBooleanRelation(targetNode, out boolReln))
+            else if (TryFindBooleanRelation(vp, out boolReln))
             {
                 if (vbWord != null)
                 {
@@ -217,6 +216,7 @@ namespace Cygnus.Nlp
             else if (!string.IsNullOrEmpty(vbWord))
             {
                 pred = new Predicate(gov: vbWord);
+                found = true;
             }
 
             verbPhrase = vp;

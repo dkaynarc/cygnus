@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="0611a299-800f-4e68-83c4-d5c9e3eee696"
   name="Controllers"
@@ -4181,7 +4181,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="fc9dad85-2fbf-41b2-aa88-4477c29f50eb"
+            Id="c0c3fa05-69e9-4353-a6b6-6e5bd0cf6ae5"
             name="CoreRequestController"
             isLeaf="false"
             isStatic="false"
@@ -4190,54 +4190,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="ab6260b9-b9c0-4a41-b456-100e2bd7b99a"
+                Id="dfec4617-7a5c-4c17-821d-24a58665795f"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Controllers Type%3DCoreRequestController Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="61a70c67-9eae-4813-baf7-caf0ae594336"
+                Id="eb10d472-df64-4bae-aadf-4e45be7d1c7b"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0cdbb2d4-00d6-4076-bf9a-f44e629fa856">
+                    Id="e5488c1d-2e56-4a96-a53e-0cfbe578fd4b">
                     <propertyInstance
-                      Id="3cfb23e6-1544-40d3-9c23-ce4d7a47437f"
+                      Id="77ed4cc0-719a-4439-9abc-601375a987d1"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fb329c34-19e1-4864-9940-aa5ffc6178af">
+                    Id="8b24e872-b9f5-4705-9279-6ed57d6badce">
                     <propertyInstance
-                      Id="58a52f8a-4076-4015-8287-e504eb026979"
+                      Id="71aabc83-2e50-4b8a-866a-69f846592f25"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c95ebc76-fb46-4807-9d7d-855e0abd590f">
+                    Id="1dae68bb-4533-4607-81fe-fc70bd62fe70">
                     <propertyInstance
-                      Id="f0c3a6e3-e6b5-4f8f-811a-87996bad0b5c"
+                      Id="aa2c7883-8d3a-4768-8952-eed85d5b2937"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="06b7190e-ded3-4b08-8597-4f5dc1673a37">
+                    Id="e216a5b6-3ee3-4c95-b9cd-90c2490637de">
                     <propertyInstance
-                      Id="28215a55-7784-42e6-92e2-9c50c7b0563e"
+                      Id="3477a9dd-b40f-45d0-bafd-ae7905fb87e7"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="202b2c99-d752-4fe1-8b20-d6bb1388feab">
+                    Id="9e6ce9ee-66e9-40c7-9afa-7c0c0b0bcf21">
                     <propertyInstance
-                      Id="fd88f8ab-ee71-4629-8764-df80b4c51623"
+                      Id="9f0cc0b4-9598-44bc-9ca6-fe8d219268b1"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="474ff42c-3a9b-41e3-a193-c5360129a56a">
+                    Id="bac41612-6d0e-4788-88d4-68dee1a1d966">
                     <propertyInstance
-                      Id="db4bb74a-99d3-4014-9e7d-0f166e1160cd"
+                      Id="4abe377d-b8dc-4539-b3c7-5a8302969883"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

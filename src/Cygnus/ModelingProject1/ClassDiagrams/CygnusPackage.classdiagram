@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="58a0f235-dc93-4b3c-b5d1-6d802bb01d28" name="CygnusPackage" linkedPackageId="8cf5beaa-b685-4ca8-b5c9-39f2119517c5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="2020d849-c545-4803-84ae-48db17b6e6a9">
-      <profileInstance Id="11235275-9b6d-4d08-9bae-b24c0b4f42e2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ad3ba075-883d-4378-9e64-8302c17224f4">
-      <profileInstance Id="f9352225-65c4-40f9-9ead-033d790f301f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ff523c84-695e-4ac8-a518-336e504c9a29">
-      <profileInstance Id="c1d32e04-5284-41f0-b45d-66a631895bee" name="CSharpProfile">
-        <elementDefinition Id="2aef4ee1-76c4-45ae-b365-82c8272d1873" />
-      </profileInstance>
-      <elementDefinition Id="f028d207-0ed4-4317-9e91-2b7e5957bb7c" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="e139885e-9385-4c11-ab83-a316523faf15" name="Cygnus" visibility="Private">
@@ -38,44 +18,6 @@
                 </reference>
               </referencesInternal>
               <elementDefinition Id="a8b38cce-32ff-4b15-afc4-4252c2f02cdb" />
-            </package>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <package Id="de0c0d31-b902-480f-a9c7-3e7dfe7b6dd0" name="GatewayInterface" visibility="Private">
-              <referencesInternal>
-                <reference Id="aa120a0a-e151-45f0-9d40-265a6957c547" handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.GatewayInterface" tag="ViewCode">
-                  <elementDefinition Id="381650a9-5c67-4c46-aec3-6c2e6f327479" />
-                </reference>
-              </referencesInternal>
-              <elementDefinition Id="4f9ab18d-f2d3-447e-8774-54c89ff9a064" />
-              <profileInstances>
-                <packageHasProfileInstances Id="67f5eb96-5b13-4af8-8ff5-6ab539638f29">
-                  <profileInstance Id="8d8457c3-05ca-456e-aa3f-7711e82552df" name="CSharpProfile">
-                    <elementDefinition Id="78950d81-e074-471f-b8f3-b295a1991536" />
-                  </profileInstance>
-                  <elementDefinition Id="204ff9fc-6f02-4cea-96ae-ad472409d360" />
-                </packageHasProfileInstances>
-              </profileInstances>
-            </package>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <package Id="a5b86ff3-473c-453c-a959-d1e289269872" name="Api" visibility="Private">
-              <referencesInternal>
-                <reference Id="dd0d8f94-5880-4b82-acda-844a12fa5445" handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.Models.Api" tag="ViewCode">
-                  <elementDefinition Id="e124d980-8495-42e0-9fb9-05328f94a561" />
-                </reference>
-              </referencesInternal>
-              <elementDefinition Id="8d01463a-123d-45ce-adc6-f0b0c564ec7f" />
-            </package>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <package Id="0d79f789-042e-4357-b6b2-267e338e95e3" name="GatewayTestHarness" visibility="Private">
-              <referencesInternal>
-                <reference Id="482282ed-e528-44a2-ba98-0f28beee2d7e" handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.GatewayTestHarness" tag="ViewCode">
-                  <elementDefinition Id="1bcf6f85-1d13-47f8-b9b9-ec33f7273b6c" />
-                </reference>
-              </referencesInternal>
-              <elementDefinition Id="70af703a-edbe-419c-8ac6-355aaa4bde54" />
             </package>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -124,5 +66,25 @@
   </packagedElements>
   <package Id="8cf5beaa-b685-4ca8-b5c9-39f2119517c5" name="ModelingProject1">
     <elementDefinition Id="5f951517-31ed-4a43-9fb5-c61324d7deea" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2020d849-c545-4803-84ae-48db17b6e6a9">
+        <profileInstance Id="11235275-9b6d-4d08-9bae-b24c0b4f42e2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ad3ba075-883d-4378-9e64-8302c17224f4">
+        <profileInstance Id="f9352225-65c4-40f9-9ead-033d790f301f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ff523c84-695e-4ac8-a518-336e504c9a29">
+        <profileInstance Id="c1d32e04-5284-41f0-b45d-66a631895bee" name="CSharpProfile">
+          <elementDefinition Id="2aef4ee1-76c4-45ae-b365-82c8272d1873" />
+        </profileInstance>
+        <elementDefinition Id="f028d207-0ed4-4317-9e91-2b7e5957bb7c" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

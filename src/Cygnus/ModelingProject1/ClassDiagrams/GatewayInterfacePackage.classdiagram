@@ -1232,56 +1232,56 @@
                   </appliedStereotypesInternal>
                   <elementDefinition Id="0ba7f951-412d-407d-917b-4881d51742db" />
                 </operation>
-                <operation Id="79649828-9b0a-4234-9704-e9f7d1fa7872" name="~GatewaySocketClient" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="56ee3a5d-2c44-4494-9af2-17801091f9d4" name="~GatewaySocketClient" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
-                    <reference Id="939dd5ab-6184-4486-992a-3a363c1a746c" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayInterface%2Fbin%2FDebug%2FGatewayInterface.dll&quot; Namespace%3DCygnus.GatewayInterface Type%3DGatewaySocketClient Member%3DFinalize" tag="ViewCode">
-                      <elementDefinition Id="7397c437-42e2-4c78-a3f9-11acc53111fc" />
+                    <reference Id="d7608dba-0ff1-4485-9020-f9253c7b6198" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayInterface%2Fbin%2FDebug%2FGatewayInterface.dll&quot; Namespace%3DCygnus.GatewayInterface Type%3DGatewaySocketClient Member%3DFinalize" tag="ViewCode">
+                      <elementDefinition Id="0013a883-75fb-4f5c-8b29-3949c54f05b3" />
                     </reference>
                   </referencesInternal>
                   <appliedStereotypesInternal>
-                    <stereotypeInstance Id="7180c1fd-33be-4481-8c8f-937ec6dac5bc" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="0f95c061-b1e8-41a7-ba42-4092532b2d5a" />
+                    <stereotypeInstance Id="dda7c6b6-0674-48c0-bb18-35f4b7b430cc" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="9bce2f0d-5d03-40ce-9ae6-76e2c3138e38" />
                       <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="811707a8-4c82-428a-a2db-6e23fa5d2b43">
-                          <propertyInstance Id="46a3a08d-1f87-4a79-8f8c-ad2cf8f1e6e8" name="ClrAttributes">
-                            <elementDefinition Id="9e485b8e-6a5c-4ab7-92f5-caa76c0316ab" />
+                        <stereotypeInstanceHasPropertyInstances Id="6b9509a0-93c1-4037-ad1c-537b6bc664db">
+                          <propertyInstance Id="8af1ba0a-6a61-45e0-a7f9-87748201717a" name="ClrAttributes">
+                            <elementDefinition Id="c733b65a-9fd7-4795-bdd4-bf5bfe85bff8" />
                           </propertyInstance>
-                          <elementDefinition Id="ce50306a-7574-4782-ae29-c8135063d5a9" />
+                          <elementDefinition Id="db0a476a-63cd-43f7-96f2-66f31f9a1c21" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="a3bbeb47-36a4-484b-b75b-73029e2ed448">
-                          <propertyInstance Id="b511a4d0-d1d5-4d6b-876f-01d362bd7cfc" name="IsPartial" value="false">
-                            <elementDefinition Id="f874bc75-d7c4-4bbc-b50f-312f95fc0fe0" />
+                        <stereotypeInstanceHasPropertyInstances Id="3abe5fbc-442a-4878-936f-730c8481f1b2">
+                          <propertyInstance Id="f1a10a62-284c-4b15-8d37-d1530bf97f3e" name="IsPartial" value="false">
+                            <elementDefinition Id="06ed3ccc-7d40-4b1c-8940-11196684afe9" />
                           </propertyInstance>
-                          <elementDefinition Id="eaa53aa6-14f9-479d-b12c-ab7401ebb8c8" />
+                          <elementDefinition Id="2ea05b48-a4cb-4513-ac66-1b4c4aa99382" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="987cac4b-7482-4c6f-bb3a-04b3dfea7afb">
-                          <propertyInstance Id="57e77327-1b57-4c43-85a6-c7bf67de27e5" name="IsUnsafe" value="false">
-                            <elementDefinition Id="a2dc0d32-90f1-4c10-a0d3-7a0838c31507" />
+                        <stereotypeInstanceHasPropertyInstances Id="e62fe781-1b37-4718-bd4e-53d174e05df9">
+                          <propertyInstance Id="25373da2-cabe-41d7-a39c-61694d6c45ea" name="IsUnsafe" value="false">
+                            <elementDefinition Id="4a5b76fd-9ba0-491c-9390-c8af1aa083d6" />
                           </propertyInstance>
-                          <elementDefinition Id="91dcbe70-e681-445e-b919-547f14459a1d" />
+                          <elementDefinition Id="91446b8d-4b70-416d-9b73-f1ef03be6df7" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="862003ad-9575-46e2-b76d-b5102cdcd3e2">
-                          <propertyInstance Id="93c35bd9-8338-4b8f-b6c5-b7708cfd11a9" name="Inheritance" value="none">
-                            <elementDefinition Id="9b5ae204-d2f9-4f21-a103-64333a7c3b08" />
+                        <stereotypeInstanceHasPropertyInstances Id="1aa2fbc9-dd2d-4f8a-8056-6e8a9fb931fa">
+                          <propertyInstance Id="187e229b-fb96-4408-910f-981571f8eed9" name="Inheritance" value="none">
+                            <elementDefinition Id="4836af4a-d0dd-4792-abca-0cd19613ccd7" />
                           </propertyInstance>
-                          <elementDefinition Id="02283138-2191-41d5-bb42-cd39a1ca6806" />
+                          <elementDefinition Id="b25dbf8e-d990-43db-9404-8f31faa50622" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="de05e4d0-cbdf-46b6-bce0-640863a6bfcd">
-                          <propertyInstance Id="418fd37b-22ca-455b-b50b-0b222341000b" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="2a805a64-0ca0-4381-bcbc-1c4b2bcd6ee5" />
+                        <stereotypeInstanceHasPropertyInstances Id="e7122d19-8f7d-4694-951e-7b7c72667771">
+                          <propertyInstance Id="9ea8b213-645c-499d-b34e-976bef48842d" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="c4807d5e-1e04-44c8-ad2b-3afa60cd57da" />
                           </propertyInstance>
-                          <elementDefinition Id="6b9b87ed-cd4e-47f2-9d2c-1dc7ff6d9fb7" />
+                          <elementDefinition Id="f729006e-33de-49d4-a3c7-f9b8ae1d378c" />
                         </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="71b0132d-f35d-4ab9-af57-dd15e5e9e901">
-                          <propertyInstance Id="241febca-80b8-447a-a847-dea9d1d71caa" name="params" value="false">
-                            <elementDefinition Id="0278f7e8-f69f-4700-9230-3277284647ed" />
+                        <stereotypeInstanceHasPropertyInstances Id="497c95c2-b731-4576-9560-fc392468e50d">
+                          <propertyInstance Id="bec8ba0b-b36f-44eb-89b6-979e686c26b3" name="params" value="false">
+                            <elementDefinition Id="63bb3833-86bc-404f-ace7-8fbcf63a1bac" />
                           </propertyInstance>
-                          <elementDefinition Id="33e2e60d-9428-483d-8462-737f9a678ec8" />
+                          <elementDefinition Id="8d58871e-904f-4871-9ca8-ebbff1ad9d9e" />
                         </stereotypeInstanceHasPropertyInstances>
                       </propertyInstances>
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
-                  <elementDefinition Id="2720f3bb-3eee-4e5c-afe2-44df99cda0ed" />
+                  <elementDefinition Id="2ef48a1f-56a9-43eb-aad5-293b1563eafe" />
                 </operation>
               </ownedOperationsInternal>
             </class>

@@ -38,7 +38,7 @@ namespace Cygnus.Nlp
             Trace.WriteLine("Initializing NlpEngineThread.");
             // Annotation pipeline configuration
             var props = new Properties();
-            props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
+            props.setProperty("annotators", "tokenize, ssplit, pos, parse");
             props.setProperty("sutime.binders", "0");
 
             var curDir = Environment.CurrentDirectory;

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="acf22259-db7e-463c-9aaa-9c6058d0e76c"
+  name="Api"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="cca2abca-ad8a-4371-a29b-d57c52fa0ebc"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCygnus.Models.Api"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f38d5f6e-535e-4690-bb19-6c489788060b"
+        name="Resource"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="34894196-6a05-40d6-8b0a-135ee321125a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResource"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f104fde8-ad27-49dc-b6e6-d1f639317d46"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57cccc22-9fdb-44bc-9bb6-d85ddf74e855">
+                <propertyInstance
+                  Id="64957089-71bc-46e4-81d6-80b7a830f5e7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9e3b1a8-5082-45d3-a364-53ac62a1c200">
+                <propertyInstance
+                  Id="e63aab1d-c532-4c56-9251-96deb240b3db"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c293b715-a18c-4a5c-84ad-eae794c1c3b8">
+                <propertyInstance
+                  Id="ea5776c9-506d-4878-b04d-6b489ef4affc"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76e948af-8594-4c4f-a683-0e374e929a2f">
+                <propertyInstance
+                  Id="ee8a1a7f-4cb9-41ee-8728-44bd59350759"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99e65013-8f30-4939-a38a-12fc57c8699d">
+                <propertyInstance
+                  Id="3d56b52d-9080-4910-83b6-bf437c57c64b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="870c5d3e-09e4-4973-a787-254b239b1a24"
+        name="ResourceGroup"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d0a4253b-2a25-4cc8-955d-ff8eeb1b6dea"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FCygnus%2Fbin%2FCygnus.dll&quot; Namespace%3DCygnus.Models.Api Type%3DResourceGroup"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8badc7a5-aa2c-42a2-813f-8f6a674de538"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c104b9d8-5d3d-4ff6-bc4e-7d5ebc66434f">
+                <propertyInstance
+                  Id="0c84cc41-774b-4fa9-b11e-ac986650c956"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55313f64-db6e-4572-bf82-b93142588217">
+                <propertyInstance
+                  Id="b1071e9c-ee6b-4b46-a9a4-e26a300dcfaf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fe70107-619b-424c-a2b8-e78fe64353b5">
+                <propertyInstance
+                  Id="aaa6c700-6e62-4555-a0e1-f8cc11851d58"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a1fb0f00-dcba-403e-afcd-c329918d4191">
+                <propertyInstance
+                  Id="48602428-f122-4657-a33a-65f23e2a0b0b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bfad8fae-fbc9-4c11-ac88-db6d83a39808">
+                <propertyInstance
+                  Id="711ec3d2-01a4-4874-8f94-3bb6066a4ac7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

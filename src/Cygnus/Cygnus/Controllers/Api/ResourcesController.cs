@@ -38,7 +38,7 @@ namespace Cygnus.Controllers.Api
         }
 
         // GET: api/Resources/5
-        [ResponseType(typeof(Resource))]
+        [ResponseType(typeof(ResourceDTO))]
         public async Task<IHttpActionResult> GetResource(Guid id)
         {
             var resource = await db.Resources.Include(s => s.Gateway).Select(s =>
