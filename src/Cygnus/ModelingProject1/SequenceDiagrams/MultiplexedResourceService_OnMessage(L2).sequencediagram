@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="cc46872f-b792-4247-aa77-373384d5e7d6" name="MultiplexedResourceService_OnMessage" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="cc46872f-b792-4247-aa77-373384d5e7d6" name="MultiplexedResourceService_OnMessage" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="f0e05ab6-e2c9-45ff-adc0-c9a4207c66bb" name="MultiplexedResourceService_OnMessage" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -771,6 +771,11 @@
               <lifelineMoniker Id="f22102c1-f12b-4dbe-a9bf-061c14ab1896" LastKnownName="this.m_boundResources : HashSet&lt;IResource&gt;" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1b92faca-e34d-40de-88b7-dcd1d29b375d" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f22102c1-f12b-4dbe-a9bf-061c14ab1896" LastKnownName="this.m_boundResources : HashSet&lt;IResource&gt;" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="0712db49-e6a9-43a7-946e-0af6011fe31f" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="4c45acc5-7929-4ed5-b99a-cce0990480f4" LastKnownName="resource : IResource" />
@@ -779,11 +784,6 @@
           <operandOccurrenceSpecification Id="0c8d9f17-434e-4090-8816-4aa5d0dd506a" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="f9f86ebf-b310-4848-a237-fc28e0cb4804" LastKnownName="this : MultiplexedResourceService" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="1b92faca-e34d-40de-88b7-dcd1d29b375d" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="f22102c1-f12b-4dbe-a9bf-061c14ab1896" LastKnownName="this.m_boundResources : HashSet&lt;IResource&gt;" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6e466504-2ba2-4c0f-82b1-0190f4551d0f" name="MessageOccurrenceSpecification">

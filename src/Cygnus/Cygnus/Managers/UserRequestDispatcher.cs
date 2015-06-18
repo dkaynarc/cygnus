@@ -15,8 +15,7 @@ namespace Cygnus.Managers
     public class UserRequestDispatcher : INotifiableRequester
     {
         private static UserRequestDispatcher m_instance;
-        private ConcurrentDictionary<Guid, UserResponsePackage> m_responseBucket = new ConcurrentDictionary<Guid, UserResponsePackage>();
-        private static AutoResetEvent m_waitEvent = new AutoResetEvent(false);
+        private TaskCompletionSource<UserResponsePackage> m_taskCompletion = null;
         public static UserRequestDispatcher Instance 
         {
             get
@@ -52,26 +51,27 @@ namespace Cygnus.Managers
         public UserResponsePackage GetResourceData(Guid resourceId)
         {
             Guid requestGuid = Guid.Empty;
-            UserResponsePackage response = null;
+            m_taskCompletion = new TaskCompletionSource<UserResponsePackage>();
             requestGuid = GatewayResourceProxy.Instance.SendGetResourceDataRequest(resourceId, this);
-            m_waitEvent.WaitOne();
-            m_responseBucket.TryRemove(requestGuid, out response);
+            var response = m_taskCompletion.Task.Result;
+            m_taskCompletion = null;
+
             return response;
         }
 
         public void SetResourceData(Guid resourceId, object data)
         {
-             var requestGuid = GatewayResourceProxy.Instance.SendSetResourceDataRequest(resourceId, data, this);
+            var requestGuid = GatewayResourceProxy.Instance.SendSetResourceDataRequest(resourceId, data, this);
+            m_taskCompletion = null;
         }
 
         public void Notify(Guid id, object data)
         {
-            Task.Run(() =>
+            var userPackage = new UserResponsePackage() { Data = data };
+            if (m_taskCompletion != null)
             {
-                var userPackage = new UserResponsePackage() { Data = data };
-                m_responseBucket.AddOrUpdate(id, userPackage, (key, prev) => userPackage);
-                m_waitEvent.Set();
-            });
+                m_taskCompletion.SetResult(userPackage);
+            }
         }
     }
 

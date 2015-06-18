@@ -57,8 +57,10 @@ namespace Cygnus.GatewayTestHarness
 
         void m_button_Click(object sender, EventArgs e)
         {
+            m_boundResource.OnDataChanged -= OnDataChanged;
             SetButtonState(!m_buttonState);
             m_boundResource.SetResourceData(m_buttonState.ToString());
+            m_boundResource.OnDataChanged += OnDataChanged;
         }
 
         private void RemoveHandlers()
@@ -80,9 +82,9 @@ namespace Cygnus.GatewayTestHarness
         {
             if (IsHandleCreated)
             {
+                m_buttonState = state;
                 this.BeginInvoke(new Action(() =>
                 {
-                    m_buttonState = state;
                     m_button.BackColor = state ? Color.Green : Color.Red;
                     m_button.Text = state ? "ON" : "OFF";
                 }));

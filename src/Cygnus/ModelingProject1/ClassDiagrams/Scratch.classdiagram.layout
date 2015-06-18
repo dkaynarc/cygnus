@@ -75,5 +75,23 @@
         <OperationElementListCompartment Id="6e7315a4-c266-4dd6-8c1f-47a17781d437" absoluteBounds="2.89, 2.3124449770649278, 3.0949999999999998, 1.8027343178788817" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="f42337b8-2a56-4621-b36f-99ea062819f1" absoluteBounds="7.75, 1, 4, 2.3089293346802395" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="4e0cb5cd-01d0-4be6-a17a-5ebe62095d35" LastKnownName="UserRequestDispatcher" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="0116dfce-ab21-422e-8f00-32de3f98c6d5" absoluteBounds="7.765, 1.5153356393178306, 3.9699999999999998, 0.68164060264825832" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="208e510b-17ee-4fcc-9382-4bd5472fd358" absoluteBounds="7.765, 2.206976241966089, 3.9699999999999998, 1.0019530927141507" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.75 : 3.30892933468024); (9.75 : 3.68392933468024); (12.125 : 3.68392933468024); (12.125 : 2.15446466734012); (11.75 : 2.15446466734012)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
+      <associationMoniker Id="88eb84b0-6d97-4e1c-9e61-1e8ae00efb2c" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="11.875, 1.9375, 0.46976268291473389, 0.14800345897674561" shapeFieldName="TargetRoleName" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <classShapeMoniker Id="f42337b8-2a56-4621-b36f-99ea062819f1" />
+        <classShapeMoniker Id="f42337b8-2a56-4621-b36f-99ea062819f1" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </logicalClassDesignerDiagram>

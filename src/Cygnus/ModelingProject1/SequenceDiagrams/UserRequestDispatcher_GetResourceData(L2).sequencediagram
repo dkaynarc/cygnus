@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="442680bf-5c5e-425b-a4c1-e691c26959b8" name="UserRequestDispatcher_GetResourceData" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="442680bf-5c5e-425b-a4c1-e691c26959b8" name="UserRequestDispatcher_GetResourceData" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="94f34bf0-32e3-4cd0-ac36-c84552eb0f8c" name="UserRequestDispatcher_GetResourceData" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -280,14 +280,14 @@
               <lifelineMoniker Id="1ca2a832-adcf-4e10-9560-7d35f40c1dc7" LastKnownName="GatewayResourceProxy.m_instance : GatewayResourceProxy" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ced30fe9-c1b0-4d67-bd0e-43a9ab1af949" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="d5d34649-2516-454c-b346-c2f70db1eb75" LastKnownName="GatewayResourceProxy.m_instance.m_gatewayClients : Dictionary&lt;String, GatewaySocketClient&gt;" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="815846b4-31e1-4a73-ad9d-5a2c67bfdfeb" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="1ca2a832-adcf-4e10-9560-7d35f40c1dc7" LastKnownName="GatewayResourceProxy.m_instance : GatewayResourceProxy" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ced30fe9-c1b0-4d67-bd0e-43a9ab1af949" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="d5d34649-2516-454c-b346-c2f70db1eb75" LastKnownName="GatewayResourceProxy.m_instance.m_gatewayClients : Dictionary&lt;String, GatewaySocketClient&gt;" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="2382c882-472d-4024-9b29-40294dd548f2" name="ExecutionOccurrenceSpecification">
@@ -389,14 +389,14 @@
             </covered>
           </messageOccurrenceSpecification>
           <lostFoundTarget Id="7c890c7d-eb13-45f6-a869-81e6d60a8416" name="LostFoundTarget" />
-          <messageOccurrenceSpecification Id="1cf01d7b-99cd-48b1-9788-f46a0aa9d96e" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="1ca2a832-adcf-4e10-9560-7d35f40c1dc7" LastKnownName="GatewayResourceProxy.m_instance : GatewayResourceProxy" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="3fd04230-97a9-40ef-976d-7c81dff78506" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="2200187f-b183-48d3-98e5-006cb70fa42f" LastKnownName="client : GatewaySocketClient" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1cf01d7b-99cd-48b1-9788-f46a0aa9d96e" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="1ca2a832-adcf-4e10-9560-7d35f40c1dc7" LastKnownName="GatewayResourceProxy.m_instance : GatewayResourceProxy" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="82a1fe7c-e2a9-4b99-a380-14ab42b3edbf" name="ExecutionOccurrenceSpecification">

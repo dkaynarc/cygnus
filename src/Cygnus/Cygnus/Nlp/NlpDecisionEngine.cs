@@ -174,7 +174,8 @@ namespace Cygnus.Nlp
                     }
                     return true;
                 });
-            
+
+            if (vp == null) { return false; }
             string vbWord = null;
             bool found = false;
             Traverse(vp, x =>

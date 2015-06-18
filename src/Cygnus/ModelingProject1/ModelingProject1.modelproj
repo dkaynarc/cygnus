@@ -271,6 +271,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrams\CoreRequestController_Submit(L1).sequencediagram</DependentUpon>
     </Content>
+    <Content Include="SequenceDiagrams\GatewayHost_Initialize.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\GatewayHost_Initialize.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\GatewayHost_Initialize.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagrams\GatewayHost_RegisterWithApi%28L1%29.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -313,6 +320,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrams\NlpDecisionEngine_ExecuteQuery(L1).sequencediagram</DependentUpon>
     </Content>
+    <Content Include="SequenceDiagrams\NlpDecisionEngine_Initialize%28L3%29.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\NlpDecisionEngine_Initialize%28L3%29.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\NlpDecisionEngine_Initialize(L3).sequencediagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagrams\NlpDecisionEngine_TryFindConditionalExpression%28L2%29.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -333,6 +347,13 @@
     <Content Include="SequenceDiagrams\NlpEngineThread_AnalyseText%28L1%29.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrams\NlpEngineThread_AnalyseText(L1).sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrams\NlpEngineThread_InitializeThread.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\NlpEngineThread_InitializeThread.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\NlpEngineThread_InitializeThread.sequencediagram</DependentUpon>
     </Content>
     <Content Include="SequenceDiagrams\ResourceGroupManager_ExecuteExpressions%28L1%29.sequencediagram">
       <SubType>Content</SubType>

@@ -117,6 +117,11 @@ namespace Cygnus.GatewayTestHarness
             ResourceManager.Instance.Add(new MockSwitch("StudyLight1"));
             ResourceManager.Instance.Add(new MockSwitch("StudyLight2"));
             ResourceManager.Instance.Add(new MockSwitch("StudyLight3"));
+            ResourceManager.Instance.Add(new MockTemperatureSensor("ServerRoomAC1"));
+            ResourceManager.Instance.Add(new MockSwitch("ServerRoomACWarningLight1"));
+            ResourceManager.Instance.Add(new MockSwitch("HallwayLight1"));
+            ResourceManager.Instance.Add(new MockSwitch("HallwayLight2"));
+            ResourceManager.Instance.Add(new MockSwitch("HallwayLight3"));
         }
 
         /// <summary>

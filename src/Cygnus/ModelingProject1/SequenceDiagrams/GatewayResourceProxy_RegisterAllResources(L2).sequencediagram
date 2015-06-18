@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="61b0684e-dab7-4590-913a-f8c35a597acc" name="GatewayResourceProxy_RegisterAllResources" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="61b0684e-dab7-4590-913a-f8c35a597acc" name="GatewayResourceProxy_RegisterAllResources" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="be2e377f-64b4-4a3f-8e92-8b4284cb5235" name="GatewayResourceProxy_RegisterAllResources" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -331,14 +331,9 @@
               <lifelineMoniker Id="557a71a2-b5cb-4a8c-bb0c-f03bd1d5bf1d" LastKnownName="this.m_gatewayClients : Dictionary&lt;String, GatewaySocketClient&gt;" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="7f270441-32dd-4dd6-80c1-9da039708801" name="OperandOccurrenceSpecification">
+          <operandOccurrenceSpecification Id="01b1022f-23a2-4834-8904-e11340ff0091" name="OperandOccurrenceSpecification">
             <covered>
-              <lifelineMoniker Id="557a71a2-b5cb-4a8c-bb0c-f03bd1d5bf1d" LastKnownName="this.m_gatewayClients : Dictionary&lt;String, GatewaySocketClient&gt;" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="ff0ec14f-08fc-4c26-af7d-79cdadd7d995" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="ae3e1674-013a-4d69-a351-3a9aebd186f8" LastKnownName="this : GatewayResourceProxy" />
+              <lifelineMoniker Id="cb23df3a-8a1f-479f-9a61-398a21249934" LastKnownName="client.m_requestList : Dictionary&lt;Guid, Request&gt;" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="b984243e-9cae-493f-b984-82a5498ba294" name="OperandOccurrenceSpecification">
@@ -346,9 +341,14 @@
               <lifelineMoniker Id="7c111a58-97ef-4e7c-a524-5dc3e59add47" LastKnownName="client : GatewaySocketClient" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="01b1022f-23a2-4834-8904-e11340ff0091" name="OperandOccurrenceSpecification">
+          <operandOccurrenceSpecification Id="ff0ec14f-08fc-4c26-af7d-79cdadd7d995" name="OperandOccurrenceSpecification">
             <covered>
-              <lifelineMoniker Id="cb23df3a-8a1f-479f-9a61-398a21249934" LastKnownName="client.m_requestList : Dictionary&lt;Guid, Request&gt;" />
+              <lifelineMoniker Id="ae3e1674-013a-4d69-a351-3a9aebd186f8" LastKnownName="this : GatewayResourceProxy" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="7f270441-32dd-4dd6-80c1-9da039708801" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="557a71a2-b5cb-4a8c-bb0c-f03bd1d5bf1d" LastKnownName="this.m_gatewayClients : Dictionary&lt;String, GatewaySocketClient&gt;" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="3b6201c2-3977-42b1-a5df-0d24843251af" name="BehaviorExecutionSpecification">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="74849260-e6f9-4cf2-bb7f-59ac5bef48b4" name="ConditionalRequestManager_AddExpression" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="74849260-e6f9-4cf2-bb7f-59ac5bef48b4" name="ConditionalRequestManager_AddExpression" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="7f27e3b5-9d20-4fbc-9863-fb61b06f2708" name="ConditionalRequestManager_AddExpression" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -139,14 +139,14 @@
             </covered>
           </messageOccurrenceSpecification>
           <lostFoundTarget Id="d3e96e44-2bdf-4b64-ac62-0d6c3bd43e9e" name="LostFoundTarget" />
-          <messageOccurrenceSpecification Id="93fb3878-0584-4351-be9a-c2feb3d68507" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="b13dbb2b-c012-4d3a-8b84-51f5c785b0a1" LastKnownName="ResolvedConditionalExpression" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="157d4778-9adc-4c40-9730-d635257edfa4" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="db03cfae-a87c-4852-b2ae-6a4d2f19ed4e" LastKnownName="this : ConditionalRequestManager" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="93fb3878-0584-4351-be9a-c2feb3d68507" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="b13dbb2b-c012-4d3a-8b84-51f5c785b0a1" LastKnownName="ResolvedConditionalExpression" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="35d781ef-6f77-40ff-bfeb-0018c5bb5ce5" name="ExecutionOccurrenceSpecification">
@@ -202,12 +202,12 @@
               <lifelineMoniker Id="af4fc812-64a7-48ca-ba2f-5529bf1c6849" LastKnownName="resolved : ResolvedConditionalExpression" />
             </covered>
           </messageOccurrenceSpecification>
-          <lostFoundTarget Id="1fb6a702-63a3-4ecf-8073-4aea77a56d5d" name="LostFoundTarget" />
           <messageOccurrenceSpecification Id="d18331c7-08c0-4048-8572-5333d09be93c" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="af4fc812-64a7-48ca-ba2f-5529bf1c6849" LastKnownName="resolved : ResolvedConditionalExpression" />
             </covered>
           </messageOccurrenceSpecification>
+          <lostFoundTarget Id="1fb6a702-63a3-4ecf-8073-4aea77a56d5d" name="LostFoundTarget" />
           <messageOccurrenceSpecification Id="0a068d8d-2ebc-42ff-95a3-6c73e915b37e" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="af4fc812-64a7-48ca-ba2f-5529bf1c6849" LastKnownName="resolved : ResolvedConditionalExpression" />

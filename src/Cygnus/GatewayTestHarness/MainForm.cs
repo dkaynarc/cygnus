@@ -60,6 +60,7 @@ namespace Cygnus.GatewayTestHarness
                     m_resourceControls.Add(switchControl);
                 }
             }
+            this.AutoSize = true;
         }
     }
 }

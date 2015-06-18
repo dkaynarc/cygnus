@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="f7dea57c-0834-49af-8dab-7e8e92672c21" name="ConditionalRequestManager_OnMessage" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f7dea57c-0834-49af-8dab-7e8e92672c21" name="ConditionalRequestManager_OnMessage" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="c2f21a0e-f94a-46e7-950f-04605b3b4542" name="ConditionalRequestManager_OnMessage" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -299,12 +299,12 @@
               <lifelineMoniker Id="92ebcd6e-4653-4b48-b537-a2fb5a64b91e" LastKnownName="originalExpr : ResolvedConditionalExpression" />
             </covered>
           </operandOccurrenceSpecification>
-          <lostFoundTarget Id="af9ef5ff-fe65-4f48-a279-35e0139a5fbb" name="LostFoundTarget" />
           <messageOccurrenceSpecification Id="a20314cb-37b6-4c18-9f21-ac00157d5a3b" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="92ebcd6e-4653-4b48-b537-a2fb5a64b91e" LastKnownName="originalExpr : ResolvedConditionalExpression" />
             </covered>
           </messageOccurrenceSpecification>
+          <lostFoundTarget Id="af9ef5ff-fe65-4f48-a279-35e0139a5fbb" name="LostFoundTarget" />
           <lostFoundTarget Id="5bfebb4a-8a99-4e35-a691-246808834a94" name="LostFoundTarget" />
           <messageOccurrenceSpecification Id="a9c44487-9006-49a6-a194-fc66ed609241" name="MessageOccurrenceSpecification">
             <covered>
