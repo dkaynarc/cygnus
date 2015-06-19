@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="70af703a-edbe-419c-8ac6-355aaa4bde54"
   name="GatewayTestHarness"
@@ -5875,6 +5875,67 @@
                 LastKnownLocation="Package5_1614.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="998534b0-f7d1-496c-840a-5e5606a9e2e3"
+            name="SavedResourcesPath"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6689edcf-dd7a-43d3-aca1-a726d61e2ff8"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3DSavedResourcesPath"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7691e5ad-cb42-42a1-aed6-a8577ae34c45"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a2da352-aaf6-4887-9226-ebea55b3d01f">
+                    <propertyInstance
+                      Id="74c109c4-b11e-4838-95e2-0c1f398059bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b107506f-d694-4d04-9e8b-de3869a3d523">
+                    <propertyInstance
+                      Id="837d5a0c-531f-4251-9b5b-a69574339bd0"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="503f3b4f-f862-4488-9e4c-801abebf7167">
+                    <propertyInstance
+                      Id="39032105-2253-4c04-8d15-72967599d168"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b266570-e682-4d5c-9fb7-bd162f0a8279">
+                    <propertyInstance
+                      Id="3d250752-996f-4a4b-94c2-c76db16cd163"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17f0d18b-1bd2-477d-8763-99c6c81ef328">
+                    <propertyInstance
+                      Id="4950407f-1fbc-450d-9fcd-33acbdf38959"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -6228,64 +6289,129 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="54c6195d-4ab6-48e6-8b34-75d8b2b494e5"
-            name="ExportResourceMap"
+            Id="8975f26c-13ad-4d76-998b-e573bc3cf91f"
+            name="ResourceManager"
             visibility="Private"
             isLeaf="false"
-            isStatic="true"
+            isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="e419af61-0084-4d5f-8759-bf59b4c52799"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D(Name%3DExportResourceMap OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]))])"
+                Id="fd5757f4-0b0e-496a-b805-71e87c2d7175"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="a3c2d3f7-b790-468d-a14e-b78a33b14183"
+                Id="92ae609c-b356-4730-9135-b5251bcd5df4"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c316a9e9-542b-42a7-8d58-3c13b6a7e4f1">
+                    Id="2ee66f0c-0eef-419e-a07d-b602554dbc63">
                     <propertyInstance
-                      Id="fb2853cb-ca43-413c-80cd-4299c9b8a170"
+                      Id="aa87b25d-97f9-4e8b-bb95-7cece6965f55"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c361de3c-cddb-4858-bd9c-b1f23f1e5f6c">
+                    Id="014db96f-e8d3-43f7-9b9a-b857bcabe8b4">
                     <propertyInstance
-                      Id="932ef111-e5b8-442e-aa8f-9310f802ca0b"
+                      Id="3a749824-503f-4f4e-8110-e9b45b88ed63"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e351d398-757f-4fd8-a30c-882c8979f763">
+                    Id="70bf9789-fd57-4c8b-ab4b-df76ca8c8e94">
                     <propertyInstance
-                      Id="f1d97a1a-c810-4026-a12f-69d54557b9aa"
+                      Id="c60b4134-cae3-4a68-96c3-68dcabaf1cc3"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ab1a7283-3f05-464b-a476-6222a70b8d01">
+                    Id="056bfa60-4797-4cba-bbe8-14ad695afbfb">
                     <propertyInstance
-                      Id="3a510ca5-f324-4a53-a510-cf0d84e1ff18"
+                      Id="61180352-fe95-40d8-af16-e8de4e171917"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5d6f40c8-7744-49f2-bd96-8ac80eb66e1a">
+                    Id="b585dc16-ea16-42a8-a631-e8bbcc22808c">
                     <propertyInstance
-                      Id="8eec67ad-8c2f-45b9-bf09-25b56e3d63bb"
+                      Id="a885735e-9695-480e-a25e-ad27c5a7e58f"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6ab3de39-bb07-4628-9a95-d1bbc58aa105">
+                    Id="84304431-6a12-4a6b-a04d-e751f3d6789e">
                     <propertyInstance
-                      Id="67a275ec-9204-428a-ac5c-a2ab89c1d268"
+                      Id="c39d760c-523d-4bb5-a518-7ed21bd72711"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="fc0ec12d-00ce-4bfd-935c-71b8f31657d7"
+            name="Contains"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1b03997d-0c73-4c1a-9172-f372580deb1f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D(Name%3DContains OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="28d6fa97-8591-4478-8461-206d58d0f8a2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eacea7b1-8f14-4ba7-838d-a83c793efb48">
+                    <propertyInstance
+                      Id="d3681959-1670-4b34-9542-a68babbc700d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="729f34c6-cee9-498a-b26e-759f64cc0e48">
+                    <propertyInstance
+                      Id="e09b69d2-74ca-4d5d-9970-e3dc4e7e9237"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25878b30-07fa-4679-8c81-fcda3c014198">
+                    <propertyInstance
+                      Id="dff7c064-5499-4271-b1f3-71ea93822ab4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b0aeb07-c4a6-4a89-a5fa-7a71c8809e90">
+                    <propertyInstance
+                      Id="02bc8f35-f13f-4f21-b01e-c8d174728d49"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36ae0b53-796c-47ec-b95c-18baea35eab3">
+                    <propertyInstance
+                      Id="11dbf8ac-e068-4c27-be5f-626dc66f71c0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bfab099-b006-4c83-a3d2-f134153a8bb3">
+                    <propertyInstance
+                      Id="8e17f9cc-32f7-49ba-aaee-083f5f237fa4"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6295,12 +6421,241 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="525c1016-d690-4414-9f69-5526c65b351c"
+                  Id="fa59a691-e20c-4754-b0ac-b204976cb05e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e1b9b3b7-4a14-4db6-8df8-615247075c9e"
+                  name="name"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="44b475e6-14fa-454a-befa-dafa5ea6fee0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D(Name%3DContains OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b9129ddb-2d2d-44dd-8542-77488ff8cfad"
+            name="LoadFromFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="46137a38-de98-403c-9041-9cb59159c99b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3DLoadFromFile"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b6a66847-0520-4ba5-b042-9826e2d4ebbd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0500ac7-8efd-4742-b800-9f683f34a695">
+                    <propertyInstance
+                      Id="380bbe5c-b7eb-486b-9bea-0f4f1c17bb1f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b80eb37-5b3f-4a07-9471-6be01c68c599">
+                    <propertyInstance
+                      Id="015b0eb9-50c2-47c2-8461-a56e89ee5de7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="215ff63c-87cb-45af-b5cb-24e08517ef5d">
+                    <propertyInstance
+                      Id="db35a4cd-a533-430c-8005-acf6b64d462e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="487ff41d-5107-4483-804f-e3b41202deb6">
+                    <propertyInstance
+                      Id="aed008fc-90b2-4d37-a623-76183813b3b1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d87e358-aceb-4b39-b7cb-1c045fb2e980">
+                    <propertyInstance
+                      Id="1acf2fc6-8531-4b54-a654-26f450bf4a32"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8aa6ea21-fd51-40f6-b1ae-e94173925030">
+                    <propertyInstance
+                      Id="e4b6576b-bb78-4316-8411-b89520c6c17b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="b1505259-e1f0-4ef3-b21b-0a8b5996ba8d"
+            name="SaveResources"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="68cf9348-15ed-481c-9ae9-f34f9b180152"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3DSaveResources"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="20778ce1-8564-4ebb-a676-ae5e7a692db8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db07cb31-0c78-4694-9080-d625e35cd6f2">
+                    <propertyInstance
+                      Id="13b3b4d9-3242-42c5-aaee-642f212f2e62"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8cbeb62-1c10-4e38-8b0f-33ba168aca40">
+                    <propertyInstance
+                      Id="46afca25-956f-47a6-9c4e-f1f1797061f1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="790a066e-b318-4442-899f-8b2f4e0d6499">
+                    <propertyInstance
+                      Id="1f4f41fa-08d3-410e-91f9-b0c97e218631"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59d68f4c-e291-460f-b808-e191df600c47">
+                    <propertyInstance
+                      Id="c98f2147-b924-4853-b4d3-953fab95312e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40f470c5-feef-4e07-8b56-57b3b545b3ce">
+                    <propertyInstance
+                      Id="3d18ef7a-5091-4981-9cc6-79f7574db201"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ca523f7-d96f-4751-93eb-f41849a5a357">
+                    <propertyInstance
+                      Id="cfa2e1bf-b530-4446-b5f2-a97e2f73ddf5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a5260c12-53ce-4e36-98c7-23cd1ffd4f71"
+            name="ExportResourceMap"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="85b85b52-2a0c-4c49-a20d-155232c4e57a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D(Name%3DExportResourceMap OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f62ff947-4104-452c-a2c4-de1027b754f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72ed39ce-d375-4d23-bf16-dadcdef113ae">
+                    <propertyInstance
+                      Id="6da43816-aeab-4604-aed4-9d1cb2074165"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5df0cce-97a4-40f0-968c-96e4cfc3ba7c">
+                    <propertyInstance
+                      Id="d9113983-476c-4c91-a0e0-7851edeb5ae5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c40b27d3-8a58-43b3-964b-d1d2329c692f">
+                    <propertyInstance
+                      Id="39c82baf-a382-4d34-8b98-04bd772e892b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f93c339e-903c-4bda-82e4-01aa4aafa483">
+                    <propertyInstance
+                      Id="53946616-1fdb-456a-ba65-ddd241aca39d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ba7ac47-83d8-4f87-9088-cc10905caa6a">
+                    <propertyInstance
+                      Id="5e99eeb5-d778-442f-90d8-ae156eb19410"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5abc0437-91a3-4294-b63a-fcf603253c49">
+                    <propertyInstance
+                      Id="35568952-0187-4cb4-abd2-dee2e6e6b389"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7015c3e4-4353-4778-80ea-88b93eb601dd"
                   name="map"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="30994b6d-d6c5-49ef-b359-b4a7fe3771bd"
+                      Id="290aae53-588a-473a-87c1-498830a82da3"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D(Name%3DExportResourceMap OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DDictionary GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DGuid)]))]) ParameterIdentifier%3Dmap"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -6313,72 +6668,6 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-          <operation
-            Id="ba6566cf-aa7a-442c-9dd0-c1ae563b1bcc"
-            name="ResourceManager"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="b539f8d6-4180-4d14-a6e0-ee341eaf9b23"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDenis%2FDocuments%2FVisual Studio 2013%2FProjects%2Fcygnus%2Fsrc%2FCygnus%2FGatewayTestHarness%2Fbin%2FDebug%2FGatewayTestHarness.exe&quot; Namespace%3DCygnus.GatewayTestHarness Type%3DResourceManager Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="a136115d-18d5-432f-813e-a2b6a2dca218"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a16a7bd1-3736-461d-a322-5658255c250a">
-                    <propertyInstance
-                      Id="07a2e0e4-2ce4-44b7-85a0-7252a57c61cb"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="feec4177-dc32-4d27-95c3-d45e8b0402d7">
-                    <propertyInstance
-                      Id="4650531d-0d37-488d-af6d-047e21818a88"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2c114b8a-6175-4b2c-9c3f-f452ed538c7f">
-                    <propertyInstance
-                      Id="c68bbfe2-fc53-45ba-9757-845363d13895"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="724545f5-9417-40b6-918a-f35450c64d15">
-                    <propertyInstance
-                      Id="201801d4-1e35-41e2-ba19-22b0586f07a2"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="07c5231a-82f2-4357-99a2-4520ff797608">
-                    <propertyInstance
-                      Id="d82c281c-a1d9-4769-8b27-14b22c5973ca"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="1f3d1ad1-03d0-45f8-8626-c354291917c5">
-                    <propertyInstance
-                      Id="b9e176d4-fb68-4216-a5f7-b85e0586ed1b"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
