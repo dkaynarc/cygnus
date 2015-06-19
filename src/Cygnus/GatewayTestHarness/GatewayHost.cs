@@ -44,6 +44,7 @@ namespace Cygnus.GatewayTestHarness
         public void Shutdown()
         {
             CloseSocketServer();
+            ResourceManager.Instance.SaveResources();
         }
 
         private void InitializeGuid()
@@ -111,17 +112,11 @@ namespace Cygnus.GatewayTestHarness
 
         private void CreateResources()
         {
+            ResourceManager.Instance.LoadFromFile();
+            // Default resources
             ResourceManager.Instance.Add(new MockTemperatureSensor("LivingRoomTemp"));
             ResourceManager.Instance.Add(new MockTemperatureSensor("StudyTemp"));
             ResourceManager.Instance.Add(new MockSwitch("LivingRoomMainLights"));
-            ResourceManager.Instance.Add(new MockSwitch("StudyLight1"));
-            ResourceManager.Instance.Add(new MockSwitch("StudyLight2"));
-            ResourceManager.Instance.Add(new MockSwitch("StudyLight3"));
-            ResourceManager.Instance.Add(new MockTemperatureSensor("ServerRoomAC1"));
-            ResourceManager.Instance.Add(new MockSwitch("ServerRoomACWarningLight1"));
-            ResourceManager.Instance.Add(new MockSwitch("HallwayLight1"));
-            ResourceManager.Instance.Add(new MockSwitch("HallwayLight2"));
-            ResourceManager.Instance.Add(new MockSwitch("HallwayLight3"));
         }
 
         /// <summary>

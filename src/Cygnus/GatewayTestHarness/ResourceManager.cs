@@ -14,6 +14,7 @@ namespace Cygnus.GatewayTestHarness
     {
         private static ResourceManager m_instance;
         private const string GuidDbPath = "resources.xml";
+        private const string SavedResourcesPath = "savedresources.xml";
         public static ResourceManager Instance
         {
             get
@@ -43,8 +44,11 @@ namespace Cygnus.GatewayTestHarness
             {
                 m_nameGuidMapping.Add(resource.Name, resource.Guid);
             }
-            Resources.Add(resource);
-            ExportResourceMap(m_nameGuidMapping);
+            if (!this.Contains(resource.Name))
+            {
+                Resources.Add(resource);
+                ExportResourceMap(m_nameGuidMapping);
+            }
         }
 
         public void Remove(IResource resource)
@@ -62,6 +66,60 @@ namespace Cygnus.GatewayTestHarness
             return Resources.FindAll(x => x.Guid == id).ToList().Count() > 0;
         }
 
+        public bool Contains(string name)
+        {
+            return Resources.FindAll(x => x.Name.Equals(name)).ToList().Count() > 0;
+        }
+
+        public void LoadFromFile()
+        {
+            if (File.Exists(SavedResourcesPath))
+            {
+                using (var sr = new StreamReader(SavedResourcesPath))
+                {
+                    var xml = new XmlSerializer(typeof (TypedResourceItem[]),
+                                    new XmlRootAttribute() { ElementName = "TypedResourceItems" });
+                    try 
+                    {
+                        var items = xml.Deserialize(sr) as TypedResourceItem[];
+                        if (items != null)
+                        {
+                            var resources = new List<IResource>();
+                            resources.AddRange(items.Select(x =>
+                                {
+                                    IResource r = null;
+                                    if (x.Type.Contains("MockSwitch"))
+                                    {
+                                        r = new MockSwitch(x.Name);
+                                    }
+                                    else if (x.Type.Contains("MockTemperatureSensor"))
+                                    {
+                                        r = new MockTemperatureSensor(x.Name);
+                                    }
+                                    return r;
+                                }).Where(x => x != null));
+                            this.Resources.AddRange(resources);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Trace.WriteLine(e.Message);
+                    }
+                }
+            }
+        }
+
+        public void SaveResources()
+        {
+            using (var sw = new StreamWriter(SavedResourcesPath))
+            {
+                var xml = new XmlSerializer(typeof(TypedResourceItem[]),
+                                new XmlRootAttribute() { ElementName = "TypedResourceItems" });
+                var items = this.Resources.Select(x => new TypedResourceItem() { Name = x.Name, Type = x.GetType().ToString() });
+                xml.Serialize(sw, items.ToArray());
+            }
+        }
+
         private static Dictionary<string, Guid> ImportResourceMap()
         {
             var resourceDb = new Dictionary<string, Guid>();
@@ -77,7 +135,7 @@ namespace Cygnus.GatewayTestHarness
                     }
                     catch (Exception e)
                     {
-                        Debug.Print(e.Message);
+                        Trace.WriteLine(e.Message);
                     }
                 }
             }
@@ -101,5 +159,13 @@ namespace Cygnus.GatewayTestHarness
         public string Key;
         [XmlAttribute]
         public Guid Value;
+    }
+
+    public struct TypedResourceItem
+    {
+        [XmlAttribute]
+        public string Name;
+        [XmlAttribute]
+        public string Type;
     }
 }
