@@ -98,7 +98,10 @@ namespace Cygnus.GatewayTestHarness
                                     }
                                     return r;
                                 }).Where(x => x != null));
-                            this.Resources.AddRange(resources);
+                            foreach (var resource in resources)
+                            {
+                                this.Add(resource);
+                            }
                         }
                     }
                     catch (Exception e)

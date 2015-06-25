@@ -85,8 +85,10 @@ namespace Cygnus.GatewayInterface
 
         private void Disconnect()
         {
-            m_gatewaySocket.Close();
-            m_gatewaySocket = null;
+            if (m_gatewaySocket != null)
+            {
+                m_gatewaySocket.Close();
+            }
         }
 
         private void OnMessage(object sender, MessageEventArgs e)
